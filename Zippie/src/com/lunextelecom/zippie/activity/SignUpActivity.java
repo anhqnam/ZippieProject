@@ -1,4 +1,6 @@
-package com.lunextelecom.zippie;
+package com.lunextelecom.zippie.activity;
+
+import com.lunextelecom.zippie.R;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
