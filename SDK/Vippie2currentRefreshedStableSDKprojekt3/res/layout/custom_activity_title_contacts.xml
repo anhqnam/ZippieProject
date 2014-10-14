@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/activity_title_panel_contacts"
+  	android:orientation="horizontal"
+   	android:layout_width="fill_parent"
+   	android:layout_height="30dp"
+   	android:gravity="center_vertical"
+   	android:padding="5dp"
+   	android:background="@color/row_primary" >
+
+   	<ImageView
+   		android:id="@+id/activity_title_icon"
+   		android:layout_width="wrap_content"
+    	android:layout_height="wrap_content" />
+
+   	<unique.packagename.widget.MainTextView
+   		android:id="@+id/activity_title"
+   		android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:singleLine="true"
+    	android:ellipsize="end"
+    	android:layout_weight="1"
+    	android:text="@string/contacts_title"
+    	style="@style/CustomWindowTitleContacts"
+    	 />
+
+</LinearLayout>

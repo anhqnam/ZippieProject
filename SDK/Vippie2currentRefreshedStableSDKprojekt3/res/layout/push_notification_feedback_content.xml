@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingTop="10dp" >
+
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/push_feedback_txt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="testestestedfadfadfadfas \n fdfadfadfa\ndfadfad"
+        android:visibility="gone"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/faces_row"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/ib1"
+            style="@style/push_feedback_ib"
+            android:src="@drawable/face_hate" />
+
+        <ImageButton
+            android:id="@+id/ib2"
+            style="@style/push_feedback_ib"
+            android:src="@drawable/face_bad" />
+
+        <ImageButton
+            android:id="@+id/ib3"
+            style="@style/push_feedback_ib"
+            android:src="@drawable/face_i_dont_care" />
+
+        <ImageButton
+            android:id="@+id/ib4"
+            style="@style/push_feedback_ib"
+            android:src="@drawable/face_enjoy" />
+
+        <ImageButton
+            android:id="@+id/ib5"
+            style="@style/push_feedback_ib"
+            android:src="@drawable/face_love_it" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <unique.packagename.widget.MainButton
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK" />
+
+        <unique.packagename.widget.MainButton
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/top_bar" >
+    
+    <unique.packagename.widget.Button android:id="@+id/btn_vippie"
+		style="@style/top_bar_button"
+		android:layout_weight="1"
+		android:visibility="visible"
+	/>
+	<unique.packagename.widget.Button android:id="@+id/btn_all"
+		style="@style/top_bar_button"
+		android:layout_weight="1"
+		android:visibility="visible"
+	/>
+</LinearLayout>

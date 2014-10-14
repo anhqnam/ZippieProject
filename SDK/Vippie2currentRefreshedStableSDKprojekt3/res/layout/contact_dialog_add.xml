@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+    <unique.packagename.widget.MainTextView
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="@color/text_row_primary"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:text="@string/add_info"
+        />
+    
+    <unique.packagename.widget.MainEditText
+        android:id="@+id/contact_firstname"
+        android:background="@drawable/textfield_default_holo_dark"
+		android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="@color/text_row_primary"
+        android:hint="@string/add_first_name_hint"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:inputType="textNoSuggestions"
+        android:imeOptions="actionNext"
+		/>
+    
+    <unique.packagename.widget.MainEditText 
+        android:id="@+id/contact_lastname"
+        android:background="@drawable/textfield_default_holo_dark"
+		android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="@color/text_row_primary"
+        android:hint="@string/add_last_name_hint"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:inputType="textNoSuggestions"
+        android:imeOptions="actionDone"
+		/>
+    
+</LinearLayout>

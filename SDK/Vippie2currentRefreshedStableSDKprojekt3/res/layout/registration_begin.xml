@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_p">
+	
+	<ImageView
+	    android:layout_width="fill_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:drawingCacheQuality="high"
+		android:scaleType="fitCenter"
+		android:layout_centerInParent="true"
+		android:layout_marginLeft="45dp"
+		android:layout_marginRight="45dp"
+		android:layout_marginTop="20dp"
+		android:layout_marginBottom="20dp"
+		android:src="@drawable/splash_logo_big">
+	</ImageView>
+    
+    <TableLayout
+        android:id="@+id/navigation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="left">
+
+        <TableRow
+            android:id="@+id/login_id"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/row_secondary"
+            android:gravity="center" >
+
+            <unique.packagename.widget.MainTextView
+                android:id="@+id/login_id_text"
+                style="@style/registration_number_navigation"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/registration_have_id"
+                android:textColor="@color/registration_text_row" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/register_id"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/row_primary"
+            android:gravity="center" >
+
+            <unique.packagename.widget.MainTextView
+                android:id="@+id/register_id_text"
+                style="@style/registration_number_navigation"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/registration_sign_id"
+                android:textColor="@color/registration_text_row" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

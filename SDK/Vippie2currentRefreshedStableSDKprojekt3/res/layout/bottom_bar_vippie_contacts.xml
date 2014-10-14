@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/top_bar" 	 
+	>
+
+	    <ImageButton android:id="@+id/btn_vippie"
+			style="@style/bottom_bar_vippie"
+			android:background="@drawable/bottom_bar_btn_selector_left"
+			android:src="@drawable/contacts_vippie_filter_btn_selector"
+		/>
+	    
+		<ImageButton android:id="@+id/btn_all"
+			style="@style/bottom_bar_vippie"
+			android:background="@drawable/bottom_bar_btn_selector_right"
+			android:src="@drawable/contacts_all_filter_btn_selector"
+	/>
+
+</LinearLayout>

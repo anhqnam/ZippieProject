@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/incoming_call_operations_size"
+    android:layout_height="@dimen/incoming_call_operations_size">
+
+    <ImageView
+        android:id="@+id/circle_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/incoming_call_background_circle_margin"
+        android:src="@drawable/incoming_call_operations_circle"
+        android:scaleType="fitCenter"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rings"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/incoming_call_operations_ring"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/incoming_call_operations_ring"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+	
+    <unique.packagename.widget.AnsweringArrow
+        android:id="@+id/answer_left_arrow"
+        android:scaleType="fitCenter"
+        android:layout_width="31dp"
+        android:layout_height="16dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="55dp"
+        />
+    
+    <unique.packagename.widget.AnsweringArrow
+        android:id="@+id/answer_right_arrow"
+        android:scaleType="fitCenter"
+        android:layout_width="31dp"
+        android:layout_height="16dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="55dp"
+        />
+    
+    <unique.packagename.widget.AnsweringArrow
+        android:id="@+id/answer_top_arrow"
+        android:scaleType="fitCenter"
+        android:layout_width="16dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="55dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        />
+    
+    <ImageView
+        android:id="@+id/call_operation_answer_audio"
+        android:layout_width="@dimen/incoming_call_operations_icons_size"
+        android:layout_height="@dimen/incoming_call_operations_icons_size"
+        android:src="@drawable/ic_calling_accept_call"
+        android:tag="call_operation"
+        />
+
+    <ImageView
+        android:id="@+id/call_operation_answer_video"
+        android:layout_width="@dimen/incoming_call_operations_icons_size"
+        android:layout_height="@dimen/incoming_call_operations_icons_size"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_calling_accept_video_call"
+        android:tag="call_operation"
+        />
+
+    <ImageView
+        android:id="@+id/call_operation_reject"
+        android:layout_width="@dimen/incoming_call_operations_icons_size"
+        android:layout_height="@dimen/incoming_call_operations_icons_size"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_calling_end_call"
+        android:tag="call_operation"
+        />
+
+    <!-- Lock will be centered programmaticaly - do not add centerParent -->
+    
+    <ImageView
+        android:id="@+id/lock"
+        android:layout_width="@dimen/incoming_call_operations_icons_size"
+        android:layout_height="@dimen/incoming_call_operations_icons_size"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_calling_lockscreen_lock"
+        />
+
+</RelativeLayout>

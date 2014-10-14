@@ -1,0 +1,208 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="80dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/calling_list_entry_bg"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/top_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <unique.packagename.widget.MainTextView
+                android:id="@+id/dialog_title_custom"
+                style="@style/CallingListEntryHeaderText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Test"
+                android:textColor="@color/white"
+                android:layout_marginLeft="40dp" />
+
+            <ImageView
+                android:id="@+id/search_close_btn"
+                android:layout_width="@dimen/action_medium_icon"
+                android:layout_height="@dimen/action_medium_icon"
+                android:scaleType="fitXY"
+                android:src="@drawable/button_msg_notification_dialog" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/separator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_bar"
+            android:background="@drawable/calling_list_entry_separator"
+            android:padding="20dp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/separator"
+            android:layout_marginTop="5dp"
+            android:minHeight="50dp"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <unique.packagename.widget.MainTextView
+                android:id="@+id/dialer_mgs_search_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/dialer_msg_searching_number"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/search_msg_section"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="17dp"
+                android:visibility="visible" >
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <ImageButton
+                        android:id="@+id/paid_call"
+                        style="@style/searching_dialog_button"
+                        android:src="@drawable/popup_actions_call" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/found_vippie_msg_section"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="17dp" >
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" >
+
+                        <ImageButton
+                            android:id="@+id/callmode_dialog_freeaudio"
+                            style="@style/searching_dialog_button"
+                            android:src="@drawable/contacts_free_actions_call" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone" >
+
+                        <ImageButton
+                            android:id="@+id/paid_call2"
+                            style="@style/searching_dialog_button"
+                            android:padding="2dp"
+                            android:src="@drawable/popup_actions_call" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" >
+
+                        <ImageButton
+                            android:id="@+id/callmode_dialog_freevideo"
+                            style="@style/searching_dialog_button"
+                            android:src="@drawable/contacts_free_actions_video" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:orientation="vertical" >
+
+                    <unique.packagename.widget.MainTextView
+                        android:id="@+id/dialer_msg_search_out"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/dialer_msg_searching_out"
+                        android:textColor="@color/white" />
+
+                    <ImageButton
+                        android:id="@+id/callmode_dialog_audio_vippie"
+                        style="@style/searching_dialog_button"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/popup_actions_call" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/non_vippie_msg_section"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="17dp"
+                android:visibility="visible" >
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <ImageButton
+                        android:id="@+id/callmode_dialog_audio"
+                        style="@style/searching_dialog_button"
+                        android:src="@drawable/popup_actions_call" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <ImageButton
+                        android:id="@+id/invite_dialog"
+                        style="@style/searching_dialog_button"
+                        android:src="@drawable/tell_chat" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

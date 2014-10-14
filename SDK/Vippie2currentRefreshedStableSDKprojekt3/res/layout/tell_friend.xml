@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <unique.packagename.widget.TitleBar
+            android:id="@+id/label"
+            android:background="@color/row_primary"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bars_height"
+            app:label="@string/more_tell_friends" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <unique.packagename.widget.MainTextView
+                android:id="@+id/tell_invite_by_vippie"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/row_primary"
+                android:padding="15dp"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/text_row_primary" />
+
+            <LinearLayout
+                style="@style/options_tell_row_light"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/tell_sms"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/options_tell_light_icon_size"
+                    android:layout_weight="25"
+                    android:background="@color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/tell_chat" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/tell_mail"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/options_tell_light_icon_size"
+                    android:layout_weight="25"
+                    android:background="@color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/tell_mail" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/tell_facebook"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/options_tell_light_icon_size"
+                    android:layout_weight="25"
+                    android:background="@color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/tell_facebook" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/tell_twitter"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/options_tell_light_icon_size"
+                    android:layout_weight="25"
+                    android:background="@color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/tell_twitter" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <unique.packagename.widget.MainTextView
+                android:id="@+id/tell_invite_and_call"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="20dp"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="@color/row_secondary" />
+
+            <ViewSwitcher
+                android:id="@+id/tell_get_dolars_switcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp" >
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <unique.packagename.widget.MainTextView
+                    android:id="@+id/tell_url_get_dolars"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="20dp"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/text_noneditable" />
+            </ViewSwitcher>
+
+            <LinearLayout
+                android:id="@+id/tell_who_invites"
+                style="@style/options_row_dark"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/row_secondary" >
+
+                <unique.packagename.widget.MainTextView
+                    android:id="@+id/tell_who_invites_text"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/tell_who_invites_you"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/text_row_primary" />
+
+                <ImageView
+                    android:id="@+id/tell_who_invites_icon"
+                    android:layout_width="@dimen/options_dark_icon_size"
+                    android:layout_height="@dimen/options_dark_icon_size"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/arrow_right" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

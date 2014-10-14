@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    >
+	
+	<unique.packagename.widget.TitleBar
+        android:id="@+id/voicemail_list_label"
+        android:background="@color/row_primary"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bars_height"/>
+	<ListView
+		android:id="@android:id/list"
+		android:layout_width="fill_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:scrollingCache="true"
+		android:cacheColorHint="#00000000"
+		android:divider="@color/contact_list_divider"
+		android:dividerHeight="1dp"
+	/>
+	
+	<LinearLayout
+        android:id="@android:id/empty"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1" >
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/voicemail_list_empty_msg"
+            style="@style/list_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/messages_list_msg"
+            android:gravity="center" />
+    </LinearLayout>
+		
+	<!-- <unique.packagename.widget.MainTextView android:id="@android:id/empty"
+		style="@style/list_message"
+		android:gravity="top|center_horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:text="@string/voicemail_empty_list"
+	/> -->
+	<RelativeLayout
+        android:id="@+id/panel_bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bars_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/tabs"
+        android:padding="5dp" >
+
+        <ImageButton
+            android:id="@+id/voicemail_delete"
+            android:layout_width="@dimen/bottom_bar_btn_height"
+            android:layout_height="@dimen/bottom_bar_btn_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bottom_bar_btn_selector_both"
+            android:src="@drawable/did_edit"
+            android:visibility="visible" />
+        
+        
+
+    </RelativeLayout>	
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/calling_active_call_top_calls_padding" >
+
+        <!--
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/call_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Calling"
+        style="@style/CallingListEntryHeaderText"/>
+        -->
+
+        <RelativeLayout
+            android:id="@+id/call_avatar_container"
+            android:layout_width="@dimen/calls_list_avatar_size"
+            android:layout_height="@dimen/calls_list_avatar_size" >
+
+            <ImageView
+                android:id="@+id/call_avatar"
+                android:layout_width="@dimen/calls_list_avatar_size"
+                android:layout_height="@dimen/calls_list_avatar_size"
+                android:scaleType="fitCenter"
+                android:src="@drawable/calling_unknown_image" />
+
+        </RelativeLayout>
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/call_uri"
+            style="@style/CallingTopListEntryUriText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/call_avatar_container"
+            android:layout_alignRight="@id/call_avatar_container"
+            android:layout_below="@id/call_avatar_container"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/calling_active_call_top_contacts_panel"
+            android:gravity="center"
+            android:text="Name"
+            android:textSize="@dimen/calling_active_call_top_calls_uri_text_size" />
+    </RelativeLayout>
+
+</RelativeLayout>

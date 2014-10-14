@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/contacts_row"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/voicemail_row_avatar"
+        android:layout_alignParentLeft="true"
+		android:layout_width="@dimen/contacts_avatar_container_width"
+		android:layout_height="@dimen/contacts_avatar_container_height">
+
+		<include 
+		    layout="@layout/avatar"/>
+		
+	</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_toRightOf="@id/voicemail_row_avatar"
+        android:layout_gravity="left|center_vertical"
+        android:orientation="vertical" >
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/voicemail_from"
+            style="@style/contacts_row_name"
+            android:ellipsize="end"
+            android:lines="1"
+            
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="frommmm&#160;ewwwwww" />
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/voicemail_duration"
+            style="@style/contacts_row_number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="duration_value"
+            android:textColor="@color/text_noneditable" />
+    </LinearLayout>
+	
+    <ImageView 
+        android:id="@+id/voicemail_call"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="fitXY"
+        android:focusable="true"
+        
+        android:layout_gravity="center_vertical"
+        android:background="@color/transparent"
+        android:src="@drawable/button_play"/>
+    
+    <ImageView 
+        android:id="@+id/voicemail_remove"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:focusable="true"        
+        android:layout_gravity="center_vertical"
+        android:background="@color/transparent"
+        android:src="@drawable/ic_row_clear"/>
+    
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/voicemail_date"
+        style="@style/voicemail_row_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="95sp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:minLines="2"       
+        android:text="00-00-0000" />
+
+</LinearLayout>

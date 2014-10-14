@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/tabs"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bars_height"
+    android:padding="5dp"
+    android:gravity="center" >
+    
+    <ImageButton 
+        android:id="@+id/messages_threads_"
+        android:layout_height="@dimen/bottom_bar_btn_height"
+        android:layout_width="@dimen/bottom_bar_btn_height"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_contacts_add"
+        android:background="@drawable/bottom_bar_btn_selector_both"
+        android:visibility="invisible"
+         />
+    
+	<ImageButton
+        android:id="@+id/btn_messages_new"
+        style="@style/bottom_bar_vippie"
+        android:layout_height="@dimen/bottom_bar_btn_height"
+        android:layout_width="@dimen/bottom_bar_btn_height"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_compose"
+        android:background="@drawable/bottom_bar_btn_selector_both"
+         />
+</RelativeLayout>

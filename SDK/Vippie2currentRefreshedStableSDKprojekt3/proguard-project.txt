@@ -1,0 +1,104 @@
+-dontwarn com.google.**
+-dontwarn java.awt.**
+-dontwarn javax.security.**
+-dontwarn org.xmlpull.v1.**
+-dontwarn org.joda.time.**
+-dontwarn com.amazon.**
+-dontwarn com.inmobi.**
+-dontwarn org.apache.**
+-dontwarn org.w3c.**
+-dontwarn java.beans.**
+-dontwarn com.google.android.gms.**
+
+-renamesourcefileattribute SourceFile    
+-keepattributes SourceFile,LineNumberTable
+
+-keep class com.facebook.** { *; }
+
+-keep class com.appsflyer.** { *; }
+-keep class com.tapjoy.** { *; }
+-keep class com.moblin.** { *; }
+-keep class com.google.** { *; }
+-keep class com.android.internal.** { *; }
+
+-keep public class com.voipswitch.jni.NativeLibrariesLoader {
+	*;
+}
+
+-keep public class com.voipswitch.pjsipwrapper.PJSIPWrapper {
+	*;
+}
+
+-keep public class com.voipswitch.media.video.backend.webrtc.VideoEngineWebRTC {
+	*;
+}
+
+-keep public class com.voipswitch.media.video.camera.VippieCameraController {
+	*;
+}
+
+-keep public class com.voipswitch.media.audio.backend.webrtc.AudioEngineWebRTC {
+	*;
+}
+
+-keep class com.voipswitch.media.audio.backend.webrtc.WebRtcAudioTrack {
+	*;
+}
+
+-keep class com.voipswitch.media.audio.backend.webrtc.WebRtcAudioRecord {
+	*;
+}
+
+-keepclassmembers class * implements java.io.Serializable
+{
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+-keep class com.facebook.** {
+   *;
+}
+
+-keep public class com.voipswitch.xmpp.facebook.SASLXFacebookPlatformMechanism {*;}
+-keep public class com.voipswitch.xmpp.google.SALSGTalkOauthMechanism {*;}
+
+
+-keep public class unique.packagename.dialer.BaseDialerActivity {
+	public void nop(android.view.View);
+}
+
+-keep public class unique.packagename.dialer.BaseCallingActivity {
+	public void nop(android.view.View);
+}
+
+-keep public class unique.packagename.dialer.widget.CameraPreview {
+	public void setZOrderMediaOverlay(boolean);
+}
+
+-keep public class unique.packagename.dialer.widget.ControlledEditText {
+	*;
+}
+
+-keep public class unique.packagename.widget.ImageViewRounded {
+	*;
+}
+
+-keep class * extends java.util.ListResourceBundle {
+    protected Object[][] getContents();
+}
+
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+    @ccom.google.android.gms.common.annotation.KeepName *;
+}
+
+-keepnames class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}

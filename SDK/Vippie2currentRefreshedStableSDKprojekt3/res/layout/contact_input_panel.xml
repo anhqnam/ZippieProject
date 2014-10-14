@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contact_input_panel"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/bars_height"
+    android:gravity="center_vertical"
+    android:background="@color/row_primary_transparent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/transparent_bg" >
+
+        <unique.packagename.widget.MainEditText
+            android:id="@+id/edt_recipient_number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:textColor="@color/text_row_primary"
+            android:textColorHint="@color/text_hint"
+            android:imeOptions="actionNone"
+            android:gravity="left|center_vertical"
+            android:inputType="phone"
+            android:digits="+1234567890 "
+            android:minHeight="30dp"
+            android:paddingLeft="5dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_pick_contact"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_pick" />
+</LinearLayout>

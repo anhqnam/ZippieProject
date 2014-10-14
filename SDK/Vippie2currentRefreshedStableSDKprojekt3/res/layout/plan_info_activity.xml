@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <unique.packagename.widget.TitleBar
+            android:id="@+id/plan_info_name"
+            android:background="@color/row_primary"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bars_height"/>
+
+    <LinearLayout
+        android:id="@+id/plan_info_buy_section"
+        style="@style/options_row_dark"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/plan_info_buynow_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/plan_info_buy"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="@color/text_noneditable" />
+
+        <RelativeLayout
+            android:id="@+id/plan_info_row_buy_click_receiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp" >
+
+            <ImageView
+                android:layout_width="@dimen/options_large_icon"
+                android:layout_height="@dimen/options_large_icon"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/option_buy_blank" />
+
+            <unique.packagename.widget.MainTextView
+                android:id="@+id/plan_info_row_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="5$"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/text_row_primary" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/transparent"
+        android:dividerHeight="10dp"
+        android:listSelector="@color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/plan_terms_row"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:background="@color/vippie_dark_gray" >
+
+        <ImageView
+            android:id="@+id/terms_arrow"
+            android:layout_width="@dimen/options_dark_icon_size"
+            android:layout_height="@dimen/options_dark_icon_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/arrow_right" />
+
+        <unique.packagename.widget.MainTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/terms_arrow"
+            android:singleLine="true"
+            android:text="@string/plan_terms"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="@color/text_row_primary" />
+    </RelativeLayout>
+
+</LinearLayout>

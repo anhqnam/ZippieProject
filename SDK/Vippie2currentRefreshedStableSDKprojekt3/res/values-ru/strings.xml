@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vippie</string>
+    <string name="settings_title">Настройки</string>
+
+    <string name="call_state_incoming">Входящий</string>
+    <string name="call_state_dialing">Набор...</string>
+    <string name="call_state_ringing">Звонок</string>
+    <string name="call_state_disconnected">Разъединено</string>
+    <string name="call_state_failed">Сбой</string>
+    <string name="call_state_active">Активный</string>
+    <string name="call_state_hold">Удерживаемый</string>
+    <string name="call_state_remote_hold">Собеседник удерживает звонок</string>
+    <string name="call_state_conference">Конференция</string>
+
+    <string name="call_waitng_for_remote_video_text">Ожидание видео...</string>
+
+    <string name="account_registered">Онлайн</string>
+    <string name="account_trying_register">Соединение</string>
+    <string name="account_not_registered">Не в сети</string>
+    <string name="account_activation_required">Требуется активация</string>
+    <string name="account_activation_sms_received">Код активации получен через смс</string>
+    <string name="account_activation_sms_obtained">Код активации находится во входящих</string>
+	
+    <string name="remote_video_offer_title_text">Включить видео</string>
+	<string name="calling_video_offer_text">Собеседник хочет с Вами начать видеозвонок. Вы согласны?</string>
+    <string name="calling_video_offer_accept">Принять</string>
+    <string name="calling_video_offer_reject">Отклонить</string>
+
+    <string name="menu_quit">Выход</string>
+
+    <string name="menu_mute">Без звука</string>
+    <string name="menu_unmute">Включить звук</string>
+    <string name="menu_hold">Удерживать</string>
+    <string name="menu_unhold">Снять с удержания</string>
+    <string name="menu_speaker_on">Вкл. динамик</string>
+    <string name="menu_speaker_off">Выкл. динамик</string>
+    <string name="menu_video_start">Начать видеоразговор</string>
+    <string name="menu_video_stop">Закончить видеразговор</string>
+    <string name="menu_addcall">Добавить звонок</string>
+    <string name="menu_split">Разъединить</string>
+    <string name="menu_merge">Объединить</string>
+    <string name="menu_keypad">Клавиатура</string>
+    <string name="menu_transfer">Переадресация</string>
+    <string name="menu_conference">Конференция</string>
+
+    <string name="menu_record">Запись</string>
+    <string name="menu_record_pause">Пауза</string>
+    <string name="menu_view">Просмотр</string>
+    <string name="menu_delete_all">Удалить все</string>
+    <string name="menu_total_duration">Общая продолжительность</string>
+    <string name="menu_add_contact">Добавить контакт</string>
+    <string name="menu_add_xmpp_contact">Добавить XMPP контакт</string>
+    <string name="menu_filter">Фильтр</string>
+    <string name="menu_add_to_phonebook">Добавить в тел. книгу</string>
+    <string name="menu_create_new_contact">Создать новый контакт</string>
+    <string name="menu_choose_existing_contact">Изменить существующий контакт</string>
+    <string name="menu_details">Детали</string>
+    <string name="menu_delete">Удалить</string>
+    <string name="menu_edit">Изменить</string>
+    <string name="menu_call">Звонок</string>
+    <string name="menu_message">Сообщение</string>
+    <string name="menu_send_msg">Отправить сообщение</string>
+    <string name="menu_new_msg">Новое сообщение</string>
+    <string name="menu_resend">Повторить попытку</string>
+    <string name="menu_copy_to_clipboard">Копировать в буфер обмена</string>
+    <string name="menu_checkrate">Узнать тарифы</string>
+
+    <string name="menu_select_all">Выбрать всё</string>
+    <string name="menu_deselect_all">Снять отметки</string>
+
+    <string name="hide_dialpad_text">Скрыть клавиатуру</string>
+	<string name="dialpad_rate_suffix">/мин.</string>
+<!-- do not translate -->
+    <string name="dialpad_btn_0"><big>0</big>\n<small>+-</small></string>
+    <string name="dialpad_btn_1"><big>1</big></string>
+    <string name="dialpad_btn_2"><big>2</big>\n<small>ABC</small></string>
+    <string name="dialpad_btn_3"><big>3</big>\n<small>DEF</small></string>
+    <string name="dialpad_btn_4"><big>4</big>\n<small>GHI</small></string>
+    <string name="dialpad_btn_5"><big>5</big>\n<small>JKL</small></string>
+    <string name="dialpad_btn_6"><big>6</big>\n<small>MNO</small></string>
+    <string name="dialpad_btn_7"><big>7</big>\n<small>PQRS</small></string>
+    <string name="dialpad_btn_8"><big>8</big>\n<small>TUV</small></string>
+    <string name="dialpad_btn_9"><big>9</big>\n<small>WXYZ</small></string>
+    <string name="dialpad_btn_ast"><big>*\n<small>@</small></big></string>
+    <string name="dialpad_btn_hash"><big>#\n<small>_.,</small></big></string>
+    <string name="dialpad_call">Call</string>
+<!-- do not translate -->
+    
+    <string name="contact_name_default">(Неизвестный)</string>
+
+    <string name="calllog_title">Журнал звонков</string>
+    <string name="calllog_view">Выбрать вид</string>
+    <string name="calllog_view_all">Все</string>
+    <string name="calllog_view_incoming">Входящие</string>
+    <string name="calllog_view_outgoing">Исходящие</string>
+    <string name="calllog_view_missed">Пропущенные</string>
+    <string name="calllog_total_duration">Общая продолжительность</string>
+    <string name="calllog_confimr_delete_all">Вы действительно хотите удалить историю звонков?</string>
+    <string name="calllog_empty_list">Нет записей</string>
+
+    <string name="contacts_title">Контакты</string>
+    <string name="contacts_search_hint">Поиск контактов</string>
+    <string name="contacts_enter_sip_uri_hint">Введите номер</string>
+    <string name="contacts_enter_jid_uri_hint">Введите XMPP URI</string>
+    <string name="contacts_regular">Контакты</string>
+    <string name="contacts_xmpp">XMPP контакты</string>
+    <string name="messages_title">Сообщения</string>
+    <string name="messages_empty_list">Начать переписку</string>
+    <string name="messages_me">Я</string>
+    <string name="messages_read_status">Читать</string>
+    <string name="messages_unsupported_operation">Операция не поддерживается. Пожалуйста, обновите приложение</string>
+    <string name="message_compose_hint">Введите</string>
+    <string name="message_not_vippie">Это не пользователь %s, файлы не могут быть отправлены</string>
+    <string name="message_notification_ticked">Пришло новое сообщение</string>
+    <string name="message_notification_title">От</string>
+    <string name="voicemail_notification_title">Голосовая почта</string>
+    <string name="voicemail_notification_text">У Вас %d новых сообщений</string>
+    <string name="voicemail_notification_ticked">Новые голосовые сообщения</string>
+    <string name="message_att_title">Выберите тип файла</string>
+    <string name="message_att_picture">Выбрать из галереи</string>
+    <string name="message_att_picture_from_camera">Сделать фото</string>
+    <string name="message_att_audio_from_record">Голосовая запись</string>
+    <string name="message_att_video_from_record">Записать видео</string>
+    <string name="message_att_not_allowed">Запрещено во время звонка</string>
+    <string name="contact_xmpp_contact_added_notification">XMPP контакт добавлен:\n%1$s</string>
+
+    <string name="checkrate_title">Узнать тарифы</string>
+    <string name="checkrate_prefix_hint">Введите номер телефона или префикс</string>
+    <string name="checkrate_info_destination_label">Направление:</string>
+    <string name="checkrate_info_rate_label">Тариф:</string>
+    <string name="checkrate_info_duration_label">Максимальная длительность:</string>
+
+    <string name="http_connection_failed">Проблема с подключением</string>
+
+    <string name="recharge_title">Пополнить счет</string>
+    <string name="recharge_entry_text">Пополнить счет</string>
+    <string name="recharge_description">Звоните по невероятно низким тарифам контактам, которые не используют приложение. Пополните счет непосредственно со своего %1$s счета</string>
+
+    <string name="billing_missing_transaction_id">Невозможно произвести операцию</string>
+    <string name="billing_problems_with_recharge">Проблемы с пополнением счета</string>
+    <string name="billing_not_supported_title">Вы не можете совершать финансовые операции</string>
+    <string name="billing_not_supported_message">Услуга платежа временно недоступна.  Вы можете пользоваться приложением, но не можете совершать финансовые операции.</string>
+    <string name="billing_cannot_connect_title">Вы не можете подключиться к системе платежей</string>
+    <string name="billing_cannot_connect_message">Приложение не может соединиться с системой платежей.\nВозможно, ваша версия %1$s устарела.\nВы можете пользоваться приложением, но\nнe можете совершать финансовые операции.</string>
+    <string name="billing_transaction_finished_ok">Операция успешно завершена. Ваш баланс пополнен</string>
+    <string name="billing_transaction_finished">Операция закончена; состояние: %s</string>
+
+    <string name="date_today">Сегодня</string>
+
+    <string name="button_yes">Да</string>
+    <string name="button_no">Нет</string>
+    <string name="button_ok">Oк</string>
+    <string name="button_save">Сохранить</string>
+    <string name="button_cancel">Отмена</string>
+    <string name="button_edit">Изменить</string>
+    <string name="button_details">Детали</string>
+    <string name="button_delete">Удалить</string>
+    <string name="button_send">Отправить</string>
+
+    <string name="button_checkrate">Узнать</string>
+    <string name="button_display">Дисплей</string>
+    <string name="button_close">Закрыть</string>
+
+    <string name="calling_notification_ticker">SIP звонок начался</string>
+    <string name="calling_notification_title">Текущий SIP вызов</string>
+    <string name="calling_notification_text">Нажмите для восстановления звонка</string>
+
+    <string name="callmode_dialog_title">Выбрать режим звонка</string>
+    <string name="callmode_dialog_audio">Аудио</string>
+    <string name="callmode_dialog_video">Видео</string>
+
+    <string name="msg_account_state">Баланс</string>
+    <string name="msg_loading">Загрузка...\nПожалуйста, подождите</string>
+
+    <string name="new_messages_title">Новые сообщения</string>
+    <string name="new_messages_voice_msg">У Вас %d новое(ых) голосовое(ых) сообщение(ий)</string>
+    <string name="new_messages_voice_btn">Прослушать голосовую почту</string>
+
+    <string name="settings_screen_audio">Аудио</string>
+    <string name="settings_screen_video">Видео</string>
+    <string name="settings_screen_system">Настройки системы</string>
+    <string name="settings_screen_deactivate">Деактивация аккаунта</string>
+    <string name="settings_deactivate_title">Деактивация аккаунта</string>
+    <string name="settings_deactivate_msg">Вы действительно хотите деактивировать аккаунт?</string>
+    <string name="error_deactivating">Ошибка  при деактивации аккаунта</string>
+
+    <string name="settings_key_video_front_camera">Передняя камера</string>
+    <string name="settings_key_video_front_camera_sum_on">При наличии будет использована передняя камера</string>
+    <string name="settings_key_video_front_camera_sum_off">Использована будет основная камера</string>
+    <string name="settings_key_video_bps">Скорость передачи данных</string>
+    <string name="settings_key_video_res">Разрешение</string>
+    <string name="settings_key_video_fps">Количество кадров в секунду</string>
+    <string name="settings_key_video_recording">Запись</string>
+
+    <string name="settings_key_ringtone">Рингтон телефона</string>
+    <string name="settings_key_ringtone_summary">Рингтон входящего вызова</string>
+    <string name="settings_sms_key_ringtone">Звук SMS</string>
+    <string name="settings_sms_key_ringtone_summary">Звук входящего сообщения</string>
+    <string name="settings_key_keytones">Вкл. звук клавиатуры</string>
+    <string name="settings_key_keytones_summary">Вкл./Откл. звук клавиатуры</string>
+    <string name="settings_key_vibration">Вкл. вибрацию</string>
+    <string name="settings_key_vibration_summary">Вкл./Откл. вибрацию</string>
+    <string name="settings_key_bluetooth">Использовать гарнитуру Bluetooth</string>
+    <string name="settings_key_bluetooth_summary">Вкл. если хотите использовать гарнитуру Bluetooth</string>
+
+    <string name="settings_key_message_type">Тип сообщения</string>
+
+    <string name="settings_key_voice">Голосовая почта</string>
+    <string name="settings_key_voice_summary">Номер голосовой почты</string>
+    <string name="settings_key_service_auto_start">Автостарт</string>
+    <string name="settings_key_service_auto_start_summary">После старта системы начнется использование VOIP</string>
+    <string name="settings_key_native_calllog">Использовать свой журнал вызовов</string>
+    <string name="settings_key_native_calllog_summary">Журнал вызовов переместить в историю вызовов телефона, если это возможно</string>
+
+    <string name="settings_key_push_notifications">Push-уведомления</string>
+    <string name="settings_key_push_notifications_summary">Вкл./Откл. GCM push-уведомления, когда пользователь не в сети</string>
+    <string name="settings_key_pop_up_notifications">Всплывающие уведомления</string>
+    <string name="settings_key_pop_up_notifications_summary">Вкл./Откл. окно всплывающих уведомлений</string>
+
+  <string name="settings_key_about">О нас</string>
+  <string name="settings_key_version">Версия</string>
+  <string name="settings_key_website">Наш вебсайт</string>
+  <string name="settings_website">www.ivippie.com</string>
+  <string name="settings_key_legal">Лицензия</string>
+  <string name="settings_deactivate_info">Деактивация аккаунта приведет к потере всех данных из приложения</string>
+
+  <string name="settings_use_vippie_ringtone">Использовать %s звонок телефона</string>
+  <string name="settings_use_vippie_ringtone_summary">Вкл./Откл. %s звонок телефона</string>
+  <string name="settings_use_vippie_sms_ring">Использовать %s звук SMS</string>
+  <string name="settings_use_vippie_sms_ring_summary">Вкл./Откл. %s Звук SMS</string>
+
+    <string name="empty_number_error">Пожалуйста, введите номер</string>
+    <string name="empty_voice_number_error">Установите номер голосовой почты в настройках</string>
+
+    <string name="regstate_authentification_error">Неверное имя или пароль.</string>
+    <string name="regstate_server_error">Невозможно соединиться с сервером.</string>
+    <string name="regstate_unknown_error">Ошибка при регистрации.</string>
+    <string name="regstate_default_error">Аккаунт не зарегистрирован. Проверьте настройки и интернет-соединение.</string>
+
+    <string name="regstate_error_title">Ошибка при регистрации</string>
+    <string name="send_error">Ошибка при отправлении!</string>
+    <string name="regstate_ok_button">Oк</string>
+    <string name="regstate_settings_button">Настройки</string>
+
+    <string name="contact_info_call">Звонок</string>
+    <string name="contact_info_send_text">SMS</string>
+    <string name="contact_info_add_to_fav">Избранный</string>
+
+    <string name="contact_info_incoming">Входящие вызовы</string>
+    <string name="contact_info_outgoing">Исходящие вызовы</string>
+    <string name="contact_info_share">Поделиться</string>
+
+  <string name="presence_status_online">Онлайн</string>
+  <string name="presence_status_offline">Не в сети</string>
+  <string name="presence_status_push">На Push-уведомлении</string>
+
+    <string name="contact_delete_confirmation_dialog_title">Подтверждение</string>
+    <string name="contact_delete_confirmation_dialog_content">Вы действительно хотите удалить %1$s из ваших контактов?</string>
+    <string name="contact_delete_error">При удалении контакта произошла ошибка.</string>
+    <string name="contact_add_error">При добавлении контакта произошла ошибка.</string>
+    <string name="contact_edit_error">При изменении контакта произошла ошибка.</string>
+  
+  <string name="registration_country_code">Код страны</string>
+  <string name="registration_phone_number_hint">Номер телефона</string>
+  <string name="registration_request_sms">Запросить SMS</string>
+  <string name="try_again">Попробовать снова</string>
+  <string name="verification_code">Код активации</string>
+  <string name="registration_continue">Продолжить</string>
+  <string name="registration_country_prompt">Выберите вашу страну</string>
+  <string name="registration_countdown">Пожалуйста, дождитесь получения кода</string>
+
+  <string name="registration_will_send_sms">Мы отправим вам сообщение с \n кодом для активации</string>
+  <string name="registration_terms"><b>Регистрируясь, я принимаю следующее: </b></string>
+  <string name="registration_terms_btn"><u><b>Правила и условия</b></u></string>
+  <string name="registration_acces_btn">
+        <u>
+            <b>Доступ к тел. книге</b>
+        </u>
+    </string>
+
+  <string name="tab_label_contacts">Контакты</string>
+    <string name="tab_label_messages">Сообщения</string>
+    <string name="tab_label_dialpad">Клавиатура</string>
+    <string name="tab_label_callslog">История</string>
+    <string name="tab_label_more">Опции</string>
+
+  <string name="voicemail_new_unheard_messages">Новые/Непрослушанные</string>
+  <string name="voicemail_old_messages">Прослушанные</string>
+  <string name="listen_message">Прослушать сообщение</string>
+  <string name="voicemail_new_none">У Вас нет \nновых сообщений</string>
+  <string name="voicemail_old_none">У Вас нет \nпрослушанных сообщений</string>
+  <string name="voicemail_messages_section">Сообщения</string>
+  <string name="voicemail_send_voicemail_as_attachment_to">Отправить голосовое сообщение на:</string>
+  <string name="voicemail_email">Email</string>
+  <string name="voicemail_set_mail">Введите</string>
+  <string name="voicemail_record_welcome_greeting">Записать приветствие</string>
+  <string name="voicemail_empty_list">Нет сообщений</string>
+  <string name="voicemail_toggle">Голосовая почта</string>
+  <string name="voicemail_retrieving_settings">Настройки получения голосовой почты</string>
+  <string name="voicemail_saving_settings">Сохранить настройки</string>
+  <string name="voicemail_error_retrieving_settings">При настройке получения голосовой почты произошла ошибка</string>
+  <string name="voicemail_error_saving_settings">При сохранении настроек произошла ошибка</string>
+  <string name="call_number">Позвонить на номер</string>
+  <string name="add_number">Добавить номер  в контакты</string>
+
+  <string name="contact_invite_to_vippie">Пригласить к использованию %s</string>
+  <string name="contact_sms_invite_text">Присоединитесь к %1$s через APPSTORE или GOOGLE PLAY\nБесплатные звонки, видеозвонки, отправка сообщений с прикрепленными файлами &amp; Текстовые сообщения\n %2$s</string>
+  <string name="vippie_freecall">Бесплатные звонки</string>
+  <string name="vippie_freevid">Бесплатные видеозвонки</string>
+  <string name="vippie_freesms">Бесплатный чат</string>
+
+  <string name="profile_first_name">Имя</string>
+  <string name="profile_last_name">Фамилия</string>
+  <string name="profile_your_number">Номер телефона</string>
+  <string name="profile_share_your_number">Поделиться номером телефона</string>
+  <string name="profile_details">Данные профиля</string>
+  <string name="profile_sex">Пол</string>
+  <string name="profile_sex_female">Женский</string>
+  <string name="profile_sex_male">Мужской</string>
+  <string name="profile_sex_notset"></string>
+  <string name="profile_country">Страна</string>
+  <string name="profile_city">Город</string>
+  <string name="profile_birthday">День рождения</string>
+  <string name="profile_email">Email</string>
+  <string name="profile_vippie_id">%s логин</string>
+
+  <string name="profile_not_set_hint">Введите</string>
+  <string name="profile_my_status">Мой %s статус</string>
+
+  <string name="profile_camera">Снять фото</string>
+  <string name="profile_phone">Выбрать из галереи</string>
+  <string name="profile_username_alert">Имя пользователя может быть установлено только раз. Продолжить?</string>
+  <!-- empty --><string name="profile_username_title"> </string>
+  <string name="profile_progress_message">Получение данных</string>
+  <!-- empty --><string name="profile_progress_title"> </string>
+  <string name="profile_error_email_wrong">Ошибка при сохранении данных. Неверный адрес email</string>
+  <string name="profile_error_email_used">Ошибка при сохранении данных. Этот email уже используется</string>
+  <string name="profile_error_id_error">Ошибка при установке %s логина. Он должен содержать не менее 6 букв или цифр</string>
+  <string name="profile_data_canceled">Получение данных о Вашем профиле отменено</string>
+
+  <string name="press_record">Нажмите запись</string>
+  <string name="record_your_message">Записать</string>
+  <string name="message_recorded">Сообщение записано</string>
+  <string name="recording_stopped">Запись остановлена</string>
+  <string name="recording">Запись</string>
+  <string name="review_message">Прослушать сообщение</string>
+  <string name="error_sdcard_access">Ошибка доступа к SD карте</string>
+  <string name="error_app_internal">Внутренняя ошибка</string>
+  <string name="insert_sd_card">Остутствует SD карта</string>
+
+  <string name="crop_save_text">Обрезать</string>
+  <string name="crop_discard_text">Отменить</string>
+  <string name="read_picture_error">Ошибка открытия файла: %s</string>
+
+  <string name="image_attachment">Изображение</string>
+  <string name="audio_attachment">Аудио</string>
+  <string name="video_attachment">Видео</string>
+  
+  <string name="audio_recorder_stop">Стоп</string>
+  <string name="audio_recorder_cancel">Отмена</string>
+  <string name="audio_recorder_send">Отправить</string>
+
+  <string name="more_my_profile">Мой профиль</string>
+  <string name="more_my_profile_details">Данные профиля</string>
+  <string name="more_voicemail">Голосовая почта</string>
+  <string name="more_social_hub">Социальные сети</string>
+  <string name="more_top_up">Пополнение счета</string>
+  <string name="more_rates">Тарифы</string>
+  <string name="more_settings">Настройки</string>
+  <string name="more_tell_friends">Поделиться с друзьями</string>
+  <string name="more_help">Помощь</string>
+  <string name="more_status_ok">Oк</string>
+  <string name="more_status_cancel">Отмена</string>
+  <string name="more_status_title">Установить статус</string>
+
+  <string name="rates_country_prompt">Выберите страну</string>
+
+  <string name="call_greeting_displayname">Голосовая почта</string>
+  <string name="call_voicemail_displayname">Голосовая почта</string>
+  <string name="tell_invite_to_vippie">Пригласите к использованию %s через:</string>
+  <string name="tell_invite_and_call">Пригласите к использованию %s и общайтесь бесплатно</string>
+  <string name="tell_who_invites_you">Укажите, кто вас пригласил</string>
+  <string name="tell_you_were_invited">Вас пригласил</string>
+  <string name="tell_friends_email_title">Отличная связь без оплат</string>  
+  <string name="more_tell_text">У меня есть замечательное приложение! В нем огромное количество функций,бесплатные звонки и сообщения. Убедитесь сами %1$s!\n%2$s</string>
+  <string name="facebook_post_on_wall_done">Запись успешно опубликована</string>
+  <string name="facebook_post_on_wall_not_done">Прервано</string> 
+  <string name="facebook_action_canceled">Обновление статуса отменено</string>
+  <string name="facebook_post_on_wall_question">Хотите ли поделиться приглашением к использованию %s на Вашей страничке в Facebook?</string>
+
+  <string name="twitter_post_on_wall_question">Хотите ли поделиться приглашением к использованию %s на Вашей страничке Twitter?</string>
+
+  <string name="hello_title_optional">Доступна новая версия</string>
+  <string name="hello_title_obligatory">Новая версия</string>
+  <string name="hello_message_optional">Новая версия доступна на Google play</string>
+  <string name="hello_message_obligatory">Ваша текущая версия больше не поддерживается. Пожалуйста, загрузите последние обновление.\nЧто нового в обновлении: \n</string>
+  <string name="hello_update">Обновить</string>
+  <string name="hello_do_not_update">Не обновлять</string>
+  <string name="hello_exit">Выход</string>
+
+  <string name="push_notification_call_info_incoming_call">Входящий вызов от:</string>
+  <string name="push_notification_call_info_missed_call">Пропущенный вызов от:</string>
+
+  <string name="push_notification_social_text">Новый пользователь присоединился к %s!</string>
+
+  <string name="push_notification_payment_text">На Вашем счету нет средств.\nВы можете пополнить счет через Google Wallet.</string>
+  <string name="push_notification_payment_top_up">Пополнение счета</string>
+  <string name="push_notification_payment_close">Закрыть</string>
+  <string name="push_notyfication_sms">Сообщение</string>
+  <string name="push_notyfication_payment">Платеж</string>
+  <string name="push_notyfication_social">Социальные сети</string>
+  <string name="push_notyfication_missed">Пропущенные</string>
+  <string name="push_notyfication_incoming">Входящие</string>
+  <string name="push_notyfication_voicemail">Голосовая почта</string>
+
+  <string name="registration_too_many_sms_request_from_the_same_device">Слишком много SMS запросов с одного устройства.</string>
+  <string name="registration_problem_with_internet_connection">Проблемы с интернет-соединением.</string>
+  <string name="registration_wrong_user_pass">Неверный логин или пароль.</string>
+  <string name="registration_wrong_authorisation_code">Неверный код.</string>
+  <string name="registration_too_many_authorisation_attempts">Слишком много попыток.</string>
+  <string name="registration_phone_number_field_can_not_be_empty">Поле "Номер телефона" не может быть пустым</string>
+  <string name="registration_invalid_verification_code">Неверный код</string>
+  <string name="registration_we_will_send_you_an_sms">Мы отправим код подтверждения через SMS на этот номер:</string>
+  <string name="registration_is_this_number_correct">Это правильный номер?</string>
+  <string name="registration_we_will_call_you">Похоже, возникли проблемы при высылании SMS на Ваш номер. Приготовьтесь записать код: нажмите Oк, когда будете готовы. Мы Вам перезвоним.</string>
+  <string name="registration_callback_started">Начался звонок.</string>
+  <string name="registration_existing_account">Похоже, это устройство и номер уже зарегистрированы. Вы можете пользоваться приложением без активационного кода.</string>
+  <string name="registration_activated_account">Аккаунт успешно активирован.</string>
+  <string name="registration_your_phone">Ваш телефонный номер</string>
+  <string name="registration_phone_activate">Активировать</string>
+  <string name="registration_received_code">Получить активационный код</string>
+  <string name="registration_please_wait">Если Вы не получили SMS, пожалуйста, подождите и вышлите запрос о звонке</string>
+  <string name="registration_call_me">Позвоните мне</string>
+  <string name="registration_never_goten"><u>Я так и не получил код</u></string>
+  <string name="registration_feedback_sending">Хотите ли Вы отправить отзыв о проблеме, связанной с регистрацией? Пожалуйста введите Ваш Email</string>
+  <string name="registration_we_will_get">Отзыв отправлен,  скоро мы  с Вами свяжемся.</string>
+  <string name="registration_we_will_get_error">При отправке отзыва возникла проблема</string>
+  <string name="registration_wrong_number">Проверьте правильность номера.</string>
+  <string name="registration_try_in_hour">При отправке SMS произошла ошибка, пожалуйста, попробуйте позже.</string>
+  <string name="registration_enter_code">Введите код</string>
+  <string name="registration_code">Код</string>
+  <string name="registration_sms_sent">Сообщение с кодом отправлено.</string>
+  <string name="registration_vippie_id">ID</string>
+  <string name="registration_vippie_pass">Пароль</string>
+
+  <string name="help_faq">FAQ</string>
+  <string name="help_feedback">Отзыв</string>
+  <string name="help_feedback_send"><b>Отправить</b></string>
+  <string name="help_feedback_section">Отзыв</string>
+
+  <string name="help_facebook_text">Чтобы задать нам вопрос - посетите нас на Facebook</string>
+  <string name="help_twitter_text">Чтобы задать нам вопрос - посетите нас на Twitter</string>
+  
+  <string name="feedback_hint">Отзыв</string>
+  <string name="feedback_email_alert_title">Введите Ваш Email</string>
+  <string name="feedback_email_alert_text">Введите контактный Email</string>
+  <string name="feedback_email_alert_ok">Oк</string>
+  <string name="feedback_email_alert_cancel">Отмена</string>
+  <string name="feedback_sent_ok">Отзыв успешно отправлен</string>
+  <string name="feedback_sent_error">При отправлении отзыва произошла ошибка</string>
+  <string name="feedback_email_sent_error">Проблема в настройках Email</string>
+  
+  <string name="rates_country_section">Тарифы</string>
+  <string name="rates_call_rates">Тарифы на звонки</string>
+  <string name="rates_sms_rates">Тарифы на SMS</string>
+
+ <string name="registration_login_password_lost"><b><u>Не удается войти в аккаунт?</u></b></string>
+    <string name="message_typing">пишет...</string>
+    <string name="account_title">Пополнить счет</string>
+    <string name="account_plans">Планы</string>
+    <string name="account_numbers">Мои номера</string>
+    <string name="account_offers">Тарифы</string>
+    <string name="transaction_canceled">Транзакция отклонена.</string>
+    <string name="transaction_unknown">Транзакция отклонена, неизвестная ошибка. Пожалуйста, обратитесь к администратору.</string>
+    <string name="transaction_voucher_used">Транзакция отклонена. Этот ваучер уже используется.</string>
+    <string name="transaction_voucher_wrong">Транзакция отклонена. Неверный номер ваучера.</string>
+    <string name="registration_or">или</string>
+    <string name="please_wait">Пожалуйста, подождите</string>
+    <string name="registration_use_email_reg">Использовать мой Email</string>
+    <string name="vippie_share">Поделиться</string>
+    <string name="profile_problem_details">Проблема получения данных из Вашего Профиля</string>
+    <string name="more_account">Пополнить счет</string>
+    <string name="more_search">Найти друзей</string>
+    <string name="push_notyfication_feedback_text">Оставьте свой отзыв</string>
+    <string name="push_notyfication_feedback">Тарифы %s</string>
+    <string name="message_att_location">Поделиться местоположением</string>
+    <string name="redirection_to_market">Да! Мы так счастливы, что Вам понравилось работать с нашим приложением %s \n\nПожалуйста, поделитесь своей любовью с другими! \n\n Спасибо за вашу поддержку!</string>
+    <string name="redirection_to_feedback">Ой! \n\nНам так жаль, что Вы так думаете.\nДайте нам шанс исправиться и отправьте нам свой отзыв!</string>
+    <string name="registration_already_exist_number">Номер телефона уже занят. Пожалуйста, используйте другой.</string>
+    <string name="registration_already_assigned_number">Вы уже используете номер телефона. Вы не можете его изменить.</string>
+    <string name="registration_activation_new_number">Мы  вышлем Вам код активации.</string>
+    <string name="registration_activation_by_number">Мы зарегестрируем Ваш аккаунт и вышлем Вам код активации.</string>
+    <string name="registration_logged_in">Вы успешно вошли в систему.</string>
+    <string name="registration_feedback_email_hint">не установлено</string>
+    <string name="registration_your_number">Ваш номер телефона</string>
+    <string name="registration_use_number"><![CDATA[<b>В качестве логина использовать мой номер телефона</b>]]></string>
+    <string name="registration_enter_activation_code"><![CDATA[<b>Введите код активации</b>]]></string>
+    <string name="registration_vippie_id_your">Ваш логин или телефон</string>
+    <string name="registration_vippie_id_set">%s логин</string>
+    <string name="registration_have_id"><![CDATA[<b>Я уже пользователь %s]]></string>
+    <string name="registration_sign_id"><![CDATA[<b>Я новичок в %s</b>]]></string>
+    <string name="registration_your_mail">Ваш Еmail</string>
+    <string name="registration_vippie_pass_conf">Подтвердить пароль</string>
+    <string name="registration_activation_by_email">Мы отправили Вам Email с ссылкой активации. После активации Вы можете войти с помощью  %s логина.</string>
+    <string name="registration_password_bad">Короткие пароли легко угадать. Пожалуйста, выберите пароль длиной от 6-20 символов.</string>
+    <string name="registration_password_not_match">Пароли не совпадают. Попробуйте еще раз.</string>
+    <string name="registration_invalid_email">Неверный Email.</string>
+    <string name="registration_invalid_user">Неверное имя пользователя</string>
+    <string name="registration_used_email">Этот Email уже используется</string>
+    <string name="registration_not_activated">Аккаунт не активирован. Пожалуйста,  используйте ссылку  с активацией,которую Вы получили на Еmail.</string>
+    <string name="registration_activated_with_link">Ваш аккаунт был успешно активирован. Вы можете уже войти.</string>
+    <string name="registration_incorrect_email">Неверный Еmail</string>
+    <string name="registration_used_vippie_id">Этот %s логин уже используется</string>
+    <string name="registration_set_new_number">Введите новый номер тел.</string>
+    <string name="registration_set_new_number_set">Новый номер телефона установлен успешно</string>
+    <string name="registration_go">дальше</string>
+    <string name="registration_back">назад</string>
+    <string name="registration_sign_up">регистр.</string>
+    <string name="registration_log_in">Вход</string>
+    <string name="registration_dialog_problem">У Вас возникли проблемы?\n Свяжитесь с нами:</string>
+    <string name="registration_too_many_devices">Слишком много устройств, активированных с тем же %s логином</string>
+    <string name="registration_hint_login_password"><![CDATA[<b><big>Пароль</big></b><p>Введите пароль, использованный при регистрации.<p>Если Вы уже используете %s приложение на другом устройстве, и у Вас нет пароля, Вы можете создать его в <b>Моём Профиле.</b>]]></string>
+    <string name="registration_hint_login_vippieid"><![CDATA[<b><big>%1$s</big><p>- это многоплатформенное приложение.</b><p><p>Вы можете использовать приложение на: iPhone, Mac, Android и ПК.<p><p>Просто войдите с помощью вашего %2$s логина или номер телефона и пароля.]]></string>
+    <string name="registration_hint_register_mail"><![CDATA[<big><b>Адрес электронной почты</b></big><p><p>Пожалуйста, используйте действительный адрес электронной почты.<p><p>Мы вышлем Вам на этот email ссылку для активации.]]></string>
+    <string name="registration_hint_register_password"><![CDATA[<big><b>Пароль</b></big><p><p>Пожалуйста, выберите пароль длиной от 6&#8211;20 символов.<p><p><b>Вы можете использовать один аккаунт в %1$s на всех ваших устройствах!</b>Используйте свой %2$s логин и пароль, чтобы войти в свой аккаунт на Mac, ПК или смартфоне.]]></string>
+    <string name="registration_hint_vippieid"><![CDATA[<big><b>%1$s логин</big></b><p><p>является уникальным названием в %2$s.<p><p>Он должен состоять из 6&#8211;30  символов, начинаться с буквы и состоящий из букв (a&#8211;z), цифр, точек(.) и знаков подчёркивания(_).Отметим, что мы игнорируем заглавные буквы.]]></string>
+    <string name="registration_hint_number"><![CDATA[<big><b>Отличные новости!</b></big><p><p>%1$s может распознать Вас с помощью Вашего номера телефона.<p><p><b>Вы можете использовать один аккаунт в %2$s на всех Ваших устройствах!</b>Но Вы должны установить пароль в <b>Моём профиле.</b> После этого Вы сможете войти в свою учетную запись на Mac, ПК или смартфоне.]]></string>
+    <string name="registration_hint_number_code"><![CDATA[<b><big>Код активации</big></b><p><p>Вы не получили SMS с кодом активации?<p><p>Если у Вас возникли проблемы с регистрацией, то свяжитесь с нами:]]></string>
+    <string name="registration_dialog_need_help"><![CDATA[<u><b>Нужна помощь?</b></u>]]></string>
+    <string name="registration_dialog_want_more"><![CDATA[<u><b>Хотите знать больше о %s?<b></u>]]></string>
+    <string name="registration_cant_leave">Это поле должно быть заполнено. </string>
+    <string name="registration_username_incorect">Имя пользователя введено неверно</string>
+    <string name="settings_key_video_tablet_fix">Видео-настройки для планшетов</string>
+    <string name="settings_key_video_tablet_fix_summary">Позволяет настроить выходящее видео в горизатальном положениии</string>
+    <string name="settings_key_video_preview_horizontal_flip_fix">Настройки для предварительного просмотра камеры</string>
+    <string name="settings_key_video_preview_horizontal_flip_fix_summary">Позволяет настроить предварительный просмотр камеры на некоторых устройствах в горизантальном положении</string>
+    <string name="intro_tell">рассказать друзьям</string>
+    <string name="intro_free_calls"><![CDATA[Теперь Вы можете совершать звонки,<br>видео звонки и отправлять<br>сообщения <b>другим пользователям %s /b><br>бесплатно!]]></string>
+    <string name="intro_share">
+        <b>
+            <u>проверить это предложение</u>
+        </b>
+    </string>
+    <string name="intro_rates_title">Теперь вы также можете позвонить на стационарные и мобильные телефоны.</string>
+    <string name="intro_invite"><![CDATA[Пригласите своих друзей<br> в %s и получите<br> <b>0,2$</b> для платного звонка<br> за каждое принятое приглашение!]]></string>
+    <string name="intro_next">дальше</string>
+    <string name="intro_end">конец</string>
+    <string name="intro_check">проверить наши тарифы</string>
+    <string name="intro_rates">США&amp;Канада <b>0,004$</b>/ мин\nИндия <b>0,015$</b> /мин\n
+      						Бангладеш <b>0,02$</b>/ мин\nПакистан <b>0,05$</b>/ мин\nЕгипет <b>0,10$</b>/ мин\n</string>
+    <string name="did_title">Купить номер</string>
+    <string name="did_order">Купить номер</string>
+    <string name="did_buy_new">Купить сейчас</string>
+    <string name="did_my_numbers">Мои номера</string>
+    <string name="did_cancel">Отмена</string>
+    <string name="add_invite">Пригласить в  %s</string>
+    <string name="buy_number">Купить номер</string>
+    <string name="profile_password">Пароль</string>
+    <string name="did_pick_country">Страна</string>
+    <string name="did_pick_area">Область</string>
+    <string name="did_pick_period">Длительность</string>
+    <string name="did_next_payment">следующий платеж</string>
+    <string name="did_expires">истекает</string>
+    <string name="did_remove_msg">Вы собираетесь удалить %1$s  номер %2$s.\nВы уверены? Удалить номер или сохранить его до окончания срока действия?</string>
+    <string name="did_order_msg">Вы собираетесь заказать номер %1$s для %2$s, область - %3$s на %4$s  месяца и у Вас будет сниматься с вашего счета %5$s</string>
+    <string name="add_not_found_sorry">К сожалению, ничего не найдено</string>
+    <string name="did_remove">Удалить немедленно</string>
+    <string name="did_number_removed">Номер удален</string>
+    <string name="did_buy_succes">Успешное приобретение номера</string>
+    <string name="did_insufficient_funds">Недостаточно средств</string>
+    <string name="did_unknown_error">Неизвестная ошибка. Пожалуйста, попробуйте позже</string>
+    <string name="did_communication_error">Проблема с доступом в Интернет</string>
+    <string name="add_not_found_invite_number">Этот номер телефона ещё не является пользователем %s</string>
+    <string name="add_not_found_invite_email">Этот адрес электоронной почты ещё не является пользователем %s</string>
+    <string name="add_no_match">К сожалению, ничего не найдено. Похожие результаты:</string>
+    <string name="add_found_free">Вы можете звонить и отправлять сообщения этому контакту БЕСПЛАТНО</string>
+    <string name="add_hint">Логин, email или номер тел.</string>
+    <string name="add_first_name_hint">Добавить имя</string>
+    <string name="add_last_name_hint">Добавить фамилию</string>
+    <string name="add_create">Создать новый контакт</string>
+    <string name="add_empty_name">Имя пользователя должно быть указано</string>
+    <string name="add_offer">Вы также можете использовать наше специальное предложение</string>
+    <string name="add_min_char">Пожалуйста, введите не менее 3 символов</string>
+    <string name="add_info">Пожалуйста, укажите имя и фамилию</string>
+    <string name="add_find">Найти друзей, используя %s логин, email или номер тел.</string>
+    <string name="account_sth_failed">Что-то пошло не так</string>
+    <string name="account_sync_progress">Синхронизируем</string>
+    <string name="dialer_msg_number_is_vippie">Этот номер является пользователем %s, Вы можете звонить ему бесплатно!</string>
+    <string name="dialer_msg_number_non_vippie">Этот номер не является пользователем %1$s. Пригласите друга или совершите дешевый звонок за %2$s %3$s</string>
+    <string name="dialer_msg_searching_number">Минуточку, мы проверяем будет ли звонок бесплатный или же дешевый.</string>
+    <string name="calling_searching">Поиск...</string>
+    <string name="calling_found_vippie">Найден пользов. %s !</string>
+    <string name="calling_found_nonvippie">Это не пользов. %s</string>
+    <string name="dids_details">Детали номера</string>
+    <string name="dids_details_display_name">Показывать меня как:</string>
+    <string name="did_details_share_my_number">Поделиться номером телефона</string>
+    <string name="change_password">Изменить пароль</string>
+    <string name="set_password">Установите пароль</string>
+    <string name="dialog_set_status_title">Установить статус</string>
+    <string name="dialog_old_password">Старый пароль</string>
+    <string name="dialog_new_password">Новый пароль</string>
+    <string name="dialog_hint_enter_old">Введите старый пароль</string>
+    <string name="dialog_hint_enter_pass">Введите пароль</string>
+    <string name="dialog_hint_confirm_pass">Подтвердите пароль</string>
+    <string name="please_enter_your_old_password">Пожалуйста, введите старый пароль</string>
+    <string name="passwords_mismatch">Пароли не совпадают</string>
+    <string name="new_passwords_mismatch">Новые пароли не совпадают</string>
+    <string name="new_password_equals_old_error">Нельзя использовать старый пароль</string>
+    <string name="password_changed">Пароль изменен!</string>
+    <string name="password_wrong_old_pass">Неверный старый пароль!</string>
+    <string name="new_password_field_cannot_be_blank_">"Должен быть указан новый пароль"</string>
+    <string name="dialog_hint_pass_requirement2">Пароль должен иметь не менее %d символов</string>
+    <string name="dialog_hint_pass_requirement">минимальная длина пароля %d</string>
+    <string name="password_communication_error">Ошибка передачи данных!</string>
+    <string name="password_unknown_error">Неизвестная ошибка!</string>
+    <string name="password_set_success">Пароль установлен!</string>
+    <string name="msg_threads_gps_thumbnail">GPS местоположения</string>
+    <string name="registration_loging_in">Вход</string>
+    <string name="registration_signing_up">Регистрация</string>
+    <string name="contact_add_success">Контакт добавлен успешно</string>
+    <string name="map_hint_search_places">поиск места</string>
+    <string name="map_search_msg_no_location_found">Ooops! К сожалению, совпадений не найдено.</string>
+    <string name="map_edittitle_fragment_hint">описание типа</string>
+    <string name="plan_info_cannot_connect_with_server">Не удалось подключиться к нашему серверу.</string>
+    <string name="my_profile_set_email_enter_your_email_hint">Введите Ваш email</string>
+    <string name="my_profile_set_email_address">Введите Ваш email</string>
+    <string name="set_username_unexpected_error_try_again_later">Неожиданная ошибка, повторите попытку позже</string>
+    <string name="set_username_server_error_try_again_later">Ошибка сервера, повторите попытку позже</string>
+    <string name="set_username_already_in_use_please_choose_another">Этот логин уже занят. Используйте другой.</string>
+    <string name="set_username_msg_username_correct">Правильное имя пользователя </string>
+    <string name="set_username_msg_username_can_t_start_with_number">%s логин должен начинаться с буквы.</string>
+    <string name="plan_terms">Условия</string>
+    <string name="plan_info_plan_active">Действующий</string>
+    <string name="plan_info_not_enough_money">У Вас недостаточно средств</string>
+    <string name="plan_info_buy">Купить сейчас!</string>
+    <string name="plan_title">Планы</string>
+    <string name="map_nearby">Поблизости</string>
+    <string name="set_username_msg_username_is_to_short">Ваш логин слишком короткий. Пожалуйста, выберите %1$s логин между 6-30 символами.</string>
+    <string name="set_username_msg_only_letters_and_numbers">Ваш %s логин содержит недопустимые символы. Пожалуйста, используйте  только буквы (a-z), цифры, точки(.) и знаки подчёркивания(_).</string>
+    <string name="details_activity_birht_date_in_future_error">Машина времени еще не изобретена. Пожалуйста, установите правильную дату.</string>
+    <string name="did_keep">Сохранить</string>
+    <string name="account_type">com.vippieid</string>
+    <string name="dialer_msg_searching_out">... или можете использовать %s Out</string>
+    <string name="set_id_first">Сначала установите %s логин</string>
+    <string name="location_error_while_parsing_data">Ошибка при проверке данных местоположения</string>
+    <string name="registration_wrong_number_length">Неверный номер телефона</string>
+    <string name="registration_use_number_reg">Использовать мой номер тел.</string>
+    <string name="account_your_balance">Ваш баланс:</string>
+    <string name="account_your_bonus">Ваш бонус:</string>
+    <string name="account_top_up">
+        <b>пополнить счет</b>
+    </string>
+    <string name="phone_type_mobile">Сотовый</string>
+    <string name="phone_type_home">Домашний</string>
+    <string name="phone_type_work">Рабочий</string>
+    <string name="phone_type_other">Другой</string>
+    <string name="phone_type_free">Бесплатный</string>
+    <string name="account_left">осталось: %s мин</string>
+    <string name="account_get_more">
+        <b>получить бесплатные минуты</b>
+    </string>
+    <string name="add_no_match_at_all">К сожалению, ничего не найдено.</string>
+    <string name="settings_logout">Выход</string>
+    <string name="settings_logout_title">Выход</string>
+    <string name="settings_logout_msg">Вы уверены, что хотите выйти?</string>
+    <string name="crop_saving">Сохранение изображения</string>
+    <string name="account_bonus_empty">Проверьте, как получить бесплатные минуты, чтобы звонить на мобильные и стационарные телефоны! Это действительно просто!</string>
+    <string name="account_get_more_title">Получение бесплатных минут</string>
+    <string name="settings_logout_info">При выходе будут удалены все %s даные с вашего устройства.</string>
+</resources>

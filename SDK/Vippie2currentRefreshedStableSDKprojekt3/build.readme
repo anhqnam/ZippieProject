@@ -1,0 +1,3 @@
+Android SDK
+< r15 use build.xml (ant <target>)
+>= r15 use build2.xml (ant -f build2.xml <target>)

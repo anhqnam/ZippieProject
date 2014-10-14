@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/more_shadow_plus_space"
+        android:background="@color/background"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/more_new_space"
+        android:layout_width="@dimen/more_shadow_space"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent" />
+
+    <ImageView
+        android:id="@+id/more_new_shadow"
+        android:layout_width="@dimen/more_shadow_width"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/more_shadow_space"
+        android:background="@drawable/shape_shadow_vertical" >
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/more_new_top_section"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/more_shadow_plus_space"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/more_new_top_profile_section"
+            android:layout_width="fill_parent"
+            android:layout_height="192dp" >
+
+            <!-- <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="182dp"
+                android:drawingCacheQuality="high"
+                android:src="@drawable/background" /> -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_p"
+                android:gravity="top" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/contact_info_avatar_container_height_with_margin"
+                    android:layout_marginLeft="@dimen/contact_info_avatar_container_height_with_margin"
+                    android:background="@color/presence_bg"
+                    android:orientation="vertical" >
+
+                    <unique.packagename.widget.MainEditText
+                        android:id="@+id/contact_info_status"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/profile_my_status"
+                        android:inputType="textMultiLine"
+                        android:minLines="1"
+                        android:padding="15dp"
+                        android:textAppearance="@android:style/TextAppearance.Medium"
+                        android:textColor="@color/row_primary"
+                        android:textColorHint="@color/row_secondary" />
+                </LinearLayout>
+
+                <include
+                    android:layout_width="@dimen/contact_info_avatar_container_width"
+                    android:layout_height="@dimen/contact_info_avatar_container_height"
+                    android:layout_margin="5dp"
+                    layout="@layout/avatar_profile" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/more_my_profile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/more_shadow_plus_space"
+        android:layout_alignBottom="@id/more_new_top_section" >
+
+        <LinearLayout
+            android:id="@+id/more_my_profile_click_receiver"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/more_my_profile_container"
+            android:layout_alignTop="@+id/more_my_profile_container"            
+            android:background="@drawable/more_btn_selector_transparent"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/more_my_profile_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@color/vippie_light_gray" >
+
+            <include layout="@layout/shadow_vertical_more" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/more_profile" />
+            </RelativeLayout>
+
+            <unique.packagename.widget.MainTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more_my_profile"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/more_new_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/more_new_top_section"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/more_top_up"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" >
+
+                    <LinearLayout
+                        android:id="@+id/more_top_up_click_receiver"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/more_top_up_container"
+                        android:layout_alignTop="@+id/more_top_up_container"
+                        android:layout_marginLeft="@dimen/more_shadow_plus_space"
+                        android:background="@drawable/more_btn_selector"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/more_top_up_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <include layout="@layout/shadow_vertical_more" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/tabs"
+                            android:gravity="center_vertical"
+                            android:padding="5dp" >
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/more_rates" />
+                        </RelativeLayout>
+
+                        <unique.packagename.widget.MainTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/more_account"
+                            android:textColor="@color/text_noneditable" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/more_tell_friends"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/more_tell_friends_click_receiver"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/more_tell_friends_container"
+                        android:layout_alignTop="@+id/more_tell_friends_container"
+                        android:layout_marginLeft="@dimen/more_shadow_plus_space"
+                        android:background="@drawable/more_btn_selector"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/more_tell_friends_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <include layout="@layout/shadow_vertical_more" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/row_primary"
+                            android:gravity="center_vertical"
+                            android:padding="5dp" >
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/more_tell_friend" />
+                        </RelativeLayout>
+
+                        <unique.packagename.widget.MainTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/more_tell_friends"
+                            android:textColor="@color/text_noneditable" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/more_social_hub"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:id="@+id/more_social_hub_click_receiver"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/more_social_hub_container"
+                        android:layout_alignTop="@+id/more_social_hub_container"
+                        android:layout_marginLeft="@dimen/more_shadow_plus_space"
+                        android:background="@drawable/more_btn_selector"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/more_social_hub_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <include layout="@layout/shadow_vertical_more" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/row_primary"
+                            android:gravity="center_vertical" >
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/more_social_hub" />
+                        </RelativeLayout>
+
+                        <unique.packagename.widget.MainTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/more_social_hub"
+                            android:textColor="@color/text_noneditable" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/more_search"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/more_search_click_receiver"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/more_search_container"
+                        android:layout_alignTop="@+id/more_search_container"
+                        android:layout_marginLeft="@dimen/more_shadow_plus_space"
+                        android:background="@drawable/more_btn_selector"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/more_search_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <include layout="@layout/shadow_vertical_more" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/row_secondary"
+                            android:gravity="center_vertical"
+                            android:padding="5dp" >
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/more_find_new_friends" />
+                        </RelativeLayout>
+
+                        <unique.packagename.widget.MainTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/more_search"
+                            android:textColor="@color/text_noneditable" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/more_help"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/more_help_click_receiver"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/more_help_container"
+                        android:layout_alignTop="@+id/more_help_container"
+                        android:layout_marginLeft="@dimen/more_shadow_plus_space"
+                        android:background="@drawable/more_btn_selector"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/more_help_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <include layout="@layout/shadow_vertical_more" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/vippie_pink"
+                            android:gravity="center_vertical"
+                            android:padding="5dp" >
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/more_help" />
+                        </RelativeLayout>
+
+                        <unique.packagename.widget.MainTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/more_help"
+                            android:textColor="@color/text_noneditable" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/more_voicemail_click_receiver"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/more_voicemail_container"
+                        android:layout_alignTop="@+id/more_voicemail_container"
+                        android:layout_marginLeft="@dimen/more_shadow_plus_space"
+                        android:background="@drawable/more_btn_selector"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/more_voicemail_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <include layout="@layout/shadow_vertical_more" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/vippie_orange"
+                            android:gravity="center_vertical"
+                            android:padding="5dp" >
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/more_voice_mail" />
+                        </RelativeLayout>
+
+                        <unique.packagename.widget.MainTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/more_voicemail"
+                            android:textColor="@color/text_noneditable" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/more_settings"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/more_settings_click_receiver"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/more_settings_container"
+                        android:layout_alignTop="@+id/more_settings_container"
+                        android:layout_marginLeft="@dimen/more_shadow_plus_space"
+                        android:background="@drawable/more_btn_selector"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/more_settings_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <include layout="@layout/shadow_vertical_more" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/vippie_yellow"
+                            android:gravity="center_vertical"
+                            android:padding="5dp" >
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/more_settings" />
+                        </RelativeLayout>
+
+                        <unique.packagename.widget.MainTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/more_settings"
+                            android:textColor="@color/text_noneditable" />
+                    </LinearLayout>
+                </RelativeLayout>
+				
+                <RelativeLayout
+                    android:id="@+id/more_exit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/more_exit_click_receiver"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/more_exit_container"
+                        android:layout_alignTop="@+id/more_exit_container"
+                        android:layout_marginLeft="@dimen/more_shadow_plus_space"
+                        android:background="@drawable/more_btn_selector"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/more_exit_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <include layout="@layout/shadow_vertical_more" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/vippie_light_gray"
+                            android:gravity="center_vertical"
+                            android:padding="5dp" >
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_menu_clear" />
+                        </RelativeLayout>
+
+                        <unique.packagename.widget.MainTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu_quit"
+                            android:textColor="@color/text_noneditable" />
+                    </LinearLayout>
+                </RelativeLayout>
+                
+                <RelativeLayout
+                    android:id="@+id/more_logs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/more_logs_click_receiver"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/more_logs_container"
+                        android:layout_alignTop="@id/more_logs_container"
+                        android:layout_marginLeft="@dimen/more_shadow_plus_space"
+                        android:background="@drawable/more_btn_selector"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@id/more_logs_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <include layout="@layout/shadow_vertical_more" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/vippie_yellow"
+                            android:gravity="center_vertical"
+                            android:padding="5dp" >
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_bug" />
+                        </RelativeLayout>
+
+                        <unique.packagename.widget.MainTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Send logs"
+                            android:textColor="@color/text_noneditable" />
+                    </LinearLayout>
+                </RelativeLayout>
+                
+                <RelativeLayout
+                    android:id="@+id/more_debug"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/more_debug_click_receiver"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/more_debug_container"
+                        android:layout_alignTop="@+id/more_debug_container"
+                        android:layout_marginLeft="@dimen/more_shadow_plus_space"
+                        android:background="@drawable/more_btn_selector"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/more_debug_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp" >
+
+                        <include layout="@layout/shadow_vertical_more" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/row_primary"
+                            android:gravity="center_vertical"
+                            android:padding="5dp" >
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:scaleType="fitXY"
+                                android:src="@android:drawable/star_on" />
+                        </RelativeLayout>
+
+                        <unique.packagename.widget.MainTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DebugBtn"
+                            android:textColor="@color/text_noneditable" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

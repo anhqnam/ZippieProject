@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="settings_title">设置</string>
+
+    <string name="call_state_incoming">来电</string>
+    <string name="call_state_dialing">拨电中...</string>
+    <string name="call_state_ringing">响铃</string>
+    <string name="call_state_disconnected">中断</string>
+    <string name="call_state_active">联系中</string>
+    <string name="call_state_hold">保持</string>
+    <string name="call_state_remote_hold">遥控保持</string>
+    <string name="call_state_conference">会议</string>
+
+    <string name="account_state_message">账户状态: </string>
+    <string name="account_registered">已注册</string>
+    <string name="account_trying_register">尝试注册中</string>
+    <string name="account_not_registered">未注册</string>
+    <string name="account_activation_required">需要激活</string>
+
+    <string name="menu_quit">离开</string>
+    <string name="menu_preferences">设置</string>
+    <string name="menu_callslog">通话记录</string>
+    <string name="menu_contacts">联系人</string>
+    <string name="menu_messages">信息</string>
+
+    <string name="menu_mute">静音</string>
+    <string name="menu_unmute">取消静音</string>
+    <string name="menu_hold">保持</string>
+    <string name="menu_unhold">取消保持</string>
+    <string name="menu_speaker_on">使用扩音器</string>
+    <string name="menu_speaker_off">关闭扩音器</string>
+    <string name="menu_addcall">添加联系人</string>
+    <string name="menu_transfer">转播</string>
+    <string name="menu_conference">会议</string>
+    <string name="menu_conference_end">结束会议</string>
+    <string name="menu_record">录音</string>
+    <string name="menu_record_pause">暂停</string>
+    <string name="menu_view">显示</string>
+    <string name="menu_delete_all">全部删除</string>
+    <string name="menu_total_duration">通话时间</string>
+    <!--<string name="menu_edit_contact">编辑 联系人</string>-->
+    <string name="menu_add_contact">添加联系人</string>
+    <string name="menu_add_xmpp_contact">添加 XMPP 联系人</string>
+    <string name="menu_filter">过滤</string>
+    <string name="menu_add_to_phonebook">加入电话簿</string>
+    <string name="menu_create_new_contact">创建新联系人</string>
+    <string name="menu_choose_existing_contact">选择已有联系人</string>
+    <string name="menu_details">详细资料</string>
+    <string name="menu_delete">删除</string>
+    <string name="menu_edit">编辑</string>
+    <string name="menu_call">通话</string>
+    <string name="menu_send_msg">发送信息</string>
+    <string name="menu_new_msg">新信息</string>
+    <string name="menu_resend">再次发送</string>
+    <string name="menu_copy_to_clipboard">复制于剪贴板</string>
+    <string name="menu_checkrate">检查费用</string>
+    <string name="menu_callback">回拨</string>
+    <string name="menu_select_all">选择全部</string>
+    <string name="menu_deselect_all">全取消选择</string>
+
+    <string name="dialpad_btn_0"><big>0</big>\n<small>+-</small></string>
+    <string name="dialpad_btn_1"><big>1</big></string>
+    <string name="dialpad_btn_2"><big>2</big>\n<small>ABC</small></string>
+    <string name="dialpad_btn_3"><big>3</big>\n<small>DEF</small></string>
+    <string name="dialpad_btn_4"><big>4</big>\n<small>GHI</small></string>
+    <string name="dialpad_btn_5"><big>5</big>\n<small>JKL</small></string>
+    <string name="dialpad_btn_6"><big>6</big>\n<small>MNO</small></string>
+    <string name="dialpad_btn_7"><big>7</big>\n<small>PQRS</small></string>
+    <string name="dialpad_btn_8"><big>8</big>\n<small>TUV</small></string>
+    <string name="dialpad_btn_9"><big>9</big>\n<small>WXYZ</small></string>
+    <string name="dialpad_btn_ast"><big>*\n<small>@</small></big></string>
+    <string name="dialpad_btn_hash"><big>#\n<small>_.,</small></big></string>
+
+    <string name="contact_login_label">SIP 登录</string>
+    <string name="contact_edit_empty_name">此栏不可空白</string>
+    <string name="contact_edit_empty_number">此栏不可空白.</string>
+    <string name="contact_number_label">SIP 号码</string>
+    <string name="contact_deleted">成功删除联系人资料.</string>
+    <string name="contact_name_default">(未知)</string>
+
+    <string name="calllog_title">通话记录</string>
+    <string name="calllog_view">选择显示</string>
+    <string name="calllog_view_all">所有</string>
+    <string name="calllog_view_incoming">来电</string>
+    <string name="calllog_view_outgoing">拨电</string>
+    <string name="calllog_view_missed">未接来电</string>
+    <string name="calllog_total_duration">总通话时间</string>
+    <string name="calllog_confimr_delete_all">您要清除所有通话记录?</string>
+    <string name="calllog_empty_list">没任何输入</string>
+
+    <string name="contacts_title">联系人</string>
+    <string name="contacts_search_hint">请输入以便搜寻</string>
+    <string name="contacts_enter_sip_uri_hint">输入 SIP 号码</string>
+    <string name="contacts_enter_jid_uri_hint">输入 XMPP URI</string>
+    <string name="contacts_regular">联系人</string>
+    <string name="contacts_xmpp">XMPP 联系人</string>
+    <string name="messages_title">信息</string>
+    <string name="messages_empty_list">没有信息</string>
+    <string name="messages_me">我</string>
+    <string name="messages_sending">发送中...</string>
+    <string name="message_compose_hint">触按以开始编写</string>
+    <string name="message_notification_ticked">收到新信息</string>
+    <string name="message_notification_title">来自</string>
+    <string name="contact_xmpp_contact_added_notification">已加入XMPP联系:\n%1$s</string>
+
+    <string name="checkrate_title">检查费用</string>
+    <string name="checkrate_prefix_hint">输入号码或字首</string>
+    <string name="checkrate_info_destination_label">目的地:</string>
+    <string name="checkrate_info_rate_label">收费:</string>
+    <string name="checkrate_info_duration_label">最大时间:</string>
+
+    <string name="callback_title">回拨</string>
+    <string name="callback_info_src_text">输入来源号码</string>
+    <string name="callback_info_dst_text">输入目标号码</string>
+    <string name="callback_connection_type">连接类别</string>
+    <string-array name="callback_connection_type_array">
+        <item>先连接来源</item>
+        <item>同时连接</item>
+    </string-array>
+    <string name="callback_status_text">状态:</string>
+    <string name="callback_status_connecting">连接中...</string>
+    <string name="callback_status_faild">失败</string>
+	<string name="callback_status_hang_up">挂断</string>
+	<string name="callback_status_connected">已连接</string>
+
+    <string name="date_today">今天</string>
+
+    <string name="button_yes">是</string>
+    <string name="button_no">否</string>
+    <string name="button_ok">Ok</string>
+    <string name="button_save">储存</string>
+    <string name="button_cancel">取消</string>
+    <string name="button_edit">编写</string>
+    <string name="button_details">详情</string>
+    <string name="button_delete">删除</string>
+    <string name="button_send">发送</string>
+    <string name="button_call">拨电</string>
+    <string name="button_hangup">挂断</string>
+    <string name="button_checkrate">检查</string>
+    <string name="button_display">显示</string>
+    <string name="button_close">关闭</string>
+
+    <string name="phone_type_mobile_short">M:&#160;</string>
+    <string name="phone_type_sip_uri">SIP:</string>
+    <string name="phone_type_sip_uri_short">S:&#160;</string>
+    <string name="phone_type_xmpp">JID:</string>
+    <string name="phone_type_xmpp_short">J:&#160;</string>
+    <string name="phone_type_mobile">流动号码:</string>
+    <string name="phone_type_home_short">H:&#160;</string>
+    <string name="phone_type_home">家:</string>
+    <string name="phone_type_work_short">W:&#160;</string>
+    <string name="phone_type_work">工作:</string>
+    <string name="phone_type_other_short">O:&#160;</string>
+    <string name="phone_type_other">其它:</string>
+
+    <string name="xmpp_jid_label">JID:</string>
+    <string name="xmpp_user_name_label">用户名字:</string>
+
+    <string name="calling_notification_ticker">开始SIP通话</string>
+    <string name="calling_notification_title">正进行SIP通话</string>
+    <string name="calling_notification_text">触按以恢复通话器</string>
+
+    <string name="callmode_dialog_title">选择通话模式</string>
+    <string name="callmode_dialog_audio">声频</string>
+    <string name="callmode_dialog_video">视频</string>
+
+    <string name="message_type_dialog_title">选择信息种类</string>
+    <string name="message_type_dialog_sip">短信</string>
+    <string name="message_type_dialog_xmpp">聊天</string>
+
+    <string name="native_callmode_dialog_title">选择通话行动 Call Action</string>
+    <string name="native_callmode_dialog_native">电话通话</string>
+
+    <string name="msg_account_state">余额</string>
+    <string name="msg_loading">载录中...\n 请稍等</string>
+
+    <string name="new_messages_title">新信息</string>
+    <string name="new_messages_voice_msg">您有 %d 个新语音信息</string>
+    <string name="new_messages_voice_btn">拨打语音信息</string>
+
+    <string name="settings_screen_sip">SIP 设置</string>
+    <string name="settings_screen_xmpp">XMPP 设置</string>
+    <string name="settings_screen_audio">音频设置</string>
+    <string name="settings_screen_video">视频设置</string>
+    <string name="settings_screen_system">系统设置</string>
+    <string name="settings_key_user_name">用户名</string>
+    <string name="settings_key_user_name_summary">SIP账户的名称</string>
+    <string name="settings_key_password">密码</string>
+    <string name="settings_key_password_summary">SIP账户密码</string>
+    <string name="settings_key_category_sip_server">伺服器设置</string>
+    <string name="settings_key_category_sip_presence">现有设置</string>
+    <string name="settings_key_sip_presence_publish_method">发布方法</string>
+    <string name="settings_key_category_sip_advanced">高级设置</string>
+    <string name="settings_key_sip_port">SIP 端口</string>
+    <string name="settings_key_sip_port_summary">SIP伺服器的端口</string>
+    <string name="settings_key_sip_port_hint">默认 5060</string>
+    <string name="settings_key_server">SIP 伺服器</string>
+    <string name="settings_key_server_summary">伺服器域名或IP</string>
+    <string name="settings_key_display_name">显示名字</string>
+    <string name="settings_key_display_name_summary">手机屏幕拨电者名字显示</string>
+    <string name="settings_key_auth_user_name">Auth 用户名字</string>
+    <string name="settings_key_auth_user_name_summary">伺服器认证所用的名字</string>
+    <string name="settings_key_outbound_proxy">出站代理</string>
+    <string name="settings_key_outbound_proxy_summary">处理SIP请求的代理伺服器(如需要，请输入)</string>
+    <string name="settings_key_nat_traversal">NAT 遍历</string>
+    <string name="settings_key_stun_server">Stun 伺服器</string>
+    <string name="settings_key_stun_server_summary">在此输入，若您的SIP伺服器需要STUN伺服器</string>
+    <string name="settings_key_allow_contact_rewrite">允许联系人改写</string>
+
+    <string name="settings_key_xmpp_user_name">用户名</string>
+    <string name="settings_key_xmpp_user_name_summary">XMPP账户的用户名</string>
+    <string name="settings_key_xmpp_password">密码</string>
+    <string name="settings_key_xmpp_password_summary">XMPP账户的密码</string>
+    <string name="settings_key_category_xmpp_server">伺服器设置</string>
+    <string name="settings_key_xmpp_server">XMPP伺服器</string>
+    <string name="settings_option_xmpp_server_custom">客制</string>
+    <string name="settings_key_xmpp_server_host">主伺服器</string>
+    <string name="settings_key_xmpp_server_summary">XMPP伺服器域名或IP</string>
+    <string name="settings_key_xmpp_port">端口</string>
+    <string name="settings_key_xmpp_port_summary">XMPP伺服器端口</string>
+    <string name="settings_key_xmpp_port_hint">默认 5222</string>
+    <string name="settings_key_xmpp_service">服务名称</string>
+    <string name="settings_key_xmpp_service_summary">伺服器内服务名称</string>
+    <string name="settings_key_xmpp_service_hint">服务名称，若与伺服器名称相同请置空 </string>
+    <string name="settings_key_category_xmpp_other">现有设置</string>
+    <string name="settings_key_xmpp_presence">状态</string>
+    <string name="settings_key_xmpp_presence_status">状态 Text</string>
+    <string name="settings_key_xmpp_presence_status_summary">公开的状态</string>
+
+    <string name="settings_key_default_call">默认通话行动</string>
+    <string name="settings_key_video_front_camera">使用前置镜头</string>
+    <string name="settings_key_video_front_camera_sum_on">若有前置镜头，将被使用</string>
+    <string name="settings_key_video_front_camera_sum_off">主摄像头</string>
+    <string name="settings_key_video_bps">位速率</string>
+    <string name="settings_key_video_res">清晰度</string>
+    <string name="settings_key_video_fps">帧频</string>
+    <string name="settings_key_video_recording">录影中</string>
+    <string name="settings_key_video_codecs">编码译码器</string>
+    <string name="settings_key_H264_90000">H.264</string>
+    <string name="settings_key_H263_1998_90000">H.263+</string>
+    <string name="settings_key_H263_90000">H.263</string>
+    <string name="settings_key_ringtone">电话铃声</string>
+    <string name="settings_key_ringtone_summary">来电铃声</string>
+    <string name="settings_sms_key_ringtone">短信铃声</string>
+    <string name="settings_sms_key_ringtone_summary">新信息铃声 </string>
+    <string name="settings_key_keytones">启用按键铃声</string>
+    <string name="settings_key_keytones_summary">启用/禁用拨号盘按键音</string>
+    <string name="settings_key_vibration">启用按键振动</string>
+    <string name="settings_key_vibration_summary">启用/禁用拨号盘的按键振动</string>
+    <string name="settings_key_bluetooth">启用蓝牙耳机</string>
+    <string name="settings_key_bluetooth_summary">若你要使用蓝牙耳机，请启用</string>
+    <string name="settings_key_audio_codecs">编码器</string>
+    <string name="settings_key_ec">消除回声</string>
+    <string name="settings_key_ec_summary">当扩音器开启时使用消除回声</string>
+    <string name="settings_key_dtmf_mode">双音多频模式</string>
+    <string name="settings_key_message_type">信息种类</string>
+    <string name="settings_key_transport">转运</string>
+    <string name="settings_key_native_call_mode">原通话行动 </string>
+    <string name="settings_key_G729">G.729</string>
+    <string name="settings_key_G722_16000">G.722</string>
+    <string name="settings_key_PCMU_8000">G.711u</string>
+    <string name="settings_key_PCMA_8000">G.711a</string>
+    <string name="settings_key_GSM_8000">GSM</string>
+    <string name="settings_key_speex_8000">Speex (8kHz)</string>
+    <string name="settings_key_speex_16000">Speex (16kHz)</string>
+    <string name="settings_key_iLBC_8000">iLBC</string>
+    <string name="settings_key_voice">语音信息</string>
+    <string name="settings_key_voice_summary">语音信箱编号</string>
+    <string name="settings_key_service_auto_start">自动接收</string>
+    <string name="settings_key_service_auto_start_summary">系统启动时自动运行VOIP服务与注册</string>
+    <string name="settings_key_native_calllog">使用本机通话记录</string>
+    <string name="settings_key_native_calllog_summary">若有必要，通话将登录在本地</string>
+
+    <string name="empty_number_error">请输入号码</string>
+    <string name="empty_voice_number_error">请在设置区内输入语音信箱号码。Please set the voicemail number in the
+        settings panel</string>
+
+    <string name="regstate_authentification_error">用户名或密码错误.</string>
+    <string name="regstate_server_error">伺服器不能连接.</string>
+    <string name="regstate_unknown_error">注册故障.</string>
+    <string name="regstate_default_error">账户不能注册. 请检查设置与网络联线.</string>
+    <string name="xmpp_message_send_account_not_set_error">XMPP 账户未设置! 不能使用JID地址发送信息</string>
+    <string name="xmpp_regstate_error_title">XMPP注册故障</string>
+    <string name="xmpp_not_registered_error">XMPP账户未注册!</string>
+    <string name="regstate_error_title">注册故障</string>
+    <string name="send_error">发送故障故障!</string>
+    <string name="regstate_ok_button">OK</string>
+    <string name="regstate_settings_button">设置</string>
+
+    <string name="error_configure_account">请设置您的账户</string>
+
+    <string name="contact_info_presence_subscription">现有订阅</string>
+    <string name="contact_info_presence_subscription_status">现有的订阅是 %1$s</string>
+    <string name="contact_info_presence_subscription_enabled">启用</string>
+    <string name="contact_info_presence_subscription_disabled">禁用</string>
+
+    <string name="presence_subscriptions">出席订阅</string>
+    <string name="presence_subscriptions_pending">等待</string>
+    <string name="presence_subscriptions_allowed">允许</string>
+    <string name="presence_subscriptions_denied">拒绝</string>
+    <string name="presence_subscriptions_change_permission_question">移去列表?</string>
+    <string name="presence_subscriptions_allow">允许</string>
+    <string name="presence_subscriptions_deny">禁止</string>
+    <string name="presence_subscriptions_empty_list">无可用的订阅</string>
+    <string name="presence_subscriptions_subscription_request_question">您有未决定的现有订阅请求</string>
+    <string name="presence_subscriptions_menu_allow_selected">允许选择</string>
+    <string name="presence_subscriptions_menu_deny_selected">禁止选择</string>
+    <string name="presence_subscriptions_menu_delete_selected">删除选择</string>
+
+    <string-array name="transport">
+        <item>UDP</item>
+        <item>TCP</item>
+    </string-array>
+
+    <string-array name="transport_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+
+    <string-array name="native_call">
+        <item>询问</item>
+        <item>使用本机通话</item>
+    </string-array>
+
+    <string-array name="native_call_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+
+    <string-array name="video_bps">
+        <item>48kbps</item>
+        <item>96kbps</item>
+        <item>192kbps</item>
+        <item>384kbps</item>
+        <item>768kbps</item>
+    </string-array>
+
+    <string-array name="video_bps_values">
+        <item>48000</item>
+        <item>96000</item>
+        <item>192000</item>
+        <item>384000</item>
+        <item>768000</item>
+    </string-array>
+
+    <string-array name="default_call">
+        <item>询问</item>
+        <item>音频</item>
+        <item>视频</item>
+    </string-array>
+
+    <string-array name="default_call_values">
+        <item>0</item>
+        <item>01</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="video_res">
+        <item>QCIF (176x144)</item>
+        <!--  <item>CIF (352x288)</item>-->
+        <item>QVGA (320x240)</item>
+        <item>VGA (640x480)</item>
+    </string-array>
+
+    <string-array name="video_res_values">
+        <item>2</item>
+        <!-- <item>3</item>-->
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="video_fps">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+    </string-array>
+
+    <string-array name="video_fps_values">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+    </string-array>
+
+    <string-array name="dtmf_mode">
+        <item>RFC 2833</item>
+        <item>SIP 讯息</item>
+    </string-array>
+
+    <string-array name="dtmf_mode_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+
+    <string-array name="message_types">
+        <item>文字/空白</item>
+        <item>信息/CPIM</item>
+    </string-array>
+
+    <string-array name="message_types_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+
+    <string-array name="nat_traversal_mode">
+        <item>禁止</item>
+        <item>检测 STUN</item>
+        <item>STUN 伺服器</item>
+    </string-array>
+
+    <string-array name="nat_traversal_mode_values">
+        <item>0</item>
+        <item>01</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="xmpp_presence">
+        <item>上线</item>
+        <item>离开</item>
+        <item>可聊天</item>
+        <item>不可打扰</item>
+        <item>离线</item>
+    </string-array>
+
+    <string-array name="xmpp_presence_values">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="sip_presence">
+        <item>上线</item>
+        <item>离开</item>
+        <item>忙碌</item>
+        <item>离线</item>
+    </string-array>
+
+    <string-array name="sip_presence_values">
+        <item>2</item>
+        <item>4</item>
+        <item>5</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="xmpp_server_list">
+        <item>Gmail</item>
+        <item>Facebook</item>
+        <item>@string/settings_option_xmpp_server_custom</item> <!-- DO NOT TRANSLATE THIS -->
+    </string-array>
+
+    <string-array name="xmpp_server_list_values">
+        <item>gmail.com</item>
+        <item>facebook.com</item>
+        <item>custom</item> <!-- DO NOT TRANSLATE THIS -->
+    </string-array>
+
+    <string-array name="sip_presence_publish_method">
+        <item>代理</item>
+        <item>P2P</item>
+    </string-array>
+
+    <string-array name="sip_presence_publish_method_values">
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="log_send_emails">
+        <item>piotr@voipswitch.com</item>
+    </string-array>
+
+    <string name="toast_serial_incorrect">激活密码不正确</string>
+    <string name="toast_activation_error">激活故障，请稍后在尝试.</string>
+    <string name="toast_cannot_activate">%s 无法激活. 请联络您的服务供应商.</string>
+    <string name="serial_input_hint">通话器激活密码</string>
+    <string name="serial_input_button">继续</string>
+    <string name="serial_input_label">清输入您的激活密码</string>
+
+    <string name="contact_delete_confirmation_dialog_title">确认</string>
+    <string name="contact_delete_confirmation_dialog_content">您确定要从联络簿删除%1$s?</string>
+    <string name="contact_delete_error">当删除联系人，故障出现</string>
+    <string name="contact_add_error">当添加联系人，故障出现.</string>
+    <string name="contact_edit_error">当编辑联系人，故障出现Error while editing a contact.</string>
+
+    <string name="sign_up_text">报名</string>
+    <string name="login_username">用户名称:</string>
+	<string name="login_password">密码:</string>
+	<string name="login_hint_required">需要</string>
+	<string name="login_button_continue">登录</string>
+	<string name="login_button_login">登录</string>
+
+	<string name="callback_message_login_incorrect">不正确登录</string>
+	<string name="callback_message_registered_successful">用户注册成功</string>
+	<string name="callback_message_hang_up">挂断</string>
+	<string name="callback_message_clients_connected">已连接客户端</string>
+	<string name="callback_message_busy">繁忙</string>
+	<string name="callback_message_no_answer">没有接听</string>
+	<string name="callback_message_call_rejected">通话被拒绝</string>
+	<string name="callback_message_insufficient_funds">余额不足</string>
+	<string name="callback_message_call_ended_because_of_insufficient_funds">余额不足，通话结束</string>
+	<string name="callback_message_wrong_source_number">拨电号码错误</string>
+	<string name="callback_message_wrong_destination_number">来电码错误</string>
+	<string name="callback_message_destination_is_alerting">来电号码提示中</string>
+	<string name="callback_message_source_is_alerting">拨电号码提示中</string>
+	<string name="callback_message_source_connected">拨电号码已连接</string>
+	<string name="callback_message_destination_connected">来电号码已连接</string>
+	<string name="callback_message_destination_ended_call">来电结束通话</string>
+	<string name="callback_message_source_ended_call">拨电号码结束通话</string>
+	<string name="callback_message_source_has_insufficient_funds">拨电号码余额不足</string>
+	<string name="callback_message_destination_has_insufficient_funds">来电号码余额不足</string>
+	<string name="callback_message_ok">OK</string>
+	<string name="callback_message_faild">失败</string>
+	<string name="callback_message_autorization_faild">授权失败</string>
+	<string name="callback_message_login_success">登录成功</string>
+	<string name="callback_message_wrong_parameters">参数错误</string>
+	<string name="callback_message_default">未知</string>
+
+</resources>

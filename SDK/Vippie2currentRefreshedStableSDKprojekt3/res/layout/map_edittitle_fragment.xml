@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bars_height"
+    android:background="@color/row_primary_transparent"
+    android:padding="5dp" >
+
+    <ImageButton
+        android:id="@+id/map_edittitle_delete"
+        android:layout_width="@dimen/action_medium_icon"
+        android:layout_height="@dimen/action_medium_icon"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="0dp"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/msg_dialog_close_up" />
+
+    <unique.packagename.widget.MainEditText
+        android:id="@+id/map_edittitle_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@id/map_edittitle_delete"
+        android:ellipsize="end"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/map_edittitle_fragment_hint"
+        android:imeOptions="actionDone"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:singleLine="true"
+        android:background="@drawable/textfield_default_holo_dark"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

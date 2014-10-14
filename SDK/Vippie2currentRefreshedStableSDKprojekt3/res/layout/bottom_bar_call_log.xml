@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/tabs"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bars_height"
+    android:padding="5dp"
+    android:gravity="center" >
+    
+        <ImageButton
+            android:id="@+id/call_log_filter_in_out"
+            style="@style/bottom_bar_vippie"
+            android:background="@drawable/bottom_bar_btn_selector_left"
+            android:src="@drawable/call_log_io_btn_selector" />
+        
+        <ImageButton
+            android:id="@+id/call_log_filter_missed"
+            style="@style/bottom_bar_vippie"
+            android:background="@drawable/bottom_bar_btn_selector_right"
+            android:src="@drawable/call_log_missed_btn_selector" />
+
+</LinearLayout>

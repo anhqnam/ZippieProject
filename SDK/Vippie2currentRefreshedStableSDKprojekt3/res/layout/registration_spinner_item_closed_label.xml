@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@drawable/registration_spiner"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+  >
+  <ImageView
+      android:id="@+id/flag"
+      android:layout_width="28dp"
+      android:layout_height="14dp"
+      android:layout_gravity="center_vertical" />
+  <unique.packagename.widget.MainTextView
+      android:id="@+id/label"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_vertical"
+      android:paddingLeft="5dp"
+       />
+</LinearLayout>

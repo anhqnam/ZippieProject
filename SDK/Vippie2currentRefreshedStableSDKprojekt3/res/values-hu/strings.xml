@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <string name="settings_title">Beállítások</string>
+  <string name="call_state_incoming">Bejövő</string>
+  <string name="call_state_dialing">Hívás...</string>
+  <string name="call_state_ringing">Csengetés</string>
+  <string name="call_state_disconnected">Bontva</string>
+  <string name="call_state_active">Aktív</string>
+  <string name="call_state_hold">Tartás</string>
+  <string name="call_state_remote_hold">Távoli tartás</string>
+  <string name="call_state_conference">Konferencia</string>
+  <string name="account_state_message">Előfizetés állapota:</string>
+  <string name="account_registered">Regisztrálva</string>
+  <string name="account_trying_register">Regisztrálási kísérlet</string>
+  <string name="account_not_registered">Nem regisztrált</string>
+  <string name="account_activation_required">Aktiválás szükséges</string>
+  <string name="menu_quit">Kilépés</string>
+  <string name="menu_preferences">Beállítások</string>
+  <string name="menu_callslog">Hívásnapló</string>
+  <string name="menu_contacts">Kapcsolatok</string>
+  <string name="menu_messages">Üzenetek</string>
+  <string name="menu_mute">Némítás</string>
+  <string name="menu_unmute">Némítás ki</string>
+  <string name="menu_hold">Tartás</string>
+  <string name="menu_unhold">Tartás ki</string>
+  <string name="menu_speaker_on">Hangszóró be</string>
+  <string name="menu_speaker_off">Hangszóró ki</string>
+  <string name="menu_addcall">Újabb hívás</string>
+  <string name="menu_transfer">Átadás</string>
+  <string name="menu_conference">Konferencia</string>
+  <string name="menu_conference_end">Konferencia vége</string>
+  <string name="menu_record">Felvétel</string>
+  <string name="menu_record_pause">Szünet</string>
+  <string name="menu_view">Nézet</string>
+  <string name="menu_delete_all">Mindent töröl</string>
+  <string name="menu_total_duration">Teljes időtartam</string>
+  <string name="menu_add_contact">Kapcsolat hozzáadása</string>
+  <string name="menu_add_xmpp_contact">XMPP Kapcsolat hozzáadása</string>
+  <string name="menu_filter">Szűrő</string>
+  <string name="menu_add_to_phonebook">Hozzáadás a telefonkönyvhöz</string>
+  <string name="menu_create_new_contact">Új kapcsolat létrehozása</string>
+  <string name="menu_choose_existing_contact">Létező kapcsolat kiválasztása</string>
+  <string name="menu_details">Részletek</string>
+  <string name="menu_delete">Törlés</string>
+  <string name="menu_edit">Szerkesztés</string>
+  <string name="menu_call">Hívás</string>
+  <string name="menu_send_msg">Üzenet küldése</string>
+  <string name="menu_new_msg">Új üzenet</string>
+  <string name="menu_resend">Újraküldés</string>
+  <string name="menu_copy_to_clipboard">Vágólapra másol</string>
+  <string name="menu_checkrate">Költségek ellenőrzése</string>
+  <string name="menu_callback">Visszahívás</string>
+  <string name="menu_select_all">Mindent kijelöl</string>
+  <string name="menu_deselect_all">Minden kijelölés törlése</string>
+  <string name="dialpad_btn_0">
+    <big>0</big>
+    \n
+    <small>+-</small>
+  </string>
+  <string name="dialpad_btn_1">
+    <big>1</big>
+  </string>
+  <string name="dialpad_btn_2">
+    <big>2</big>
+    \n
+    <small>ABC</small>
+  </string>
+  <string name="dialpad_btn_3">
+    <big>3</big>
+    \n
+    <small>DEF</small>
+  </string>
+  <string name="dialpad_btn_4">
+    <big>4</big>
+    \n
+    <small>GHI</small>
+  </string>
+  <string name="dialpad_btn_5">
+    <big>5</big>
+    \n
+    <small>JKL</small>
+  </string>
+  <string name="dialpad_btn_6">
+    <big>6</big>
+    \n
+    <small>MNO</small>
+  </string>
+  <string name="dialpad_btn_7">
+    <big>7</big>
+    \n
+    <small>PQRS</small>
+  </string>
+  <string name="dialpad_btn_8">
+    <big>8</big>
+    \n
+    <small>TUV</small>
+  </string>
+  <string name="dialpad_btn_9">
+    <big>9</big>
+    \n
+    <small>WXYZ</small>
+  </string>
+  <string name="dialpad_btn_ast">
+    <big>
+      *\n
+      <small>@</small>
+    </big>
+  </string>
+  <string name="dialpad_btn_hash">
+    <big>
+      #\n
+      <small>_.,</small>
+    </big>
+  </string>
+  <string name="contact_login_label">SIP Login</string>
+  <string name="contact_edit_empty_name">A név nem lehet üres.</string>
+  <string name="contact_edit_empty_number">SIP hívószám nem lehet üres.</string>
+  <string name="contact_number_label">SIP hívószám</string>
+  <string name="contact_deleted">Kapcsolat sikeresen törölve.</string>
+  <string name="contact_name_default">(Ismeretlen)</string>
+  <string name="calllog_title">Hívásnapló</string>
+  <string name="calllog_view">Nézet kiválasztása</string>
+  <string name="calllog_view_all">Minden</string>
+  <string name="calllog_view_incoming">Bejövő</string>
+  <string name="calllog_view_outgoing">Kimenő</string>
+  <string name="calllog_view_missed">Nem fogadott</string>
+  <string name="calllog_total_duration">Teljes időtartam</string>
+  <string name="calllog_confimr_delete_all">Valóban törölni akarja a hívásnaplót?</string>
+  <string name="calllog_empty_list">Nincs bejegyzés</string>
+  <string name="contacts_title">Kapcsolatok</string>
+  <string name="contacts_search_hint">Írja be a kereséshez</string>
+  <string name="contacts_enter_sip_uri_hint">SIP URI beírása</string>
+  <string name="contacts_enter_jid_uri_hint"> XMPP URI beírása</string>
+  <string name="contacts_regular">Kapcsolatok</string>
+  <string name="contacts_xmpp">XMPP kapcsolatok</string>
+  <string name="messages_title">Üzenetek</string>
+  <string name="messages_empty_list">Nincs üzenet</string>
+  <string name="messages_me">Én</string>
+  <string name="message_compose_hint">Nyomja meg a rendezéshez</string>
+  <string name="message_notification_ticked">Új üzenet érkezett</string>
+  <string name="message_notification_title">Tól</string>
+  <string name="contact_xmpp_contact_added_notification">XMPP kapcsolat hozzáadva:\n%1$s</string>
+  <string name="checkrate_title">Költség ellenőrzése</string>
+  <string name="checkrate_prefix_hint">Hívószám, vagy előhívó megadása</string>
+  <string name="checkrate_info_destination_label">Cél:</string>
+  <string name="checkrate_info_rate_label">Költség:</string>
+  <string name="checkrate_info_duration_label">Max időtartam:</string>
+  <string name="callback_title">Visszahívás</string>
+  <string name="callback_info_src_text">A hívó szám megadása</string>
+  <string name="callback_info_dst_text">A hívott szám megadása</string>
+  <string name="callback_connection_type">A kapcsolat típusa</string>
+  <string-array name="callback_connection_type_array">
+    <item>Kapcsolja a hívót először</item>
+    <item>Kapcsolja mindkettő egyidejűleg</item>
+  </string-array>
+  <string name="callback_status_text">Állapot:</string>
+  <string name="callback_status_connecting">Kapcsolódás...</string>
+  <string name="callback_status_faild">Sikertelen</string>
+  <string name="callback_status_hang_up">Megszakítás</string>
+  <string name="callback_status_connected">Kapcsolódva</string>
+  <string name="date_today">Ma</string>
+  <string name="button_yes">Igen</string>
+  <string name="button_no">Nem</string>
+  <string name="button_ok">OK</string>
+  <string name="button_save">Mentés</string>
+  <string name="button_cancel">Visszlépés</string>
+  <string name="button_edit">Szerkesztés</string>
+  <string name="button_details">Részletek</string>
+  <string name="button_delete">Törlés</string>
+  <string name="button_send">Küldés</string>
+  <string name="button_call">Hívás</string>
+  <string name="button_hangup">Megszakítás</string>
+  <string name="button_checkrate">Ellenőrzés</string>
+  <string name="button_display">Kijelző</string>
+  <string name="button_close">Bezás</string>
+  <string name="phone_type_mobile_short">M: </string>
+  <string name="phone_type_sip_uri">SIP:</string>
+  <string name="phone_type_sip_uri_short">S: </string>
+  <string name="phone_type_xmpp">JID:</string>
+  <string name="phone_type_xmpp_short">J: </string>
+  <string name="phone_type_mobile">Mobil:</string>
+  <string name="phone_type_home_short">H: </string>
+  <string name="phone_type_home">Otthoni:</string>
+  <string name="phone_type_work_short">W: </string>
+  <string name="phone_type_work">Munkahely:</string>
+  <string name="phone_type_other_short">O: </string>
+  <string name="phone_type_other">Egyéb:</string>
+  <string name="xmpp_jid_label">JID:</string>
+  <string name="xmpp_user_name_label">Felhasználónév:</string>
+  <string name="calling_notification_ticker">SIP hívás elindult</string>
+  <string name="calling_notification_title">Kimenő SIP hívás</string>
+  <string name="calling_notification_text">Nyomja meg a hívó visszaállításához</string>
+  <string name="callmode_dialog_title">Hívási mód kiválasztása</string>
+  <string name="callmode_dialog_audio">Audio</string>
+  <string name="callmode_dialog_video">Video</string>
+  <string name="message_type_dialog_title">Válasszon üzenet típust</string>
+  <string name="message_type_dialog_sip">SMS</string>
+  <string name="message_type_dialog_xmpp">Chat</string>
+  <string name="native_callmode_dialog_title">Válasszon hívási eseményt</string>
+  <string name="native_callmode_dialog_native">Telefonhívás</string>
+  <string name="msg_account_state">Egyenleg</string>
+  <string name="msg_loading">Betöltés...\Kérem várjon</string>
+  <string name="new_messages_title">Új üzenet</string>
+  <string name="new_messages_voice_msg">Önnek %d új hangüzenete van</string>
+  <string name="new_messages_voice_btn">Hangposta hívása</string>
+  <string name="settings_screen_sip">SIP Beállítások</string>
+  <string name="settings_screen_xmpp">XMPP Beállítások</string>
+  <string name="settings_screen_audio">Audio beállítások</string>
+  <string name="settings_screen_video">Video beállítások</string>
+  <string name="settings_screen_system">Rendszer beállítások</string>
+  <string name="settings_key_user_name">Felhasználónév</string>
+  <string name="settings_key_user_name_summary">Felhasználónév SIP előfizetéshez</string>
+  <string name="settings_key_password">Jelszó</string>
+  <string name="settings_key_password_summary">Jelszó a SIP előfizetéshez</string>
+  <string name="settings_key_category_sip_server">Server beállítások</string>
+  <string name="settings_key_category_sip_presence">Megjelenítési beállítások</string>
+  <string name="settings_key_sip_presence_publish_method">Közzétételi mód</string>
+  <string name="settings_key_category_sip_advanced">Haladó beállítások</string>
+  <string name="settings_key_sip_port">SIP Port</string>
+  <string name="settings_key_sip_port_summary">Port a SIP szerveren</string>
+  <string name="settings_key_sip_port_hint">Aktuális 5060</string>
+  <string name="settings_key_server">SIP Szerver</string>
+  <string name="settings_key_server_summary">Domain, vagy IP címe a szervernek</string>
+  <string name="settings_key_display_name">Név kijelzése</string>
+  <string name="settings_key_display_name_summary">A hívó kijelzése a hívott félnél</string>
+  <string name="settings_key_auth_user_name">Hiteles felhasználónév</string>
+  <string name="settings_key_auth_user_name_summary">A szerveren történő hitelesítéshez használt név</string>
+  <string name="settings_key_outbound_proxy">Kimenő Proxy</string>
+  <string name="settings_key_outbound_proxy_summary">A proxy szerver amely a SIP kérést fogadja(amennyiben szükséges)</string>
+  <string name="settings_key_nat_traversal">NAT átjáró</string>
+  <string name="settings_key_stun_server">Stun Szerver</string>
+  <string name="settings_key_stun_server_summary">Adja meg, ha a SIP szerver stun szervert igényel</string>
+  <string name="settings_key_allow_contact_rewrite">Kapcsolat újraírásának engedélyezése</string>
+  <string name="settings_key_xmpp_user_name">Felhasználónév</string>
+  <string name="settings_key_xmpp_user_name_summary">Felhasználónév az XMPP előfizetéshez</string>
+  <string name="settings_key_xmpp_password">Jelszó</string>
+  <string name="settings_key_xmpp_password_summary">Jelszó az XMPP előfizetéshez</string>
+  <string name="settings_key_category_xmpp_server">Szerver beállítások</string>
+  <string name="settings_key_xmpp_server">XMPP Szerver</string>
+  <string name="settings_option_xmpp_server_custom">Custom</string>
+  <string name="settings_key_xmpp_server_host">Host</string>
+  <string name="settings_key_xmpp_server_summary">Domain, vagy IP címe az XMPP szervernek</string>
+  <string name="settings_key_xmpp_port">Port</string>
+  <string name="settings_key_xmpp_port_summary">Port az XMPP szerveren</string>
+  <string name="settings_key_xmpp_port_hint">Aktuális 5222</string>
+  <string name="settings_key_xmpp_service">A szolgáltatás neve</string>
+  <string name="settings_key_xmpp_service_summary">A Szolgáltatás neve a szerveren</string>
+  <string name="settings_key_xmpp_service_hint">Szolgáltató neve, vagy üres, ha azonos a szerver nevével</string>
+  <string name="settings_key_category_xmpp_other">Megjelenítési beállítások</string>
+  <string name="settings_key_xmpp_presence">Állapot</string>
+  <string name="settings_key_xmpp_presence_status">Állapot szöveg</string>
+  <string name="settings_key_xmpp_presence_status_summary">Az állapot látható más kapcsolatoknak</string>
+  <string name="settings_key_default_call">Aktuális hívási esemény</string>
+  <string name="settings_key_video_front_camera">Front kamera használata</string>
+  <string name="settings_key_video_front_camera_sum_on">Front camera használat, amennyiben van</string>
+  <string name="settings_key_video_front_camera_sum_off">A fő camera lesz használatban</string>
+  <string name="settings_key_video_bps">Bit Rate</string>
+  <string name="settings_key_video_res">Felbontás</string>
+  <string name="settings_key_video_fps">Frames Per Second</string>
+  <string name="settings_key_video_recording">Felvétel</string>
+  <string name="settings_key_video_codecs">Codecs</string>
+  <string name="settings_key_H264_90000">H.264</string>
+  <string name="settings_key_H263_1998_90000">H.263+</string>
+  <string name="settings_key_H263_90000">H.263</string>
+  <string name="settings_key_ringtone">A telefon csengőhangja</string>
+  <string name="settings_key_ringtone_summary">Bejövő hívások csengőhangja</string>
+  <string name="settings_sms_key_ringtone">SMS csengőhang</string>
+  <string name="settings_sms_key_ringtone_summary">Bejövő üzenetek csengőhangja</string>
+  <string name="settings_key_keytones">Billentyűhangok engedélyezése</string>
+  <string name="settings_key_keytones_summary">Billentyűhangok engedélyezése/tiltása a billentyűzeten</string>
+  <string name="settings_key_vibration">Billentyű rezgés engedélyezése</string>
+  <string name="settings_key_vibration_summary">Billentyűzet rezgés bekapcsolás/kikapcsolás</string>
+  <string name="settings_key_bluetooth">Bluetooth Headset használata</string>
+  <string name="settings_key_bluetooth_summary">Engedélyezés, ha bluetooth headset-et akar használni</string>
+  <string name="settings_key_audio_codecs">Codecs</string>
+  <string name="settings_key_ec">Visszhang elnyomás</string>
+  <string name="settings_key_ec_summary">Visszhang elnyomás engedélyezése, ha a hangszózó be van kapcsolva</string>
+  <string name="settings_key_dtmf_mode">DTMF Mód</string>
+  <string name="settings_key_message_type">Üzenet típusa</string>
+  <string name="settings_key_transport">Átvitel</string>
+  <string name="settings_key_native_call_mode">Honos hívási esemény</string>
+  <string name="settings_key_G729">G.729</string>
+  <string name="settings_key_G722_16000">G.722</string>
+  <string name="settings_key_PCMU_8000">G.711u</string>
+  <string name="settings_key_PCMA_8000">G.711a</string>
+  <string name="settings_key_GSM_8000">GSM</string>
+  <string name="settings_key_speex_8000">Speex (8kHz)</string>
+  <string name="settings_key_speex_16000">Speex (16kHz)</string>
+  <string name="settings_key_iLBC_8000">iLBC</string>
+  <string name="settings_key_voice">Hangposta</string>
+  <string name="settings_key_voice_summary">Hangposta hívószáma</string>
+  <string name="settings_key_service_auto_start">Automatikus indítás</string>
+  <string name="settings_key_service_auto_start_summary">VOIP szolgáltatás és naplózás indítása a rendszer indításával egyidejűleg</string>
+  <string name="settings_key_native_calllog">Honos hívásnapló használata</string>
+  <string name="settings_key_native_calllog_summary">Hívások a hívásnaplóban, ha lehetséges</string>
+  <string name="empty_number_error">Kérem adja meg a számot</string>
+  <string name="empty_voice_number_error">Kérem adja meg a hangposta hívószámát a beállításoknál</string>
+  <string name="regstate_authentification_error">Érvénytelen felhasználónév, vagy jelszó.</string>
+  <string name="regstate_server_error">Nem tud a szerverhez kapcsolódni.</string>
+  <string name="regstate_unknown_error">Regisztrációs hiba</string>
+  <string name="regstate_default_error">Az előfizető nem regisztrált. Ellenőrizze a beállításokat és az Internet kapcsolatot.</string>
+  <string name="xmpp_message_send_account_not_set_error">XMPP előfizetés nincs beállítva! AZ üzenet küldése a JID címre nem lehetséges.</string>
+  <string name="xmpp_regstate_error_title">XMPP regisztrációs hiba</string>
+  <string name="xmpp_not_registered_error">Nincs regisztrálva az XMPP előfizetése!</string>
+  <string name="regstate_error_title">Regisztrációs hiba</string>
+  <string name="send_error">Küldési hiba!</string>
+  <string name="regstate_ok_button">OK</string>
+  <string name="regstate_settings_button">Beállítások</string>
+  <string name="error_configure_account">Kérem állítsa be előfizetését!</string>
+  <string name="contact_info_presence_subscription">Feltöltés kijelzése</string>
+  <string name="contact_info_presence_subscription_status">Feltöltése %1$s</string>
+  <string name="contact_info_presence_subscription_enabled">Engedélyezve</string>
+  <string name="contact_info_presence_subscription_disabled">letiltva</string>
+  <string name="presence_subscriptions">Feltöltések kijelzése</string>
+  <string name="presence_subscriptions_pending">Felfüggesztve</string>
+  <string name="presence_subscriptions_allowed">Engedélyezve</string>
+  <string name="presence_subscriptions_denied">Megtagadva</string>
+  <string name="presence_subscriptions_change_permission_question">Átküldés %1$s a \'%2$s\' részére?</string>
+  <string name="presence_subscriptions_allow">Engedélyezés</string>
+  <string name="presence_subscriptions_deny">Megtagadás</string>
+  <string name="presence_subscriptions_empty_list">Feltöltés nem lehetséges</string>
+  <string name="presence_subscriptions_subscription_request_question">Ön megszakította a feltöltés folyamatát.</string>
+  <string name="presence_subscriptions_menu_allow_selected">Engedélyezés kiválasztva</string>
+  <string name="presence_subscriptions_menu_deny_selected">Megtagadás kiválasztva</string>
+  <string name="presence_subscriptions_menu_delete_selected">Törlés kiválasztva</string>
+  <string-array name="transport">
+    <item>UDP</item>
+    <item>TCP</item>
+  </string-array>
+  <string-array name="transport_values">
+    <item>0</item>
+    <item>01</item>
+  </string-array>
+  <string-array name="native_call">
+    <item>Kérés</item>
+    <item>Honos hívás</item>
+  </string-array>
+  <string-array name="native_call_values">
+    <item>0</item>
+    <item>01</item>
+  </string-array>
+  <string-array name="video_bps">
+    <item>48kbps</item>
+    <item>96kbps</item>
+    <item>192kbps</item>
+    <item>384kbps</item>
+  </string-array>
+  <string-array name="video_bps_values">
+    <item>48000</item>
+    <item>96000</item>
+    <item>192000</item>
+    <item>384000</item>
+  </string-array>
+  <string-array name="default_call">
+    <item>Kérés</item>
+    <item>Audió</item>
+    <item>Videó</item>
+  </string-array>
+  <string-array name="default_call_values">
+    <item>0</item>
+    <item>01</item>
+    <item>2</item>
+  </string-array>
+  <string-array name="video_res">
+    <item>QCIF (176x144)</item>
+    <item>CIF (352x288)</item>
+  </string-array>
+  <string-array name="video_res_values">
+    <item>2</item>
+    <item>3</item>
+  </string-array>
+  <string-array name="video_fps">
+    <item>5</item>
+    <item>10</item>
+    <item>15</item>
+  </string-array>
+  <string-array name="video_fps_values">
+    <item>5</item>
+    <item>10</item>
+    <item>15</item>
+  </string-array>
+  <string-array name="dtmf_mode">
+    <item>RFC 2833</item>
+    <item>SIP Info</item>
+  </string-array>
+  <string-array name="dtmf_mode_values">
+    <item>0</item>
+    <item>01</item>
+  </string-array>
+  <string-array name="message_types">
+    <item>Egyszerű szöveg</item>
+    <item>Üzenet/CPIM</item>
+  </string-array>
+  <string-array name="message_types_values">
+    <item>0</item>
+    <item>01</item>
+  </string-array>
+  <string-array name="nat_traversal_mode">
+    <item>Letiltva</item>
+    <item>STUN keresés</item>
+    <item>STUN Szerver</item>
+  </string-array>
+  <string-array name="nat_traversal_mode_values">
+    <item>0</item>
+    <item>01</item>
+    <item>2</item>
+  </string-array>
+  <string-array name="xmpp_presence">
+    <item>Elérhető</item>
+    <item>Nem elérhető</item>
+    <item>Beszélgethet</item>
+    <item>Ne zavarj!</item>
+    <item>Nem elérhető</item>
+  </string-array>
+  <string-array name="xmpp_presence_values">
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>7</item>
+  </string-array>
+  <string-array name="sip_presence">
+    <item>Online</item>
+    <item>Nincs a készüléknél</item>
+    <item>Foglalt</item>
+    <item>Kilépve</item>
+  </string-array>
+  <string-array name="sip_presence_values">
+    <item>2</item>
+    <item>4</item>
+    <item>5</item>
+    <item>3</item>
+  </string-array>
+  <string-array name="xmpp_server_list">
+    <item>Gmail</item>
+    <item>Facebook</item>
+    <item>@string/settings_option_xmpp_server_custom</item>
+  </string-array>
+  <string-array name="xmpp_server_list_values">
+    <item>gmail.com</item>
+    <item>facebook.com</item>
+    <item>Egyéb</item>
+  </string-array>
+  <string-array name="sip_presence_publish_method">
+    <item>Agent</item>
+    <item>P2P</item>
+  </string-array>
+  <string-array name="sip_presence_publish_method_values">
+    <item>2</item>
+    <item>3</item>
+  </string-array>
+  
+  <string name="toast_serial_incorrect">Az aktivációs kód hibás</string>
+  <string name="toast_activation_error">Aktiválási hiba. Kérem próbálja újra később.</string>
+  <string name="toast_cannot_activate">%s nem aktiválható. Kérem vegye fel kapcsolatot a SIP szolgáltatóval.</string>
+  <string name="serial_input_hint">Hívó aktivációs kódja</string>
+  <string name="serial_input_button">Folytatás</string>
+  <string name="serial_input_label">Kérem adja meg a hívó aktivációs kódját</string>
+  <string name="contact_delete_confirmation_dialog_title">Jóváhagyás</string>
+  <string name="contact_delete_confirmation_dialog_content">Biztosan törölni akarja %1$s a kapcsolatok közül?</string>
+  <string name="contact_delete_error">Hiba a kapcsolat törlése közben.</string>
+  <string name="contact_add_error">Hiba a kapcsolat hozzáadása közben.</string>
+  <string name="contact_edit_error">Hiba a kapcsolat szerkesztése közben.</string>
+  <string name="sign_up_text">Feliratkozás</string>
+  <string name="login_username">Felhasználó:</string>
+  <string name="login_password">Jelszó:</string>
+  <string name="login_hint_required">Szükséges</string>
+  <string name="login_button_continue">Bejelentkezés</string>
+  <string name="login_button_login">Bejelentkezés</string>
+  <string name="callback_message_login_incorrect">A bejelentkezés sikertelen</string>
+  <string name="callback_message_registered_successful">A felhasználó regisztrációja sikeres</string>
+  <string name="callback_message_hang_up">Felfüggesztés</string>
+  <string name="callback_message_clients_connected">Az ügyfél kapcsolódva</string>
+  <string name="callback_message_busy">Foglalt</string>
+  <string name="callback_message_no_answer">Nincs válasz</string>
+  <string name="callback_message_call_rejected">A hívást elutasították</string>
+  <string name="callback_message_insufficient_funds">Nincs felhasználható egyenlege</string>
+  <string name="callback_message_call_ended_because_of_insufficient_funds">A hívás befejeződik felhasználható egyenleg hiánya miatt</string>
+  <string name="callback_message_wrong_source_number">Hibás a hívó száma</string>
+  <string name="callback_message_wrong_destination_number">Hibás a hívott szám</string>
+  <string name="callback_message_destination_is_alerting">A hívott riasztást ad</string>
+  <string name="callback_message_source_is_alerting">A hívó riasztást ad</string>
+  <string name="callback_message_source_connected">A hívó kapcsolódva</string>
+  <string name="callback_message_destination_connected">A hívott kapcsolódva</string>
+  <string name="callback_message_destination_ended_call">A hívott befejezte a hívást</string>
+  <string name="callback_message_source_ended_call">A hívó befejezte a hívást</string>
+  <string name="callback_message_source_has_insufficient_funds">A hívónak nincs elég felhasználható egyenlege</string>
+  <string name="callback_message_destination_has_insufficient_funds">A hívottnak nincs elég felhasználható egyenlege</string>
+  <string name="callback_message_ok">OK</string>
+  <string name="callback_message_faild">Sikertelen</string>
+  <string name="callback_message_autorization_faild">A hitelesítés sikertelen</string>
+  <string name="callback_message_login_success">A bejelentkezés sikertelen</string>
+  <string name="callback_message_wrong_parameters">Hibás paraméterek</string>
+  <string name="callback_message_default">Ismeretlen</string>
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/set_vippie_id_tv"
+        style="@style/dialog_passwrod_textview"
+        android:text="@string/profile_username_alert" 
+        />
+
+    <LinearLayout
+        android:id="@+id/enter_old_pass_section"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+         >
+
+        <unique.packagename.widget.MainEditText
+           android:id="@+id/set_vippie_id_et"
+           style="@style/custom_alert_dialog"
+           android:hint="@string/set_vippie_id_dialog_hint" 
+           android:background="@drawable/textfield_default_holo_dark"
+           android:padding="4dp"
+           android:inputType="none"
+           android:layout_weight="1"
+            />
+        
+         <ImageButton
+           android:id="@+id/set_vippie_id_ok_btn"
+            android:layout_width="@dimen/registration_icon_size"
+            android:layout_height="@dimen/registration_icon_size"
+            android:layout_gravity="bottom"
+            android:background="@drawable/transparent_bg"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_accept"
+            android:visibility="visible" />
+         <ProgressBar
+             android:id="@+id/set_vippie_id_proggress_bar"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:padding="1dp"
+             android:layout_gravity="bottom"
+             android:visibility="gone"
+             />
+    </LinearLayout>
+    
+    <unique.packagename.widget.MainTextView
+        android:layout_marginTop="3dp"
+        android:id="@+id/set_vippie_id_hint"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:textColor="@color/red"
+        />
+    
+
+</LinearLayout>

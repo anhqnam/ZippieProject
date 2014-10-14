@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="add_user_avatar_size">150dp</dimen>
+    <dimen name="calls_list_buttons_distance">10dp</dimen>
+    
+    <dimen name="map_top_margin_for_marker_in_edit_mode">60dp</dimen>
+    <dimen name="registration_or_margin">10dp</dimen>
+    <dimen name="registration_btn_margin">15dp</dimen>
+</resources>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerInParent="true"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/registration_padding"
+    android:paddingRight="@dimen/registration_padding"
+    android:paddingTop="5dp" >
+
+    <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/registration_mode"
+        style="@style/registration_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/registration_use_number"
+        android:textColor="@color/registration_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow>
+
+                <LinearLayout
+                    style="@style/options_row_registration"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:background="@drawable/textfield_default_holo_light"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Spinner
+                        android:id="@+id/registration_country_spiner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/transparent"
+                        android:entries="@array/countries_list"
+                        android:fastScrollEnabled="true"
+                        android:prompt="@string/registration_country_prompt" >
+                    </Spinner>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <LinearLayout
+                    style="@style/options_row_registration"
+                    android:layout_width="0dp"
+                    android:layout_column="0"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <unique.packagename.widget.MainTextView
+                        android:id="@+id/registration_country_code_value"
+                        style="@style/registration_textview_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="-10dp"
+                        android:gravity="center"
+                        android:hint="cc"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:minEms="3"
+                        android:numeric="decimal"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:textColor="@color/registration_number_disabled" />
+
+                    <unique.packagename.widget.DefocusableEditText
+                        android:id="@+id/registration_phone_number_value"
+                        style="@style/registration_textview_color"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:hint="@string/registration_phone_number_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:numeric="decimal"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:textColor="@color/registration_number_disabled" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/registration_edit_number"
+                    android:layout_width="@dimen/registration_icon_size_small"
+                    android:layout_height="@dimen/registration_icon_size_small"
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_compose"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/registration_help_number"
+                    style="@style/button_help_help"
+                    android:layout_gravity="center_vertical" />
+            </TableRow>
+
+            <TableRow android:id="@+id/verification_code_section" >
+
+                <LinearLayout
+                    style="@style/options_row_registration"
+                    android:layout_width="0dp"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <unique.packagename.widget.DefocusableEditText
+                        android:id="@+id/verification_code_value"
+                        style="@style/registration_textview_color"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:hint="@string/registration_enter_code"
+                        android:imeOptions="actionGo"
+                        android:inputType="numberSigned"
+                        android:maxLength="4"
+                        android:numeric="decimal"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:textColor="@color/registration_number" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/registration_help_code"
+                    style="@style/button_help_help"
+                    android:layout_gravity="center_vertical" />
+            </TableRow>
+        </TableLayout>
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/registration_create_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:minLines="3"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:text="@string/registration_activation_by_number"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/text_noneditable" />
+
+        <include
+            android:id="@+id/terms"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/registration_terms" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/registration_btn_margin"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginRight="-5dp"
+            android:layout_marginTop="@dimen/registration_btn_margin"
+            android:orientation="horizontal" >
+
+            <include
+                android:id="@+id/registration_register_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                layout="@layout/registration_number_button_go" />
+
+            <include
+                android:id="@+id/registration_back_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                layout="@layout/registration_number_button_back" />
+
+            <include
+                android:id="@+id/registration_send_code_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                layout="@layout/registration_number_button_singup" />
+        </LinearLayout>
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/registration_code_sent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/registration_sms_sent"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/text_noneditable" />
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/registration_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/registration_number"
+            android:visibility="gone" />
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/registration_never_get"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/registration_btn_size"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/row_primary"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/registration_never_goten"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/text_row_primary"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/registration_or"
+        style="@style/registration_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/registration_or_margin"
+        android:gravity="center"
+        android:text="@string/registration_or"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/text_noneditable" />
+
+    <unique.packagename.widget.MainButton
+        android:id="@+id/registration_use_email"
+        style="@style/registration_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/registration_btn_size"
+        android:layout_marginTop="@dimen/registration_btn_margin"
+        android:background="@color/row_primary"
+        android:text="@string/registration_use_email_reg"
+        android:textColor="@color/text_row_primary" />
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/bottom_bar" >
+    
+    <unique.packagename.widget.Button android:id="@+id/btn_left"
+		style="@style/bottom_bar_button"
+		android:visibility="visible"
+	/>
+	<unique.packagename.widget.Button android:id="@+id/btn_right"
+		style="@style/bottom_bar_button"
+		android:visibility="visible"
+	/>
+</LinearLayout>

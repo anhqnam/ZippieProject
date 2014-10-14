@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="50dp" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/calling_list_entry_bg"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/top_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <unique.packagename.widget.MainTextView
+                android:id="@+id/dialog_title_custom"
+                style="@style/CallingListEntryHeaderText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Test" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/separator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_bar"
+            android:background="@drawable/calling_list_entry_separator"
+            android:padding="20dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/separator"
+            android:layout_marginTop="5dp"
+            android:minHeight="50dp"
+            android:visibility="visible" >
+
+            <ImageButton
+                android:id="@+id/callmode_dialog_audio"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:gravity="center_horizontal"
+                android:minWidth="120dp"
+                android:src="@drawable/contacts_free_actions_call" />
+
+            <ImageButton
+                android:id="@+id/callmode_dialog_video"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:gravity="center_horizontal"
+                android:minWidth="120dp"
+                android:src="@drawable/contacts_free_actions_video" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="help_link_faq">http://www.ivippie.com/help/</string>
+    <string name="help_link_facebook">http://www.facebook.com/VippieByVoipswitch</string>
+    <string name="help_link_twitter">https://twitter.com/Vippie_</string>
+    <string name="dialer_eula">http://ivippie.com/mobile/eula.html</string>
+    <string name="dialer_privacy">http://ivippie.com/mobile/privacy_policy.html</string>
+    <string name="dialer_website">http://ivippie.com</string>
+    <string name="dialer_get_vippie">http://www.ivippie.com/gv</string>
+    <string name="dialer_faq">http://www.ivippie.com/help/</string>
+    <string name="settings_website">www.ivippie.com</string>
+    <string name="password_dialog_footer">After that you will be able to log in to your account on www.ivippie.com</string>
+    <string name="intro_offer_link">http://www.ivippie.com/vippie-for-everyone-vippie-for-you/</string>
+    <string name="intro_rates_link">http://www.ivippie.com/check-rates/</string>
+    <string name="plan_terms_uri">https://www.ivippie.com/mobile/t&amp;c_plans.html</string>
+    <string name="plan_info_terms_uri">https://www.ivippie.com/plans-details/</string>
+    <string name="login_forgot_pass_link">https://www.ivippie.com/forgot-password/</string>
+    <string name="support_email">support@ivippie.com</string>
+    <string name="support_email_for_view"><u>support@ivippie.com</u></string>
+    
+    <string name="intro_page1">https://www.ivippie.com/intro1.html</string>
+    <string name="intro_page2">https://www.ivippie.com/intro2.html</string>
+    <string name="intro_page3">https://www.ivippie.com/intro3.html</string>
+    
+    <string name="account_bonus_get_more">https://www.ivippie.com/mbonus</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="calls_list_avatar_size">64dp</dimen>
+    <dimen name="calls_list_avatar_size_push_margin">74dp</dimen>
+    <dimen name="top_calls_list_avatar_size">64dp</dimen>
+
+    <dimen name="emot_icons_picker_icon_width">30dp</dimen>
+    <dimen name="emot_icons_picker_icon_height">30dp</dimen>
+    <dimen name="emot_icons_picker_icon_padding">3dp</dimen>
+    <dimen name="emot_icons_picker_max_height">140dp</dimen>
+
+    <dimen name="incoming_call_operations_size">240dp</dimen>
+    <dimen name="incoming_call_background_circle_margin">24dp</dimen>
+    <dimen name="intro_text_field_height">160dp</dimen>
+    <dimen name="add_user_avatar_size">120dp</dimen>
+    
+    <dimen name="registration_or_margin">0dp</dimen>
+    <dimen name="registration_btn_margin">7dp</dimen>
+</resources>

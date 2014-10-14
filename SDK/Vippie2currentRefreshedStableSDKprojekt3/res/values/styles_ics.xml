@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+<!-- the theme applied to the application or activity -->
+    <style name="Theme.AppCompatVippie" parent="@style/Theme.AppCompat.Light">
+        <item name="android:actionBarStyle">@style/VippieActionBar</item>
+        <item name="android:actionBarTabStyle">@style/VippieTabs</item>
+        <item name="android:actionBarTabTextStyle">@style/VippieActionBarTabText</item>
+        <item name="android:actionBarTabBarStyle">@style/VippieActionBarTabBar</item>
+        <item name="android:actionMenuTextColor">@color/text_row_primary</item>
+
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/VippieActionBar</item>
+        <item name="android:actionBarTabStyle">@style/VippieTabs</item>
+        <item name="actionBarTabTextStyle">@style/VippieActionBarTabText</item>
+        <item name="actionBarTabBarStyle">@style/VippieActionBarTabBar</item>
+        <item name="actionMenuTextColor">@color/text_row_primary</item>
+    </style>
+    
+    
+<!-- ActionBar styles -->
+    <style name="VippieActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/row_primary</item>
+		<item name="android:titleTextStyle">@style/VippieActionBarTitleText</item>
+		
+        <!-- Support library compatibility -->
+        <item name="background">@color/row_primary</item>
+        <item name="titleTextStyle">@style/VippieActionBarTitleText</item>
+    </style>
+    
+ 
+<!-- ActionBar title text -->
+    <style name="VippieActionBarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/text_row_primary</item>
+        <!-- The textColor property is backward compatible with the Support Library -->
+    </style>
+
+<!-- ActionBar tabs text -->
+    <style name="VippieActionBarTabText" parent="@style/Widget.AppCompat.ActionBar.TabText">
+        <item name="android:textColor">@color/text_row_primary</item>
+        <!-- The textColor property is backward compatible with the Support Library -->
+    </style>
+
+    <!-- ActionBar tab bar  -->
+    <style name="VippieActionBarTabBar" parent="@style/Widget.AppCompat.ActionBar.TabBar">
+        <!--<item name="android:divider"></item> -->
+        <item name="android:background">@color/tab_holo_bg</item>
+        <!-- The textColor property is backward compatible with the Support Library -->
+    </style>
+    
+<!-- ActionBar tabs styles -->
+    <style name="VippieTabs" parent="@style/Widget.AppCompat.ActionBar.TabView">
+        <!-- tab indicator -->
+        <item name="android:background">@drawable/registration_actionbar_tab_indicator</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/registration_actionbar_tab_indicator</item>
+    </style>
+    
+    
+</resources>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <unique.packagename.widget.TitleBar
+        android:id="@+id/title_layout"
+        android:background="@color/row_primary"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bars_height"
+        app:label="@string/more_my_profile_details"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:fillViewport="true" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp" >
+
+            <TableRow
+                style="@style/options_row_profile"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="10dp" >
+
+                <unique.packagename.widget.MainTextView
+                    android:id="@+id/profile_first_Name"
+                    style="@style/my_profile_row_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/profile_first_name" />
+
+                <unique.packagename.widget.MainEditText
+                    android:id="@+id/profile_first_name_val"
+                    style="@style/iphone_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textfield_default_holo_light"
+                    android:hint="@string/profile_not_set_hint"
+                    android:text="asdfadf"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                style="@style/options_row_profile"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp" >
+
+                <unique.packagename.widget.MainTextView
+                    android:id="@+id/profile_last_name"
+                    style="@style/my_profile_row_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/profile_last_name" />
+
+                <unique.packagename.widget.MainEditText
+                    android:id="@+id/profile_last_name_val"
+                    style="@style/iphone_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textfield_default_holo_light"
+                    android:hint="@string/profile_not_set_hint"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/profile_sex_section"
+                style="@style/options_row_profile"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:focusableInTouchMode="true" >
+
+                <unique.packagename.widget.MainTextView
+                    android:id="@+id/profile_sex"
+                    style="@style/my_profile_row_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/profile_sex" />
+
+                <unique.packagename.widget.MainTextView
+                    android:id="@+id/profile_sex_val"
+                    style="@style/iphone_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textfield_default_holo_light"
+                    android:hint="@string/profile_not_set_hint" />
+            </TableRow>
+
+            <TableRow
+                style="@style/options_row_profile"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp" >
+
+                <unique.packagename.widget.MainTextView
+                    android:id="@+id/profile_birthday"
+                    style="@style/my_profile_row_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/profile_birthday" />
+
+                <unique.packagename.widget.MainTextView
+                    android:id="@+id/profile_birthday_val"
+                    style="@style/iphone_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textfield_default_holo_light"
+                    android:hint="@string/profile_not_set_hint"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                style="@style/options_row_profile"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp" >
+
+                <unique.packagename.widget.MainTextView
+                    android:id="@+id/profile_country"
+                    style="@style/my_profile_row_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/profile_country" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/textfield_default_holo_light"
+                    android:gravity="right|center_vertical" >
+
+                    <Spinner
+                        android:id="@+id/details_country_spiner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:entries="@array/countries_list"
+                        android:fastScrollEnabled="true"
+                        android:prompt="@string/registration_country_prompt" >
+                    </Spinner>
+                </FrameLayout>
+            </TableRow>
+
+            <TableRow
+                style="@style/options_row_profile"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp" >
+
+                <unique.packagename.widget.MainTextView
+                    android:id="@+id/profile_city"
+                    style="@style/my_profile_row_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/profile_city" />
+
+                <unique.packagename.widget.MainEditText
+                    android:id="@+id/profile_city_val"
+                    style="@style/iphone_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/profile_not_set_hint"
+                    android:inputType="textPersonName"
+                    android:background="@drawable/textfield_default_holo_light" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

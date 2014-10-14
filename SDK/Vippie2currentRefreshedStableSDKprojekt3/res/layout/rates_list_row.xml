@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/transparent_bg"
+    android:orientation="vertical"
+    android:stretchColumns="1" >
+
+    <TableRow
+        android:id="@+id/voicemail_new_unheard_row"
+        android:layout_width="fill_parent"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/rate_row_country"
+            style="@style/rates_row_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:paddingLeft="10dp" />
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/rate_row_rate"
+            style="@style/rates_row_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:paddingRight="10dp"
+            android:textColor="@color/row_primary" />
+    </TableRow>
+
+</TableLayout>

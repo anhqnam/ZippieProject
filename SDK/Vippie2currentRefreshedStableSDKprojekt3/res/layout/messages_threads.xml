@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <!--
+         <unique.packagename.widget.MainTextView android:id="@+id/messages_message"
+    	style="@style/list_message"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:visibility="gone"
+    	/>
+    -->
+
+    <LinearLayout
+        android:id="@+id/messages_threads_empty_section"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:gravity="center" >
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/messages_message"
+            style="@style/list_message"
+            android:layout_height="125dp"
+            android:layout_width="125dp"
+            android:background="@drawable/messages_list_msg"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <unique.packagename.messages.widget.MessageThreadsList
+        android:id="@+id/messages_threads_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/contact_list_divider"
+        android:dividerHeight="1dp" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/messages_threads_bottom_bar" />
+
+</LinearLayout>

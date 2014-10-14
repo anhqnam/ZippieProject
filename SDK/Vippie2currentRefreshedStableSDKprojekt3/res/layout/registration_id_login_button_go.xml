@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/registration_btn_size"
+    android:background="@color/row_primary"
+    android:orientation="horizontal"
+    android:gravity="center">    
+    <ImageView 
+        android:layout_height="@dimen/registration_icon_size"
+        android:layout_width="@dimen/registration_icon_size"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/go"
+        /> 
+	<unique.packagename.widget.MainTextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="@dimen/registration_btn_size"
+	    android:layout_gravity="center_vertical"
+	    android:gravity="center_vertical"
+		android:layout_marginLeft="10dp"
+		android:textColor="@color/text_row_primary"
+		style="@style/registration_title"
+		android:textStyle="bold"
+	    android:text="@string/registration_go"
+	    />
+</LinearLayout>

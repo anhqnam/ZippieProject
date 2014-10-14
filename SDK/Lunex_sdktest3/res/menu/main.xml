@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.sdktest.MainActivity" >
+    
+    <item
+        android:id="@+id/action_registration"
+        android:orderInCategory="100"
+        android:title="@string/action_registration"
+        app:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/action_sip_register"
+        android:orderInCategory="100"
+        android:title="@string/action_sip_register"
+        app:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/action_start_dialer"
+        android:orderInCategory="100"
+        android:title="@string/action_start_dialer"
+        app:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/action_sip_unregister"
+        android:orderInCategory="100"
+        android:title="@string/action_sip_unregister"
+        app:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/action_dialer_exit"
+        android:orderInCategory="100"
+        android:title="@string/action_dialer_exit"
+        app:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/action_contacts"
+        android:orderInCategory="100"
+        android:title="@string/action_contacts"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_p"
+    android:paddingBottom="30dp">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:drawingCacheQuality="high"
+        android:layout_above="@+id/activation_code"
+        android:scaleType="fitCenter"
+        android:src="@drawable/splash_logo_big" >
+    </ImageView>
+
+    <EditText
+        android:id="@id/activation_code"
+        style="@style/registration_textview_color"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toLeftOf="@+id/activation_help_code"
+        android:ems="10"
+        android:hint="@string/activation_enter_code"
+        android:imeOptions="actionGo"
+        android:inputType="number"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/registration_number" />
+
+    <ImageButton
+        android:id="@+id/activation_help_code"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        style="@style/button_help_help"
+        android:layout_gravity="center_vertical" 
+        android:contentDescription="TODO"/>
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/calllog_row"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" >
+	
+   <RelativeLayout
+		android:layout_width="@dimen/contacts_avatar_container_width"
+		android:layout_height="@dimen/contacts_avatar_container_height">
+
+		<include 
+		    layout="@layout/avatar"/>
+
+		<ImageView android:id="@+id/calllog_row_icon"
+				android:layout_width="@dimen/contacts_avatar_icon_size"
+				android:layout_height="@dimen/contacts_avatar_icon_size"
+				android:scaleType="fitXY"
+				android:layout_alignParentLeft="true"
+				android:layout_alignParentTop="true"
+				android:layout_marginLeft="3dp"
+				android:layout_marginTop="3dp"
+		/>
+		
+	</RelativeLayout>
+    
+    
+	<!-- android:background="@drawable/ic_list_contact" -->
+	
+	<LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_gravity="center_vertical"
+		android:gravity="center"
+		android:layout_weight="1" >
+		
+		<LinearLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal" >
+			
+			<unique.packagename.widget.MainTextView android:id="@+id/calllog_row_name"
+				style="@style/calllog_row_name"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:ellipsize="end"
+				android:singleLine="true"
+				android:text="Adadavsdfafaf"
+			/>
+			
+			<unique.packagename.widget.MainTextView android:id="@+id/calllog_row_date_day"
+				style="@style/calllog_row_date"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center_vertical"
+			/>
+		
+		</LinearLayout>
+			<unique.packagename.widget.MainTextView android:id="@+id/calllog_row_number"
+				style="@style/calllog_row_number"
+				android:ellipsize="end"
+				android:singleLine="true"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="asdfafwfwfwfwfwefwf"
+			/>
+		
+	</LinearLayout>
+	
+	<ImageView 
+		    android:id="@+id/callslog_list_row_external"
+		    android:layout_width="@dimen/action_small_icon"
+			android:layout_height="@dimen/action_small_icon"
+			android:scaleType="fitXY"
+			android:layout_gravity="center"
+		    android:src="@drawable/contacts_actions_rates"
+		    android:visibility="gone"/>
+	
+	<unique.packagename.widget.MainTextView android:id="@+id/calllog_row_date_time"
+				style="@style/calllog_row_date"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+			/>
+		
+</LinearLayout>

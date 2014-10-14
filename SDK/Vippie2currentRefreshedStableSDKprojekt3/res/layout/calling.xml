@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	<unique.packagename.dialer.widget.AudioContent
+		android:id="@+id/calling_content"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:visibility="visible"
+	/>
+	<unique.packagename.dialer.widget.VideoContent
+		android:id="@+id/calling_content_video"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:visibility="gone"
+	/>	
+		<unique.packagename.dialer.widget.CallsList
+			android:id="@+id/calling_callslist"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		/>	
+	<unique.packagename.widget.BottomBar
+		android:id="@+id/calling_bottom_bar"
+	    android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+	/>
+		<!--  <unique.packagename.dialer.widget.Dialpad
+			android:id="@+id/calling_dialpad"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:visibility="gone"
+		android:layout_above="@id/calling_bottom_bar"
+	/>-->
+	
+	<unique.packagename.dialer.widget.DialpadCalling
+			android:id="@+id/calling_dialpad"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:visibility="gone"
+		android:layout_above="@id/calling_bottom_bar"
+	/>
+	
+	<unique.packagename.dialer.widget.CallingMenu
+		android:id="@+id/calling_menu_widget"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:visibility="gone"
+		android:layout_above="@id/calling_bottom_bar"
+	/>
+</RelativeLayout>

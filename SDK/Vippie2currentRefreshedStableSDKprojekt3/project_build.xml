@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="VippieApp" default="help">	
+	
+	<!-- The build.properties file can be created by you and is never touched
+         by the 'android' tool. This is the place to change some of the
+         default property values used by the Ant rules.
+         Here are some properties you may want to change/update:
+
+         source.dir
+             The name of the source directory. Default is 'src'.
+         out.dir
+             The name of the output directory. Default is 'bin'.
+
+         Properties related to the SDK location or the project target should
+         be updated using the 'android' tool with the 'update' action.
+
+         This file is an integral part of the build system for your
+         application and should be checked into Version Control Systems.
+
+         -->
+	<property file="build.properties" />
+	
+	<property file="keystore.properties" />
+		
+	<!-- Default properties -->
+	<property name="package.name" value="com.voipswitch.vippieandroid" />
+	<property name="package.path" value="com/voipswitch/vippieandroid" />
+	<property name="app.name" value="Vippie" />
+	<property name="app.release" value="true" />
+	<property name="app.video" value="false" />
+	<property name="app.tunnel" value="false" />	
+	
+	<property name="src.dir" value="src" />
+	<property name="res.dir" value="res" />
+	<property name="work.dir" value="work" />
+	<property name="out.dir" value="${work.dir}/bin" />
+	<property name="dist.dir" value="./" />
+	<property name="src-preprocessed.dir" value="${work.dir}/src-preprocessed" />
+	<property name="res-preprocessed.dir" value="${work.dir}/res-preprocessed" />
+	<property name="default.package.name" value="unique.packagename" />
+	<property name="default.package.path" value="unique/packagename" />
+	<property name="voipswitch.package.name" value="com.voipswitch" />
+	<property name="voipswitch.package.path" value="com/voipswitch" />
+	<property name="out.classes-obfuscated.dir" value="${out.dir}/classes-obfuscated" />
+	<property name="config.file" value="jni_vippie_config.h"/>
+	<property name="config.dir" value="jni"/>
+	
+	<property name="optimize.pjsiplibs.size" value="false" />	
+	<property name="pjsip.configsite.path" value="jni/pjproject/android/pj/config_site.h" />
+	
+	<tstamp>
+		<format property="date" pattern="yyyyMMdd" />
+	</tstamp>
+	<condition property="video.name" value="_VIDEO" else="" >
+			<equals arg1="${app.video}" arg2="true"/>	
+	</condition>
+	<condition property="version.name" value="_MARKET">
+			<equals arg1="${app.version}" arg2="VERSION_MARKET"/>	
+	</condition>
+	<condition property="version.name" value="_RETAIL">
+			<equals arg1="${app.version}" arg2="VERSION_RETAIL"/>	
+	</condition>
+	<condition property="version.name" value="_FULL">
+			<equals arg1="${app.version}" arg2="VERSION_FULL"/>	
+	</condition>
+	<condition property="version.name" value="_CUSTOM">
+			<equals arg1="${app.version}" arg2="VERSION_CUSTOM"/>	
+	</condition>
+	
+	
+	<property name="version.manager.path" value="${src-preprocessed.dir}/${package.path}/util/VersionManager.java"/>
+	<property name="settings.editor.path" value="${src-preprocessed.dir}/${package.path}/settings/SettingsEditor.java"/>
+	<property name="asmack.file.name" value="asmack-2010.05.07.jar" />
+	<property name="asmack.lib.temp.path" value="${asmack.file.name}"/>	
+
+	<target name="-app-setup" depends="-set-app-version,-set-manifest-version-code,-set-manifest-version-name,-set-video, -set-demo,
+		-set-release, -set-sms, -set-xmpp, -set-xmpp-custom-server, -set-xmpp-server, -set-xmpp-port,
+		-set-xmpp-service, -set-app-name, -set-icon, -set-splash-screen,-set-splash-screen-horizontal,
+		-set-activation,-set-activation-provider, -set-siplink, -set-custom-server,
+		-set-sip-server, -set-sip-port, -set-sip-username, -set-sip-password, -set-use-auth-name,-set-sip-useragent-name,
+		-set-sip-port-tunnel, -set-callback-url, -set-callback, -set-callthru, -set-callthru-url, 
+		-set-advertisement, -set-advertisement-url, -set-xmpp-usesiplogin, -run-bash-script,
+		-create-pjsip-conf,-setup-make-config, -optimize-pjsip-libs-size, -set-checkrate, -set-checkrate-url,
+		-set-balance, -set-balance-url, -set-min-sdk-version, -no-app-version,
+		-set-tunnel, -set-sip-tunnel-remote-port,-set-tunnel-local-ip,-sip-tunnel-remote-ip,
+		-set-login-page,-set-login-credential-url,-set-sign-up-url,-set-recharge,-set-recharge-url,-set-recharge-button-text,
+		-set-voicemail,-set-voicemail-number,-set-dns-srv-records,-set-custom-menu-item,
+		-set-custom-menu-item-url,-set-custom-menu-item-text,
+		-set-sip-advanced-enable,-set-sip-advanced-fields,
+		-set-codecs-user-edition,
+		-set-codec-g729,-set-codec-g729-priority,
+		-set-codec-g722,-set-codec-g722-priority,
+		-set-codec-g711u,-set-codec-g711u-priority,
+		-set-codec-g711a,-set-codec-g711a-priority,
+		-set-codec-gsm,-set-codec-gsm-priority,
+		-set-codec-amr-nb, -set-codec-amr-nb-priority,
+		-set-codec-amr-wb, -set-codec-amr-wb-priority,
+		-set-codec-speex-16kHz,-set-codec-speex-16kHz-priority,
+		-set-codec-speex-8kHz,-set-codec-speex-8kHz-priority,
+		-set-codec-iLBC,-set-codec-iLBC-priority"
+		
+		    description="Setting up the app before build">
+	</target>
+
+	<target name="-set-min-sdk-version" if="sdk.min" depends="-src-preprocess, -create-pjsip-conf">	
+		<replaceregexp file="AndroidManifest.xml"
+			match="&lt;uses-sdk android:minSdkVersion=&quot;4&quot; /&gt;"
+			replace="&lt;uses-sdk android:minSdkVersion=&quot;${sdk.min}&quot; /&gt;"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-manifest-version-code" if="app.manifest.version.code" depends="-src-preprocess">	
+		<replaceregexp file="AndroidManifest.xml"
+			match="android:versionCode=&quot;([0-9]+)&quot;"
+			replace="android:versionCode=&quot;${app.manifest.version.code}&quot;"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-manifest-version-name" if="app.manifest.version.name" depends="-src-preprocess">	
+		<replaceregexp file="AndroidManifest.xml"
+			match="android:versionName=&quot;([^&quot;]*)&quot;"
+			replace="android:versionName=&quot;${app.manifest.version.name}&quot;"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-app-version" if="app.version" depends="-src-preprocess">	
+		<replaceregexp file="${version.manager.path}"
+			match="private static final int VERSION =(.*);"
+			replace="private static final int VERSION = ${app.version};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-no-app-version" unless="app.version" depends="-src-preprocess">	
+		<fail message="Error: Enter the application version in build.properties!"/>
+	</target>
+	
+        <target name="-set-tunnel" depends="-src-preprocess"> 
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean TUNNEL_ENABLED =(.*);"
+			replace="public static final boolean TUNNEL_ENABLED = ${app.tunnel};"
+			byline="true"
+		/>
+	</target>
+	<target name="-set-video" depends="-src-preprocess"> 
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean VIDEO =(.*);"
+			replace="public static final boolean VIDEO = ${app.video};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-demo" if="app.demo" depends="-src-preprocess"> 
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean DEMO =(.*);"
+			replace="public static final boolean DEMO = ${app.demo};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-activation" if="app.activation" depends="-src-preprocess"> 
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int ACTIVATION_TYPE =(.*);"
+			replace="public static final int ACTIVATION_TYPE = ${app.activation};"
+			byline="true"
+		/>
+	</target>	
+	
+	<target name="-set-activation-provider" if="app.activation.provider" depends="-src-preprocess"> 
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String LICENSE_PROVIDER =(.*);"
+			replace="public static final String LICENSE_PROVIDER = ${app.activation.provider};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-custom-server" if="app.custom.server" depends="-src-preprocess"> 
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean CUSTOM_SERVER =(.*);"
+			replace="public static final boolean CUSTOM_SERVER = ${app.custom.server};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-siplink" if="app.siplink" depends="-src-preprocess"> 
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean SIPLINK =(.*);"
+			replace="public static final boolean SIPLINK = ${app.siplink};"
+			byline="true"
+		/>
+	</target>
+	
+	<property name="nl"  value="&#13;&#10;"/>
+
+	<target name="-optimize-pjsip-libs-size" if="${optimize.pjsiplibs.size}" depends="-create-pjsip-conf">				
+		<replaceregexp file="${pjsip.configsite.path}"
+			match="#define PJMEDIA_HAS_VIDEO (.*)"
+			replace="#define PJMEDIA_HAS_VIDEO ${video.option}"
+			byline="true"
+		/>
+	</target>
+
+	<target name="-setup-make-config" depends="-create-pjsip-conf">
+		<touch file = "${config.dir}/${config.file}" />
+		<echo message="#define VIDEO_ENABLED ${video.option}${nl}"
+		    file="${config.dir}/${config.file}"/>
+		<echo message="#define TUNNEL_ENABLED ${tunnel.option}${nl}"
+		    file="${config.dir}/${config.file}" append="yes"/>
+		<echo message="#define TUNNEL_USE_SINGLE_PACKET_INJECTION ${tunnel.single.packet.injection.option}${nl}"
+		    file="${config.dir}/${config.file}" append="yes"/>
+		<echo message="#define RELEASE_VERSION ${release.option}${nl}"
+		    file="${config.dir}/${config.file}" append="yes"/>
+	</target> 
+	
+	<target name="-create-pjsip-conf" >
+		<condition property="video.option" value="1" else="0">
+			<equals arg1="${app.video}" arg2="true"/>	
+		</condition>
+		<condition property="tunnel.option" value="1" else="0">
+			<equals arg1="${app.tunnel}" arg2="true"/>	
+		</condition>
+		<condition property="tunnel.single.packet.injection.option" value="1" else="0">
+			<equals arg1="${app.tunnel.single.packet.injection}" arg2="true"/>	
+		</condition>
+		<condition property="release.option" value="1" else="0">
+			<equals arg1="${app.release}" arg2="true"/>	
+		</condition>        
+		<condition property="sdk.min" value="7">
+			<equals arg1="${app.video}" arg2="true"/>	
+		</condition>
+	</target>
+	
+	<target name="-set-release" if="app.release" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean RELEASE =(.*);"
+			replace="public static final boolean RELEASE = ${app.release};"
+			byline="true"
+		/>
+	</target>	
+	
+	<target name="-set-sms" if="app.sms" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean SMS =(.*);"
+			replace="public static final boolean SMS = ${app.sms};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-app-name" if="app.name" depends="-src-preprocess">
+		<exec executable="sed" inputstring="${app.name}" outputproperty="app.name.escaped">
+			<arg value="s/&amp;/&amp;amp;/g"/>
+		</exec>
+		<replaceregexp encoding="utf-8">
+			<regexp pattern="&lt;string name=&quot;app_name&quot;&gt;(.*)&lt;/string&gt;"/>
+			<substitution expression="&lt;string name=&quot;app_name&quot;&gt;${app.name.escaped}&lt;/string&gt;"/>
+			<fileset dir="${res-preprocessed.dir}">
+				<include name="values*/strings.xml"/>
+			</fileset>
+		</replaceregexp>
+	</target>
+	
+	<target name="-set-icon" if="app.icon.path" depends="-src-preprocess">
+		<copy file="${app.icon.path}"
+			tofile="${res-preprocessed.dir}/drawable/icon.png"
+			overwrite="true">
+		</copy>
+		<!-- Please change Icon converter fileaname to convertImage -->
+		<exec executable="convertImage" osfamily="windows">									
+			<arg file="${res-preprocessed.dir}/drawable/icon.png"/>
+			<arg line="-colorspace gray"/>
+			<arg file="${res-preprocessed.dir}/drawable/icon_inactive.png"/>
+		</exec>
+		<exec executable="convert" osfamily="unix">
+			<arg file="${res-preprocessed.dir}/drawable/icon.png"/>
+			<arg line="-colorspace gray"/>
+			<arg file="${res-preprocessed.dir}/drawable/icon_inactive.png"/>
+		</exec>
+	</target>
+	
+	<target name="-run-bash-script" depends="-src-preprocess">				
+		<exec executable="bash" newenvironment="false" dir="./">
+			<arg value="replaceVersionManager.sh"/>
+			<arg value="${version.manager.path}"/>
+			<arg value="${settings.editor.path}"/>
+		</exec>
+	</target>
+	
+	<target name="-set-splash-screen" if="app.splash.screen.path" depends="-src-preprocess">
+			<copy file="${app.splash.screen.path}"
+				tofile="${res-preprocessed.dir}/drawable/splash_screen.png"
+				overwrite="true">
+			</copy>
+	</target>
+
+	<target name="-set-splash-screen-horizontal" if="P_SPLASH_SCREEN_H_FILE" depends="-src-preprocess">
+			<copy file="${P_SPLASH_SCREEN_H_FILE}"
+				tofile="${res-preprocessed.dir}/drawable-land/splash_screen.png"
+				overwrite="true">
+			</copy>
+	</target>
+
+	
+	<target name="-set-sip-server" if="app.sip.server" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String SIP_SERVER =(.*);"
+			replace="public static final String SIP_SERVER = ${app.sip.server};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-sip-port" if="app.sip.port" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int SIP_PORT =(.*);"
+			replace="public static final int SIP_PORT = ${app.sip.port};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-sip-username" if="app.sip.username" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String SIP_USERNAME =(.*);"
+			replace="public static final String SIP_USERNAME = ${app.sip.username};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-sip-password" if="app.sip.password" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String SIP_PASSWORD =(.*);"
+			replace="public static final String SIP_PASSWORD = ${app.sip.password};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-sip-useragent-name" if="app.sip.useragent.name" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String SIP_USER_AGENT_NAME =(.*);"
+			replace="public static final String SIP_USER_AGENT_NAME = ${app.sip.useragent.name};"
+			byline="true"
+		/>
+	</target>	
+	
+	<target name="-set-use-auth-name" if="app.use.auth.name" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean USE_AUTH_NAME =(.*);"
+			replace="public static final boolean USE_AUTH_NAME = ${app.use.auth.name};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-sip-port-tunnel" if="app.sip.port.tunnel" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int SIP_TUNNEL_PORT =(.*);"
+			replace="public static final int SIP_TUNNEL_PORT = ${app.sip.port.tunnel};"
+			byline="true"
+		/>
+	</target>
+		
+	<target name="-set-sip-tunnel-remote-port" if="app.sip.tunnel.remote.port" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int SIP_TUNNEL_REMOTE_PORT =(.*);"
+			replace="public static final int SIP_TUNNEL_REMOTE_PORT = ${app.sip.tunnel.remote.port};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-tunnel-local-ip" if="app.sip.tunnel.local.ip" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String SIP_TUNNEL_LOCAL_IP =(.*);"
+			replace="public static final String SIP_TUNNEL_LOCAL_IP = ${app.sip.tunnel.local.ip};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-sip-tunnel-remote-ip" if="app.sip.tunnel.remote.ip" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String SIP_TUNNEL_REMOTE_IP =(.*);"
+			replace="public static final String SIP_TUNNEL_REMOTE_IP = ${app.sip.tunnel.remote.ip};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-balance" if="app.balance" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int BALANCE =(.*);"
+			replace="public static final int BALANCE = ${app.balance};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-balance-url" if="app.balance.url" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String BALANCE_URL =(.*);"
+			replace="public static final String BALANCE_URL = ${app.balance.url};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-checkrate" if="app.checkrate" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int CHECK_RATE =(.*);"
+			replace="public static final int CHECK_RATE = ${app.checkrate};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-checkrate-url" if="app.checkrate.url" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String CHECK_RATE_URL =(.*);"
+			replace="public static final String CHECK_RATE_URL = ${app.checkrate.url};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-callback" if="app.callback" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int CALLBACK =(.*);"
+			replace="public static final int CALLBACK = ${app.callback};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-callback-url" if="app.callback.url" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String CALLBACK_URL =(.*);"
+			replace="public static final String CALLBACK_URL = ${app.callback.url};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-callthru" if="app.callthru" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean CALL_THROUGH_ENABLE =(.*);"
+			replace="public static final boolean CALL_THROUGH_ENABLE = ${app.callthru};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-callthru-url" if="app.callthru.url" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String CALL_THROUGH_ACCESS_NUMS_URL =(.*);"
+			replace="public static final String CALL_THROUGH_ACCESS_NUMS_URL = ${app.callthru.url};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-sip-advanced-enable" if="app.sip.advanced.enable" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean SETTING_SIP_ADVANCED_ENABLE =(.*);"
+			replace="public static final boolean SETTING_SIP_ADVANCED_ENABLE = ${app.sip.advanced.enable};"
+			byline="true"
+		/>
+	</target>	
+	
+	<target name="-set-sip-advanced-fields" if="app.sip.advanced.fields.bit" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String SETTING_SIP_ADVANCED_ENABLE_FIELD_BIT =(.*);"
+			replace="public static final String SETTING_SIP_ADVANCED_ENABLE_FIELD_BIT = ${app.sip.advanced.fields.bit};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-advertisement" if="app.advertisement" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean ADVERTISEMENT_ENABLE =(.*);"
+			replace="public static final boolean ADVERTISEMENT_ENABLE = ${app.advertisement};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-advertisement-url" if="app.advertisement.url" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String ADVERTISEMENT_URL =(.*);"
+			replace="public static final String ADVERTISEMENT_URL = ${app.advertisement.url};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-xmpp" if="app.xmpp" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean XMPP =(.*);"
+			replace="public static final boolean XMPP = ${app.xmpp};"
+			byline="true"
+		/>		
+	</target>
+	
+	<target name="-set-xmpp-custom-server" if="app.xmpp.custom.server" depends="-src-preprocess"> 
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean XMPP_CUSTOM_SERVER =(.*);"
+			replace="public static final boolean XMPP_CUSTOM_SERVER = ${app.xmpp.custom.server};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-xmpp-server" if="app.xmpp.server" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String XMPP_SERVER =(.*);"
+			replace="public static final String XMPP_SERVER = ${app.xmpp.server};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-xmpp-port" if="app.xmpp.port" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int XMPP_PORT =(.*);"
+			replace="public static final int XMPP_PORT = ${app.xmpp.port};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-xmpp-service" if="app.xmpp.service" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String XMPP_SERVICE =(.*);"
+			replace="public static final String XMPP_SERVICE = ${app.xmpp.service};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-xmpp-usesiplogin" if="app.xmpp.usesiplogin" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean XMPP_USE_SIP_LOGIN =(.*);"
+			replace="public static final boolean XMPP_USE_SIP_LOGIN = ${app.xmpp.usesiplogin};"
+			byline="true"
+		/>
+	</target>
+		
+	<target name="-set-login-page" if="app.login.page" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean HAS_LOGIN_PAGE =(.*);"
+			replace="public static final boolean HAS_LOGIN_PAGE = ${app.login.page};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-login-credential-url" if="app.login.credential.url" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String LOGIN_CREDENTIAL_URL =(.*);"
+			replace="public static final String LOGIN_CREDENTIAL_URL = ${app.login.credential.url};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-sign-up-url" if="app.sign.up.url" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String SIGN_UP_URL =(.*);"
+			replace="public static final String SIGN_UP_URL = ${app.sign.up.url};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-recharge" if="app.recharge" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int RECHARGE_DISPLAY =(.*);"
+			replace="public static final int RECHARGE_DISPLAY = ${app.recharge};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-recharge-url" if="app.recharge.url" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String RECHARGE_URL =(.*);"
+			replace="public static final String RECHARGE_URL = ${app.recharge.url};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-recharge-button-text" if="app.recharge.button.text" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String RECHARGE_BUTTON_TEXT =(.*);"
+			replace="public static final String RECHARGE_BUTTON_TEXT = ${app.recharge.button.text};"
+			byline="true"
+		/>
+	</target>
+
+	<target name="-set-custom-menu-item" if="app.custom.menu.item" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean HAS_CUSTOM_MENU_ITEM =(.*);"
+			replace="public static final boolean HAS_CUSTOM_MENU_ITEM = ${app.custom.menu.item};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-custom-menu-item-url" if="app.custom.menu.item.url" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String CUSTOM_MENU_ITEM_URL =(.*);"
+			replace="public static final String CUSTOM_MENU_ITEM_URL = ${app.custom.menu.item.url};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-custom-menu-item-text" if="app.custom.menu.item.text" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final String CUSTOM_MENU_ITEM_TEXT =(.*);"
+			replace="public static final String CUSTOM_MENU_ITEM_TEXT = ${app.custom.menu.item.text};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-dns-srv-records" if="app.dns.srv.records" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean USE_SRV_RECORDS =(.*);"
+			replace="public static final boolean USE_SRV_RECORDS = ${app.dns.srv.records};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-voicemail" if="app.voicemail" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean VOICEMAIL =(.*);"
+			replace="public static final boolean VOICEMAIL = ${app.voicemail};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-voicemail-number" if="app.voicemail.number" depends="-src-preprocess">
+		<replaceregexp file="${settings.editor.path}"
+			match="public static final String DEFAULT_VOICEMAIL =(.*);"
+			replace="public static final String DEFAULT_VOICEMAIL = ${app.voicemail.number};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codecs-user-edition" if="app.codecs.edition" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final boolean ALLOW_USER_CODECS_CUSTOMIZATION =(.*);"
+			replace="public static final boolean ALLOW_USER_CODECS_CUSTOMIZATION = ${app.codecs.edition};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-g729" if="app.codecs.g729" depends="-src-preprocess">
+		<replaceregexp file="${settings.editor.path}"
+			match="public static final boolean DEFAULT_G729 =(.*);"
+			replace="public static final boolean DEFAULT_G729 = ${app.codecs.g729};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-g729-priority" if="app.codecs.g729.priority" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int G729_PRIORITY =(.*);"
+			replace="public static final int G729_PRIORITY = ${app.codecs.g729.priority};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-g722" if="app.codecs.g722" depends="-src-preprocess">
+		<replaceregexp file="${settings.editor.path}"
+			match="public static final boolean DEFAULT_G722_16000 =(.*);"
+			replace="public static final boolean DEFAULT_G722_16000 = ${app.codecs.g722};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-g722-priority" if="app.codecs.g722.priority" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int G722_PRIORITY =(.*);"
+			replace="public static final int G722_PRIORITY = ${app.codecs.g722.priority};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-g711u" if="app.codecs.g711u" depends="-src-preprocess">
+		<replaceregexp file="${settings.editor.path}"
+			match="public static final boolean DEFAULT_PCMU_8000 =(.*);"
+			replace="public static final boolean DEFAULT_PCMU_8000 = ${app.codecs.g711u};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-g711u-priority" if="app.codecs.g711u.priority" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int PCMU_PRIORITY =(.*);"
+			replace="public static final int PCMU_PRIORITY = ${app.codecs.g711u.priority};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-g711a" if="app.codecs.g711a" depends="-src-preprocess">
+		<replaceregexp file="${settings.editor.path}"
+			match="public static final boolean DEFAULT_PCMA_8000 =(.*);"
+			replace="public static final boolean DEFAULT_PCMA_8000 = ${app.codecs.g711a};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-g711a-priority" if="app.codecs.g711a.priority" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int PCMA_PRIORITY =(.*);"
+			replace="public static final int PCMA_PRIORITY = ${app.codecs.g711a.priority};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-gsm" if="app.codecs.gsm" depends="-src-preprocess">
+		<replaceregexp file="${settings.editor.path}"
+			match="public static final boolean DEFAULT_GSM_8000 =(.*);"
+			replace="public static final boolean DEFAULT_GSM_8000 = ${app.codecs.gsm};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-gsm-priority" if="app.codecs.gsm.priority" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int GSM_PRIORITY =(.*);"
+			replace="public static final int GSM_PRIORITY = ${app.codecs.gsm.priority};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-amr-nb" if="app.codecs.amr.nb" depends="-src-preprocess">
+		<replaceregexp file="${settings.editor.path}"
+			match="public static final boolean DEFAULT_AMR_NB_8000_1 =(.*);"
+			replace="public static final boolean DEFAULT_AMR_NB_8000_1 = ${app.codecs.amr.nb};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-amr-nb-priority" if="app.codecs.amr.nb.priority" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int AMR_NB_PRIORITY =(.*);"
+			replace="public static final int AMR_NB_PRIORITY = ${app.codecs.amr.nb.priority};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-amr-wb" if="app.codecs.amr.wb" depends="-src-preprocess">
+		<replaceregexp file="${settings.editor.path}"
+			match="public static final boolean DEFAULT_AMR_WB_16000_1 =(.*);"
+			replace="public static final boolean DEFAULT_AMR_WB_16000_1 = ${app.codecs.amr.wb};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-amr-wb-priority" if="app.codecs.amr.wb.priority" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int AMR_WB_PRIORITY =(.*);"
+			replace="public static final int AMR_WB_PRIORITY = ${app.codecs.amr.wb.priority};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-speex-16kHz" if="app.codecs.speex.16kHz" depends="-src-preprocess">
+		<replaceregexp file="${settings.editor.path}"
+			match="public static final boolean DEFAULT_SPEEX_16000 =(.*);"
+			replace="public static final boolean DEFAULT_SPEEX_16000 = ${app.codecs.speex.16kHz};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-speex-16kHz-priority" if="app.codecs.speex.16kHz.priority" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int SPEEX_16_PRIORITY =(.*);"
+			replace="public static final int SPEEX_16_PRIORITY = ${app.codecs.speex.16kHz.priority};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-speex-8kHz" if="app.codecs.speex.8kHz" depends="-src-preprocess">
+		<replaceregexp file="${settings.editor.path}"
+			match="public static final boolean DEFAULT_SPEEX_8000 =(.*);"
+			replace="public static final boolean DEFAULT_SPEEX_8000 = ${app.codecs.speex.8kHz};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-speex-8kHz-priority" if="app.codecs.speex.8kHz.priority" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int SPEEX_8_PRIORITY =(.*);"
+			replace="public static final int SPEEX_8_PRIORITY = ${app.codecs.speex.8kHz.priority};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-iLBC" if="app.codecs.iLBC" depends="-src-preprocess">
+		<replaceregexp file="${settings.editor.path}"
+			match="public static final boolean DEFAULT_ILBC_8000 =(.*);"
+			replace="public static final boolean DEFAULT_ILBC_8000 = ${app.codecs.iLBC};"
+			byline="true"
+		/>
+	</target>
+	
+	<target name="-set-codec-iLBC-priority" if="app.codecs.iLBC.priority" depends="-src-preprocess">
+		<replaceregexp file="${version.manager.path}"
+			match="public static final int ILBC_PRIORITY =(.*);"
+			replace="public static final int ILBC_PRIORITY = ${app.codecs.iLBC.priority};"
+			byline="true"
+		/>
+	</target>
+	
+	<!-- Newer ADT cannot be compiled without asmack library
+	<target name="-include-asmack-check">
+		<condition property="include-asmack">
+			<or>
+				<not>
+					<isset property="app.xmpp" />
+				</not>			
+				<equals arg1="${app.xmpp}" arg2="true" />
+			</or>
+		</condition>
+	</target>
+
+	<target name="-exclude-asmack" unless="include-asmack" depends="-src-preprocess">
+		<move file="${jar.libs.absolute.dir}/${asmack.file.name}" tofile="${asmack.lib.temp.path}" failonerror="false" />
+	</target>
+		
+	<target name="-restore-asmack" >
+		<move file="${asmack.lib.temp.path}" tofile="${jar.libs.absolute.dir}/${asmack.file.name}" failonerror="false"/>		
+	</target> -->
+	
+	<!-- Override default propertis -->
+	<property name="source.dir" value="${src-preprocessed.dir}" />
+	<property name="resource.dir" value="${res-preprocessed.dir}" />
+	<property name="manifest.package" value="${package.name}" />
+	<property name="resource.absolute.dir" value="${res-preprocessed.dir}" />
+	
+	<taskdef resource="proguard/ant/task.properties"
+         classpath="${sdk.dir}/tools/proguard/lib/proguard.jar"  /> 
+		  
+	
+	<target name="-jar">
+        <jar destfile="${out.absolute.dir}/input.jar" basedir="${out.absolute.dir}/classes" />
+    </target>
+	
+	<target name="-src-preprocess" >
+		<echo>Preprocessing sources...</echo>
+		<!-- Copy all to preprocess -->
+		<copy todir="${source.dir}">
+			<fileset dir="${src.dir}">
+				<include name="**/*.java"/>
+				<include name="**/*.aidl"/>
+			</fileset>
+		</copy>
+
+                <!-- Move specified package directory -->
+		<move todir="${source.dir}/${package.path}">
+			<fileset dir="${source.dir}/${default.package.path}">
+				<include name="**/*.java"/>
+				<include name="**/*.aidl"/>				
+			</fileset>
+		</move>
+		<replace dir="${src-preprocessed.dir}" token="${default.package.name}" value="${package.name}">
+			<include name="**/*.java"/>
+			<include name="**/*.aidl"/>
+		</replace>
+		
+		<copy todir="${resource.dir}">
+			<fileset dir="${res.dir}">
+				<include name="**/*"/>
+			</fileset>
+		</copy>
+		<replace dir="${res-preprocessed.dir}" token="${default.package.name}" value="${package.name}">
+			<include name="**/*.xml"/>
+		</replace>
+		
+		<move file="AndroidManifest.xml.bak" tofile="AndroidManifest.xml" overwrite="true" failonerror="false"/>
+		<copy file="AndroidManifest.xml" tofile="AndroidManifest.xml.bak" overwrite="true" />						
+		<replace file="AndroidManifest.xml" token="${default.package.name}" value="${package.name}" />
+	</target>
+	
+	<target name="-clean-preprocessed" >				
+		<delete file="${config.dir}/${config.file}" verbose="${verbose}" />
+	</target>
+	
+	<target name="-restore-manifest" >						
+		<copy file="AndroidManifest.xml.bak" tofile="AndroidManifest.xml" overwrite="true" failonerror="false" />
+		<delete file="AndroidManifest.xml.bak" />
+	</target>
+	
+	<target name="-ndk-build" depends="-app-setup">
+	 <echo>Building native library...</echo>
+		<exec executable="${ndk.build.script}" failonerror="true">	
+			<arg value="-j6" />
+		</exec>
+	</target>
+
+    <target name="-pre-build" depends="-src-preprocess,-app-setup,-ndk-build">
+    </target>
+	
+    <target name="-pre-compile">
+    </target>
+<!--
+    [This is typically used for code obfuscation.
+     Compiled code location: ${out.classes.absolute.dir}
+     If this is not done in place, override ${out.dex.input.absolute.dir}]-->
+    <target name="-post-compile" depends="-obfuscate">
+    </target>
+	
+	<target name="-post-build" depends="-restore-manifest" />	
+
+
+    <!-- Execute the Android Setup task that will setup some properties
+         specific to the target, and import the build rules files.
+
+         The rules file is imported from
+            <SDK>/platforms/<target_platform>/ant/ant_rules_r#.xml
+
+         To customize existing targets, there are two options:
+         - Customize only one target:
+             - copy/paste the target into this file, *before* the
+               <setup> task.
+             - customize it to your needs.
+         - Customize the whole script.
+             - copy/paste the content of the rules files (minus the top node)
+               into this file, *after* the <setup> task
+             - disable the import of the rules by changing the setup task
+               below to <setup import="false" />. 
+             - customize to your needs.
+    -->    
+	
+	<target name="-clean-ndk" description="Removes output files created by NDK builder.">
+        	<exec executable="${ndk.build.script}">
+			<arg value="clean" />
+		</exec>
+		<delete dir="obj" verbose="${verbose}" />
+    	</target>
+	
+	<target name="-clean-work">
+        	<delete dir="${work.dir}" verbose="${verbose}" />		
+    	</target>
+	
+	<target name="clean"  depends="-clean-preprocessed,-restore-manifest,-clean-work" description="Removes output files created by other targets.">        
+        <delete dir="${gen.absolute.dir}" verbose="${verbose}" />
+    </target>
+		
+	<target name="zip-release" depends="release">
+		
+		<exec executable="sed" inputstring="${date}_${app.name}${video.name}${version.name}" outputproperty="zip.out.name">
+			<arg value="s/ /_/g"/>
+		</exec>
+		<property name="zip.out.dir" value="${out.dir}/${zip.out.name}"/>
+		<mkdir dir="${zip.out.dir}"/>
+		<copy todir="${zip.out.dir}">
+			<fileset dir="${out.dir}" casesensitive="yes"> 
+				<include name="**/*proguard"/>
+			</fileset>
+		</copy>
+		<copy file="build.properties" todir="${zip.out.dir}"/>
+		<copy todir="${zip.out.dir}">
+			<fileset dir="${out.dir}" casesensitive="yes"> 
+				<include name="**/*-release.apk"/>
+			</fileset>
+			<globmapper from="*-release.apk" to="${app.name}.apk"/>
+		</copy>
+		<!--
+		<rename src="${zip.out.dir}" replace="true"
+			dest="${zip.out.dir}/${app.name}.apk"/> -->
+		<copy todir="${zip.out.dir}/proguard">
+			<fileset dir="${out.dir}/proguard">
+				<include name="mapping.txt"/>
+			</fileset>
+		</copy>
+		<mkdir dir="${dist.dir}"/>
+		<zip destfile="${dist.dir}/${zip.out.name}.zip"
+		       basedir="${zip.out.dir}"
+		/>	
+	</target>	
+	
+	<target name="clean-ndk" depends="-clean-ndk" />     
+	
+	<target name="ndk" depends="-create-pjsip-conf,-setup-make-config,-optimize-pjsip-libs-size">
+		<echo>Building native library...</echo>
+		<exec executable="${ndk.build.script}" failonerror="true">	
+			<arg value="-j6" />
+		</exec>
+	</target>
+	
+	<target name="uninstall" >
+		<exec executable="adb">
+			<arg value="uninstall"/>
+			<arg value="${package.name}"/>
+		</exec>
+	</target>
+
+</project>

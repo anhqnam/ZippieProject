@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Vippie</string>
+    <string name="settings_title">Settings</string>
+    <string name="call_state_dialing">Dialing...</string>
+    <string name="call_state_ringing">Ringing</string>
+    <string name="call_state_disconnected">Disconnected</string>
+    <string name="call_state_failed">Failed</string>
+
+    <string name="call_state_conference">Conference</string>
+    <string name="call_waitng_for_remote_video_text">Waiting for remote video...</string>
+    <string name="account_registered">Online</string>
+    <string name="account_trying_register">Connecting</string>
+    <string name="account_not_registered">Offline</string>
+    <string name="account_activation_required">Activation required</string>
+    <string name="account_activation_sms_received">Activation code SMS received</string>
+    <string name="account_activation_sms_obtained">Activation code obtained from inbox</string>
+    <string name="remote_video_offer_title_text">Enable video</string>
+    <string name="calling_video_offer_text">Remote party invites you to have a video conversation, would you like to accept it?</string>
+
+    <string name="menu_quit">Exit</string>
+    <string name="menu_view">View</string>
+    <string name="menu_delete_all">Delete All</string>
+    <string name="menu_total_duration">Total Duration</string>
+    <string name="menu_add_contact">Add Contact</string>
+    <string name="menu_add_xmpp_contact">Add XMPP Contact</string>
+    <string name="menu_filter">Filter</string>
+    <string name="menu_add_to_phonebook">Add to phone book</string>
+    <string name="menu_create_new_contact">Create new contact</string>
+    <string name="menu_choose_existing_contact">Choose existing contact</string>
+    <string name="menu_details">Details</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_edit">Edit</string>
+    <string name="menu_call">Call</string>
+    <string name="menu_message">Message</string>
+    <string name="menu_send_msg">Send Message</string>
+    <string name="menu_new_msg">New Message</string>
+    <string name="menu_resend">Resend</string>
+    <string name="menu_copy_to_clipboard">Copy to clipboard</string>
+    <string name="menu_checkrate">Check rate</string>
+    <string name="menu_select_all">Select all</string>
+    <string name="menu_deselect_all">Deselect all</string>
+    <string name="hide_dialpad_text">Hide keypad</string>
+    <string name="dialpad_rate_suffix">/min</string>
+    <string name="contact_name_default">(Unknown)</string>
+    <string name="calllog_title">Call log</string>
+    <string name="calllog_view">Select view</string>
+    <string name="calllog_view_all">All</string>
+    <string name="calllog_view_incoming">Incoming</string>
+    <string name="calllog_view_outgoing">Outgoing</string>
+    <string name="calllog_view_missed">Missed</string>
+    <string name="calllog_total_duration">Total duration</string>
+    <string name="calllog_confimr_delete_all">Are you sure you want to clear call log?</string>
+    <string name="calllog_empty_list">No entries</string>
+    <string name="contacts_title">Contacts</string>
+    <string name="contacts_search_hint">Type to search</string>
+    <string name="contacts_enter_sip_uri_hint">Enter number</string>
+    
+    <string name="messages_empty_list">start a chat</string>
+    
+    <string name="messages_unsupported_operation">Unsupported operation, please update the application</string>
+    <string name="message_compose_hint">Tap to compose</string>
+    <string name="message_typing">typing</string>
+    <string name="message_not_vippie">It\'s not a %s number, attachments can not be send.</string>
+    <string name="message_notification_ticked">New message received</string>
+    <string name="message_notification_title">From</string>
+    <string name="voicemail_notification_title">Voicemail</string>
+    <string name="voicemail_notification_text">You have %d new messages</string>
+    <string name="voicemail_notification_ticked">New voicemail messages</string>
+
+    <string name="message_att_not_allowed">Not allowed during call</string>
+
+    <string name="http_connection_failed">Problem with connection to destination</string>
+    <string name="recharge_title">Top Up</string>
+    <string name="recharge_entry_text">Top Up</string>
+    <string name="recharge_description">Make calls at extremely cheap international rates to contacts who do not have the app. Add credit directly from your %1$s account</string>
+    <string name="account_title">Account</string>
+    
+    <string name="account_plans">Plans</string>
+    <string name="account_numbers">Numbers</string>
+    <string name="billing_missing_transaction_id">Cannot acquire transaction ID from server</string>
+    <string name="billing_problems_with_recharge">Problems with recharging account</string>
+    <string name="billing_not_supported_title">Can\'t make purchases</string>
+    <string name="billing_not_supported_message">The payments\nservice is not available at this time.  You can continue to use this app but you\nwon\'t be able to make purchases.</string>
+    <string name="billing_cannot_connect_title">Can\'t connect to payments service</string>
+    <string name="billing_cannot_connect_message">This app cannot connect to payments service.\nYour version of %1$s may be out of date.\nYou can continue to use this app but you\nwon\'t be able to make purchases.</string>
+    <string name="billing_transaction_finished_ok">Transaction finished successfully. Your account balance will be increased</string>
+    <string name="billing_transaction_finished">Transaction finished with state: %s</string>
+    <string name="transaction_voucher_wrong">Transaction cancelled. Invalid voucher number.</string>
+    <string name="transaction_voucher_used">Transaction cancelled. Used voucher number.</string>
+    <string name="transaction_unknown">Transaction cancelled, unknown error. Please contact administrator.</string>
+    <string name="transaction_canceled">Transaction cancelled.</string>
+    <string name="date_today">Today</string>
+    <string name="button_yes">Yes</string>
+    <string name="button_no">No</string>
+    <string name="button_ok">OK</string>
+    <string name="button_save">Save</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_edit">Edit</string>
+    <string name="button_details">Details</string>
+    <string name="button_delete">Delete</string>
+    <string name="button_send">Send</string>
+    <string name="button_checkrate">Check</string>
+    <string name="button_display">Display</string>
+    <string name="button_close">Close</string>
+	
+    <string name="callmode_dialog_title">Select call mode</string>
+    
+    <string name="msg_account_state">Balance</string>
+    <string name="msg_loading">Loading...\nPlease wait</string>
+
+    <string name="settings_screen_video">Video</string>
+    <string name="settings_screen_system">System settings</string>
+    <string name="settings_screen_deactivate">Deactivate account</string>
+    <string name="settings_deactivate_title">Deactivate account</string>
+    <string name="settings_deactivate_msg">Are you sure you want to deactivate your account</string>
+    <string name="error_deactivating">Error deactivating account</string>
+    <string name="settings_key_video_front_camera">Use front camera</string>
+    <string name="settings_key_video_front_camera_sum_on">Front camera will be used if available</string>
+    <string name="settings_key_video_front_camera_sum_off">Main camera will be used</string>
+    <string name="settings_key_video_tablet_fix">Video fix for tablet devices</string>
+    <string name="settings_key_video_tablet_fix_summary">Enables fix for horizontally flipped outgoing video</string>
+    <string name="settings_key_video_preview_horizontal_flip_fix">Fix for camera preview</string>
+    <string name="settings_key_video_preview_horizontal_flip_fix_summary">Enables fix for horizontally flipped camera preview on some bugged devices</string>
+    <string name="settings_key_video_bps">Bit rate</string>
+    <string name="settings_key_video_res">Resolution</string>
+    <string name="settings_key_video_fps">Frames per second</string>
+    <string name="settings_key_video_recording">Recording</string>
+    <string name="settings_key_ringtone">Phone ringtone</string>
+    <string name="settings_key_ringtone_summary">Ringtone for incoming calls</string>
+    <string name="settings_sms_key_ringtone">SMS ringtone</string>
+    <string name="settings_sms_key_ringtone_summary">Ringtone for incoming messages</string>
+    <string name="settings_key_keytones">Enable key tones</string>
+    <string name="settings_key_keytones_summary">Enable/disable key tones in dialpad</string>
+    <string name="settings_key_vibration">Enable key vibration</string>
+    <string name="settings_key_vibration_summary">Enable/disable key vibration in dialpad</string>
+    <string name="settings_key_bluetooth">Use bluetooth headset</string>
+    <string name="settings_key_bluetooth_summary">Enable if you want to use bluetooth headset</string>
+    <string name="settings_key_message_type">Message type</string>
+
+    <string name="settings_key_service_auto_start">Auto start</string>
+    <string name="settings_key_service_auto_start_summary">Starts VOIP service and registers when system starts</string>
+    <string name="settings_key_native_calllog">Use Native Call Log</string>
+    <string name="settings_key_native_calllog_summary">Logs calls in native call log if possible</string>
+    <string name="settings_key_push_notifications">Push notifications</string>
+    <string name="settings_key_push_notifications_summary">Enable/disable GCM push notifications while user is Offline</string>
+    <string name="settings_key_pop_up_notifications">Pop up notifications</string>
+    <string name="settings_key_pop_up_notifications_summary">Enable/disable pop up notifications window</string>
+    <string name="settings_key_about">About</string>
+    <string name="settings_key_version">Version</string>
+    <string name="settings_key_website">Our website</string>
+    <string name="settings_key_legal">Legal</string>
+    <string name="settings_deactivate_info">Deactivating account will remove all %s data on your device and close the account</string>
+    <string name="settings_use_vippie_ringtone">Use %s Phone Ringtone</string>
+    <string name="settings_use_vippie_ringtone_summary">Enable/Disable %s Phone Ringtone</string>
+    <string name="settings_use_vippie_sms_ring">Use %s SMS Ringtone</string>
+    <string name="settings_use_vippie_sms_ring_summary">Enable/Disable %s SMS Ringtone</string>
+    <string name="empty_number_error">Please enter the number</string>
+    
+    <string name="regstate_authentification_error">Incorrect User Name or Password.</string>
+    <string name="regstate_server_error">Cannot connect to the server.</string>
+    <string name="regstate_unknown_error">Registration error</string>
+    <string name="regstate_default_error">Account not registered. Please check settings and the Internet connection.</string>
+    <string name="regstate_error_title">Registration Error</string>
+    <string name="send_error">Send error!</string>
+    <string name="regstate_ok_button">OK</string>
+    <string name="regstate_settings_button">Settings</string>
+    <string name="contact_info_call">Call</string>
+    <string name="contact_info_send_text">SMS</string>
+    <string name="contact_info_add_to_fav">Favorite</string>
+    <string name="contact_info_incoming">Incoming calls</string>
+    <string name="contact_info_outgoing">Outgoing calls</string>
+
+    <string name="contact_delete_confirmation_dialog_title">Confirmation</string>
+    <string name="contact_delete_confirmation_dialog_content">Are you sure you want to delete %1$s from your contacts?</string>
+    <string name="contact_delete_error">Error while deleting a contact.</string>
+    <string name="contact_add_error">Error while adding a contact.</string>
+    <string name="contact_edit_error">Error while editing a contact.</string>
+    <string name="registration_phone_number_hint">Your phone no.</string>
+
+    <string name="registration_country_prompt">Please select your country</string>
+    
+    <string name="registration_terms">By signing in I do accept the following: </string>
+    <string name="registration_terms_btn"><b><u>Terms and conditions</u></b></string>
+    <string name="registration_acces_btn"><b><u>Access to the phone contacts</u></b></string>
+    <string name="registration_wrong_number_length">Wrong number length</string>
+    <string name="registration_or">Or</string>
+    <string name="registration_use_email_reg"><b>Use my email to register</b></string>
+    <string name="registration_use_number_reg"><b>Use my phone no. as my ID</b></string>
+    <string name="please_wait">Please wait</string>
+    <string name="voicemail_new_unheard_messages">New/Unheard</string>
+    <string name="voicemail_old_messages">Old</string>
+
+    <string name="voicemail_new_none">You don\'t have \nnew messages</string>
+    <string name="voicemail_old_none">You don\'t have \nold messages</string>
+    <string name="voicemail_messages_section">Messages</string>
+    <string name="voicemail_send_voicemail_as_attachment_to">Send voicemail as attachment to:</string>
+    <string name="voicemail_email">Email</string>
+    <string name="voicemail_set_mail">not set</string>
+    <string name="voicemail_record_welcome_greeting">Record welcome greeting</string>
+
+    <string name="voicemail_toggle">Voicemail</string>
+    <string name="voicemail_retrieving_settings">Retrieving voicemail settings</string>
+    <string name="voicemail_saving_settings">Saving voicemail settings</string>
+    <string name="voicemail_error_retrieving_settings">Error retrieving voicemail settings</string>
+    <string name="voicemail_error_saving_settings">Error saving voicemail settings</string>
+
+    <string name="contact_invite_to_vippie">Invite to %s</string>
+    <string name="contact_sms_invite_text">Join %1$s through the APPSTORE or GOOGLE PLAY\nMake Free Video Calls, Voice Calls, Send Attachments &amp; Text Messages\n %2$s</string>
+    <string name="vippie_freecall">Free Call</string>
+
+    <string name="vippie_freesms">Free Chat</string>
+    <string name="vippie_share">Share</string>
+    <string name="profile_first_name">First name</string>
+    <string name="profile_last_name">Last name</string>
+    <string name="profile_your_number">Phone number</string>
+    <string name="profile_details">Profile details</string>
+    <string name="profile_sex">Sex</string>
+    <string name="profile_sex_female">Female</string>
+    <string name="profile_sex_male">Male</string>
+    <string name="profile_sex_notset">Unspecified</string>
+    <string name="profile_country">Country</string>
+    <string name="profile_city">City</string>
+    <string name="profile_birthday">Birthday</string>
+    <string name="profile_email">Email</string>
+    <string name="profile_vippie_id">%s ID</string>
+    <string name="profile_not_set_hint">not set</string>
+    <string name="profile_my_status">My %s status</string>
+    <string name="profile_camera">Get from camera</string>
+    <string name="profile_phone">Get from phone gallery</string>
+    <string name="profile_username_alert">Username can be set only once. Are you sure ?</string>
+    <!-- empty --><string name="profile_username_title"></string>
+    <string name="profile_progress_message">Obtaining data</string>
+    <!-- empty --><string name="profile_progress_title"></string> 
+    <string name="profile_error_email_wrong">Error saving MyProfile data. Wrong email format</string>
+    <string name="profile_error_email_used">Error saving MyProfile data. The email is already in use</string>
+    <string name="profile_error_id_error">Error setting %s id. It must contain at least 6 characters and contain only letters and numbers</string>
+    <string name="profile_data_canceled">Profile data obtaining canceled</string>
+    <string name="profile_problem_details">Problem obtaining MyProfile details</string>
+
+    <string name="record_your_message">Record voice note</string>
+    <string name="message_recorded">Message recorded</string>
+    <string name="recording_stopped">Recording stopped</string>
+    <string name="recording">Recording</string>
+    <string name="review_message">Review message</string>
+    <string name="error_sdcard_access">Error accessing SD card</string>
+    <string name="error_app_internal">Internal error</string>
+    <string name="insert_sd_card">Insert SD card</string>
+    <string name="crop_save_text">Crop </string>
+    <string name="crop_discard_text">Discard</string>
+    <string name="read_picture_error">Error reading picture file: %s</string>
+    <string name="image_attachment">Image attachment</string>
+    <string name="audio_attachment">Audio attachment</string>
+    <string name="video_attachment">Video attachment</string>
+
+    <string name="more_my_profile">My profile</string>
+    <string name="more_my_profile_details">My profile Details</string>
+    <string name="more_voicemail">Voicemail</string>
+
+    <string name="more_account">Account</string>
+    <string name="more_settings">Settings</string>
+    <string name="more_tell_friends">Share your love</string>
+    <string name="more_help">Help</string>
+    <string name="more_search">Find friends</string>
+    
+    <string name="rates_country_prompt">Please select a country</string>
+    <string name="call_greeting_displayname">Voicemail</string>
+    <string name="call_voicemail_displayname">Voicemail</string>
+    <string name="tell_invite_to_vippie">Invite to %s by:</string>
+    <string name="tell_invite_and_call">Invite to %s and call for free</string>
+    <string name="tell_who_invites_you">Tell us who invited you</string>
+    <string name="tell_you_were_invited">You were invited by</string>
+    <string name="tell_friends_email_title">ADVANCED COMMUNICATION FOR NO FEE</string>
+    <string name="more_tell_text">I have amazing app!Many options, calls and texts for free. Check new %1$s!\n%2$s</string>
+    <string name="facebook_post_on_wall_done">Successfully shared</string>
+    <string name="facebook_post_on_wall_not_done">Aborted</string>
+    <string name="facebook_action_canceled">Status update cancelled</string>
+    <string name="facebook_post_on_wall_question">Do you want to share a %s invitation on your facebook wall?</string>
+    <string name="twitter_post_on_wall_question">Do you want to share a %s invitation on your twitter wall?</string>
+    <string name="hello_title_optional">New version available</string>
+    <string name="hello_title_obligatory">New version</string>
+    <string name="hello_message_optional">There is a new version available on the Google play</string>
+    <string name="hello_message_obligatory">Your current version is not longer supported. Please download the latest update.\nWhat\'s new in ver: \n</string>
+    <string name="hello_update">Update</string>
+    <string name="hello_do_not_update">Do not update</string>
+    <string name="hello_exit">Exit</string>
+
+    <string name="push_notification_social_text">New user has joined %s!</string>
+    <string name="push_notification_payment_text">Your balance is zero.\nPlease, top up your account.</string>
+    <string name="push_notification_payment_top_up">Top up</string>
+
+    <string name="push_notyfication_sms">Message</string>
+    <string name="push_notyfication_payment">Payment</string>
+    <string name="push_notyfication_feedback">Rate %s</string>
+    <string name="push_notyfication_feedback_text">Give us your feedback</string>
+    <string name="push_notyfication_social">Social</string>
+    <string name="push_notyfication_missed">Missed</string>
+    <string name="push_notyfication_incoming">Incoming</string>
+    <string name="push_notyfication_voicemail">Voicemail</string>
+    <string name="redirection_to_market">Yeah! We\'re so happy that you enjoy using our %s \n\n Please share your love with others! \n\n Thanks for your support!</string>
+    <string name="redirection_to_feedback">Aww!\n\n We\'re sorry you feel that way.\n Give us a chance to improve and send us feedback!</string>
+    <string name="registration_too_many_sms_request_from_the_same_device">Too many SMS request from the same device.</string>
+    <string name="registration_problem_with_internet_connection">Problem with internet connection.</string>
+    <string name="registration_wrong_user_pass">Wrong username or password.</string>
+    <string name="registration_already_exist_number">Phone number already exist in database. Please use another one.</string>
+    <string name="registration_already_assigned_number">You have already assigned number. You cannot change it.</string>
+    <string name="registration_wrong_authorisation_code">Wrong authorisation code.</string>
+    <string name="registration_too_many_authorisation_attempts">Too many authorisation attempts.</string>
+
+    <string name="registration_invalid_verification_code">Invalid verification code</string>
+    <string name="registration_activation_new_number">We will send you an activation code.</string>
+    <string name="registration_activation_by_number">We will create an account and send you an activation code.</string>
+    <string name="registration_we_will_send_you_an_sms">We will send you an SMS with verification code to this number.</string>
+    <string name="registration_is_this_number_correct">Is this number correct ?</string>
+    <string name="registration_we_will_call_you">Looks we have a problem with sending an SMS to your number. Prepare something to write down the code and click OK when ready. We will call you.</string>
+    <string name="registration_callback_started">Call started.</string>
+    <string name="registration_existing_account">Looks we have this device and number registered. You can use application without new activation code.</string>
+    <string name="registration_activated_account">Your account was successfully activated.</string>
+    <string name="registration_logged_in">You have logged in successfully.</string>
+
+    <string name="registration_never_goten"><u>I\'ve never got the code</u></string>
+    <string name="registration_feedback_sending">Do you want to send feedback about registering problems? Please enter your email</string>
+    <string name="registration_feedback_email_hint">not set</string>
+    <string name="registration_we_will_get">Feedback send, we will get back to you soon.</string>
+    <string name="registration_we_will_get_error">Problem sending feedback</string>
+    <string name="registration_wrong_number">Please check if provided number is valid.</string>
+    <string name="registration_try_in_hour">We have problem sending you an SMS, please try again in one hour.</string>
+    <string name="registration_enter_code">enter code</string>
+    <string name="registration_sms_sent">SMS with code has been sent.</string>
+
+    <string name="registration_use_number"><![CDATA[<b>Use my phone no. as my ID</b>]]></string>
+    <string name="registration_enter_activation_code"><![CDATA[<b>Enter the activation code</b>]]></string>
+    <string name="registration_sign_id"><![CDATA[<b>New to %s</b>]]></string>
+    <string name="registration_have_id"><![CDATA[<b>I\'m already a %s user]]></string>
+    <string name="registration_vippie_id_your">your %s ID or phone no.</string>
+    <string name="registration_vippie_id_set">enter %s ID</string>
+    <string name="registration_vippie_pass">password</string>
+    <string name="registration_vippie_pass_conf">confirm password</string>
+    <string name="registration_your_mail">your email</string>
+    <string name="registration_activation_by_email">You will receive an email with an activation link. You can log in with %s ID after activation.</string>
+    <string name="registration_password_bad">Short passwords are easy to guess. Please choose a password between 6&#8211;20 characters. </string>
+    <string name="registration_password_not_match">These passwords don\'t match. Try again.</string>
+    <string name="registration_invalid_email">Invalid email address.</string>
+    <string name="registration_not_activated">Account not activated. Please use activation link from email</string>
+    <string name="registration_activated_with_link">Your account was successfully activated. You can log in now.</string>
+    <string name="registration_used_email">This email is already in use</string>
+    <string name="registration_incorrect_email">This email is incorrect</string>
+    <string name="registration_used_vippie_id">This %s ID is already in use</string>    
+    <string name="registration_set_new_number">Set new phone no.</string>
+    <string name="registration_set_new_number_set">New phone no. set successfully</string>
+    <string name="registration_go"><b>next</b></string>
+    <string name="registration_back"><b>back</b></string>
+    <string name="registration_sign_up"><b>sign up</b></string>
+    <string name="registration_log_in"><b>log in</b></string>
+    <string name="registration_dialog_problem">Have a problem?\nContact our support:</string>
+    <string name="registration_too_many_devices">Too many devices activated with the same %s ID</string>
+    
+    <string name="registration_hint_login_password"><![CDATA[<b><big>Password</big></b><p>Enter the password you used during registration.<p>If you already use the %s app on other device and you don\'t have the password, you can create it in <b>My Profile.</b>]]></string>
+    <string name="registration_hint_login_vippieid"><![CDATA[<b><big>%1$s</big><p>is a cross-platform app.</b><p><p>You can use it on: iPhone, Android, Mac and PC.<p><p>Just log in by using your %2$s ID or phone number and password.]]></string>
+    <string name="registration_hint_register_mail"><![CDATA[<big><b>Email address</b></big><p><p>Please, use a valid email address.<p><p>We will send you an email with activation link.]]></string>
+    <string name="registration_hint_register_password"><![CDATA[<big><b>Password</b></big><p><p>Please choose a password between 6&#8211;20 characters.<p><p><b>You can use one %1$s account across all your devices!</b><p><p>Use your %2$s ID and password to log in to your account on Mac, PC or smartphone.]]></string>
+    <string name="registration_hint_vippieid"><![CDATA[<big><b>%1$s ID</big></b><p><p>is your unique username for %2$s.<p><p>It must be between 6&#8211;30 characters, begin with a letter and contain letters (a&#8211;z), numbers, periods (.) and underscores (_).<p><p>Note that we ignore capitalization.]]></string>
+    <string name="registration_hint_number"><![CDATA[<big><b>Great news!</b></big><p><p>%1$s can use your phone number as your identity.<p><p><b>You can use one %2$s account across all your devices!</b><p><p>But first, you have to set the password in <b>My Profile.</b> After that you will be able to log in to your account on Mac, PC or smartphone.]]></string>
+    <string name="registration_hint_number_code"><![CDATA[<b><big>Activation code</big></b><p><p>You haven\'t received an SMS with the activation code?<p><p>If you have any problems with the registration process, contact us:]]></string>
+    <string name="registration_dialog_need_help"><![CDATA[<u><b>need a help?</b></u>]]></string>
+    <string name="registration_dialog_want_more"><![CDATA[<u><b>want to know more about %s?<b></u>]]></string>
+    
+    <string name="registration_cant_leave">You can\'t leave this empty. Try again.</string>
+    <string name="registration_username_incorect">The username you entered is incorrect</string>
+    
+    <string name="intro_free_calls"><![CDATA[Now you can make calls,<br>video calls and send<br>messages <b>for free</b><br>to other %s users!]]></string>
+    <string name="intro_tell"><b>tell others</b></string>
+    <string name="intro_invite"><![CDATA[Invite your friends<br> to %s and get<br> <b>0,2$</b> credit call<br> for every accepted invitation!]]></string>
+    <string name="intro_share"><b><u>check this offer</u></b></string>
+    <string name="intro_rates_title">Now you can also call landline and mobile.</string>
+    <string name="intro_rates">USA&amp;Canada <b>0,004$</b>/ min\nIndia <b>0,015$</b> /min\n
+      						Bangladesh <b>0,02$</b>/ min\nPakistan <b>0,05$</b>/ min\nEgypt <b>0,10$</b>/ min\n</string>
+    <string name="intro_check"><b>check our rates</b></string>
+    <string name="intro_next">next</string>
+    <string name="intro_end">end</string>
+    <string name="help_faq">FAQ</string>
+    <string name="help_feedback">Feedback</string>
+    <string name="help_feedback_send"><b>Send</b></string>
+    <string name="help_feedback_section">Feedback</string>
+    <string name="help_facebook_text">Visit our FB to ask your question</string>
+    <string name="help_twitter_text">Visit our twitter to ask your question</string>
+    <string name="feedback_hint">Feedback</string>
+    <string name="feedback_email_alert_title">Please set your email address</string>
+    <string name="feedback_email_alert_text">Please set your email address we could contact you</string>
+    <string name="feedback_email_alert_ok">OK</string>
+    <string name="feedback_email_alert_cancel">Cancel</string>
+    <string name="feedback_sent_ok">Feedback sent correctly</string>
+    <string name="feedback_sent_error">Error sending feedback</string>
+    <string name="feedback_email_sent_error">Problem setting email</string>
+    <string name="rates_country_section">Rates</string>
+    <string name="rates_call_rates">Call rates</string>
+    <string name="rates_sms_rates">SMS rates</string>
+    <string name="did_title">Buy number</string>
+    <string name="did_pick_period">Pick period</string>
+    <string name="did_pick_area">Pick area</string>
+    <string name="did_pick_country">Pick country</string>
+    <string name="did_order">Buy number</string>
+    <string name="did_buy_new">Buy new</string>
+    <string name="did_my_numbers">My numbers</string>
+    <string name="did_keep">Keep </string>
+    <string name="did_remove">Remove immediately</string>
+    <string name="did_cancel">Cancel</string>
+    <string name="did_next_payment">next payment</string>
+    <string name="did_expires">expires</string>
+    <string name="did_number_removed">Number removed</string>
+    <string name="did_buy_succes">Successfully bought number</string>
+    <string name="did_insufficient_funds">Insufficient funds</string>
+    <string name="did_unknown_error">Unknown error, please try again later</string>
+    <string name="did_communication_error">Problem with internet connection</string>
+    <string name="did_remove_msg">You are going to remove %1$s number  %2$s.\nAre you sure? Do you want to remove number immediately or keep it until it expires?</string>
+    <string name="did_order_msg">You are going to order %1$s number for %2$s, area %3$s for %4$s months\n it will charge your account %5$s</string>
+    <string name="add_invite">Invite to %s</string>
+    <string name="add_not_found_invite_number">This phone no. is not yet a %s user</string>
+    <string name="add_not_found_invite_email">This email is not yet a %s user</string>
+    <string name="add_not_found_sorry">Sorry, no results found</string>
+    <string name="add_no_match">Sorry, no match found. Similar results:</string>
+    <string name="add_no_match_at_all">Sorry, no match found.</string>
+    <string name="add_found_free">You can call and message this contact FOR FREE</string>
+    <string name="add_hint">%s ID, email or phone no.</string>
+    <string name="add_first_name_hint">set first name</string>
+    <string name="add_last_name_hint">set last name</string>
+    <string name="add_create">Create new contact</string>
+    <string name="add_empty_name">Contact name can not be empty</string>
+    <string name="add_offer">You can also use our special offer</string>
+    <string name="add_min_char">Please enter at least 3 characters</string>
+    <string name="add_info">Please provide first name and last name</string>
+    <string name="add_find">Find friends using %s ID. email or phone no.</string>
+
+    <string name="dialer_msg_number_is_vippie">This number has %s. You can call for free...</string>
+    <string name="dialer_msg_number_non_vippie">This number doesn\'t have %1$s yet. Invite him or make a cheap call for %2$s.</string>
+    <string name="dialer_msg_searching_number">Give us a second to check if we can connect this call for free or make a cheap call</string>
+    <string name="dialer_msg_searching_out">...or you can use %s Out</string>
+    <string name="calling_searching">Searching...</string>
+    <string name="calling_found_vippie">Found %s User!</string>
+    <string name="calling_found_nonvippie">Not a %s User</string>
+    <string name="dids_details">Number details</string>
+    <string name="buy_number">Buy number</string>
+    <string name="dids_details_display_name">Display name:</string>
+    <string name="did_details_share_my_number">Display my phone no. in contact search results</string>
+    <string name="profile_password">Password</string>
+    <string name="change_password">Change password</string>
+    <string name="set_password">Set password</string>
+    
+    <string name="dialog_set_status_title">Set status</string>
+    <string name="dialog_old_password">old password</string>
+    <string name="dialog_new_password">new password</string>
+    <string name="dialog_hint_enter_old">enter old password</string>
+    <string name="dialog_hint_enter_pass">enter password</string>
+    <string name="dialog_hint_confirm_pass">confirm password</string>
+
+    <string name="dialog_hint_pass_requirement2">Password must be at least %d characters long</string>
+    <string name="please_enter_your_old_password">Please, enter your old password</string>
+    <string name="new_password_field_cannot_be_blank_">"New password field cannot be blank "</string>
+    <string name="new_passwords_mismatch">New passwords don\'t match</string>
+    <string name="passwords_mismatch">Passwords don\'t match</string>
+    <string name="new_password_equals_old_error">New password should not be same as old password</string>
+    <string name="password_communication_error">Communication Error!</string>
+    <string name="password_changed">Password changed!</string>
+    <string name="password_wrong_old_pass">Wrong old password!</string>
+    <string name="password_unknown_error">Unknown Error!</string>
+    <string name="password_set_success">Password set!</string>
+    <string name="map_nearby">Nearby </string>
+    <string name="msg_threads_gps_thumbnail">GPS Location</string>
+    <string name="details_activity_birht_date_in_future_error">Time machine has not been invented yet. Set correct date.</string>
+    <string name="location_error_while_parsing_data">Error while parsing Location data</string>
+    <string name="plan_title">Plans</string>
+    <string name="plan_info_buy">Buy now!</string>
+    <string name="plan_info_not_enough_money">You don\'t have a sufficient amount of money</string>
+    <string name="plan_info_plan_active">Active</string>
+    <string name="plan_terms">Terms</string>
+    <string name="set_username_msg_username_is_to_short">Your %1$s ID is to short. Please choose a %2$s ID between 6&#8211;30 characters.</string>
+    <string name="set_username_msg_only_letters_and_numbers">Your %s ID contains forbidden characters. Please use only letters (a&#8211;z), numbers, periods (.) and underscores (_).</string>
+    <string name="set_username_msg_username_can_t_start_with_number">%s ID must begin with a letter.</string>
+    <string name="set_username_msg_username_correct">Username correct</string>
+    <string name="set_username_already_in_use_please_choose_another">Someone already has that %s ID. Try again.</string>
+    <string name="set_username_server_error_try_again_later">Server error, try again later</string>
+    <string name="set_username_unexpected_error_try_again_later">Unexpected error, try again later</string>
+    <string name="my_profile_set_email_address">Set email address</string>
+    <string name="my_profile_set_email_enter_your_email_hint">enter your email</string>
+    <string name="plan_info_cannot_connect_with_server">Cannot connect with our server.</string>
+    <string name="map_edittitle_fragment_hint">type description</string>
+	
+    <string name="registration_login_password_lost"><b><u>Can\'t access your account?</u></b></string>
+    <string name="registration_loging_in">Logging in</string>
+    <string name="registration_signing_up">Signing up</string>
+    
+    <string name="contact_add_success">Contact added successfully</string>
+    
+    <string name="map_hint_search_places">search places</string>
+    <string name="map_search_msg_no_location_found">Ooops! Sorry! No matches found.</string>
+    
+    <!-- new strings -->
+    <string name="account_your_balance">Your balance:</string>
+    <string name="account_your_bonus">Your bonus:</string>
+    <string name="account_bonus_empty">Check how to get free minutes to call mobile and landline. It\'s really easy!</string>
+    <string name="account_get_more"><b>get free minutes</b></string>
+    <string name="account_get_more_title">Get free minutes</string>
+    <string name="account_top_up"><b>top up</b></string>
+    <string name="account_left">left: %s min</string>
+    <string name="account_offers">Special offers</string>
+    
+    <string name="phone_type_mobile">Mobile</string>
+    <string name="phone_type_home">Home</string>
+    <string name="phone_type_work">Work</string>
+    <string name="phone_type_other">Other</string>
+    <string name="phone_type_free">Free</string>
+    
+    <string name="settings_logout">Log out</string>
+    <string name="settings_logout_info">Log out will remove all %s data from device.</string>
+    <string name="settings_logout_title">Log out</string>
+    <string name="settings_logout_msg">Are you sure you want to log out?</string>
+    <string name="settings_logout_abort_msg">Check your internet connection.</string>
+    
+    <string name="crop_saving">Image save</string>
+    
+    <string name="facebook_loading">Loading...</string>
+    <string name="my_profile_set_email_error">Please enter valid email address</string>
+    
+    <string name="set_vippie_id_dialog_title">Set %s ID</string>
+    <string name="set_vippie_id_dialog_hint">enter %s ID here</string>
+    <string name="map_write_words_hint">Write some words!</string>
+    
+    <string name="activation_enter_code">Operator Code</string>
+    <string name="activation_hint_operation_code"><![CDATA[<big><b>Operator Code</big></b><p><p>is your unique Operator Code.]]></string>
+    <string name="activation_wrong_operator_code">Cannot verify Operator Code. Please contact your provider.</string>
+	
+    <string name="image_not_ready">Image not ready</string>
+    
+    <string name="wrong_image_provider">Wrong image provider</string>
+    <string name="no_activity">No activity to handle this action</string>
+</resources>

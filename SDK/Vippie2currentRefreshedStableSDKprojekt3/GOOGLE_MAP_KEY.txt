@@ -1,0 +1,37 @@
+	************************************************************************
+	*More info:															   *
+	*http://developer.android.com/tools/publishing/app-signing.html		   *
+	*																	   *
+	*if you have problem with ant make this line in terminal:			   *
+	*<path to tools folder in Android SDK>android update project -p ./     *
+	*																	   *
+	*now try ant release												   *
+	************************************************************************
+
+You want to generate key for GOOGLE_MAPS ...  So let's play a game:
+
+A) For developers (Debug Mode)
+
+1) Find your Eclipse (should be here : userhome/.android/debug.keystore )
+2) Did you find it? GREAT, now in terminal write (without stars) ***keytool -list -v -alias androiddebugkey \
+-keystore <PATH_TO_YOUR_DEBUG_KEYSTORE>debug.keystore \
+-storepass android -keypass android  ***
+
+Keytool is java file. Example of path C:\Program Files (x86)\Java\jdk<version>\bin\keytool.exe .
+
+3) Now copy SHA1 code
+4) Enter https://code.google.com/apis/console/
+5) Create new Android key in API Access.
+6) Paste copied beofre SHA1 code AND AFTER semicolon add name of package of application
+Example:
+A5:B1:40:E9:BF:1D:4E:79:49:31:7B:13:57:F3:7E:4C:C5:07:2B:EE;unique.packagename
+7)Copy your API key and add it to AndroidManifest.xml under "meta-data"
+
+It should works now... probably. If not, you did smth wrong. Have a nice day.
+
+B) REALSE MODE
+
+Change in 2)  Find your keystore file and write in terminal *** keytool -list -v -keystore <PATH_TO_KEYSTORE> ***
+
+
+

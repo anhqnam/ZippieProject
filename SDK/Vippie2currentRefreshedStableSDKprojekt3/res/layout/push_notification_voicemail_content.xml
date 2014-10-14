@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/avatar_container"
+        android:layout_width="@dimen/calls_list_avatar_size"
+        android:layout_height="@dimen/calls_list_avatar_size"
+        android:layout_below="@id/separator"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:id="@+id/call_avatar"
+            android:layout_width="@dimen/calls_list_avatar_size"
+            android:layout_height="@dimen/calls_list_avatar_size"
+            android:scaleType="fitCenter"
+            android:src="@drawable/calling_unknown_image" />
+
+    </RelativeLayout>
+
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/push_voicemail_display_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@id/avatar_container"
+        android:gravity="center"
+        android:text="michal"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/push_voicemail_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/push_voicemail_display_name"
+        android:layout_toRightOf="@id/avatar_container"
+        android:text="asdasdad"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/push_missied_call_info_actions"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/avatar_container"
+        android:layout_below="@id/push_voicemail_info_text"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:visibility="visible"
+        android:weightSum="14" >
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/push_voicemail_freecall"
+            android:layout_width="@dimen/options_dark_icon_size"
+            android:layout_height="@dimen/options_dark_icon_size"
+            android:background="@color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/contacts_free_actions_call" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/push_voicemail_freesms"
+            android:layout_width="@dimen/options_dark_icon_size"
+            android:layout_height="@dimen/options_dark_icon_size"
+            android:background="@color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/contacts_free_actions_chat" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/push_voicemail_listen_btn"
+            android:layout_width="@dimen/options_dark_icon_size"
+            android:layout_height="@dimen/options_dark_icon_size"
+            android:layout_gravity="center_vertical"
+            android:background="@color/transparent"
+            android:focusable="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/button_play" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</RelativeLayout>

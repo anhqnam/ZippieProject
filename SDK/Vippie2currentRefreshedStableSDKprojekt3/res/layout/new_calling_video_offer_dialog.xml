@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/remote_video_offer_call_avatar_container"
+        android:layout_width="@dimen/calls_list_avatar_size"
+        android:layout_height="@dimen/calls_list_avatar_size"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:id="@+id/remote_video_offer_call_avatar"
+            android:layout_width="@dimen/calls_list_avatar_size"
+            android:layout_height="@dimen/calls_list_avatar_size"
+            android:scaleType="fitCenter"
+            android:src="@drawable/calling_unknown_image" />
+    </RelativeLayout>
+
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/remote_video_offer_text"
+        style="@style/CallingRemoteVideoOfferText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/remote_video_offer_call_avatar_container"
+        android:text="@string/calling_video_offer_text" />
+
+    <ImageButton
+        android:id="@+id/remote_video_offer_video_accept"
+        style="@style/CallingListEntryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/remote_video_offer_text"
+        android:layout_marginLeft="@dimen/calls_list_buttons_distance"
+        android:layout_toRightOf="@id/remote_video_offer_call_avatar_container"
+        android:src="@drawable/button_calling_accept_video_call" />
+
+    <ImageButton
+        android:id="@+id/remote_video_offer_video_reject"
+        style="@style/CallingListEntryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/remote_video_offer_text"
+        android:layout_marginLeft="@dimen/calls_list_buttons_distance"
+        android:layout_marginRight="@dimen/calls_list_buttons_distance"
+        android:layout_toRightOf="@id/remote_video_offer_video_accept"
+        android:src="@drawable/ic_calling_reject_video" />
+
+</RelativeLayout>

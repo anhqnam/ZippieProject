@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/push_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="@dimen/action_medium_icon"
+            android:layout_height="@dimen/action_medium_icon"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon" />
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/status"
+            style="@style/CallingListEntryHeaderText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Test" />
+
+        <ImageView
+            android:id="@+id/exit"
+            android:layout_width="@dimen/action_medium_icon"
+            android:layout_height="@dimen/action_medium_icon"
+            android:scaleType="fitXY"
+            android:src="@drawable/button_msg_notification_dialog" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar"
+        android:background="@drawable/calling_list_entry_separator"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <unique.packagename.widget.RecordingIndicator
+            android:id="@+id/recording_indicator"
+            android:scaleType="fitXY"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/message1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/message2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/exit_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_record"
+                android:layout_width="@dimen/action_medium_icon"
+            	android:layout_height="@dimen/action_medium_icon"
+                android:scaleType="fitXY"
+                android:layout_margin="5dp"
+                android:background="@color/transparent"
+                android:src="@drawable/button_rec"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btn_stop"
+                android:layout_width="@dimen/action_medium_icon"
+            	android:layout_height="@dimen/action_medium_icon"
+                android:scaleType="fitXY"
+                android:layout_margin="5dp"
+                android:background="@color/transparent"
+                android:src="@drawable/button_stop" />
+
+            <ImageButton
+                android:id="@+id/btn_record_again"
+                android:layout_width="@dimen/action_medium_icon"
+            	android:layout_height="@dimen/action_medium_icon"
+                android:scaleType="fitXY"
+                android:layout_margin="5dp"
+                android:background="@color/transparent"
+                android:src="@drawable/button_again" />
+
+            <ImageButton
+                android:id="@+id/btn_play"
+                android:layout_width="@dimen/action_medium_icon"
+            	android:layout_height="@dimen/action_medium_icon"
+                android:scaleType="fitXY"
+                android:layout_margin="5dp"
+                android:background="@color/transparent"
+                android:src="@drawable/button_play"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btn_send"
+                android:layout_width="@dimen/action_medium_icon"
+            	android:layout_height="@dimen/action_medium_icon"
+                android:scaleType="fitXY"
+                android:layout_margin="5dp"
+                android:background="@color/transparent"
+                android:src="@drawable/button_send"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

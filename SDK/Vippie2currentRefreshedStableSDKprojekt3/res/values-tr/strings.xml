@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="settings_title">Ayarlar</string>
+    <!--<string name="tab_label_dialpad">Tuş Takımı</string>
+    <string name="tab_label_contacts">Kişiler</string>
+    <string name="tab_label_calls">Çağrı Kaydı</string>
+    <string name="tab_label_more">More</string>-->
+
+    <string name="call_state_incoming">Gelen</string>
+    <string name="call_state_dialing">Arıyor...</string>
+    <string name="call_state_ringing">Çalıyor</string>
+    <string name="call_state_disconnected">Bitti</string>
+    <string name="call_state_active">Aktif</string>
+    <string name="call_state_hold">Bekleyen</string>
+    <string name="call_state_remote_hold">İlk Bekleyen</string>
+    <string name="call_state_conference">Konferans</string>
+
+    <string name="account_state_message">Hesabın durumu: </string>
+    <string name="account_registered">Çevrim İçi</string>
+    <string name="account_trying_register">Bağlanmaya çalışıyor</string>
+    <string name="account_not_registered">Çevrim Dışı</string>
+    <string name="account_activation_required">Aktivasyon gerekli</string>
+
+    <string name="menu_quit">Çıkış</string>
+    <string name="menu_preferences">Ayarlar</string>
+    <string name="menu_callslog">Çağrı kayıtları</string>
+    <string name="menu_contacts">Kişiler</string>
+    <string name="menu_messages">Mesajlar</string>
+
+    <string name="menu_mute">Mikrofonu kapat</string>
+    <string name="menu_unmute">Mikrofonu aç</string>
+    <string name="menu_hold">Beklet</string>
+    <string name="menu_unhold">Geri al</string>
+    <string name="menu_speaker_on">Hoparlörü aç</string>
+    <string name="menu_speaker_off">Hoparlörü kapat</string>
+    <string name="menu_addcall">Çağrı ekle</string>
+    <string name="menu_transfer">Aktar</string>
+    <string name="menu_conference">Konferans</string>
+    <string name="menu_conference_end">Konferansı bitir</string>
+    <string name="menu_record">Kaydet</string>
+    <string name="menu_record_pause">Duraklat</string>
+    <string name="menu_view">Göster</string>
+    <string name="menu_delete_all">Tümünü sil</string>
+    <string name="menu_total_duration">Toplam süre</string>
+    <!--<string name="menu_edit_contact">Edit Contact</string>-->
+    <string name="menu_add_contact">Kişi ekle</string>
+    <string name="menu_add_xmpp_contact">XMPP kişisi ekle</string>
+    <string name="menu_filter">Filtrele</string>
+    <string name="menu_add_to_phonebook">Rehbere ekle</string>
+    <string name="menu_create_new_contact">Yeni kişi oluştur</string>
+    <string name="menu_choose_existing_contact">Kişiyi düzenle</string>
+    <string name="menu_details">Detaylar</string>
+    <string name="menu_delete">Sil</string>
+    <string name="menu_edit">Düzenle</string>
+    <string name="menu_call">Ara</string>
+    <string name="menu_send_msg">Mesaj gönder</string>
+    <string name="menu_new_msg">Yeni mesaj</string>
+    <string name="menu_resend">Tekrar gönder</string>
+    <string name="menu_copy_to_clipboard">Panoya kopyala</string>
+    <string name="menu_checkrate">Ücret kontrolü</string>
+    <string name="menu_callback">CallBack</string>
+    <string name="menu_select_all">Tümünü seç</string>
+    <string name="menu_deselect_all">Tüm seçimleri kaldır</string>
+
+    <string name="dialpad_btn_0"><big>0</big>\n<small>+-</small></string>
+    <string name="dialpad_btn_1"><big>1</big></string>
+    <string name="dialpad_btn_2"><big>2</big>\n<small>ABC</small></string>
+    <string name="dialpad_btn_3"><big>3</big>\n<small>DEF</small></string>
+    <string name="dialpad_btn_4"><big>4</big>\n<small>GHI</small></string>
+    <string name="dialpad_btn_5"><big>5</big>\n<small>JKL</small></string>
+    <string name="dialpad_btn_6"><big>6</big>\n<small>MNO</small></string>
+    <string name="dialpad_btn_7"><big>7</big>\n<small>PQRS</small></string>
+    <string name="dialpad_btn_8"><big>8</big>\n<small>TUV</small></string>
+    <string name="dialpad_btn_9"><big>9</big>\n<small>WXYZ</small></string>
+    <string name="dialpad_btn_ast"><big>*\n<small>@</small></big></string>
+    <string name="dialpad_btn_hash"><big>#\n<small>_.,</small></big></string>
+
+    <string name="contact_login_label">SIP kullanıcı adı</string>
+    <!--<string name="contact_edit_empty_name">Kullanıcı adı boş olamaz.</string>-->
+    <!--<string name="contact_edit_empty_number">SIP No boş olamaz.</string>-->
+    <string name="contact_number_label">SIP No</string>
+    <!--<string name="contact_deleted">Kişi başarıyla silindi.</string>-->
+    <string name="contact_name_default">(Bilinmiyor)</string>
+
+    <string name="calllog_title">Çağrı kaydı</string>
+    <string name="calllog_view">Görünümü seç</string>
+    <string name="calllog_view_all">Tümü</string>
+    <string name="calllog_view_incoming">Gelen</string>
+    <string name="calllog_view_outgoing">Giden</string>
+    <string name="calllog_view_missed">Cevapsız</string>
+    <string name="calllog_total_duration">Toplam süre</string>
+    <string name="calllog_confimr_delete_all">Çağrı kayıtlarını silmek istediğinizden emin misiniz?</string>
+    <string name="calllog_empty_list">Kayıt yok</string>
+
+    <string name="contacts_title">Kişiler</string>
+    <string name="contacts_search_hint">Bul</string>
+    <string name="contacts_enter_sip_uri_hint">SIP adresi gir</string>
+    <string name="contacts_enter_jid_uri_hint">XMPP adresi gir</string>
+    <string name="contacts_regular">Kişiler</string>
+    <string name="contacts_xmpp">XMPP kişileri</string>
+    <string name="messages_title">Mesajlar</string>
+    <string name="messages_empty_list">Mesaj Yok</string>
+    <string name="messages_me">Benden</string>
+    <string name="message_compose_hint">Oluşturmak için tıkla</string>
+    <string name="message_notification_ticked">Yeni mesaj alındı</string>
+    <string name="message_notification_title">Kimden</string>
+    <string name="contact_xmpp_contact_added_notification">XMPP kişisi eklendi:\n%1$s</string>
+
+    <string name="checkrate_title">Ücret kontrolü</string>
+    <string name="checkrate_prefix_hint">Numara veya prefiks girin</string>
+    <string name="checkrate_info_destination_label">Destinasyon:</string>
+    <string name="checkrate_info_rate_label">Ücret:</string>
+    <string name="checkrate_info_duration_label">Maks. süre:</string>
+
+    <string name="callback_title">CallBack</string>
+    <string name="callback_info_src_text">Arayan numarayı girin</string>
+    <string name="callback_info_dst_text">Aranacak numarayı girin</string>
+    <string name="callback_connection_type">Bağlantı tipi</string>
+    <string-array name="callback_connection_type_array">
+        <item>Önce arayan numarayı bağla</item>
+        <item>Her iki numarayı aynı anda bağla</item>
+    </string-array>
+    <string name="callback_status_text">Durum:</string>
+    <string name="callback_status_connecting">Bağlanıyor...</string>
+    <string name="callback_status_faild">Başarısız</string>
+
+    <string name="date_today">Bugün</string>
+
+    <string name="button_yes">Evet</string>
+    <string name="button_no">Hayır</string>
+    <string name="button_ok">Tamam</string>
+    <string name="button_save">Kaydet</string>
+    <string name="button_cancel">İptal</string>
+    <string name="button_edit">Düzenle</string>
+    <string name="button_details">Detaylar</string>
+    <string name="button_delete">Sil</string>
+    <string name="button_send">Gönder</string>
+    <string name="button_call">Ara</string>
+    <string name="button_hangup">Bitir</string>
+    <string name="button_checkrate">Kontrol Et</string>
+    <string name="button_display">Göster</string>
+    <string name="button_close">Kapat</string>
+
+    <string name="phone_type_mobile_short">M:&#160;</string>
+    <string name="phone_type_sip_uri">SIP:</string>
+    <string name="phone_type_sip_uri_short">S:&#160;</string>
+    <string name="phone_type_xmpp">JID:</string>
+    <string name="phone_type_xmpp_short">J:&#160;</string>
+    <string name="phone_type_mobile">Mobil:</string>
+    <string name="phone_type_home_short">H:&#160;</string>
+    <string name="phone_type_home">Ev:</string>
+    <string name="phone_type_work_short">W:&#160;</string>
+    <string name="phone_type_work">İş:</string>
+    <string name="phone_type_other_short">O:&#160;</string>
+    <string name="phone_type_other">Diğer:</string>
+
+    <string name="xmpp_jid_label">JID:</string>
+    <string name="xmpp_user_name_label">Kullanıcı adı:</string>
+
+    <string name="calling_notification_ticker">SIP çağrısı başladı</string>
+    <string name="calling_notification_title">Devam eden SIP çağrısı</string>
+    <string name="calling_notification_text">RoiPhone\'u yeniden başlatmak için tıkla</string>
+
+    <string name="callmode_dialog_title">Çağrı tipini seç</string>
+    <string name="callmode_dialog_audio">Ses</string>
+    <string name="callmode_dialog_video">Video</string>
+
+    <string name="message_type_dialog_title">Mesaj tipini seç</string>
+    <string name="message_type_dialog_sip">SIP</string>
+    <string name="message_type_dialog_xmpp">XMPP</string>
+
+    <string name="native_callmode_dialog_title">Çağrı yolu</string>
+    <string name="native_callmode_dialog_native">GSM araması</string>
+
+    <string name="msg_account_state">Kredi</string>
+    <string name="msg_loading">Yüklüyor...\nLütfen Bekleyin</string>
+
+    <string name="new_messages_title">Yeni mesaj</string>
+    <string name="new_messages_voice_msg">%d yeni sesli mesajınız var</string>
+    <string name="new_messages_voice_btn">Sesli Mesaj</string>
+
+    <string name="settings_screen_sip">SIP ayarları</string>
+    <string name="settings_screen_xmpp">XMPP ayarları</string>
+    <string name="settings_screen_audio">Ses ayarları</string>
+    <string name="settings_screen_video">Video ayarları</string>
+    <string name="settings_screen_system">Sistem ayarları</string>
+    <string name="settings_key_user_name">Kullanıcı adı</string>
+    <string name="settings_key_user_name_summary">SIP hesabı için kullanıcı adı</string>
+    <string name="settings_key_password">Parola</string>
+    <string name="settings_key_password_summary">SIP hesabı için parola</string>
+    <string name="settings_key_category_sip_server">Sunucu ayarları</string>
+    <string name="settings_key_category_sip_presence">Çevrim İçi kontrolü ayarları</string>
+    <string name="settings_key_sip_presence_publish_method">Yayınlama metodu</string>
+    <string name="settings_key_category_sip_advanced">Gelişmiş ayarlar</string>
+    <string name="settings_key_sip_port">SIP portu</string>
+    <string name="settings_key_sip_port_summary">SIP sunucu portu</string>
+    <string name="settings_key_sip_port_hint">Varsayılan 5060</string>
+    <string name="settings_key_server">SIP sunucu</string>
+    <string name="settings_key_server_summary">Sunucunun alan adı veya IP si</string>
+    <string name="settings_key_display_name">Görünen ad</string>
+    <string name="settings_key_display_name_summary">Aranana görünecek isim</string>
+    <string name="settings_key_auth_user_name">Doğrulama adı</string>
+    <string name="settings_key_auth_user_name_summary">Sunucuda doğrulama için kullanılacak isim</string>
+    <string name="settings_key_outbound_proxy">Harici vekil sunucu</string>
+    <string name="settings_key_outbound_proxy_summary">SIP taleplerini alan sunucu (gerekli ise giriniz)</string>
+    <string name="settings_key_nat_traversal">NAT geçişi</string>
+    <string name="settings_key_stun_server">Stun sunucu</string>
+    <string name="settings_key_stun_server_summary">SIP sunucunuz Stun gerektiriyor ise giriniz</string>
+    <string name="settings_key_allow_contact_rewrite">Kontağın yeniden düzenlenmesine izin ver</string>
+
+    <string name="settings_key_xmpp_user_name">Kullanıcı adı</string>
+    <string name="settings_key_xmpp_user_name_summary">XMPP hesabı için kullanıcı adı</string>
+    <string name="settings_key_xmpp_password">Parola</string>
+    <string name="settings_key_xmpp_password_summary">XMPP hesabı için parola</string>
+    <string name="settings_key_category_xmpp_server">Sunucu ayarları</string>
+    <string name="settings_key_xmpp_server">XMPP sunucu</string>
+    <string name="settings_option_xmpp_server_custom">Özel</string>
+    <string name="settings_key_xmpp_server_host">Sunucu</string>
+    <string name="settings_key_xmpp_server_summary">XMPP sunucunun alan adı veya IP si</string>
+    <string name="settings_key_xmpp_port">Port</string>
+    <string name="settings_key_xmpp_port_summary">XMPP sunucunun portu</string>
+    <string name="settings_key_xmpp_port_hint">Varsayılan 5222</string>
+    <string name="settings_key_xmpp_service">Servis ismi</string>
+    <string name="settings_key_xmpp_service_summary">Servisin sunucudaki ismi</string>
+    <string name="settings_key_xmpp_service_hint">Servis ismi veya sunucu ismi ile aynı ise boş</string>
+    <string name="settings_key_category_xmpp_other">Çemrimiçi kontrolü ayarları</string>
+    <string name="settings_key_xmpp_presence">Durum</string>
+    <string name="settings_key_xmpp_presence_status">Durum bilgisi</string>
+    <string name="settings_key_xmpp_presence_status_summary">Diğer kullanıcılara görünecek durum bilgisi</string>
+
+    <string name="settings_key_default_call">Varsayılan arama eylemi</string>
+    <string name="settings_key_video_front_camera">Ön kamerayı kullan</string>
+    <string name="settings_key_video_front_camera_sum_on">Mümkün olması durumunda ön kamera kullanılacak</string>
+    <string name="settings_key_video_front_camera_sum_off">Ana kamera kullanılacak</string>
+    <string name="settings_key_video_bps">Veri aktarım hızı</string>
+    <string name="settings_key_video_res">Çözünürlük</string>
+    <string name="settings_key_video_fps">Saniyedeki kare sayısı</string>
+    <string name="settings_key_video_recording">Kayıt</string>
+    <string name="settings_key_video_codecs">Kodekler</string>
+    <string name="settings_key_H264_90000">H.264</string>
+    <string name="settings_key_H263_1998_90000">H.263+</string>
+    <string name="settings_key_H263_90000">H.263</string>
+    <string name="settings_key_ringtone">Telefon zil sesi</string>
+    <string name="settings_key_ringtone_summary">Gelen çağrılar için zil sesi</string>
+    <string name="settings_sms_key_ringtone">SMS zil sesi</string>
+    <string name="settings_sms_key_ringtone_summary">Gelen mesajlar için zil sesi</string>
+    <string name="settings_key_keytones">Tuş seslerini aktif et</string>
+    <string name="settings_key_keytones_summary">Tuş takımında sesleri aktif/pasif et</string>
+    <string name="settings_key_vibration">Tuş titretmesini aktif et</string>
+    <string name="settings_key_vibration_summary">Tuş takımında titretmeyi aktif/pasif et</string>
+    <string name="settings_key_bluetooth">Bluetooth kulaklık kullan</string>
+    <string name="settings_key_bluetooth_summary">Bluetooth kulaklık kullanmak istiyorsanız aktif edin</string>
+    <string name="settings_key_audio_codecs">Kodekler</string>
+    <string name="settings_key_ec">Yankı önleme</string>
+    <string name="settings_key_ec_summary">Hoparlör açık iken yankı önlemeyi aktif eder</string>
+    <string name="settings_key_dtmf_mode">DTMF modu</string>
+    <string name="settings_key_message_type">Mesaj tipi</string>
+    <string name="settings_key_transport">İletim</string>
+    <string name="settings_key_native_call_mode">GSM çağrı modu</string>
+    <string name="settings_key_G729">G.729</string>
+    <string name="settings_key_G722_16000">G.722</string>
+    <string name="settings_key_PCMU_8000">G.711u</string>
+    <string name="settings_key_PCMA_8000">G.711a</string>
+    <string name="settings_key_GSM_8000">GSM</string>
+    <string name="settings_key_speex_8000">Speex (8kHz)</string>
+    <string name="settings_key_speex_16000">Speex (16kHz)</string>
+    <string name="settings_key_iLBC_8000">iLBC</string>
+    <string name="settings_key_voice">Sesli mesaj</string>
+    <string name="settings_key_voice_summary">Sesli mesaj numarası</string>
+    <string name="settings_key_service_auto_start">Otomatik başlat</string>
+    <string name="settings_key_service_auto_start_summary">Sistem başlatıldığında VOIP servisini başlat</string>
+    <string name="settings_key_native_calllog">Lokal çağrı kaydını kullan</string>
+    <string name="settings_key_native_calllog_summary">Çağrı kayıtlarını mümkün ise lokal kayıtlar içerisinde tut</string>
+
+    <string name="empty_number_error">Lütfen numarayı girin</string>
+    <string name="empty_voice_number_error">Lütfen ayarlar ekranında sesli mesaj numarasını girin</string>
+
+    <string name="regstate_authentification_error">Yanlış kullanıcı adı veya parola.</string>
+    <string name="regstate_server_error">Sunucuya bağlanamadı.</string>
+    <string name="regstate_unknown_error">Kayıt hatası.</string>
+    <string name="regstate_default_error">Hesap kaydı başarısız. Lütfen ayarları ve internet bağlantısını kontrol edin.</string>
+    <string name="xmpp_message_send_account_not_set_error">XMPP hesabı ayarlanmamış! JID adresi ile mesaj gönderimi mümkün değil</string>
+    <string name="xmpp_regstate_error_title">XMPP kaydı başarısız</string>
+    <string name="xmpp_not_registered_error">XMPP hesabına kayıt başarısız!</string>
+    <string name="regstate_error_title">Kayıt hatası</string>
+    <string name="send_error">Gönderim hatası!</string>
+    <string name="regstate_ok_button">TAMAM</string>
+    <string name="regstate_settings_button">Ayarlar</string>
+
+    <string name="error_configure_account">Lütfen hesabınızı yapılandırın</string>
+
+    <string name="contact_info_presence_subscription">Çemrimiçi kontrolü üyeliği</string>
+    <string name="contact_info_presence_subscription_status">Çemrimiçi kontrolü üyeliği %1$s</string>
+    <string name="contact_info_presence_subscription_enabled">aktif</string>
+    <string name="contact_info_presence_subscription_disabled">pasif</string>
+
+    <string name="presence_subscriptions">Çevrimiçi kontrolü üyeliği</string>
+    <string name="presence_subscriptions_pending">Beklemede</string>
+    <string name="presence_subscriptions_allowed">İzinli</string>
+    <string name="presence_subscriptions_denied">Reddedildi</string>
+    <string name="presence_subscriptions_change_permission_question">%1$s, \'%2$s\' listesine taşınsın mı?</string>
+    <string name="presence_subscriptions_allow">İzin ver</string>
+    <string name="presence_subscriptions_deny">Reddet</string>
+    <string name="presence_subscriptions_empty_list">Uygun üyelik bulunmuyor</string>
+    <string name="presence_subscriptions_subscription_request_question">Bekleyen çevrimiçi kontrolü üyeliği talepleri bulunuyor</string>
+    <string name="presence_subscriptions_menu_allow_selected">Seçilenlere izin ver</string>
+    <string name="presence_subscriptions_menu_deny_selected">Seçileni reddet</string>
+    <string name="presence_subscriptions_menu_delete_selected">Seçileni sil</string>
+
+    <string-array name="transport">
+        <item>UDP</item>
+        <item>TCP</item>
+    </string-array>
+
+    <string-array name="transport_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+
+    <string-array name="native_call">
+        <item>Sor</item>
+        <item>GSM kullanarak ara</item>
+    </string-array>
+
+    <string-array name="native_call_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+
+    <string-array name="video_bps">
+        <item>48kbps</item>
+        <item>96kbps</item>
+        <item>192kbps</item>
+        <item>384kbps</item>
+    </string-array>
+
+    <string-array name="video_bps_values">
+        <item>48000</item>
+        <item>96000</item>
+        <item>192000</item>
+        <item>384000</item>
+    </string-array>
+
+    <string-array name="default_call">
+        <item>Sor</item>
+        <item>Ses</item>
+        <item>Video</item>
+    </string-array>
+
+    <string-array name="default_call_values">
+        <item>0</item>
+        <item>01</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="video_res">
+        <item>QCIF (176x144)</item>
+        <item>CIF (352x288)</item>
+        <!--<item>QVGA (320x240)</item>
+        <item>VGA (640x480)</item>-->
+    </string-array>
+
+    <string-array name="video_res_values">
+        <item>2</item>
+        <item>3</item>
+        <!--<item>4</item>
+        <item>5</item>-->
+    </string-array>
+
+    <string-array name="video_fps">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <!--<item>20</item>
+        <item>25</item>-->
+    </string-array>
+
+    <string-array name="video_fps_values">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <!--<item>20</item>
+        <item>25</item>-->
+    </string-array>
+
+    <string-array name="dtmf_mode">
+        <item>RFC 2833</item>
+        <item>SIP Info</item>
+    </string-array>
+
+    <string-array name="dtmf_mode_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+
+    <string-array name="message_types">
+        <item>Tekst/Düz</item>
+        <item>Mesaj/CPIM</item>
+    </string-array>
+
+    <string-array name="message_types_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+
+    <string-array name="nat_traversal_mode">
+        <item>Pasif</item>
+        <item>STUN Bul</item>
+        <item>STUN Sunucu</item>
+    </string-array>
+
+    <string-array name="nat_traversal_mode_values">
+        <item>0</item>
+        <item>01</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="xmpp_presence">
+        <item>Uygun</item>
+        <item>Uzakta</item>
+        <item>Sohbet için uygun</item>
+        <item>Meşgul</item>
+        <item>Uygun Değil</item>
+    </string-array>
+
+    <string-array name="xmpp_presence_values">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="sip_presence">
+        <item>Çevrim İçi</item>
+        <item>Uzakta</item>
+        <item>Meşgul</item>
+        <item>Çevrim Dışı</item>
+    </string-array>
+
+    <string-array name="sip_presence_values">
+        <item>2</item>
+        <item>4</item>
+        <item>5</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="xmpp_server_list">
+        <item>Gmail</item>
+        <item>Facebook</item>
+        <item>@string/settings_option_xmpp_server_custom</item>
+    </string-array>
+
+    <string-array name="xmpp_server_list_values">
+        <item>gmail.com</item>
+        <item>facebook.com</item>
+        <item>custom</item>
+    </string-array>
+
+    <string-array name="sip_presence_publish_method">
+        <item>Agent</item>
+        <item>P2P</item>
+    </string-array>
+
+    <string-array name="sip_presence_publish_method_values">
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="toast_serial_incorrect">Aktivasyon kodu yanlış</string>
+    <string name="toast_activation_error">Aktivasyon hatası. Lütfen daha sonra tekrar deneyin.</string>
+    <string name="toast_cannot_activate">%s aktif edilemiyor. Lütfen bizimle irtibata geçiniz.</string>
+    <string name="serial_input_hint">RoiPhone aktivasyon kodu</string>
+    <string name="serial_input_button">Devam Et</string>
+    <string name="serial_input_label">Lütfen RoiPhone aktivasyon kodunuzu giriniz</string>
+
+    <string name="contact_delete_confirmation_dialog_title">Onay</string>
+    <string name="contact_delete_confirmation_dialog_content">%1$s adlı kişiyi silmek istediğinize emin misiniz?</string>
+    <string name="contact_delete_error">Kişiyi silerken hata oluştu.</string>
+    <string name="contact_add_error">Kişiyi eklerken hata oluştu.</string>
+    <string name="contact_edit_error">Kişi bilgisi düzenlerken hata oluştu.</string>
+</resources>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/dialer_menu_quit"
+          android:icon="@drawable/ic_menu_exit"
+          android:title="@string/menu_quit" />
+	<!-- <item android:id="@+id/dialer_menu_preferences"
+          android:icon="@drawable/ic_menu_settings"
+          android:title="@string/menu_preferences" />
+    <item android:id="@+id/dialer_menu_contacts"
+          android:icon="@drawable/ic_menu_contacts"
+          android:title="@string/menu_contacts" />
+    <item android:id="@+id/dialer_menu_callslog"
+          android:icon="@drawable/ic_menu_calls"
+          android:title="@string/menu_callslog" />
+    <item android:id="@+id/dialer_menu_messages"
+          android:icon="@drawable/ic_menu_messages"
+          android:title="@string/menu_messages" />
+    <item android:id="@+id/dialer_menu_checkrate"
+          android:icon="@drawable/ic_menu_checkrate"
+          android:title="@string/menu_checkrate" />
+    <item android:id="@+id/dialer_menu_callback"
+          android:icon="@drawable/ic_menu_callback"
+          android:title="@string/menu_callback" /> -->
+    <item android:id="@+id/dialer_menu_collect_logs"
+          android:icon="@drawable/ic_bug"
+          android:title="Send logs" />
+</menu>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/reg_top_bar"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/intro_bg" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/top_icon"
+                android:layout_width="@dimen/intro_image"
+                android:layout_height="@dimen/intro_image"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/kulka1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/intro_text_field_height"
+            android:gravity="center" >
+
+            <unique.packagename.widget.MainTextView
+                android:id="@+id/info_text"
+                style="@style/intro_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/intro_free_calls"
+                android:textColor="@color/intro_free_call" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/registration_btn_size"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp" >
+
+        <ImageButton
+            android:id="@+id/tweet"
+            android:layout_width="@dimen/registration_btn_size"
+            android:layout_height="@dimen/registration_btn_size"
+            android:background="@drawable/twit"
+            android:scaleType="fitXY" />
+
+        <unique.packagename.widget.MainTextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="@string/intro_tell"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/intro_free_call" />
+
+        <ImageButton
+            android:id="@+id/face"
+            android:layout_width="@dimen/registration_btn_size"
+            android:layout_height="@dimen/registration_btn_size"
+            android:background="@drawable/fb"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/tab_host_height" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/tab_host_height"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/intro_bg" />
+		
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="11dp"
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true"
+            android:src="@drawable/intro_dots1" />
+        
+        <LinearLayout
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingRight="10dp" >
+
+            <unique.packagename.widget.MainTextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tab_host_height"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/intro_next"
+                android:textColor="@color/white" />
+
+            <ImageButton
+                android:layout_width="@dimen/intro_icon_size_small"
+                android:layout_height="@dimen/intro_icon_size_small"
+                android:background="@color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/arrow_go_white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

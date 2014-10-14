@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/vippie_very_dark_gray_transparent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/calling_active_call_popup_padding"
+    android:paddingLeft="@dimen/calling_active_call_popup_padding"
+    android:paddingRight="@dimen/calling_active_call_popup_padding"
+    android:paddingTop="@dimen/calling_active_call_popup_padding" >
+
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/message_notification_dlg_title_bg"
+        android:gravity="center_vertical"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="@dimen/action_medium_icon"
+            android:layout_height="@dimen/action_medium_icon"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon" />
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/call_status"
+            style="@style/CallingListEntryHeaderText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Test" />
+
+        <ImageView
+            android:id="@+id/message_notification_close_btn"
+            android:layout_width="@dimen/action_medium_icon"
+            android:layout_height="@dimen/action_medium_icon"
+            android:scaleType="fitXY"
+            android:src="@drawable/button_msg_notification_dialog" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/web_progress_bar"
+        style="@style/Widget.ProgressBar.Horizontal.Custom"
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:max="100"
+        android:visibility="gone"
+        android:background="@color/vippie_dark_gray" >
+    </ProgressBar>
+
+    <WebView
+        android:id="@+id/web_view_screen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

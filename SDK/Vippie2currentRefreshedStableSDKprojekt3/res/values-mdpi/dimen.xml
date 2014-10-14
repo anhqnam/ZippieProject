@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    
+    <dimen name="registration_or_margin">0dp</dimen>
+    <dimen name="registration_btn_margin">3dp</dimen>
+</resources>

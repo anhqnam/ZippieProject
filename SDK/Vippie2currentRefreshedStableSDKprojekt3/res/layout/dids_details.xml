@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <unique.packagename.widget.TitleBar
+            android:id="@+id/label"
+            android:background="@color/row_primary"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bars_height"
+            app:label="@string/dids_details" />
+
+        <LinearLayout
+            style="@style/did_details_row"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <unique.packagename.widget.MainTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="@string/did_details_share_my_number"
+                android:textColor="@color/row_primary" />
+
+            <ToggleButton
+                android:id="@+id/profile_share_your_number_checkbox"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/toogle_btn_vippie"
+                android:gravity="center_vertical"
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/radiogroup_holder"
+            style="@style/did_details_row"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+
+            <unique.packagename.widget.MainTextView
+                android:id="@+id/listViewLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dids_details_display_name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/row_primary" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/my_dids"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fadingEdge="none"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buy_dids_section"
+        style="@style/options_row_dark"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="5dp" >
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/buy_dids"
+            style="@style/my_profile_option_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="@string/buy_number" />
+
+        <ImageButton
+            android:id="@+id/buy_dids_button"
+            android:layout_width="@dimen/options_light_icon_size_profile"
+            android:layout_height="@dimen/options_light_icon_size_profile"
+            android:background="@color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/arrow_right" />
+    </LinearLayout>
+
+</RelativeLayout>

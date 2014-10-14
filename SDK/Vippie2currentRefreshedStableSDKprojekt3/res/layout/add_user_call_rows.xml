@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/add_user_free_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/vippie_freecall_row"
+            style="@style/options_row_dark"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/row_secondary" >
+
+            <unique.packagename.widget.MainTextView
+                style="@style/contacts_info_number_row_text_vippie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vippie_freecall" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/vippie_freecall"
+                android:layout_width="@dimen/options_dark_icon_size"
+                android:layout_height="@dimen/options_dark_icon_size"
+                android:layout_marginRight="10dp"
+                android:background="@color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/contact_info_free_call" />
+
+            <ImageButton
+                android:id="@+id/vippie_freevid"
+                android:layout_width="@dimen/options_dark_icon_size"
+                android:layout_height="@dimen/options_dark_icon_size"
+                android:background="@color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/contact_info_free_video" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vippie_freesms_row"
+            style="@style/options_row_dark"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/row_secondary" >
+
+            <unique.packagename.widget.MainTextView
+                style="@style/contacts_info_number_row_text_vippie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vippie_freesms" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/vippie_freesms"
+                android:layout_width="@dimen/options_dark_icon_size"
+                android:layout_height="@dimen/options_dark_icon_size"
+                android:background="@color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/contact_info_free_chat" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_user_paid_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/contact_int_call_row"
+            style="@style/options_row_light"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" >
+
+            <unique.packagename.widget.MainTextView
+                style="@style/contacts_info_number_row_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_info_call" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/contact_int_call"
+                android:layout_width="@dimen/options_light_icon_size_profile"
+                android:layout_height="@dimen/options_light_icon_size_profile"
+                android:background="@color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/contacts_actions_call" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contact_int_sms_row"
+            style="@style/options_row_light"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" >
+
+            <!-- android:background="@drawable/contact_info_standard_action" -->
+
+            <unique.packagename.widget.MainTextView
+                style="@style/contacts_info_number_row_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_info_send_text" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/contact_int_sms"
+                android:layout_width="@dimen/options_light_icon_size_profile"
+                android:layout_height="@dimen/options_light_icon_size_profile"
+                android:background="@color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/contacts_actions_chat" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_p" >
+
+    <LinearLayout
+        style="@style/dialpad"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical"  >
+
+        <LinearLayout
+            android:id="@+id/dialpad_number_line_view"
+            style="@style/dialpad_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:baselineAligned="false"
+            android:minHeight="@dimen/dialpad_number_input_min_height"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:visibility="gone" >
+
+                <unique.packagename.dialer.widget.StatusBar
+                    android:id="@+id/dialpad_status_bar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/add_contact_icon"
+                    android:layout_width="@dimen/dialpad_action_icons_size"
+                    android:layout_height="@dimen/dialpad_action_icons_size"
+                    android:layout_gravity="center_vertical"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:src="@drawable/ic_btn_add_contact"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <unique.packagename.widget.MainTextView
+                        android:id="@+id/dialpad_number"
+                        style="@style/dialpad_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:textAppearance="@android:style/TextAppearance.Medium"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/clear_number_icon"
+                    android:layout_width="@dimen/dialpad_action_icons_size"
+                    android:layout_height="@dimen/dialpad_action_icons_size"
+                    android:layout_gravity="center_vertical"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:src="@drawable/icon_x"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <unique.packagename.widget.MainTextView
+                android:id="@+id/dialpad_checkrate"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/dialpad_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:onClick="nop"
+            android:orientation="vertical"
+            android:padding="0dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <unique.packagename.dialer.widget.buttons.DialpadButtonVippie
+                    android:id="@+id/dialpad_btn_1"
+                    style="@style/dialpad_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/dial_num_1_purple" />
+
+                <unique.packagename.dialer.widget.buttons.DialpadButtonVippie
+                    android:id="@+id/dialpad_btn_2"
+                    style="@style/dialpad_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/dial_num_2_purple" />
+
+                <unique.packagename.dialer.widget.buttons.DialpadButtonVippie
+                    android:id="@+id/dialpad_btn_3"
+                    style="@style/dialpad_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"                  
+                    android:drawableLeft="@drawable/dial_num_3_purple" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <unique.packagename.dialer.widget.buttons.DialpadButtonVippie
+                    android:id="@+id/dialpad_btn_4"
+                    style="@style/dialpad_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/dial_num_4_purple" />
+
+                <unique.packagename.dialer.widget.buttons.DialpadButtonVippie
+                    android:id="@+id/dialpad_btn_5"
+                    style="@style/dialpad_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/dial_num_5_purple" />
+
+                <unique.packagename.dialer.widget.buttons.DialpadButtonVippie
+                    android:id="@+id/dialpad_btn_6"
+                    style="@style/dialpad_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/dial_num_6_purple" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <unique.packagename.dialer.widget.buttons.DialpadButtonVippie
+                    android:id="@+id/dialpad_btn_7"
+                    style="@style/dialpad_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/dial_num_7_purple" />
+
+                <unique.packagename.dialer.widget.buttons.DialpadButtonVippie
+                    android:id="@+id/dialpad_btn_8"
+                    style="@style/dialpad_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/dial_num_8_purple" />
+
+                <unique.packagename.dialer.widget.buttons.DialpadButtonVippie
+                    android:id="@+id/dialpad_btn_9"
+                    style="@style/dialpad_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/dial_num_9_purple" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <unique.packagename.dialer.widget.buttons.DialpadButtonVippie
+                    android:id="@+id/dialpad_btn_ast"
+                    style="@style/dialpad_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/dial_num_star_purple">                   
+                </unique.packagename.dialer.widget.buttons.DialpadButtonVippie>
+
+                <unique.packagename.dialer.widget.buttons.DialpadButtonVippie
+                    android:id="@+id/dialpad_btn_0"
+                    style="@style/dialpad_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/dial_num_0_purple" />
+
+                <unique.packagename.dialer.widget.buttons.DialpadButtonVippie
+                    android:id="@+id/dialpad_btn_hash"
+                    style="@style/dialpad_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/dial_num_pound_purple" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialpad_bottom_line_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <unique.packagename.dialer.widget.buttons.DialpadButtonVippie
+                    android:id="@+id/dialpad_btn_balance"
+                    style="@style/dialpad_bottom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/dialpad_text"
+                    android:padding="0dp"
+                    android:textAppearance="@android:style/TextAppearance.Large"
+                    />
+
+                <unique.packagename.dialer.widget.buttons.DialpadButtonVippie
+                    android:id="@+id/dialpad_btn_dialer_call"
+                    style="@style/button_call"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"   />
+
+                <unique.packagename.dialer.widget.buttons.BackspaceButton
+                    android:id="@+id/dialpad_btn_bckspace"
+                    style="@style/dialpad_bottom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_backspace" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <unique.packagename.widget.Button
+            android:id="@+id/hide_dialpad_button"
+            style="@style/button_hide_dialpad"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</FrameLayout>

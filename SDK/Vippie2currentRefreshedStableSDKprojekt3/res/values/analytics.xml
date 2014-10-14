@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <!--  Site with EasyTracker Parameters 
+    https://developers.google.com/analytics/devguides/collection/android/parameters-->
+    
+  
+  <!-- Replace placeholder ID with your tracking ID -->
+  <string name="ga_trackingId">your analytics id here remember to enable analytics in version manager(VParameters)</string>  <!-- RELEASE ID -->
+  
+  <!--Enable automatic activity tracking-->
+  <bool name="ga_autoActivityTracking">true</bool>
+  <!--Enable automatic exception tracking-->
+  <bool name="ga_reportUncaughtExceptions">true</bool>
+  <!-- The dispatch period in seconds. Defaults to 30 minutes. -->
+  <integer name="ga_dispatchPeriod">120</integer> 
+</resources>

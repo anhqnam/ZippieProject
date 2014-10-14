@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="contacts_avatar_size">52dp</dimen>
+    <dimen name="contacts_avatar_icon_size">15dp</dimen>
+    <dimen name="contacts_avatar_container_width">60dp</dimen><!-- for vippie 2 should be 8px bigger than avatar size -->
+    <dimen name="contacts_avatar_container_height">52dp</dimen><!-- for vippie 2 should be same as avatar size -->
+    <dimen name="contacts_avatar_container_half">26dp</dimen>
+    <dimen name="tab_widget_shadow_height">5dp</dimen>
+    
+    <dimen name="contact_info_avatar_container_width">140dp</dimen>
+    <dimen name="contact_info_avatar_container_height">132dp</dimen>
+    <dimen name="contact_info_avatar_container_height_with_margin">142dp</dimen>
+    
+    <dimen name="action_small_icon">17dp</dimen>
+    <dimen name="action_medium_icon">40dp</dimen>
+    <dimen name="action_icon_profile">30dp</dimen>
+    <dimen name="bottom_bar_btn_height">35dp</dimen>
+    <dimen name="people_img_height">100dp</dimen>
+    
+    <dimen name="map_send_btn_size">80dp</dimen>
+    
+    <dimen name="messages_avatar_size">52dp</dimen>
+    <dimen name="messages_attachment_img_height">200dp</dimen>
+    <dimen name="messages_attachment_img_width">200dp</dimen>
+    <dimen name="messages_attachment_push_img_height">52dp</dimen>
+    <dimen name="messages_attachment_push_img_width">65dp</dimen>
+    <dimen name="messages_attachment_btn">52dp</dimen>
+    <dimen name="messages_msg_compose_icon_size">45dp</dimen>
+    <dimen name="dialpad_number_input_min_height">100dp</dimen>
+    <dimen name="dialpad_action_icons_size">40dp</dimen>
+    <dimen name="calling_calls_list_avatar_size">90dp</dimen>
+    <dimen name="tab_host_height">45dp</dimen>
+    <dimen name="reg_top_bar">46dp</dimen>
+    <dimen name="bars_height">46dp</dimen>
+    <dimen name="calls_list_avatar_size">48dp</dimen>
+    <dimen name="calls_list_avatar_size_push_margin">58dp</dimen>
+    <dimen name="top_calls_list_avatar_size">48dp</dimen>
+    <dimen name="active_call_avatar_size">150dp</dimen>
+    <dimen name="calls_list_buttons_distance">5dp</dimen>
+    <dimen name="calls_list_buttons_size">35dp</dimen>
+    <dimen name="calls_list_button_end_height">50dp</dimen>
+    <dimen name="calls_list_button_end_width">70dp</dimen>
+    <dimen name="calling_buttons_distance">15dp</dimen>
+    <dimen name="calling_active_call_uri_text_size">14sp</dimen>
+    <dimen name="calling_active_call_time_text_size">12sp</dimen>
+    <dimen name="calling_active_call_top_calls_uri_text_size">10sp</dimen>
+    <dimen name="calling_active_call_top_calls_padding">5dp</dimen>
+    <dimen name="calling_active_call_popup_padding">15dp</dimen>
+    <dimen name="calling_active_call_popup_padding_bottom">65dp</dimen>
+
+    <dimen name="emot_icons_message_icon_width">24dp</dimen>
+    <dimen name="emot_icons_message_icon_height">24dp</dimen>
+    <dimen name="emot_icons_message_threads_icon_width">15dp</dimen>
+    <dimen name="emot_icons_message_threads_icon_height">15dp</dimen>
+    <dimen name="emot_icons_picker_icon_width">30dp</dimen>
+    <dimen name="emot_icons_picker_icon_height">30dp</dimen>
+    <dimen name="emot_icons_picker_icon_padding">3dp</dimen>
+    <dimen name="emot_icons_picker_max_height">110dp</dimen>
+    
+    <dimen name="more_shadow_width">5dp</dimen>
+    <!-- increase shadow space to move blue options bg over color bg, count shadow_plus_space -->
+    <dimen name="more_shadow_space">0dp</dimen>
+    <dimen name="more_shadow_plus_space">5dp</dimen>
+    
+    <dimen name="options_dark_icon_size">40dp</dimen>
+    <dimen name="options_light_icon_size">40dp</dimen>
+    <dimen name="options_light_icon_size_profile">40dp</dimen>
+    <dimen name="options_light_icon_size_voicemail">40dp</dimen>
+    <dimen name="options_tell_light_icon_size">80dp</dimen>
+    <dimen name="options_help_light_icon_size">80dp</dimen>
+    <dimen name="options_large_icon">80dp</dimen>
+	<dimen name="registration_btn_size">46dp</dimen>
+	<dimen name="registration_btn_size_double">92dp</dimen>
+	<dimen name="registration_icon_size">30dp</dimen>
+	<dimen name="registration_icon_size_small">12dp</dimen>
+	<dimen name="registration_padding">16dp</dimen>
+	
+	<dimen name="intro_icon_size_small">8dp</dimen>
+	<dimen name="intro_text_field_height">130dp</dimen>
+	<dimen name="intro_image">200dp</dimen>
+    
+    <dimen name="incoming_call_operations_size">240dp</dimen>    
+    <dimen name="incoming_call_operations_icons_size">50dp</dimen> 
+    <dimen name="incoming_call_background_circle_margin">20dp</dimen>
+    
+    <dimen name="did_remove_icon">30dp</dimen>
+    <dimen name="add_user_avatar_size">70dp</dimen>
+    
+    <dimen name="plans_row_height">50dp</dimen>
+    <dimen name="map_top_margin_for_marker_in_edit_mode">80dp</dimen>
+</resources>

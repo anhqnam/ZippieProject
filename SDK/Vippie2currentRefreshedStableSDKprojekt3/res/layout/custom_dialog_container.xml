@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="10dp"
+    android:clickable="true" 
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="50dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/push_bg"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/top_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="@dimen/action_medium_icon"
+                android:layout_height="@dimen/action_medium_icon"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon" />
+
+            <unique.packagename.widget.MainTextView
+                android:id="@+id/call_status"
+                style="@style/CallingListEntryHeaderText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Test" />
+
+            <ImageView
+                android:id="@+id/message_notification_close_btn"
+                android:layout_width="@dimen/action_medium_icon"
+                android:layout_height="@dimen/action_medium_icon"
+                android:scaleType="fitXY"
+                android:src="@drawable/button_msg_notification_dialog" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/separator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_bar"
+            android:background="@drawable/calling_list_entry_separator"
+            android:padding="20dp" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/separator" >
+
+            <LinearLayout
+                android:id="@+id/dialog_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:minHeight="50dp"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

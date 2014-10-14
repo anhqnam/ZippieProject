@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@color/background"
+	android:gravity="center_horizontal">
+	<LinearLayout 
+		android:orientation="vertical" android:layout_width="wrap_content"
+		android:layout_height="fill_parent">
+	<TableLayout 
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_marginTop="50dp" android:orientation="vertical"
+		android:background="@layout/background_white_rounded" android:padding="10dp">
+		<TableRow >
+			<unique.packagename.widget.MainTextView android:layout_width="wrap_content" android:id="@+id/voicemail_details_from"
+				android:layout_height="wrap_content" 
+				style="@style/contacts_row_name" 
+				android:textSize="20dp" />
+		</TableRow>
+		<TableRow >
+			<unique.packagename.widget.MainTextView android:layout_width="wrap_content" android:id="@+id/voicemail_details_date"
+				android:layout_height="wrap_content" 
+				style="@style/contacts_row_name" 
+				android:textSize="20dp" />
+		</TableRow>
+		<TableRow >
+			<unique.packagename.widget.MainTextView android:layout_width="wrap_content" android:id="@+id/voicemail_details_duration"
+				android:layout_height="wrap_content" 
+				style="@style/contacts_row_name" 
+				android:textSize="20dp" />
+		</TableRow>	
+	</TableLayout>
+	
+		<unique.packagename.widget.MainButton android:id="@+id/listen_message_button" android:layout_height="wrap_content" android:layout_width="match_parent"
+			android:layout_marginTop="15dp" android:background="@drawable/button_green" android:text="@string/listen_message" android:textSize="20dp"
+			android:textColor="@color/white"/>
+		<unique.packagename.widget.MainButton android:id="@+id/call_number_button" android:layout_height="wrap_content" android:layout_width="match_parent"
+			android:layout_marginTop="15dp" android:background="@drawable/button_green" android:text="@string/call_number" android:textSize="20dp"
+			android:textColor="@color/white"/>
+		<unique.packagename.widget.MainButton android:id="@+id/add_number_button" android:layout_height="wrap_content" android:layout_width="match_parent"
+			android:layout_marginTop="15dp" android:background="@drawable/button_green" android:text="@string/add_number" android:textSize="20dp"
+			android:textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>
+

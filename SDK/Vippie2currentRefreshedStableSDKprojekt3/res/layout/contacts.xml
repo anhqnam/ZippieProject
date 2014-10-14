@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/contacts_activity_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/custom_activity_title_contacts" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bars_height"
+        android:layout_gravity="center"
+        android:background="@color/row_primary_transparent"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_search" />
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:gravity="center_vertical">
+
+            <unique.packagename.widget.MainEditText
+                android:id="@+id/contacts_search"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textfield_default_holo_dark"
+                android:gravity="left|center_vertical"
+                android:layout_centerVertical="true"
+                android:hint="@string/contacts_search_hint"
+                android:imeOptions="actionNone"
+                android:minHeight="30dp"
+                android:singleLine="true"
+                android:textColor="@color/text_row_primary"
+                android:textColorHint="@color/text_hint" />
+
+            <ImageView
+                android:id="@+id/contacts_search_clear"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_text_clear"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <unique.packagename.contacts.ContactsList
+        android:id="@+id/contacts_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bars_height"
+        layout="@layout/contacts_bottom_bar" />
+
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/calllog_row"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:paddingBottom="2dp"
+    android:paddingTop="2dp" >
+	
+    <include
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/messages_avatar_size"
+        android:layout_height="@dimen/messages_avatar_size"
+        android:layout_alignParentRight="true"
+        layout="@layout/avatar_no_frame_right" />
+    
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/avatar"		
+        layout="@layout/messages_list_item_outgoing" />
+
+</RelativeLayout>

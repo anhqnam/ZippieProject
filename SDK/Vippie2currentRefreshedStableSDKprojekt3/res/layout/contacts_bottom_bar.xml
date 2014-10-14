@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contacts_bottom"
+    android:background="@color/tabs"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bars_height"
+    android:padding="5dp"
+    android:gravity="center_vertical" >
+
+    <LinearLayout
+        android:layout_height="@dimen/bottom_bar_btn_height"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <ImageButton
+            android:id="@+id/contacts_filter_vippie"
+            style="@style/bottom_bar_vippie"
+            android:src="@drawable/contacts_vippie_filter_btn_selector"
+            android:background="@drawable/bottom_bar_btn_selector_left" />
+
+        <ImageButton
+            android:id="@+id/contacts_filter_all"
+            style="@style/bottom_bar_vippie"
+            android:src="@drawable/contacts_all_filter_btn_selector"
+            android:background="@drawable/bottom_bar_btn_selector_right" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/contacts_add"
+        style="@style/bottom_bar_vippie"
+        android:layout_height="@dimen/bottom_bar_btn_height"
+        android:layout_width="@dimen/bottom_bar_btn_height"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_contacts_add"
+        android:background="@drawable/bottom_bar_btn_selector_both"
+         />
+
+</RelativeLayout>

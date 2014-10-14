@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerInParent="true"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/registration_padding"
+    android:paddingRight="@dimen/registration_padding"
+    android:paddingTop="5dp" >
+
+    <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/registration_mode"
+        style="@style/registration_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/registration_use_email_reg"
+        android:textColor="@color/registration_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow android:id="@+id/registration_country_spiner_row" >
+
+                <LinearLayout
+                    style="@style/options_row_registration"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:background="@drawable/textfield_default_holo_light"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Spinner
+                        android:id="@+id/registration_country_spiner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/transparent"
+                        android:entries="@array/countries_list"
+                        android:fastScrollEnabled="true"
+                        android:prompt="@string/registration_country_prompt" >
+                    </Spinner>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow android:id="@+id/registration_user_login_row" >
+
+                <!-- Vippie id -->
+
+                <LinearLayout
+                    style="@style/options_row_registration"
+                    android:layout_width="0dp"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="0dp"
+                    android:paddingBottom="4dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <unique.packagename.widget.DefocusableEditText
+                        android:id="@+id/registration_user_login"
+                        style="@style/registration_textview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:hint="@string/registration_vippie_id_set"
+                        android:inputType="text"
+                        android:paddingLeft="15dp" />
+
+                    <ImageButton
+                        android:id="@+id/registration_help_id"
+                        style="@style/button_help_help"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+                <!-- Vippie id -->
+            </TableRow>
+
+            <TableRow android:id="@+id/registration_vippie_pass_value_row" >
+
+                <!-- Vippie password -->
+
+                <LinearLayout
+                    style="@style/options_row_registration"
+                    android:layout_width="0dp"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <unique.packagename.widget.DefocusableEditText
+                        android:id="@+id/registration_vippie_pass_value"
+                        style="@style/registration_textview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:hint="@string/registration_vippie_pass"
+                        android:inputType="textPassword"
+                        android:paddingLeft="15dp" />
+
+                    <ImageButton
+                        android:id="@+id/registration_help_password"
+                        style="@style/button_help_help"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow android:id="@+id/registration_vippie_pass_value_conf_row" >
+
+                <LinearLayout
+                    style="@style/options_row_registration"
+                    android:layout_width="0dp"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <unique.packagename.widget.DefocusableEditText
+                        android:id="@+id/registration_vippie_pass_value_conf"
+                        style="@style/registration_textview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:hint="@string/registration_vippie_pass_conf"
+                        android:imeOptions="actionGo"
+                        android:inputType="textPassword"
+                        android:paddingLeft="15dp" />
+
+                    <ImageButton
+                        android:id="@+id/registration_help_pass_conf"
+                        style="@style/button_help_help"
+                        android:visibility="invisible"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+                <!-- Vippie password -->
+            </TableRow>
+
+            <TableRow android:id="@+id/registration_vippie_email_value_row" >
+
+                <LinearLayout
+                    style="@style/options_row_registration"
+                    android:layout_width="0dp"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <unique.packagename.widget.DefocusableEditText
+                        android:id="@+id/registration_vippie_email_value"
+                        style="@style/registration_textview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:hint="@string/registration_your_mail"
+                        android:imeOptions="actionGo"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="15dp" />
+
+                </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/registration_help_email"
+                        style="@style/button_help_help"
+                        android:layout_gravity="center_vertical" />
+            </TableRow>
+        </TableLayout>
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/registration_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minLines="3"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/registration_activation_by_email"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/text_noneditable" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/terms"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/registration_terms"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/registration_btn_margin"
+        android:layout_marginTop="@dimen/registration_btn_margin"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginRight="-5dp"
+        android:orientation="horizontal" >
+
+        <include
+            android:id="@+id/registration_vippie_next"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            layout="@layout/registration_number_button_go" />
+
+        <include
+            android:id="@+id/registration_back_button"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            layout="@layout/registration_number_button_back" />
+
+        <include
+            android:id="@+id/registration_vippie_button"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            layout="@layout/registration_id_register_button_go" />
+    </LinearLayout>
+
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/registration_or"
+        style="@style/registration_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/registration_or_margin"
+        android:gravity="center"
+        android:text="@string/registration_or"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/text_noneditable" />
+
+    <unique.packagename.widget.MainButton
+        android:id="@+id/registration_use_number"
+        style="@style/registration_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/registration_btn_margin"
+        android:background="@color/row_primary"
+        android:minHeight="@dimen/registration_btn_size"
+        android:text="@string/registration_use_number_reg"
+        android:textColor="@color/text_row_primary" />
+
+</LinearLayout>

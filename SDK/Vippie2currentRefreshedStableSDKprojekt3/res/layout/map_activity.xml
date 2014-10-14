@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true" />
+
+    <fragment
+        android:id="@+id/map_editTitle"
+        android:name="unique.packagename.features.geolocation.EditMarkerTitleFragment"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:focusable="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp" />
+
+    <unique.packagename.widget.AutoAlphaImageButton
+        android:id="@+id/map_goButton"
+        android:layout_width="@dimen/map_send_btn_size"
+        android:layout_height="@dimen/map_send_btn_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="16dp"
+        android:background="@color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/map_send_button" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="2dp"
+      
+        android:background="@color/row_primary_transparent"
+        android:id="@+id/map_activity_autocomplete_container"
+        android:orientation="horizontal" >
+
+        <AutoCompleteTextView
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:id="@+id/map_activity_autocomplete_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:hint="@string/map_hint_search_places"
+            android:ellipsize="start"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textfield_default_holo_dark"
+            android:gravity="center_vertical"
+            android:nextFocusLeft="@id/map_activity_autocomplete_tv"
+            android:nextFocusUp="@id/map_activity_autocomplete_tv"
+            android:textColor="@color/text_row_primary"
+            android:textColorHint="@color/text_hint" />
+        
+        
+          <ImageButton
+              android:layout_gravity="center"
+            android:id="@+id/map_acitivty_search_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/transparent_bg"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_search" />
+          
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/map_activity_mymapLocationButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/map_activity_autocomplete_container"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="4dp"
+        android:padding="3dp"
+        android:contentDescription="My Location"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_menu_mylocation"
+        android:background="@drawable/btn_map_drawable"
+         />
+
+</RelativeLayout>

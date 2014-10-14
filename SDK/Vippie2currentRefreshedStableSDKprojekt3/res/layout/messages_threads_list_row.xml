@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/calllog_row"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="@dimen/contacts_avatar_container_height" >
+
+	<RelativeLayout
+		android:layout_width="@dimen/contacts_avatar_container_width"
+		android:layout_height="@dimen/contacts_avatar_container_height">
+
+		<include 
+		    layout="@layout/avatar"/>
+
+		<ImageView android:id="@+id/contacts_row_im_icon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_alignParentBottom="true"
+				android:src="@drawable/ic_xmpp_online"
+				android:clickable="false"
+				android:visibility="gone"
+		/>
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:gravity="center_vertical"
+		android:layout_gravity="center_vertical"
+		android:layout_weight="1" >
+
+		<unique.packagename.widget.MainTextView android:id="@+id/messages_threads_list_row_address"
+			style="@style/message_threads_name"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:ellipsize="end"
+			android:singleLine="true"
+			android:text="asdasdad"
+		/>
+
+		<unique.packagename.widget.MainTextView
+		    android:id="@+id/messages_threads_list_row_thumbnail"
+		    style="@style/message_threads_text"
+		    android:singleLine="true"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content" 
+		    android:text="asdad"/>
+
+	</LinearLayout>
+		<ImageView 
+		    android:id="@+id/messages_threads_list_row_external"
+		    android:layout_width="@dimen/action_small_icon"
+			android:layout_height="@dimen/action_small_icon"
+			android:scaleType="fitXY"
+			android:layout_gravity="center"
+		    android:src="@drawable/contacts_actions_rates"
+		    android:visibility="gone"/>
+		
+		<unique.packagename.widget.MainTextView android:id="@+id/messages_threads_list_row_date"
+			style="@style/message_threads_date"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+		/>
+	
+</LinearLayout>

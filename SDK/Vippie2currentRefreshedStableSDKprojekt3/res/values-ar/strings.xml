@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="settings_title">الضبط</string>
+
+  <string name="call_state_incoming">المكالمات الواردة</string>
+  <string name="call_state_dialing">...تم الاتصال به</string>
+  <string name="call_state_ringing">جاري الإتصال</string>
+  <string name="call_state_disconnected">قطع الإتصال</string>
+  <string name="call_state_active">الإتصال مفعل</string>
+  <string name="call_state_hold">تعليق المكالمة</string>
+  <string name="call_state_remote_hold">تعليق المكالمة من المتصل</string>
+  <string name="call_state_conference">مكالمة جماعية</string>
+
+  <string name="account_state_message">: حالة الحساب</string>
+  <string name="account_registered">شبكة يريد جاهزة للإتصال</string>
+  <string name="account_trying_register">محاولة التسجيل</string>
+  <string name="account_not_registered">شبكة يريد غير جاهزة للاتصال</string>
+  <string name="account_activation_required">طلب تفعيل شبكة يريد</string>
+
+  <string name="menu_quit">خروج</string>
+  <string name="menu_preferences">الإعدادات</string>
+  <string name="menu_callslog">سجل المكالمات</string>
+  <string name="menu_contacts">الأسماء</string>
+  <string name="menu_messages">الرسائل</string>
+
+  <string name="menu_mute">صامت</string>
+  <string name="menu_unmute">عام</string>
+  <string name="menu_hold">تعليق المكالمة</string>
+  <string name="menu_unhold">إنهاء تعليق المكالمة</string>
+  <string name="menu_speaker_on">س.خ</string>
+  <string name="menu_speaker_off">س.د</string>
+  <string name="menu_addcall">إضافة اسم</string>
+  <string name="menu_transfer">تحويل</string>
+  <string name="menu_conference">مكالمة جماعية</string>
+  <string name="menu_conference_end">إنهاء المكالمة الجماعية</string>
+  <string name="menu_record">تسجيل</string>
+  <string name="menu_record_pause">إيقاف التسجيل</string>
+  <string name="menu_view">عرض القائمة</string>
+  <string name="menu_delete_all">مسح الكل</string>
+  <string name="menu_total_duration">مدة جميع المكالمات</string>
+  <!--<string name="menu_edit_contact">تعديل الاسم</string> -->
+  <string name="menu_add_contact">إضافة اسم</string>
+  <string name="menu_add_xmpp_contact">XMPP إضافة إسم لخاصية</string>
+  <string name="menu_filter">تصفية</string>
+  <string name="menu_add_to_phonebook">إضافة الى دليل الهاتف</string>
+  <string name="menu_create_new_contact">إنشاء اسم جديد</string>
+  <string name="menu_choose_existing_contact">اختيار اسم موجود</string>
+  <string name="menu_details">تفاصيل</string>
+  <string name="menu_delete">حذف</string>
+  <string name="menu_edit">تعديل</string>
+  <string name="menu_call">مكالمة</string>
+  <string name="menu_send_msg">إرسال الرسالة</string>
+  <string name="menu_new_msg">رسالة جديدة</string>
+  <string name="menu_resend">إعادة إرسال</string>
+  <string name="menu_copy_to_clipboard">نسخ الى الحافظة</string>
+  <string name="menu_checkrate">التحقق من السعر</string>
+  <string name="menu_callback">الاتصال الراجع</string>
+  <string name="menu_select_all">اختيار الكل</string>
+  <string name="menu_deselect_all">إلغاء تحديد الكل</string>
+
+  <string name="dialpad_btn_0">
+    <big>0</big>
+    \n
+    <small>+-</small>
+  </string>
+  <string name="dialpad_btn_1">
+    <big>1</big>
+  </string>
+  <string name="dialpad_btn_2">
+    <big>2</big>
+    \n
+    <small>ب ت ة ث </small>
+  </string>
+  <string name="dialpad_btn_3">
+    <big>3</big>
+    \n
+    <small>ا أ إ آ ى ؤ ئ ء</small>
+  </string>
+  <string name="dialpad_btn_4">
+    <big>4</big>
+    \n
+    <small>س ش ص ض</small>
+  </string>
+  <string name="dialpad_btn_5">
+    <big>5</big>
+    \n
+    <small>د ذ ر ز</small>
+  </string>
+  <string name="dialpad_btn_6">
+    <big>6</big>
+    \n
+    <small>ج ح خ</small>
+  </string>
+  <string name="dialpad_btn_7">
+    <big>7</big>
+    \n
+    <small>ن ه و ي</small>
+  </string>
+  <string name="dialpad_btn_8">
+    <big>8</big>
+    \n
+    <small>ف ق ك ل م</small>
+  </string>
+  <string name="dialpad_btn_9">
+    <big>9</big>
+    \n
+    <small>ط ظ ع غ</small>
+  </string>
+  <string name="dialpad_btn_ast">
+    <big>
+      *\n
+      <small>@</small>
+    </big>
+  </string>
+  <string name="dialpad_btn_hash">
+    <big>
+      #\n
+      <small>_.,</small>
+    </big>
+  </string>
+
+  <string name="contact_login_label">تسجيل الدخول الى شبكة يريد</string>
+  <string name="contact_edit_empty_name">.لا يمكن ترك الاسم فارغ</string>
+  <string name="contact_edit_empty_number">.لا يمكن ترك الرقم فارغ</string>
+  <string name="contact_number_label">الرقم</string>
+  <string name="contact_deleted">.تم حذف الاسم بنجاح</string>
+  <string name="contact_name_default">الإسم</string>
+
+  <string name="calllog_title">سجل المكالمات</string>
+  <string name="calllog_view">تحديد طريقة العرض</string>
+  <string name="calllog_view_all">كل المكالمات</string>
+  <string name="calllog_view_incoming">الوارد المكالمات</string>
+  <string name="calllog_view_outgoing">المكالمات الصادرة</string>
+  <string name="calllog_view_missed">المكالمات الفائته</string>
+  <string name="calllog_total_duration">مدة جميع المكالمات</string>
+  <string name="calllog_confimr_delete_all">هل أنت متأكد أنك تريد مسح سجل المكالمات؟</string>
+  <string name="calllog_empty_list">لا يوجد ادخالات</string>
+
+  <string name="contacts_title">الأسماء</string>
+  <string name="contacts_search_hint">نوع البحث</string>
+  <string name="contacts_enter_sip_uri_hint">أدخل عنوان إلكتروني للأسماء</string>
+  <string name="contacts_enter_jid_uri_hint">XMPP URI أدخل</string>
+  <string name="contacts_regular">الأسماء</string>
+  <string name="contacts_xmpp">XMPP قائمة الأسماء في خدمة</string>
+  <string name="messages_title">الرسائل</string>
+  <string name="messages_empty_list">لا توجد رسائل</string>
+  <string name="messages_me">إرسل لي</string>
+  <string name="message_compose_hint">إنشاء رسالة</string>
+  <string name="message_notification_ticked">تم استلام رسالة جديدة</string>
+  <string name="message_notification_title">من</string>
+  <string name="contact_xmpp_contact_added_notification">XMPP تمة إضافة:\n%1$s</string>
+
+  <string name="checkrate_title">التحقق من السعر</string>
+  <string name="checkrate_prefix_hint">أدخل الرقم أو الكود الدولي</string>
+  <string name="checkrate_info_destination_label">:الوجهة</string>
+  <string name="checkrate_info_rate_label">:السعر</string>
+  <string name="checkrate_info_duration_label">المده القصوى:</string>
+
+  <string name="callback_title">المكالمة الراجعة</string>
+  <string name="callback_info_src_text">رقم المتصل (رقمك)</string>
+  <string name="callback_info_dst_text">رقم وجهة الإتصال</string>
+  <string name="callback_connection_type">نوع الاتصال</string>
+  <string-array name="callback_connection_type_array">
+    <item>قم بالإتصال على رقمي أولاً</item>
+    <item>قم بالإتصال على الجهتين في نفس الوقت</item>
+  </string-array>
+  <string name="callback_status_text">:حالة المكالمة</string>
+  <string name="callback_status_connecting">...جاري الاتصال</string>
+  <string name="callback_status_faild">إتصال غير ناجح</string>
+  <string name="callback_status_hang_up">إنهاء الإتصال</string>
+  <string name="callback_status_connected">تم ربط أطراف المكالمة</string>
+
+  <string name="date_today">اليوم</string>
+
+  <string name="button_yes">نعم</string>
+  <string name="button_no">لا</string>
+  <string name="button_ok">موافق</string>
+  <string name="button_save">حفظ</string>
+  <string name="button_cancel">إلغاء</string>
+  <string name="button_edit">تعديل</string>
+  <string name="button_details">التفاصيل</string>
+  <string name="button_delete">حذف</string>
+  <string name="button_send">إرسال</string>
+  <string name="button_call">إتصال</string>
+  <string name="button_hangup">إنهاء الإتصال</string>
+  <string name="button_checkrate">التحقق من السعر</string>
+  <string name="button_display">عرض</string>
+  <string name="button_close">إغلاق</string>
+
+  <string name="phone_type_mobile_short">M:&#160;</string>
+  <string name="phone_type_sip_uri">مزود الخدمة:</string>
+  <string name="phone_type_sip_uri_short">S:&#160;</string>
+  <string name="phone_type_xmpp">JID:</string>
+  <string name="phone_type_xmpp_short">J:&#160;</string>
+  <string name="phone_type_mobile">:نوع الهاتف</string>
+  <string name="phone_type_home_short">H:&#160;</string>
+  <string name="phone_type_home">:هاتف المنزل</string>
+  <string name="phone_type_work_short">W:&#160;</string>
+  <string name="phone_type_work">:هاتف العمل</string>
+  <string name="phone_type_other_short">O:&#160;</string>
+  <string name="phone_type_other">:هاتف آخر</string>
+
+  <string name="xmpp_jid_label">JID:</string>
+  <string name="xmpp_user_name_label">:اسم المستخدم</string>
+
+  <string name="calling_notification_ticker">بدأت المكالمة</string>
+  <string name="calling_notification_title">جاري الإتصال</string>
+  <string name="calling_notification_text">إعادة تشغيل شبكة يريد</string>
+
+  <string name="callmode_dialog_title">اختيار وضع المكالمة</string>
+  <string name="callmode_dialog_audio">مكالمة صوتية</string>
+  <string name="callmode_dialog_video">مكالمة فيديو</string>
+
+  <string name="message_type_dialog_title">اختيار نوع الرسالة</string>
+  <string name="message_type_dialog_sip">رسائل نصية قصيرة</string>
+  <string name="message_type_dialog_xmpp">دردشة</string>
+
+  <string name="native_callmode_dialog_title">الرجاء إختيار نوعية المكالمة</string>
+  <string name="native_callmode_dialog_native">مكالمة هاتفية</string>
+
+  <string name="msg_account_state">الرصيد</string>
+  <string name="msg_loading">الرجاء الإنتظار \nجاري التحميل</string>
+
+  <string name="new_messages_title">الرسائل الجديدة</string>
+  <string name="new_messages_voice_msg">مكالمة صوتية جديده %d لديك</string>
+  <string name="new_messages_voice_btn">الإتصال بالبريد الصوتي</string>
+
+  <string name="settings_screen_sip">ضبط شبكة يريد</string>
+  <string name="settings_screen_xmpp">XMPP ضبط</string>
+  <string name="settings_screen_audio">ضبط الصوت</string>
+  <string name="settings_screen_video">ضبط الفيديو</string>
+  <string name="settings_screen_system">ضبط النظام</string>
+  <string name="settings_key_user_name">اسم المستخدم</string>
+  <string name="settings_key_user_name_summary">اسم المستخدم الخاص بحساب شبكة يريد</string>
+  <string name="settings_key_password">كلمة المرور</string>
+  <string name="settings_key_password_summary">كلمة المرور الخاصة بحساب شبكة يريد</string>
+  <string name="settings_key_category_sip_server">اعدادات الملقم</string>
+  <string name="settings_key_category_sip_presence">الضبط الحالي</string>
+  <string name="settings_key_sip_presence_publish_method">طريقة النشر</string>
+  <string name="settings_key_category_sip_advanced">إعدادات متقدمة</string>
+  <string name="settings_key_sip_port">رقم قناة الإتصال</string>
+  <string name="settings_key_sip_port_summary">رقم قناة الإتصال</string>
+  <string name="settings_key_sip_port_hint">الافتراضي5060</string>
+  <string name="settings_key_server">سيرفر شبكة يريد</string>
+  <string name="settings_key_server_summary">سيرفر دومين أو أيبي</string>
+  <string name="settings_key_display_name">عرض الاسم</string>
+  <string name="settings_key_display_name_summary">عرض اسم المتصل على الطرف متلقي الاتصال</string>
+  <string name="settings_key_auth_user_name">إسم المستخدم</string>
+  <string name="settings_key_auth_user_name_summary">إسم المستخدم على السيرفر</string>
+  <string name="settings_key_outbound_proxy">Outbound Proxy</string>
+  <string name="settings_key_outbound_proxy_summary">A proxy server that receives SIP requests (enter if necessary)</string>
+  <string name="settings_key_nat_traversal">NAT Traversal</string>
+  <string name="settings_key_stun_server">Stun Server</string>
+  <string name="settings_key_stun_server_summary">Enter if your SIP server requires stun server</string>
+  <string name="settings_key_allow_contact_rewrite">إسمح بتعديل الأسماء</string>
+
+  <string name="settings_key_xmpp_user_name">اسم المستخدم</string>
+  <string name="settings_key_xmpp_user_name_summary">إسم المستخدم XMPP</string>
+  <string name="settings_key_xmpp_password">كلمة المرور</string>
+  <string name="settings_key_xmpp_password_summary">كلمة السر XMPP</string>
+  <string name="settings_key_category_xmpp_server">إعدادات الملقم لشبكة يريد</string>
+  <string name="settings_key_xmpp_server">XMPP سيرفر</string>
+  <string name="settings_option_xmpp_server_custom">تخصيص</string>
+  <string name="settings_key_xmpp_server_host">المضيف</string>
+  <string name="settings_key_xmpp_server_summary">دومين سيرفر XMPP</string>
+  <string name="settings_key_xmpp_port">المنفذ</string>
+  <string name="settings_key_xmpp_port_summary">قناة الإتصال للسرفر XMPP</string>
+  <string name="settings_key_xmpp_port_hint">الافتراضي 5222</string>
+  <string name="settings_key_xmpp_service">اسم الخدمة</string>
+  <string name="settings_key_xmpp_service_summary">اسم الخدمة على الملقم</string>
+  <string name="settings_key_xmpp_service_hint">اسم الخدمة أو اتركها فارغة اذا كان نفس اسم الملقم</string>
+  <string name="settings_key_category_xmpp_other">الضبط الحالي</string>
+  <string name="settings_key_xmpp_presence">الحالة</string>
+  <string name="settings_key_xmpp_presence_status">حالة النص</string>
+  <string name="settings_key_xmpp_presence_status_summary">حالة النص مرئية لجهات الاتصال الأخرى</string>
+
+  <string name="settings_key_default_call">إجراء مكالمة افتراضية</string>
+  <string name="settings_key_video_front_camera">استخدام الكاميرا الامامية</string>
+  <string name="settings_key_video_front_camera_sum_on">سوف تستخدم الكاميرا الامامية إذا كانت متوفرة</string>
+  <string name="settings_key_video_front_camera_sum_off">سيتم استخدام الكاميرا الرئيسية</string>
+  <string name="settings_key_video_bps">Bit Rate</string>
+  <string name="settings_key_video_res">دقة الكاميرا</string>
+  <string name="settings_key_video_fps">لقطة في الثانية</string>
+  <string name="settings_key_video_recording">تسجيل</string>
+  <string name="settings_key_video_codecs">Codecs</string>
+  <string name="settings_key_H264_90000">H.264</string>
+  <string name="settings_key_H263_1998_90000">H.263+</string>
+  <string name="settings_key_H263_90000">H.263</string>
+  <string name="settings_key_ringtone">نغمة الهاتف</string>
+  <string name="settings_key_ringtone_summary">نغمة المكالمات الواردة</string>
+  <string name="settings_sms_key_ringtone">نغمة الرسائل القصيرة</string>
+  <string name="settings_sms_key_ringtone_summary">نغمة الرسائل الواردة</string>
+  <string name="settings_key_keytones">إتاحة مفتاح النغمات</string>
+  <string name="settings_key_keytones_summary">إتاحة أو إغلاق مفتاح النغمات على الأزرار</string>
+  <string name="settings_key_vibration">إتاحة مفتاح الاهتزاز</string>
+  <string name="settings_key_vibration_summary">إتاحةأو إغلاق مفتاح الاهتزاز من الأزرار</string>
+  <string name="settings_key_bluetooth">استخدام سماعة البلوتوث</string>
+  <string name="settings_key_bluetooth_summary">إتاحة إستخدام البلوتوث في حال الرغبة</string>
+  <string name="settings_key_audio_codecs">Codecs</string>
+  <string name="settings_key_ec">فلترة الصدى</string>
+  <string name="settings_key_ec_summary">إتاحة إلغاء الصدى أثناء استخدام سماعة البلوتوث</string>
+  <string name="settings_key_dtmf_mode">DTMF Mode</string>
+  <string name="settings_key_message_type">نوع الرسالة</string>
+  <string name="settings_key_transport">ضبط النقل</string>
+  <string name="settings_key_native_call_mode">عمل الإتصال</string>
+  <string name="settings_key_G729">G.729</string>
+  <string name="settings_key_G722_16000">G.722</string>
+  <string name="settings_key_PCMU_8000">G.711u</string>
+  <string name="settings_key_PCMA_8000">G.711a</string>
+  <string name="settings_key_GSM_8000">GSM</string>
+  <string name="settings_key_speex_8000">Speex (8kHz)</string>
+  <string name="settings_key_speex_16000">Speex (16kHz)</string>
+  <string name="settings_key_iLBC_8000">iLBC</string>
+  <string name="settings_key_voice">البريد الصوتي</string>
+  <string name="settings_key_voice_summary">رفم البريد الصوتي</string>
+  <string name="settings_key_service_auto_start">البدأ التلقائي</string>
+  <string name="settings_key_service_auto_start_summary">شغل شبكة يريد مع تشغيل النظام</string>
+  <string name="settings_key_native_calllog">إستخدام سجل المكالمات</string>
+  <string name="settings_key_native_calllog_summary">سجل المكالمات في سجل المكالمات الأصلي إذا كان ذلك ممكناً</string>
+
+  <string name="empty_number_error">الرجاء إدخال الرقم</string>
+  <string name="empty_voice_number_error">الرجاء ضبط رقم البريد الصوتي في لوحة الإعدادات</string>
+
+  <string name="regstate_authentification_error">.اسم المستخدم أو كلمة المرور غير صحيحة</string>
+  <string name="regstate_server_error">.لا يمكن الاتصال بالخادم</string>
+  <string name="regstate_unknown_error">.خطأ في التسجيل لشبكة يريد</string>
+  <string name="regstate_default_error">الحساب غير مسجل.يرجى التحقق من إعدادات الاتصال بالانترنت</string>
+  <string name="xmpp_message_send_account_not_set_error">XMPP account not configured! Sending messages with use of JID address is not possible</string>
+  <string name="xmpp_regstate_error_title">XMPP Registration Error</string>
+  <string name="xmpp_not_registered_error">Not registered to XMPP account!</string>
+  <string name="regstate_error_title">خطأ في التسجيل</string>
+  <string name="send_error">!إرسال الخطأ</string>
+  <string name="regstate_ok_button">موافق</string>
+  <string name="regstate_settings_button">الإعدادات</string>
+
+  <string name="error_configure_account">الرجاء تهيئة الحساب الخاص بك</string>
+
+  <string name="contact_info_presence_subscription">وجود إشتراك</string>
+  <string name="contact_info_presence_subscription_status">%1$وجود اشتراك هو</string>
+  <string name="contact_info_presence_subscription_enabled">إتاحة</string>
+  <string name="contact_info_presence_subscription_disabled">منع</string>
+
+  <string name="presence_subscriptions">وجود اشتراكات</string>
+  <string name="presence_subscriptions_pending">قيد التسليم</string>
+  <string name="presence_subscriptions_allowed">سماح</string>
+  <string name="presence_subscriptions_denied">رفض</string>
+  <string name="presence_subscriptions_change_permission_question">؟ \'%2$s\' الى %1$sهل ترغب بنقل -</string>
+  <string name="presence_subscriptions_allow">سماح</string>
+  <string name="presence_subscriptions_deny">منع</string>
+  <string name="presence_subscriptions_empty_list">المشتركين غير متوفرين</string>
+  <string name="presence_subscriptions_subscription_request_question">لديك طلبات إشتراك تحتاج للموافقة</string>
+  <string name="presence_subscriptions_menu_allow_selected">إسمح لما تم إختياره</string>
+  <string name="presence_subscriptions_menu_deny_selected">إمنع ما تم إختياره</string>
+  <string name="presence_subscriptions_menu_delete_selected">حذف المحدد</string>
+
+  <string-array name="transport">
+    <item>UDP</item>
+    <item>TCP</item>
+  </string-array>
+
+  <string-array name="transport_values">
+    <item>0</item>
+    <item>01</item>
+  </string-array>
+
+  <string-array name="native_call">
+    <item>إسأل</item>
+    <item>قم بالمكالمة</item>
+  </string-array>
+
+  <string-array name="native_call_values">
+    <item>0</item>
+    <item>01</item>
+  </string-array>
+
+  <string-array name="video_bps">
+    <item>48kbps</item>
+    <item>96kbps</item>
+    <item>192kbps</item>
+    <item>384kbps</item>
+  </string-array>
+
+  <string-array name="video_bps_values">
+    <item>48000</item>
+    <item>96000</item>
+    <item>192000</item>
+    <item>384000</item>
+  </string-array>
+
+  <string-array name="default_call">
+    <item>إسأل</item>
+    <item>مكالمة صوتية</item>
+    <item>مكالمة بالفيديو</item>
+  </string-array>
+
+  <string-array name="default_call_values">
+    <item>0</item>
+    <item>01</item>
+    <item>2</item>
+  </string-array>
+
+  <string-array name="video_res">
+    <item>QCIF (176x144)</item>
+    <item>CIF (352x288)</item>
+    <!--<item>QVGA (320x240)</item> <item>VGA (640x480)</item> -->
+  </string-array>
+
+  <string-array name="video_res_values">
+    <item>2</item>
+    <item>3</item>
+    <!--<item>4</item> <item>5</item> -->
+  </string-array>
+
+  <string-array name="video_fps">
+    <item>5</item>
+    <item>10</item>
+    <item>15</item>
+    <!--<item>20</item> <item>25</item> -->
+  </string-array>
+
+  <string-array name="video_fps_values">
+    <item>5</item>
+    <item>10</item>
+    <item>15</item>
+    <!--<item>20</item> <item>25</item> -->
+  </string-array>
+
+  <string-array name="dtmf_mode">
+    <item>RFC 2833</item>
+    <item>معلومات ضبط شبكة يريد</item>
+  </string-array>
+
+  <string-array name="dtmf_mode_values">
+    <item>0</item>
+    <item>01</item>
+  </string-array>
+
+  <string-array name="message_types">
+    <item>نص / عادي</item>
+    <item>الرسالة / CPIM</item>
+  </string-array>
+
+  <string-array name="message_types_values">
+    <item>0</item>
+    <item>01</item>
+  </string-array>
+
+  <string-array name="nat_traversal_mode">
+    <item>عدم إتاحة</item>
+    <item>اكتشاف STUN</item>
+    <item>STUN سيرفر</item>
+  </string-array>
+
+  <string-array name="nat_traversal_mode_values">
+    <item>0</item>
+    <item>011</item>
+    <item>2</item>
+  </string-array>
+
+  <string-array name="xmpp_presence">
+    <item>متاح</item>
+    <item>بعيد</item>
+    <item>متاح للدردشة</item>
+    <item>عدم المقاطعة</item>
+    <item>غير متواجد حالياً</item>
+  </string-array>
+
+  <string-array name="xmpp_presence_values">
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>7</item>
+  </string-array>
+
+  <string-array name="sip_presence">
+    <item>متواجد</item>
+    <item>بعيدا</item>
+    <item>مشغول</item>
+    <item>غير متواجد حالياً</item>
+  </string-array>
+
+  <string-array name="sip_presence_values">
+    <item>2</item>
+    <item>4</item>
+    <item>5</item>
+    <item>3</item>
+  </string-array>
+
+  <string-array name="xmpp_server_list">
+    <item>Gmail</item>
+    <item>Facebook</item>
+    <item>@string/settings_option_xmpp_server_custom</item> <!-- DO NOT TRANSLATE THIS -->
+  </string-array>
+
+  <string-array name="xmpp_server_list_values">
+    <item>gmail.com</item>
+    <item>facebook.com</item>
+    <item>custom</item> <!-- DO NOT TRANSLATE THIS -->
+  </string-array>
+
+  <string-array name="sip_presence_publish_method">
+    <item>Agent</item>
+    <item>P2P</item>
+  </string-array>
+
+  <string-array name="sip_presence_publish_method_values">
+    <item>2</item>
+    <item>3</item>
+  </string-array>
+
+  <string name="toast_serial_incorrect">رمز التفعيل غير صحيح</string>
+  <string name="toast_activation_error">خطأ في التفعيل. الرجاء المحاولة مرة أخرى في وقت لاحق.</string>
+  <string name="toast_cannot_activate">الرجاء الإتصال بالدعم الفني لشبكة يريد على الموقع %s لم نتمكن من التفعيل</string>
+  <string name="serial_input_hint">رقم تفعيل برنامج شبكة يريد</string>
+  <string name="serial_input_button">إستمرار</string>
+  <string name="serial_input_label">الرجاء إدخال رمز تفعيل شبكة يريد</string>
+
+  <string name="contact_delete_confirmation_dialog_title">تأكيد</string>
+  <string name="contact_delete_confirmation_dialog_content">من قائمة الأسماء؟ %1$s متأكد من رغبتك بحذف</string>
+  <string name="contact_delete_error">.خطأ أثناء حذف الاسم</string>
+  <string name="contact_add_error">.خطأ أثناء إضافة الاسم</string>
+  <string name="contact_edit_error">.خطأ أثناء تعديل الاسم</string>
+
+  <string name="sign_up_text">اشترك الآن</string>
+  <string name="login_username">:اسم المستخدم</string>
+  <string name="login_password">:كلمة المرور</string>
+  <string name="login_hint_required">يلزم</string>
+  <string name="login_button_continue">تسجيل الخول لشبكة يريد</string>
+  <string name="login_button_login">تسجيل الدخول لشبكة يريد</string>
+
+  <string name="callback_message_login_incorrect">تسجيل الدخول غير صحيح</string>
+  <string name="callback_message_registered_successful">تسجيل المستخدم بنجاح</string>
+  <string name="callback_message_hang_up">قطع الاتصال</string>
+  <string name="callback_message_clients_connected">تم ربط الإتصال</string>
+  <string name="callback_message_busy">مشغول</string>
+  <string name="callback_message_no_answer">لا يجيب</string>
+  <string name="callback_message_call_rejected">تم رفض المكالمة</string>
+  <string name="callback_message_insufficient_funds">الرصيد غير كاف لإجراء المكالمة</string>
+  <string name="callback_message_call_ended_because_of_insufficient_funds">انتهت المكالمة بسبب عدم كفاية الرصيد</string>
+  <string name="callback_message_wrong_source_number">رقم المصدر(رقمك) غير صحيح</string>
+  <string name="callback_message_wrong_destination_number">رقم الوجهة غير صحيح</string>
+  <string name="callback_message_destination_is_alerting">الرقم بالوجهه المطلوبه بيدق</string>
+  <string name="callback_message_source_is_alerting">المصدر(تلفونك) بيدق</string>
+  <string name="callback_message_source_connected">لقد قمت بالرد</string>
+  <string name="callback_message_destination_connected">الوجهة المطلوبة قامت بالرد</string>
+  <string name="callback_message_destination_ended_call">قامت الوجهة المطلوبة بإنهاء المكالمة</string>
+  <string name="callback_message_source_ended_call">قمت بإنهاء المكالمة</string>
+  <string name="callback_message_source_has_insufficient_funds">ليس لديك ما يكفي من الرصيد لإتمام المكالمة</string>
+  <string name="callback_message_destination_has_insufficient_funds">ليس لدى الوجهة المطلوبة ما يكفي من الرصيد لإتمام المكالمة</string>
+  <string name="callback_message_ok">تم</string>
+  <string name="callback_message_faild">لم تنجح</string>
+  <string name="callback_message_autorization_faild">فشل السماحية</string>
+  <string name="callback_message_login_success">نجاح الدخول</string>
+  <string name="callback_message_wrong_parameters">خطأ في المعلومات</string>
+  <string name="callback_message_default">غير معروف</string>
+
+</resources>

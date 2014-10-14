@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_registration_dialog"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/registration_dialog_main_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/registration_padding"
+        android:paddingRight="@dimen/registration_padding"
+        android:background="@color/transparent" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/registration_padding" >
+
+        <include
+            android:id="@+id/registration_dialog_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            layout="@layout/registration_number_button_back" />
+		<View
+		    android:id="@+id/registration_dialog_spacer"
+		    android:layout_height="1dp"
+		    android:layout_width="@dimen/registration_padding"
+		    />
+        <include
+            android:id="@+id/registration_dialog_go"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            layout="@layout/registration_number_button_go" />
+    </LinearLayout>
+
+</LinearLayout>

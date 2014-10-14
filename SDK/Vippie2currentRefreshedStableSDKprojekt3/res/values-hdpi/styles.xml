@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="registration_title" parent="android:Widget.TextView">
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+    </style>
+	  	
+    <style name="intro_text" parent="android:Widget.TextView">
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+    </style>
+    
+</resources>

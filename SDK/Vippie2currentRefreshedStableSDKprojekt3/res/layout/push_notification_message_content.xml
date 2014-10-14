@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/avatar_container"
+        android:layout_width="@dimen/calls_list_avatar_size"
+        android:layout_height="@dimen/calls_list_avatar_size"
+        android:layout_below="@id/separator"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:id="@+id/call_avatar"
+            android:layout_width="@dimen/calls_list_avatar_size"
+            android:layout_height="@dimen/calls_list_avatar_size"
+            android:scaleType="fitCenter"
+            android:src="@drawable/calling_unknown_image" />
+
+    </RelativeLayout>
+
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/push_message_notification_from"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/avatar_container"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="testasdasd asdasdas asdas asdasdasd asdasd "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:id="@+id/push_missied_call_info_actions"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/push_message_notification_from"
+        android:layout_toRightOf="@id/avatar_container"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:visibility="visible"
+        android:weightSum="14" >
+
+        <ImageButton
+            android:id="@+id/push_message_vippie_call"
+            android:layout_width="@dimen/options_dark_icon_size"
+            android:layout_height="@dimen/options_dark_icon_size"
+            android:background="@color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/contacts_free_actions_call" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/push_message_video_call"
+            android:layout_width="@dimen/options_dark_icon_size"
+            android:layout_height="@dimen/options_dark_icon_size"
+            android:background="@color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/contacts_free_actions_video" />
+    </LinearLayout>
+
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/push_message_notification_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/avatar_container"
+        android:layout_marginTop="10dp"
+        android:minHeight="20dp"
+        android:text="11:11"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/message_body_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/avatar_container"
+        android:layout_toLeftOf="@id/push_message_notification_time" >
+
+        <ImageView
+            android:id="@+id/attachment_icon"
+            android:layout_width="@dimen/messages_attachment_push_img_width"
+            android:layout_height="@dimen/messages_attachment_push_img_height"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+        <unique.packagename.widget.MainTextView
+            android:id="@+id/push_message_notification_message_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="@dimen/calls_list_avatar_size_push_margin"
+            android:layout_marginRight="5dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxHeight="@dimen/calls_list_avatar_size"
+            android:minHeight="20dp"
+            android:singleLine="true"
+            android:text="aasdadas"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/push_message_notification_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message_body_container"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <unique.packagename.widget.MainEditText
+            android:id="@+id/push_message_notification_reply_msg_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/textfield_default_holo_dark"
+            android:ems="10"
+            android:hint="@string/message_compose_hint"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/text_row_primary"
+            android:textColorHint="@color/text_row_primary" >
+
+            <requestFocus />
+        </unique.packagename.widget.MainEditText>
+
+        <ImageButton
+            android:id="@+id/push_message_notification_reply_btn"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_toRightOf="@id/push_message_notification_input_layout"
+            android:background="@color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/registration_send" />
+    </LinearLayout>
+
+</RelativeLayout>

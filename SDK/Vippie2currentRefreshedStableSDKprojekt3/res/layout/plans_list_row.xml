@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_plan_row"
+    android:background="@color/row_secondary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/plans_row_arrow"
+        android:layout_width="@dimen/options_dark_icon_size"
+        android:layout_height="@dimen/options_dark_icon_size"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrow_right" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_toLeftOf="@id/plans_row_arrow"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical" >
+
+        <unique.packagename.widget.TextLengthDependantTextView
+            android:id="@+id/plans_row_title"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="Title"
+            android:textColor="@color/text_row_primary" />
+
+        <unique.packagename.widget.TextLengthDependantTextView
+            android:id="@+id/plans_row_description"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="Description"
+            android:textColor="@color/text_row_primary" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name_bold"><![CDATA[<b>%s</b>]]></string>
+    <string name="account_state_message">Account state: </string>
+    <string name="menu_preferences">Settings</string>
+    <string name="menu_callslog">Calls Log</string>
+    <string name="menu_contacts">Contacts</string>
+    <string name="menu_messages">Messages</string>
+    <string name="menu_mute">Mute</string>
+    <string name="menu_unmute">Unmute</string>
+    <string name="menu_hold">Hold</string>
+    <string name="menu_unhold">Unhold</string>
+    <string name="menu_speaker_on">Speaker</string>
+    <string name="menu_speaker_off">Speaker</string>
+    <string name="menu_video_start">Video start</string>
+    <string name="menu_video_stop">Video stop</string>
+    <string name="menu_addcall">Add call</string>
+    <string name="menu_split">Split</string>
+    <string name="menu_merge">Merge</string>
+    <string name="menu_keypad">Keypad</string>
+    <string name="menu_transfer">Transfer</string>
+    <string name="menu_call_info">Call Info</string>
+    <string name="menu_conference">Conference</string>
+    <string name="menu_conference_end">End conference</string>
+    <string name="menu_record">Record</string>
+    <string name="menu_record_pause">Pause</string>
+    <string name="menu_callback">Callback</string>
+    <string name="dialpad_btn_0"><big>0</big>\n<small>+-</small></string>
+    <string name="dialpad_btn_1"><big>1</big></string>
+    <string name="dialpad_btn_2"><big>2</big>\n<small>ABC</small></string>
+    <string name="dialpad_btn_3"><big>3</big>\n<small>DEF</small></string>
+    <string name="dialpad_btn_4"><big>4</big>\n<small>GHI</small></string>
+    <string name="dialpad_btn_5"><big>5</big>\n<small>JKL</small></string>
+    <string name="dialpad_btn_6"><big>6</big>\n<small>MNO</small></string>
+    <string name="dialpad_btn_7"><big>7</big>\n<small>PQRS</small></string>
+    <string name="dialpad_btn_8"><big>8</big>\n<small>TUV</small></string>
+    <string name="dialpad_btn_9"><big>9</big>\n<small>WXYZ</small></string>
+    <string name="dialpad_btn_ast"><big>*\n<small>@</small></big></string>
+    <string name="dialpad_btn_hash"><big>#\n<small>_.,</small></big></string>
+    <string name="dialpad_call">Call</string>
+    <string name="callback_title">Callback</string>
+    <string name="callback_info_src_text">Enter source number</string>
+    <string name="callback_info_dst_text">Enter destination number</string>
+    <string name="callback_connection_type">Connection type</string>
+
+    <string-array name="callback_connection_type_array">
+        <item>Connect Source first</item>
+        <item>Connect Both Simultaneously</item>
+    </string-array>
+
+    <string name="callback_status_text">Status:</string>
+    <string name="callback_status_connecting">Connecting...</string>
+    <string name="callback_status_faild">Failed</string>
+    <string name="callback_status_hang_up">Hang Up</string>
+    <string name="callback_status_connected">Connected</string>
+            
+    <string name="phone_type_mobile_short">M:&#160;</string>
+    <string name="phone_type_home_short">H:&#160;</string>
+    <string name="phone_type_work_short">W:&#160;</string>
+    <string name="phone_type_other_short">O:&#160;</string>
+	<string name="phone_type_sip_uri">SIP</string>
+    <string name="phone_type_sip_uri_short">S:&#160;</string>
+    <string name="phone_type_xmpp">JID:</string>
+    <string name="phone_type_xmpp_short">J:&#160;</string>
+    <string name="xmpp_jid_label">JID:</string>
+    <string name="xmpp_user_name_label">User Name:</string>
+    <string name="contacts_enter_jid_uri_hint">Enter XMPP URI</string>
+    <string name="contacts_xmpp">XMPP contacts</string>
+    <string name="message_type_dialog_title">Select message type</string>
+    <string name="message_type_dialog_sip">SMS</string>
+    <string name="message_type_dialog_xmpp">Chat</string>
+    <string name="native_callmode_dialog_title">Select Call Action</string>
+    <string name="native_callmode_dialog_native">Phone Call</string>
+    <string name="settings_screen_sip">SIP Settings</string>
+    <string name="settings_screen_xmpp">XMPP Settings</string>
+    <string name="settings_screen_audio">Sound</string>
+    <string name="settings_key_user_name">User Name</string>
+    <string name="settings_key_user_name_summary">User name for the SIP account</string>
+    <string name="settings_key_password">Password</string>
+    <string name="settings_key_password_summary">Password for the SIP account</string>
+    <string name="settings_key_category_sip_server">Server Settings</string>
+    <string name="settings_key_category_sip_presence">Presence Settings</string>
+    <string name="settings_key_sip_presence">Status</string>
+    <string name="settings_key_sip_presence_status">Status Text</string>
+    <string name="settings_key_sip_presence_status_summary">Status text visible to other contacts</string>
+    <string name="settings_key_sip_presence_publish_method">Publish Method</string>
+    <string name="settings_key_category_sip_advanced">Advanced Settings</string>
+    <string name="settings_key_sip_port">SIP Port</string>
+    <string name="settings_key_sip_port_summary">Port for the SIP server</string>
+    <string name="settings_key_sip_port_hint">Default 5060</string>
+    <string name="settings_key_server">SIP Server</string>
+    <string name="settings_key_server_summary">Domain or IP of the server</string>
+    <string name="settings_key_display_name">Display Name</string>
+    <string name="settings_key_display_name_summary">Caller name displayed to the receiving party</string>
+    <string name="settings_key_auth_user_name">Auth User Name</string>
+    <string name="settings_key_auth_user_name_summary">Name used to authenticate to the server</string>
+    <string name="settings_key_outbound_proxy">Outbound Proxy</string>
+    <string name="settings_key_outbound_proxy_summary">A proxy server that receives SIP requests (enter if necessary)</string>
+    <string name="settings_key_nat_traversal">NAT Traversal</string>
+    <string name="settings_key_stun_mode">Stun mode</string>
+    <string name="settings_key_stun_server">Stun Server</string>
+    <string name="settings_key_stun_server_summary">Enter domain or IP of stun server</string>
+    <string name="settings_key_enabled_ice">Enable ICE</string>
+    <string name="settings_key_enabled_turn">Enable Turn Server</string>
+    <string name="settings_key_turn_server">Turn Server</string>
+    <string name="settings_key_turn_server_summary">Enter domain or IP of turn server (optional: port followed by ":")</string>
+    <string name="settings_key_turn_realm">Turn Realm</string>
+    <string name="settings_key_turn_realm_summary">Enter Turn Server credential: Eealm</string>
+    <string name="settings_key_turn_user">Turn User Name</string>
+    <string name="settings_key_turn_user_summary">Enter Turn Server credential: user name</string>
+    <string name="settings_key_turn_pass">Turn User Password</string>
+    <string name="settings_key_turn_pass_summary">Password for Turn User</string>
+    <string name="settings_key_allow_contact_rewrite">Allow Contact Rewrite</string>
+    <string name="settings_key_auto_answer_audio">Audio Auto-Answer</string>
+    <string name="settings_key_auto_answer_audio_summary">The dialer will open up Audio incoming call automatically</string>
+    <string name="settings_key_auto_answer_video">Video Auto-Answer</string>
+    <string name="settings_key_auto_answer_video_summary">The dialer will open up Video incoming call automatically</string>
+    <string name="settings_key_xmpp_user_name">User name</string>
+    <string name="settings_key_xmpp_user_name_summary">User name for the XMPP account</string>
+    <string name="settings_key_xmpp_password">Password</string>
+    <string name="settings_key_xmpp_password_summary">Password for the XMPP account</string>
+    <string name="settings_key_category_xmpp_server">Server Settings</string>
+    <string name="settings_key_xmpp_server">XMPP Server</string>
+    <string name="settings_option_xmpp_server_custom">Custom</string>
+    <string name="settings_key_xmpp_server_host">Host</string>
+    <string name="settings_key_xmpp_server_summary">Domain or IP of the XMPP server</string>
+    <string name="settings_key_xmpp_port">Port</string>
+    <string name="settings_key_xmpp_port_summary">Port for the XMPP server</string>
+    <string name="settings_key_xmpp_port_hint">Default 5222</string>
+    <string name="settings_key_xmpp_service">Service Name</string>
+    <string name="settings_key_xmpp_service_summary">The name of the service on the server</string>
+    <string name="settings_key_xmpp_service_hint">Service name or empty if the same as server name</string>
+    <string name="settings_key_category_xmpp_other">Presence Settings</string>
+    <string name="settings_key_account_presence">Status</string>
+    <string name="settings_key_account_presence_status">Status Text</string>
+    <string name="settings_key_xmpp_presence_status_summary">Status text visible to other contacts</string>
+    <string name="settings_key_default_call">Default Call Action</string>
+    <string name="settings_key_video_codecs">Codecs</string>
+    <string name="settings_key_H264_90000">H.264</string>
+    <string name="settings_key_H263_1998_90000">H.263+</string>
+    <string name="settings_key_H263_90000">H.263</string>
+    <string name="settings_key_audio_codecs">Codecs</string>
+    <string name="settings_key_ec">Echo Cancellation</string>
+    <string name="settings_key_ec_summary">Enables echo cancellation while speaker is on</string>
+    <string name="settings_key_dtmf_mode">DTMF Mode</string>
+    <string name="settings_key_transport">Transport</string>
+    <string name="settings_secure_transport">Security transport stream</string>
+    <string name="settings_key_native_call_mode">Native Call Action</string>
+    <string name="settings_key_G729">G.729</string>
+    <string name="settings_key_G722_16000">G.722</string>
+    <string name="settings_key_PCMU_8000">G.711u</string>
+    <string name="settings_key_PCMA_8000">G.711a</string>
+    <string name="settings_key_SILK_8000">Silk 8kHz</string>
+    <string name="settings_key_SILK_12000">Silk 12kHz</string>
+    <string name="settings_key_SILK_16000">Silk 16kHz</string>
+    <string name="settings_key_SILK_24000">Silk 24kHz</string>
+    <string name="settings_key_GSM_8000">GSM</string>
+    <string name="settings_key_AMR_NB_8000">AMR-NB (8kHz)</string>
+    <string name="settings_key_AMR_WB_16000">AMR-WB (16kHz)</string>
+    <string name="settings_key_speex_8000">Speex (8kHz)</string>
+    <string name="settings_key_speex_16000">Speex (16kHz)</string>
+    <string name="settings_key_iLBC_8000">iLBC</string>
+    <string name="settings_key_callthru_country">Call through country</string>
+    <string name="xmpp_message_send_account_not_set_error">XMPP account not configured! Sending messages with use of JID address is not possible</string>
+    <string name="xmpp_regstate_error_title">XMPP Registration Error</string>
+    <string name="xmpp_not_registered_error">Not registered to XMPP account!</string>
+    <string name="error_configure_account">Please configure your account</string>
+    <string name="error_configure_call_thru">Please configure your callthrough number</string>
+    <string name="contact_info_presence_subscription">Presence subscription</string>
+    <string name="contact_info_presence_subscription_status">Presence subscription is %1$s</string>
+    <string name="contact_info_presence_subscription_enabled">enabled</string>
+    <string name="contact_info_presence_subscription_disabled">disabled</string>
+    <string name="presence_subscriptions">Presence Subscriptions</string>
+    <string name="presence_subscriptions_pending">Pending</string>
+    <string name="presence_subscriptions_allowed">Allowed</string>
+    <string name="presence_subscriptions_denied">Denied</string>
+    <string name="presence_subscriptions_change_permission_question">Move %1$s to \'%2$s\' list?</string>
+    <string name="presence_subscriptions_allow">Allow</string>
+    <string name="presence_subscriptions_deny">Deny</string>
+    <string name="presence_subscriptions_empty_list">No subscriptions available</string>
+    <string name="presence_subscriptions_subscription_request_question">You have pending presence subscription requests</string>
+    <string name="presence_subscriptions_menu_allow_selected">Allow selected</string>
+    <string name="presence_subscriptions_menu_deny_selected">Deny selected</string>
+    <string name="presence_subscriptions_menu_delete_selected">Delete selected</string>
+
+    <string-array name="transport">
+        <item>UDP</item>
+        <item>TCP</item>
+        <item>TLS</item>
+    </string-array>
+    <string-array name="transport_values">
+        <item>0</item>
+        <item>01</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="security_mode">
+        <item>NONE</item>
+        <item>SRTP optional </item>
+        <item>SRTP required</item>
+        <item>ZRTP</item>
+    </string-array>
+    <string-array name="security_mode_values">
+        <item>0</item>
+        <item>01</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="native_call">
+        <item>Ask</item>
+        <item>Make native call</item>
+    </string-array>
+    <string-array name="native_call_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+    <string-array name="video_bps">
+        <item>48kbps</item>
+        <item>96kbps</item>
+        <item>192kbps</item>
+        <item>384kbps</item>
+        <item>768kbps</item>
+    </string-array>
+    <string-array name="video_bps_values">
+        <item>48000</item>
+        <item>96000</item>
+        <item>192000</item>
+        <item>384000</item>
+        <item>768000</item>
+    </string-array>
+    <string-array name="default_call">
+        <item>Ask</item>
+        <item>Audio</item>
+        <item>Video</item>
+    </string-array>
+    <string-array name="default_call_values">
+        <item>0</item>
+        <item>01</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="video_res">
+        <item>QCIF (144x144)</item>
+        <item>CIF (288x288)</item>
+        <item>VGA (640x480)</item>
+    </string-array>
+    <string-array name="video_res_values">
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="video_fps">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+    </string-array>
+    <string-array name="video_fps_values">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+    </string-array>
+    <string-array name="dtmf_mode">
+        <item>RFC 2833</item>
+        <item>SIP Info</item>
+    </string-array>
+    <string-array name="dtmf_mode_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+    <string-array name="message_types">
+        <item>Text/Plain</item>
+        <item>Message/CPIM</item>
+    </string-array>
+    <string-array name="message_types_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+    <string-array name="stun_mode">
+        <item>Disabled</item>
+        <item>Discover STUN</item>
+        <item>STUN Server</item>
+    </string-array>
+    <string-array name="stun_mode_values">
+        <item>0</item>
+        <item>01</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="xmpp_presence">
+        <item>Available</item>
+        <item>Away</item>
+        <item>Free to chat</item>
+        <item>Do not disturb</item>
+        <item>Unavailable</item>
+    </string-array>
+    <string-array name="xmpp_presence_values">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="sip_presence">
+        <item>Online</item>
+        <item>Away</item>
+        <item>Busy</item>
+        <item>Offline</item>
+    </string-array>
+    <string-array name="sip_presence_values">
+        <item>2</item>
+        <item>4</item>
+        <item>5</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="xmpp_server_list">
+        <item>Gmail</item>
+        <item>Facebook</item>
+        <item>@string/settings_option_xmpp_server_custom</item><!-- DO NOT TRANSLATE THIS -->
+    </string-array>
+    <string-array name="xmpp_server_list_values">
+        <item>gmail.com</item>
+        <item>facebook.com</item>
+        <item>custom</item><!-- DO NOT TRANSLATE THIS -->
+    </string-array>
+    <string-array name="sip_presence_publish_method">
+        <item>Agent</item>
+        <item>P2P</item>
+    </string-array>
+    <string-array name="sip_presence_publish_method_values">
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="log_send_emails">
+        <item>m.bulba@voipswitch.com</item>
+    </string-array>
+
+    <string name="toast_serial_incorrect">Activation code incorrect</string>
+    <string name="toast_serial_incorrect_op">Operator code incorrect</string>
+    <string name="toast_activation_error">Activation error. Please try again later.</string>
+    <string name="toast_cannot_activate">%s cannot be activated. Please contact your SIP provider.</string>
+    <string name="serial_input_hint">Dialer Activation Code</string>
+    <string name="serial_input_hint_op">Operator Code</string>
+    <string name="serial_input_button">Continue</string>
+    <string name="serial_input_label">Please enter your Dialer Activation Code</string>
+    <string name="serial_input_label_op">Please enter your Operator Code</string>
+    <string name="activation_sms_from_inbox">Activation code retrieved from inbox</string>
+    <string name="activation_sms_received">Text message with activation code received</string>
+    <string name="activation_ask_for_input_address">Cannot connect to activation service. Please input new URL</string>
+    <string name="call_thru">Callthrough</string>
+    <string name="call_voip">VoIP</string>
+    <string name="toast_callthru_enabled">Callthrough enabled</string>
+    <string name="settings_key_callthru_enabled">Enable Callthrough</string>
+    <string name="callthruget_title"></string>
+    <string name="callthruget_message">Updating Callthrough numbers list</string>
+    <string name="log_input_hint">Enter a comment here...</string>
+    <string name="log_input_email">Your email</string>
+    <string name="log_input_description">Description of the problem</string>
+    <string name="log_input_error_msg">Please fill in all fields.</string>
+    <string name="log_progres_message">Preparing log...</string>
+    <string name="log_error_message">Error while generating log!</string>
+    <string name="log_sent_message">Log sent successfully!</string>
+    <string name="runningFaceDetection">Please wait\u2026</string>    <string name="recharge_button_text">Recharge</string>
+    <string name="login_new_account">Create new account</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="login_username">Username:</string>
+    <string name="login_password">Password:</string>
+    <string name="login_hint_required">Required</string>
+    <string name="login_button_continue">Login</string>
+    <string name="login_button_login">Login</string>
+    <string name="callback_message_login_incorrect">Login incorrect</string>
+    <string name="callback_message_registered_successful">User registered successful</string>
+    <string name="callback_message_hang_up">Hang up</string>
+    <string name="callback_message_clients_connected">Clients connected</string>
+    <string name="callback_message_busy">Busy</string>
+    <string name="callback_message_no_answer">No answer</string>
+    <string name="callback_message_call_rejected">Call has been rejected</string>
+    <string name="callback_message_insufficient_funds">Insufficient funds</string>
+    <string name="callback_message_call_ended_because_of_insufficient_funds">Call ended because of insufficient funds</string>
+    <string name="callback_message_wrong_source_number">Wrong source number</string>
+    <string name="callback_message_wrong_destination_number">Wrong destination number</string>
+    <string name="callback_message_destination_is_alerting">Destination is alerting</string>
+    <string name="callback_message_source_is_alerting">Source is alerting</string>
+    <string name="callback_message_source_connected">Source number connected</string>
+    <string name="callback_message_destination_connected">Destination number connected</string>
+    <string name="callback_message_destination_ended_call">Destination number ended the call</string>
+    <string name="callback_message_source_ended_call">Source number ended the call</string>
+    <string name="callback_message_source_has_insufficient_funds">Source number has insufficient funds</string>
+    <string name="callback_message_destination_has_insufficient_funds">Destination number has insufficient funds</string>
+    <string name="callback_message_ok">OK</string>
+    <string name="callback_message_connecting">Connecting...</string>
+    <string name="callback_message_faild">Failed</string>
+    <string name="callback_message_autorization_faild">Autorization Failed</string>
+    <string name="callback_message_login_success">Login success</string>
+    <string name="callback_message_wrong_parameters">Wrong Parameters</string>
+    <string name="callback_message_default">Unknown</string>
+	<string name="messages_me">Me</string>
+	
+	<string name="contact_xmpp_contact_added_notification">XMPP contact added:\n%1$s</string>
+	
+	<string name="checkrate_title">Check rate</string>
+    <string name="checkrate_prefix_hint">Enter number or prefix</string>
+    <string name="checkrate_info_destination_label">Destination:</string>
+    <string name="checkrate_info_rate_label">Rate:</string>
+    <string name="checkrate_info_duration_label">Max duration:</string>
+    
+    <string name="call_state_incoming">Incoming</string>
+    <string name="call_state_active">Active</string>
+    <string name="call_state_hold">Held</string>
+    <string name="call_state_remote_hold">Remote Held</string>
+    
+    <string name="settings_key_voice">Voicemail</string>
+    <string name="settings_key_voice_summary">Voicemail number</string>
+    <string name="empty_voice_number_error">Please set the voicemail number in the settings panel</string>
+    
+    <string name="contact_info_share">Share Contact</string>
+    <string name="presence_status_online">Online</string>
+    <string name="presence_status_offline">Offline</string>
+    <string name="presence_status_push">On Push notification</string>
+    <string name="more_social_hub">Social hub</string>
+    
+    <string name="account_type">com.vippieid</string>
+    <string name="account_sth_failed">Sth went wrong</string>
+    <string name="account_sync_progress">Sync still in progress</string>
+    
+    <string name="calling_video_offer_accept">Accept</string>
+    <string name="calling_video_offer_reject">Reject</string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calling_video_offer_layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <unique.packagename.widget.MainTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/call_menu_video_start"
+        android:padding="10dp"
+        android:text="@string/calling_video_offer_text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <unique.packagename.widget.Button
+            android:id="@+id/calling_video_offer_dialog_accept"
+            style="@style/button_video_offer_dialog"
+            android:background="@drawable/button_green"
+            android:text="@string/calling_video_offer_accept" />
+
+        <unique.packagename.widget.Button
+            android:id="@+id/calling_video_offer_dialog_reject"
+            style="@style/button_video_offer_dialog"
+            android:background="@drawable/button_red"
+            android:text="@string/calling_video_offer_reject" />
+    </LinearLayout>
+
+</LinearLayout>

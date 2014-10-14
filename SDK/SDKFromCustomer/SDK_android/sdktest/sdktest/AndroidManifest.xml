@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sdktest"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    
+    <!-- need for vippie features -->
+    <!-- For bluetooth on android 4.0+ -->
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="unique.packagename.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <permission
+        android:name="unique.packagename.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!--
+    This option is added to disable "Stretch to fill screen" option on tablets
+    introduced in android 3.2 - it has bug that crashes the application
+    http://code.google.com/p/android/issues/detail?id=19817
+    -->
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="17" />
+    <!-- <uses-sdk android:minSdkVersion="7" /> -->
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+    
+    <!--end need for vippie features -->
+    
+    <application
+        android:name=".TestApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!-- ============== all test app stuff here ================= -->
+        
+        <activity     
+            android:name="com.example.sdktest.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- ============== end all test app stuff here ================= -->
+        
+        <!-- need for vippie features -->
+        
+        <activity
+            android:name="unique.packagename.features.geolocation.MapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MapTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="unique.packagename.Main"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <!--
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.DIALER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+            -->
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.CALL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.DIAL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.CALL_BUTTON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+
+            <!--
+            <intent-filter android:priority="100" >
+                <action android:name="android.intent.action.CALL_PRIVILEGED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+            -->
+            <!--
+            sms intercepting is currently disabled
+                <intent-filter android:priority="100">
+                <action android:name="android.intent.action.SENDTO" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="smsto" />
+            </intent-filter>
+            -->
+
+        </activity>
+        <activity
+            android:name="unique.packagename.DialerTabsActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.DialerPagerTabsActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.registration.number.ChangeNumberPopUpActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/PasswordDialogTheme" >
+        </activity>
+        <activity
+            android:name="unique.packagename.dialer.MoreActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.tellfriend.TellFriendActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.dialer.HelpActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.dialer.FeedbackActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.plans.PlansActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.plans.PlanInfoActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.intro.IntroActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.profile.MyProfileActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.profile.DetailsActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.profile.UserDidNumberActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:theme="@style/CustomRadioTheme" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.voicemail.MainVoicemailActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.voicemail.VoicemailList"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.voicemail.MessageDetails"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.rates.RatesActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.activation.ActivationViaOperatorCodeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.util.GlobalDialog"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:theme="@style/GlobalDialogTheme" >
+        </activity>
+        <activity
+            android:name="unique.packagename.dialer.DialerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="unique.packagename.dialer.NewCallingActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="unique.packagename.ACTION_SIP_INCOMING_CALL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="unique.packagename.ACTION_SIP_OUTGOING_CALL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- <activity
+            android:name="unique.packagename.dialer.SplashActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> -->
+        <activity
+            android:name="unique.packagename.callslog.CallsLogActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme" >
+        </activity>
+        <activity
+            android:name="unique.packagename.contacts.ContactsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.ColorBg" >
+        </activity>
+        <activity
+            android:launchMode="singleTop"
+            android:name="unique.packagename.contacts.ContactsActivityPopup"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.Transparent" >
+        </activity>
+        <activity
+            android:name="unique.packagename.contacts.ContactInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.contacts.ContactInfoActivityPopup"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.Transparent" >
+        </activity>
+        <activity
+            android:name="unique.packagename.contacts.XmppContactActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.messages.MsgThreadsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="unique.packagename.messages.MessagesActivity"
+            android:configChanges="orientation"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.VippieBg"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="unique.packagename.messages.MessagesActivityCalling"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.VippieBg"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name="unique.packagename.messages.MessagesActivityAttachmentsCalling"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name="unique.packagename.push.PushNotificationActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.settings.SettingsActivity"
+            android:label="@string/settings_title"
+            android:theme="@style/Theme.Settings" >
+        </activity>
+        <activity
+            android:name="unique.packagename.dialer.CheckrateActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/dialog.noTitle"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="unique.packagename.dialer.CallbackActivity"
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme" >
+        </activity>
+        <activity
+            android:name="unique.packagename.dialer.NativeCallmodeActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:theme="@style/dialog.noTitle" >
+        </activity>
+        <activity
+            android:name="unique.packagename.contacts.PresenceSubscriptions"
+            android:theme="@android:style/Theme" >
+        </activity>
+        <activity
+            android:name="unique.packagename.contacts.PresenceSubscriptionsList"
+            android:theme="@android:style/Theme" >
+        </activity>
+        <activity
+            android:name="unique.packagename.LoginScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.registration.BeginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.registration.fragment.RegistrationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompatVippie" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.ivippie.com"
+                    android:path="/activate/"
+                    android:scheme="http" >
+                </data>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="unique.packagename.registration.intro.Intro"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.dialer.CallTypeChooseActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:theme="@style/dialog.noTitle" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.recharge.RechargeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.attachment.AudioRecordActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.android.camera.CropImageActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.search.UserAddActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.did.DidActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.tellfriend.Tweet"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme" >
+        </activity>
+        <activity
+            android:name="unique.packagename.dialer.SimpleWebView"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.attachment.ImageViewer"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="unique.packagename.util.LogCollectorInputActivity"
+            android:theme="@android:style/Theme" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.recharge.TopUpActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.recharge.TopUpPopUp"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Transparent" >
+        </activity>
+        <activity
+            android:name="unique.packagename.features.balance.bonus.BonusGetActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Transparent" >
+        </activity>
+        <activity
+            android:name="unique.packagename.ui.dialog.RegistrationDialog"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/Theme.Transparent" >
+        </activity>
+        <activity
+            android:name="unique.packagename.EmptyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/Theme.Transparent" >
+        </activity>
+
+        <!-- android:process=":vippie_sip_service" -->
+        <service android:name="unique.packagename.service.SipService" >
+            <intent-filter>
+                <action android:name="unique.packagename.service.SipService" />
+            </intent-filter>
+        </service>
+        <service android:name="unique.packagename.service.xmpp.core.XmppService" />
+        <service android:name="unique.packagename.payment.google.GooglePaymentsService" />
+        <!--
+        <service
+            android:name="unique.packagename.contacts.auth.AccountAuthenticatorService"
+            android:exported="true"
+            android:process=":auth" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/account_authenticator" />
+        </service>
+        <service
+            android:name="unique.packagename.contacts.sync.ContactsSyncAdapterService"
+            android:exported="true"
+            android:process=":contacts" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/contacts_sync" />
+        </service>
+        -->
+
+        <receiver android:name="unique.packagename.sip.SipCallsManager$IncommingCallReceiver" >
+            <intent-filter>
+                <action android:name="unique.packagename.INCOMING_CALL" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="unique.packagename.sip.SipCallsManager$PhoneStateChangedReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.amazon.inapp.purchasing.ResponseReceiver" >
+            <intent-filter>
+                <action
+                    android:name="com.amazon.inapp.purchasing.NOTIFY"
+                    android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="unique.packagename.sip.SipMessagesManager$MessagesReceiver" >
+            <intent-filter>
+                <action android:name="unique.packagename.MESSAGE_RECEIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="unique.packagename.MESSAGE_SEND_STATUS" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="unique.packagename.SIP_INFO_MSG" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="unique.packagename.sip.SipManager$SipServiceReceiver" >
+            <intent-filter>
+                <action android:name="unique.packagename.SERVICE_INITED" />
+                <action android:name="unique.packagename.SERVICE_ALREADY_INITED" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+             <receiver
+            android:name="unique.packagename.VippieApplication$NativeCallReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter android:priority="100" >
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <receiver android:name="unique.packagename.service.ServiceAutoStarter" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="unique.packagename.payment.google.PaymentsReceiver" >
+            <intent-filter>
+                <action android:name="com.android.vending.billing.IN_APP_NOTIFY" />
+                <action android:name="com.android.vending.billing.RESPONSE_CODE" />
+                <action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="unique.packagename.push.VippiePushReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+
+            <!-- Receive actual messages -->
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="unique.packagename" />
+            </intent-filter>
+            <!-- Receive registration ids -->
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="unique.packagename" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="unique.packagename.push.VippiePushReceiver" >
+
+            <!-- Receive logout -->
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.LOGOUT" />
+
+                <category android:name="unique.packagename" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="unique.packagename.activation.OperatorCodeActivationHandler$RefreshActivationAlarm" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/custom_map_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!--
+             value is downloaded from https://code.google.com/apis/console/
+			For more information how to generate that code read GOOGLE_MAP_KEY.txt attachted to this project        
+        -->
+        
+        <!-- end need for vippie features -->
+        
+    </application>
+
+</manifest>

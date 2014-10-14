@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.applidium.headerlistview.HeaderListView
+        android:id="@+id/contacts_list_contacts"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/contact_list_divider"
+        android:dividerHeight="1dp" />
+
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/contacts_message"
+        style="@style/list_message"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_gravity="center"
+        android:background="@drawable/messages_list_msg"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/contacts_invite"
+        style="@style/list_message"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_gravity="center"
+        android:background="@drawable/messages_list_msg"
+        android:gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

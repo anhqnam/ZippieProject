@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/bars_height"
+     >
+
+    <RelativeLayout
+        android:id="@+id/main_panel"
+        android:background="@color/tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/bars_height"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/btn_message_add_att"
+            android:layout_width="@dimen/messages_msg_compose_icon_size"
+            android:layout_height="@dimen/messages_msg_compose_icon_size"
+            android:padding="12dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/att_up_selector" />
+
+        <ImageButton
+            android:id="@+id/btn_message_toggle_emot_icons_picker"
+            android:layout_width="@dimen/messages_msg_compose_icon_size"
+            android:layout_height="@dimen/messages_msg_compose_icon_size"
+            android:padding="12dp"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/btn_message_add_att"
+            android:background="@null"
+            android:src="@drawable/ic_emot_picker_off" />
+        
+		<LinearLayout 
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_centerVertical="true"
+			android:orientation="vertical"
+            android:layout_toLeftOf="@+id/btn_message_send"
+            android:layout_toRightOf="@id/btn_message_toggle_emot_icons_picker"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" >
+			
+            <unique.packagename.widget.DefocusableEditText
+                android:id="@+id/edt_message_content"
+                style="@style/message_compose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/textfield_default_holo_dark" 
+                android:descendantFocusability="beforeDescendants"
+                android:hint="@string/message_compose_hint"
+                android:maxLength="435"
+                android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+                android:imeOptions="actionSend|actionDone" />
+		</LinearLayout>
+		
+        <ImageButton
+            android:id="@id/btn_message_send"
+            android:layout_width="@dimen/messages_msg_compose_icon_size"
+            android:layout_height="@dimen/messages_msg_compose_icon_size"
+            android:padding="12dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:src="@drawable/sms_button" />
+    </RelativeLayout>
+
+    <unique.packagename.messages.widget.HorizontalEmotIconsPicker
+        android:id="@+id/emot_icons_picker"
+        android:background="@color/emot_icons_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_panel"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

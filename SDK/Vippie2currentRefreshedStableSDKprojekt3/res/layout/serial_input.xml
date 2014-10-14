@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center"
+	android:padding="15dp">
+	<unique.packagename.widget.MainEditText
+    android:id="@+id/seria_operator_code"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+    android:hint="@string/serial_input_hint_op"
+    android:visibility="gone" />
+   <unique.packagename.widget.MainEditText
+    android:id="@+id/serial_activation_code"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/serial_input_hint" />
+	<unique.packagename.widget.MainTextView
+    android:id="@+id/serial_input_desc"
+		android:text="@string/serial_input_label"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:textSize="16dp" />
+	<unique.packagename.widget.MainButton
+		android:id="@+id/serial_input_button"
+		android:text="@string/serial_input_button"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:minWidth="120dp" />
+</LinearLayout>

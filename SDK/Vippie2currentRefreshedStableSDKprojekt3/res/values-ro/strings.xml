@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="settings_title">Setari</string>
+
+    <string name="call_state_incoming">De intrare</string>
+    <string name="call_state_dialing">Formati...</string>
+    <string name="call_state_ringing">Apelare</string>
+    <string name="call_state_disconnected">Deconectat</string>
+    <string name="call_state_active">Activ</string>
+    <string name="call_state_hold">Pe asteptare</string>
+    <string name="call_state_remote_hold">Pe asteptare</string>
+    <string name="call_state_conference">Teleconferinta</string>
+
+    <string name="account_state_message">Starea cont:</string>
+    <string name="account_registered">Inregistrat</string>
+    <string name="account_trying_register">Inregistrare...</string>
+    <string name="account_not_registered">Neinregistrat</string>
+    <string name="account_activation_required">Activarea necesara</string>
+
+    <string name="menu_quit">Iesire</string>
+    <string name="menu_preferences">Setari</string>
+    <string name="menu_callslog">Lista apeluri</string>
+    <string name="menu_contacts">Contacte</string>
+    <string name="menu_messages">Mesaje</string>
+
+    <string name="menu_mute">Mute</string>
+    <string name="menu_unmute">Unmute</string>
+    <string name="menu_hold">Pe asteptare</string>
+    <string name="menu_unhold">Resume</string>
+    <string name="menu_speaker_on">Microfon On</string>
+    <string name="menu_speaker_off">Microfon Off</string>
+    <string name="menu_addcall">Adauga apel</string>
+    <string name="menu_transfer">Transfer</string>
+    <string name="menu_conference">Conferinta</string>
+    <string name="menu_conference_end">Terminarea conferinta</string>
+    <string name="menu_record">Inregistrare</string>
+    <string name="menu_record_pause">Pauza</string>
+    <string name="menu_view">Vizualizare</string>
+    <string name="menu_delete_all">Sterge totul</string>
+    <string name="menu_total_duration">Durata totala</string>
+    <!--<string name="menu_edit_contact">Editare Contact</string>-->
+    <string name="menu_add_contact">Adauga contact</string>
+    <string name="menu_add_xmpp_contact">Adauga Contact XMPP</string>
+    <string name="menu_filter">Filtrare</string>
+    <string name="menu_add_to_phonebook">Adauga in agenda</string>
+    <string name="menu_create_new_contact">Creaza contact nou</string>
+    <string name="menu_choose_existing_contact">Alege contact existent</string>
+    <string name="menu_details">Detalii</string>
+    <string name="menu_delete">Sterge</string>
+    <string name="menu_edit">Editare</string>
+    <string name="menu_call">Apelare</string>
+    <string name="menu_send_msg">Expediere mesaj</string>
+    <string name="menu_new_msg">Trimite mesaj</string>
+    <string name="menu_resend">Reexpediaza</string>
+    <string name="menu_copy_to_clipboard">Copiere in clipboard</string>
+    <string name="menu_checkrate">Verificare rata</string>
+    <string name="menu_callback">Callback</string>
+    <string name="menu_select_all">Alege toate</string>
+    <string name="menu_deselect_all">Deselectare toate</string>
+
+    <string name="dialpad_btn_0"><big>0</big>\n<small>+-</small></string>
+    <string name="dialpad_btn_1"><big>1</big></string>
+    <string name="dialpad_btn_2"><big>2</big>\n<small>ABC</small></string>
+    <string name="dialpad_btn_3"><big>3</big>\n<small>DEF</small></string>
+    <string name="dialpad_btn_4"><big>4</big>\n<small>GHI</small></string>
+    <string name="dialpad_btn_5"><big>5</big>\n<small>JKL</small></string>
+    <string name="dialpad_btn_6"><big>6</big>\n<small>MNO</small></string>
+    <string name="dialpad_btn_7"><big>7</big>\n<small>PQRS</small></string>
+    <string name="dialpad_btn_8"><big>8</big>\n<small>TUV</small></string>
+    <string name="dialpad_btn_9"><big>9</big>\n<small>WXYZ</small></string>
+    <string name="dialpad_btn_ast"><big>*\n<small>@</small></big></string>
+    <string name="dialpad_btn_hash"><big>#\n<small>_.,</small></big></string>
+
+    <string name="contact_login_label">Nume utilizator SIP</string>
+    <string name="contact_edit_empty_name">Nume nu poate fi gol.</string>
+    <string name="contact_edit_empty_number">Numer SIP nu poate fi gol.</string>
+    <string name="contact_number_label">SIP Numer</string>
+    <string name="contact_deleted">Contact sters cu succes.</string>
+    <string name="contact_name_default">Default</string>
+
+    <string name="calllog_title">Lista Apeluri  </string>
+    <string name="calllog_view">Alege Vizualizare</string>
+    <string name="calllog_view_all">Toate</string>
+    <string name="calllog_view_incoming">De intrare</string>
+    <string name="calllog_view_outgoing">De iesire</string>
+    <string name="calllog_view_missed">Nepreluate</string>
+    <string name="calllog_total_duration">Durata totala</string>
+    <string name="calllog_confimr_delete_all">Sunteti sigur ca doriti sa stergeti lista apeluri?</string>
+    <string name="calllog_empty_list">Nici o inregistrare</string>
+
+    <string name="contacts_title">Contacte</string>
+    <string name="contacts_search_hint">Tastati pentru a cauta</string>
+    <string name="contacts_enter_sip_uri_hint">Introduceti SIP URI</string>
+    <string name="contacts_enter_jid_uri_hint">Introduceti XMPP URI</string>
+    <string name="contacts_regular">Contacte</string>
+    <string name="contacts_xmpp">XMPP contacte</string>
+    <string name="messages_title">Mesaje</string>
+    <string name="messages_empty_list">Lista mesaje goala</string>
+    <string name="messages_me">Eu</string>
+    <string name="message_compose_hint">Tastati pentru a compune</string>
+    <string name="message_notification_ticked">Mesaj nou primint</string>
+    <string name="message_notification_title">De la</string>
+    <string name="contact_xmpp_contact_added_notification">XMPP contact adaugat:\n%1$s</string>
+
+    <string name="checkrate_title">Verificare Rata</string>
+    <string name="checkrate_prefix_hint">Introduceti numar sau prefix</string>
+    <string name="checkrate_info_destination_label">Destinatia:</string>
+    <string name="checkrate_info_rate_label">Rata:</string>
+    <string name="checkrate_info_duration_label">Durata Maxima:</string>
+
+    <string name="callback_title">Callback</string>
+    <string name="callback_info_src_text">Introduceti numar sursa</string>
+    <string name="callback_info_dst_text">Introduceti numar destinatie</string>
+    <string name="callback_connection_type">Conectare tip</string>
+    <string-array name="callback_connection_type_array">
+        <item>Conectati intii sursa</item>
+        <item>Conectati ambele simultan</item>
+    </string-array>
+    <string name="callback_status_text">Statut:</string>
+    <string name="callback_status_connecting">Conectare...</string>
+    <string name="callback_status_faild">Esuat</string>
+	<string name="callback_status_hang_up">Deconectare</string>
+	<string name="callback_status_connected">Conectat</string>
+
+    <string name="date_today">Azi</string>
+
+    <string name="button_yes">Da</string>
+    <string name="button_no">Nu</string>
+    <string name="button_ok">Ok</string>
+    <string name="button_save">Salveaza</string>
+    <string name="button_cancel">Anulare</string>
+    <string name="button_edit">Editare</string>
+    <string name="button_details">Detalii</string>
+    <string name="button_delete">Sterge</string>
+    <string name="button_send">Expediere</string>
+    <string name="button_call">Apelare</string>
+    <string name="button_hangup">Deconectare</string>
+    <string name="button_checkrate">Verificare</string>
+    <string name="button_display">Afisare</string>
+    <string name="button_close">Inchide</string>
+
+    <string name="phone_type_mobile_short">M:&#160;</string>
+    <string name="phone_type_sip_uri">SIP:</string>
+    <string name="phone_type_sip_uri_short">S:&#160;</string>
+    <string name="phone_type_xmpp">JID:</string>
+    <string name="phone_type_xmpp_short">J:&#160;</string>
+    <string name="phone_type_mobile">Mobil:</string>
+    <string name="phone_type_home_short">H:&#160;</string>
+    <string name="phone_type_home">Fix:</string>
+    <string name="phone_type_work_short">W:&#160;</string>
+    <string name="phone_type_work">Servici:</string>
+    <string name="phone_type_other_short">O:&#160;</string>
+    <string name="phone_type_other">Alte:</string>
+
+    <string name="xmpp_jid_label">JID:</string>
+    <string name="xmpp_user_name_label">NUme Utilizator:</string>
+
+    <string name="calling_notification_ticker">Apel initiat</string>
+    <string name="calling_notification_title">Apel de iesire</string>
+    <string name="calling_notification_text">Tastati pentru a restabili Rendoo</string>
+
+    <string name="callmode_dialog_title">Alegeti modul de apel</string>
+    <string name="callmode_dialog_audio">Audio</string>
+    <string name="callmode_dialog_video">Video</string>
+
+    <string name="message_type_dialog_title">Alegeti tipul mesajului</string>
+    <string name="message_type_dialog_sip">SMS</string>
+    <string name="message_type_dialog_xmpp">Chat</string>
+
+    <string name="native_callmode_dialog_title">Alegeti actiune apel</string>
+    <string name="native_callmode_dialog_native">Telefon apel</string>
+
+    <string name="msg_account_state">Balanta</string>
+    <string name="msg_loading">Incarcare…\nVa rugam sa asteptati</string>
+
+    <string name="new_messages_title">Mesaj nou</string>
+    <string name="new_messages_voice_msg">Aveti %d mesaje vocale noi</string>
+    <string name="new_messages_voice_btn">Call Voicemail</string>
+
+    <string name="settings_screen_sip">Setari SIP</string>
+    <string name="settings_screen_xmpp">Setari XMPP</string>
+    <string name="settings_screen_audio">Setari Audio</string>
+    <string name="settings_screen_video">Setari Video</string>
+    <string name="settings_screen_system">Setari Sistem</string>
+    <string name="settings_key_user_name">Nume Utilizator</string>
+    <string name="settings_key_user_name_summary">Nume Utilizator SIP</string>
+    <string name="settings_key_password">Parola</string>
+    <string name="settings_key_password_summary">Parola pentru cont SIP</string>
+    <string name="settings_key_category_sip_server">Setari Server</string>
+    <string name="settings_key_category_sip_presence">Setari Presence</string>
+    <string name="settings_key_sip_presence_publish_method">Metoda de publicare</string>
+    <string name="settings_key_category_sip_advanced">Stari avansate</string>
+    <string name="settings_key_sip_port">SIP Port</string>
+    <string name="settings_key_sip_port_summary">Port SIP server</string>
+    <string name="settings_key_sip_port_hint">Default 5060</string>
+    <string name="settings_key_server">Server SIP</string>
+    <string name="settings_key_server_summary">Domen sau IP server</string>
+    <string name="settings_key_display_name">Numele afisat</string>
+    <string name="settings_key_display_name_summary">Numele apelantului presentat partii destinatare</string>
+    <string name="settings_key_auth_user_name">Auth Nume Utilizator</string>
+    <string name="settings_key_auth_user_name_summary">Nume pentru authentificare la server</string>
+    <string name="settings_key_outbound_proxy">Outbound Proxy</string>
+    <string name="settings_key_outbound_proxy_summary">Server Proxy pentru SIP(daca este necesar)</string>
+    <string name="settings_key_nat_traversal">NAT Traversal</string>
+    <string name="settings_key_stun_server">Stun server</string>
+    <string name="settings_key_stun_server_summary">Introduceti daca server SIP impune server stun</string>
+    <string name="settings_key_allow_contact_rewrite">Permite Reinscriere Contacte</string>
+
+    <string name="settings_key_xmpp_user_name">Nume Utilizator</string>
+    <string name="settings_key_xmpp_user_name_summary">Nume Utilizator pentru Cont XMPP</string>
+    <string name="settings_key_xmpp_password">Parola</string>
+    <string name="settings_key_xmpp_password_summary">Parola pentru cont XMPP</string>
+    <string name="settings_key_category_xmpp_server">Setari Server</string>
+    <string name="settings_key_xmpp_server">Server XMPP</string>
+    <string name="settings_option_xmpp_server_custom">Alte setari</string>
+    <string name="settings_key_xmpp_server_host">Host</string>
+    <string name="settings_key_xmpp_server_summary">Domen sau IP serverului XMPP</string>
+    <string name="settings_key_xmpp_port">Port</string>
+    <string name="settings_key_xmpp_port_summary">Port pentru server XMPP</string>
+    <string name="settings_key_xmpp_port_hint">Default 5222</string>
+    <string name="settings_key_xmpp_service">Nume Serviciu</string>
+    <string name="settings_key_xmpp_service_summary">Numele serviciului pe server</string>
+    <string name="settings_key_xmpp_service_hint">Numele serviciului sau mesaj gol in cazul coincidentei cu numele serverului</string>
+    <string name="settings_key_category_xmpp_other">Setari prezenta</string>
+    <string name="settings_key_xmpp_presence">Statut</string>
+    <string name="settings_key_xmpp_presence_status">Stare Text</string>
+    <string name="settings_key_xmpp_presence_status_summary">Stare text vizibil pentru alte contacte</string>
+
+    <string name="settings_key_default_call">Apel actiune Default</string>
+    <string name="settings_key_video_front_camera">Foloseste camera frontala</string>
+    <string name="settings_key_video_front_camera_sum_on">Camera frontala va fi folosita daca este disponibila</string>
+    <string name="settings_key_video_front_camera_sum_off">Va fi folosita camera principala</string>
+    <string name="settings_key_video_bps">Bit Rate</string>
+    <string name="settings_key_video_res">Rezolutie</string>
+    <string name="settings_key_video_fps">Cadre pe secunda</string>
+    <string name="settings_key_video_recording">Inregistrare</string>
+    <string name="settings_key_video_codecs">Codecs</string>
+    <string name="settings_key_H264_90000">H.264</string>
+    <string name="settings_key_H263_1998_90000">H.263+</string>
+    <string name="settings_key_H263_90000">H.263</string>
+    <string name="settings_key_ringtone">Ton de apel</string>
+    <string name="settings_key_ringtone_summary">Ton de apel pentru apelurile de intrare</string>
+    <string name="settings_sms_key_ringtone">Ton de apel SMS</string>
+    <string name="settings_sms_key_ringtone_summary">Ton de apel pentru mesajele de intrare</string>
+    <string name="settings_key_keytones">Activeaza Sunet Tastiera</string>
+    <string name="settings_key_keytones_summary">Activeaza/Dezactiveaza sunet tastiera in Rendoo</string>
+    <string name="settings_key_vibration">Activeaza modul vibro pentru taste</string>
+    <string name="settings_key_vibration_summary">Activeaza/Dezactiveaza modul Vibro in Rendoo</string>
+    <string name="settings_key_bluetooth">Utilizati setul cu casti Bluetooth</string>
+    <string name="settings_key_bluetooth_summary">Activeaza daca doresti sa utilizezi setul cu casca Bluetooth</string>
+    <string name="settings_key_audio_codecs">Codecs</string>
+    <string name="settings_key_ec">Anulare Ecou</string>
+    <string name="settings_key_ec_summary">Permite anularea ecoului in timp ce difuzorul este activ</string>
+    <string name="settings_key_dtmf_mode">Mod DTMF</string>
+    <string name="settings_key_message_type">Tip Mesaj</string>
+    <string name="settings_key_transport">Transport</string>
+    <string name="settings_key_native_call_mode">Actiune Apel Nativ</string>
+    <string name="settings_key_G729">G.729</string>
+    <string name="settings_key_G722_16000">G.722</string>
+    <string name="settings_key_PCMU_8000">G.711u</string>
+    <string name="settings_key_PCMA_8000">G.711a</string>
+    <string name="settings_key_GSM_8000">GSM</string>
+    <string name="settings_key_speex_8000">Speex (8kHz)</string>
+    <string name="settings_key_speex_16000">Speex (16kHz)</string>
+    <string name="settings_key_iLBC_8000">iLBC</string>
+    <string name="settings_key_voice">Mesageria Vocala</string>
+    <string name="settings_key_voice_summary">Numarul mesageriei vocale</string>
+    <string name="settings_key_service_auto_start">Auto Start</string>
+    <string name="settings_key_service_auto_start_summary">Lansarea Rendoo si inregistrarea automata la lansarea sistemului</string>
+    <string name="settings_key_native_calllog">Utilizati Lista de Apeluri Nativa</string>
+    <string name="settings_key_native_calllog_summary">Inregistreaza apelurilor in lista de apeluri nativa (daca este posibil)</string>
+
+    <string name="empty_number_error">Introduceti un numar</string>
+    <string name="empty_voice_number_error">Introduceti numarul mesageriei vocale in panoul de setari</string>
+
+    <string name="regstate_authentification_error">Numele de utilizator sau parola este incorecta</string>
+    <string name="regstate_server_error">Conectare la server imposibila.</string>
+    <string name="regstate_unknown_error">Eroare la inregistrare.</string>
+    <string name="regstate_default_error">Contul nu este inregistrat. Verificati setarile si conexiunea la Internet.</string>
+    <string name="xmpp_message_send_account_not_set_error">Cont XMPP nu este inregistrat! Trimiterea mesajelor cu utilizarea adresei JID nu este posibila</string>
+    <string name="xmpp_regstate_error_title">Eroare de inregistrare XMPP</string>
+    <string name="xmpp_not_registered_error">Nu sunteti inregistrat in contul XMPP!</string>
+    <string name="regstate_error_title">Eroare de inregistrare</string>
+    <string name="send_error">Eroare la trimitere!</string>
+    <string name="regstate_ok_button">OK</string>
+    <string name="regstate_settings_button">Setari</string>
+
+    <string name="error_configure_account">Va rugam sa configurati contul dvs.</string>
+
+    <string name="contact_info_presence_subscription">Abonare Presence </string>
+    <string name="contact_info_presence_subscription_status">Abonare Presence de %1$s</string>
+    <string name="contact_info_presence_subscription_enabled">Activat</string>
+    <string name="contact_info_presence_subscription_disabled">Dezactivat</string>
+
+    <string name="presence_subscriptions">Abonari Presence</string>
+    <string name="presence_subscriptions_pending">In asteptare</string>
+    <string name="presence_subscriptions_allowed">Acceptate</string>
+    <string name="presence_subscriptions_denied">Respins</string>
+    <string name="presence_subscriptions_change_permission_question">Mutare %1$s la \'%2$s\' lista?</string>
+    <string name="presence_subscriptions_allow">Permite</string>
+    <string name="presence_subscriptions_deny">Respinge</string>
+    <string name="presence_subscriptions_empty_list">Abonare indisponibila</string>
+    <string name="presence_subscriptions_subscription_request_question">Cereri de abonare Presence in asteptare</string>
+    <string name="presence_subscriptions_menu_allow_selected">Permite selectate</string>
+    <string name="presence_subscriptions_menu_deny_selected">Respinge selectate</string>
+    <string name="presence_subscriptions_menu_delete_selected">Sterge selectate</string>
+
+    <string-array name="transport">
+        <item>UDP</item>
+        <item>TCP</item>
+    </string-array>
+
+    <string-array name="transport_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+
+    <string-array name="native_call">
+        <item>Intreaba</item>
+        <item>Apel nativ</item>
+    </string-array>
+
+    <string-array name="native_call_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+
+    <string-array name="video_bps">
+        <item>48kbps</item>
+        <item>96kbps</item>
+        <item>192kbps</item>
+        <item>384kbps</item>
+        <item>768kbps</item>
+    </string-array>
+
+    <string-array name="video_bps_values">
+        <item>48000</item>
+        <item>96000</item>
+        <item>192000</item>
+        <item>384000</item>
+        <item>768000</item>
+    </string-array>
+
+    <string-array name="default_call">
+        <item>Intreaba</item>
+        <item>Audio</item>
+        <item>Video</item>
+    </string-array>
+
+    <string-array name="default_call_values">
+        <item>0</item>
+        <item>01</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="video_res">
+        <item>QCIF (176x144)</item>
+        <!--  <item>CIF (352x288)</item>-->
+        <item>QVGA (320x240)</item>
+        <item>VGA (640x480)</item>
+    </string-array>
+
+    <string-array name="video_res_values">
+        <item>2</item>
+        <!-- <item>3</item>-->
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="video_fps">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+    </string-array>
+
+    <string-array name="video_fps_values">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+    </string-array>
+
+    <string-array name="dtmf_mode">
+        <item>RFC 2833</item>
+        <item>SIP info</item>
+    </string-array>
+
+    <string-array name="dtmf_mode_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+
+    <string-array name="message_types">
+        <item>Text/Plain</item>
+        <item>Mesaj/CPIM</item>
+    </string-array>
+
+    <string-array name="message_types_values">
+        <item>0</item>
+        <item>01</item>
+    </string-array>
+
+    <string-array name="nat_traversal_mode">
+        <item>Dezactivat</item>
+        <item>Gaseste STUN</item>
+        <item>Server STUN</item>
+    </string-array>
+
+    <string-array name="nat_traversal_mode_values">
+        <item>0</item>
+        <item>01</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="xmpp_presence">
+        <item>Conectat</item>
+        <item>Plecat</item>
+        <item>Liber</item>
+        <item>Nu deranjati</item>
+        <item>Indisponibil</item>
+    </string-array>
+
+    <string-array name="xmpp_presence_values">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="sip_presence">
+        <item>Conectat</item>
+        <item>Plecat</item>
+        <item>Ocupat</item>
+        <item>Deconectat</item>
+    </string-array>
+
+    <string-array name="sip_presence_values">
+        <item>2</item>
+        <item>4</item>
+        <item>5</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="xmpp_server_list">
+        <item>Gmail</item>
+        <item>Facebook</item>
+        <item>@string/settings_option_xmpp_server_custom</item> <!-- DO NOT TRANSLATE THIS -->
+    </string-array>
+
+    <string-array name="xmpp_server_list_values">
+        <item>gmail.com</item>
+        <item>facebook.com</item>
+        <item>custom</item> <!-- DO NOT TRANSLATE THIS -->
+    </string-array>
+
+    <string-array name="sip_presence_publish_method">
+        <item>Agent</item>
+        <item>P2P</item>
+    </string-array>
+
+    <string-array name="sip_presence_publish_method_values">
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="toast_serial_incorrect">Cod de activare incorect</string>
+    <string name="toast_activation_error">Eroare la activare. Va rugam sa incercati din nou mai tirziu.</string>
+    <string name="toast_cannot_activate">%s nu poate fi activat. Va rugam sa contactati furnizorul dvs.</string>
+    <string name="serial_input_hint">Codul de activare Rendoo</string>
+    <string name="serial_input_button">Continua</string>
+    <string name="serial_input_label">Va rugam sa introduceti codul de activare</string>
+
+    <string name="contact_delete_confirmation_dialog_title">Confirmare</string>
+    <string name="contact_delete_confirmation_dialog_content">Sunteti siguri ca doriti sa stergeti pe %1$s din lista cu contacte?</string>
+    <string name="contact_delete_error">Eroare la stergerea contactului.</string>
+    <string name="contact_add_error">Eroare la adaugarea contactului.</string>
+    <string name="contact_edit_error">Eroare la editarea contactului.</string>
+
+    <string name="sign_up_text">Inregistrare</string>
+    <string name="login_username">Nume utilizator:</string>
+	<string name="login_password">Parola:</string>
+	<string name="login_hint_required">Necesare</string>
+	<string name="login_button_continue">Autentificare</string>
+	<string name="login_button_login">Autentificare</string>
+
+	<string name="callback_message_login_incorrect">Autentificare incorecta</string>
+	<string name="callback_message_registered_successful">Utilizator inregistrat cu succes</string>
+	<string name="callback_message_hang_up">Inchide</string>
+	<string name="callback_message_clients_connected">Utilizatori conectati</string>
+	<string name="callback_message_busy">Ocupat</string>
+	<string name="callback_message_no_answer">Nu raspunde</string>
+	<string name="callback_message_call_rejected">Apelul a fost respins</string>
+	<string name="callback_message_insufficient_funds">Fonduri insuficiente</string>
+	<string name="callback_message_call_ended_because_of_insufficient_funds">Apelul a fost incheiat din cauza fondurilor insuficiente</string>
+	<string name="callback_message_wrong_source_number">Numar sursa incorect</string>
+	<string name="callback_message_wrong_destination_number">Numar destinatie incorect</string>
+	<string name="callback_message_destination_is_alerting">Destinatie apelata</string>
+	<string name="callback_message_source_is_alerting">Sursa apelata</string>
+	<string name="callback_message_source_connected">Numar sursa conectat</string>
+	<string name="callback_message_destination_connected">Numar destinatie conectat</string>
+	<string name="callback_message_destination_ended_call">Numar destinatie a deconectat apelul</string>
+	<string name="callback_message_source_ended_call">Numar sursa a deconectat apelul</string>
+	<string name="callback_message_source_has_insufficient_funds">Numar sursa are fonduri insuficiente</string>
+	<string name="callback_message_destination_has_insufficient_funds">Numar destinatie are fonduri insuficiente</string>
+	<string name="callback_message_ok">OK</string>
+	<string name="callback_message_faild">Esuat</string>
+	<string name="callback_message_autorization_faild">Autentificare respinsa</string>
+	<string name="callback_message_login_success">Autentificare cu succes</string>
+	<string name="callback_message_wrong_parameters">Parametri gresiti</string>
+	<string name="callback_message_default">Necunoscut</string>
+
+</resources>
+

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="white">#FFFFFF</color>
+	<color name="red">#FF0000</color>
+	<color name="green">#00FF00</color>
+	<color name="black">#000000</color>
+	<color name="medium_grey">#dbdbdb</color>
+
+	<color name="contact_list_text_sel">#ff00A000</color>
+	<color name="calls_list_row">#000000</color>
+	<color name="calls_list_row_active">#880000</color>
+
+	<color name="calling_info_default">#FFDDDDDD</color>
+	<color name="calling_info_ended">#FFDD0000</color>
+	<color name="calling_info_active">#FF00DD00</color>
+	<color name="calling_info_held">#FF808080</color>
+	<color name="calling_background">#FF111111</color>
+
+	<color name="sliding_dtmf_pad_background">#00111111</color>
+	<color name="splash_screen_background">#0e0e0e</color>
+
+	<color name="transparent">@android:color/transparent</color>
+
+	<color name="white_transparent">#33ffffff</color>
+
+	<color name="tab_label_color_unselected">#868a90</color>
+    <color name="tab_label_color_selected">#FFF</color>
+
+    <color name="background">#FFFFFF</color>
+    <color name="voicemail_divider">#ffffff</color>
+    <color name="contact_list_divider">@color/vippie_light_gray</color>
+    
+    <color name="contact_info_bg_color">#FFFFFF</color>
+    <color name="top_label_color">#FFFFFF</color>
+    <color name="call_log_missed">@color/vippie_pink</color>
+    <color name="call_log_not_missed">@color/text_noneditable</color>
+	
+    <color name="shadow_dark">#80000000</color>
+    <color name="shadow_light">#00000000</color>
+    
+    <color name="search_row_bg">#f91a67</color>
+    <color name="registration_number">#f91a67</color>
+    <color name="registration_number_disabled">#808080</color>
+    <color name="registration_sign_id">#ff9510</color>
+    <color name="registration_login_id">@color/vippie_violet</color>
+    <color name="registration_profile">#0390f1</color>
+    <color name="registration_text_view">#4d4d4d</color>
+    <color name="registration_text_row">@color/white</color>
+    <color name="registration_title">@color/vippie_dark_gray</color>
+    
+    <color name="intro_free_call">#c64d82</color>
+    <color name="intro_invite">#E53F79</color>
+    <color name="intro_rate">#E11A3A</color>
+    
+    <color name="text_watcher_default_invalid">@color/vippie_pink</color> 
+    <color name="text_watcher_default_valid">#000</color> 
+    
+    <color name="custom_alert_dialog_text_color">#fff</color>
+    <color name="custom_alert_dialog_hinttext_color">#66ffffff</color>
+    
+    <!-- newest rows colors -->
+    <color name="tabs">@color/vippie_violet_dark</color> 
+    <color name="row_primary">@color/vippie_violet</color> 
+    <color name="row_primary_signup">@color/vippie_pink</color>
+    <color name="row_primary_transparent">@color/vippie_violet_transparent</color> 
+    <color name="row_secondary">@color/vippie_violet_light</color> 
+    <color name="text_noneditable">@color/vippie_dark_gray</color> 
+    <color name="text_noneditable_messages">@color/vippie_very_dark_gray</color> 
+    <color name="text_editable">@color/vippie_violet_dark</color> 
+    <color name="text_hint">@color/vippie_medium_gray</color> 
+    <color name="text_row_primary">#FFFFFF</color> 
+    <color name="text_empty_msg">@color/vippie_dark_gray</color> 
+    <color name="presence_bg">@color/vippie_white_transparent2</color> 
+    <color name="contacts_list_row_bg">@color/transparent</color> 
+    <color name="messages_incoming_row_bg">@color/vippie_medium_gray2_transparent</color> 
+    <color name="messages_outgoing_row_bg">@color/vippie_medium_gray_transparent</color> 
+    <color name="tell_friends_invite">@color/vippie_violet_light</color>
+    <color name="voicemail_record_bg">@color/vippie_violet_light</color>
+    <color name="contact_info_popup_top_bar_bg">@color/row_primary</color>
+    <color name="emot_icons_bg">@color/vippie_violet_dark_transparent</color>
+    <color name="avatar_bg">@color/vippie_light_gray</color>
+    <color name="text_add_minor_info">@color/text_noneditable</color>
+    <color name="text_add_main_info">@color/text_editable</color>
+    <color name="dialpad_bg">@color/vippie_white_transparent2</color>
+    <color name="dialpad_number_bg">@color/vippie_light_gray_tranparent2</color>
+    <color name="dialpad_btn">@color/transparent</color>
+    <color name="dialpad_btn_clicked">@color/vippie_white_transparent</color>
+    <color name="dialpad_text">@color/vippie_dark_gray</color>
+    <color name="calling_active_text">@color/vippie_dark_gray</color>
+    <color name="calling_entry_text">@color/vippie_medium_gray</color>
+    <color name="calling_entry_header_text">@color/white</color>
+    <color name="bg_color">@color/white</color>
+    <color name="bg_registration_dialog">@color/vippie_very_dark_gray_transparent2</color>
+    <color name="registration_hint_dialog">@color/vippie_orange</color>
+    <color name="registration_help_dialog">@color/vippie_pink</color>
+    <color name="registration_terms">@color/vippie_violet</color>
+    <color name="registration_terms_title">@color/vippie_dark_gray</color>
+    <color name="contacts_header_bg">@color/vippie_medium_gray2</color>
+    
+    <color name="tab_holo_bg">@color/vippie_dark_gray</color>
+    
+      	<!-- vippie colors implementation do not touch this! -->
+    	<color name="vippie_violet_dark">#6c2357</color>
+    	<color name="vippie_violet_dark_transparent">#b36c2357</color>
+    	<color name="vippie_violet">#9e4c87</color>
+    	<color name="vippie_violet_transparent">#d99e4c87</color> <!-- 70% -->
+    	<color name="vippie_violet_light">#c64d82</color>
+    	<color name="vippie_pink">#fb316a</color>
+    	<color name="vippie_orange">#ff953c</color>
+    	<color name="vippie_yellow">#ffce34</color>
+    	<color name="vippie_yellow_transaprent">#b3ffce34</color> <!-- 70% -->
+    	<color name="vippie_very_dark_gray">#515151</color>
+    	<color name="vippie_very_dark_gray_transparent">#d9515151</color>
+    	<color name="vippie_very_dark_gray_transparent2">#e6515151</color>
+    	<color name="vippie_dark_gray">#808080</color>
+    	<color name="vippie_medium_gray">#b3b3b3</color>
+    	<color name="vippie_medium_gray_transparent">#b3b3b3b3</color> <!-- 70% -->
+    	<color name="vippie_medium_gray2_transparent">#b3e0ded9</color> <!-- 70% -->
+    	<color name="vippie_medium_gray2">#e0ded9</color> <!-- 70% -->
+    	<color name="vippie_light_gray">#d7d2cb</color>
+    	<color name="vippie_light_gray_tranparent">#b3d7d2cb</color>
+    	<color name="vippie_light_gray_tranparent2">#4dd7d2cb</color>
+    	<color name="vippie_white_transparent">#b3ffffff</color> <!-- 70% -->
+    	<color name="vippie_white_transparent2">#4dffffff</color> <!-- 30% -->
+    	<color name="vippie_white_transparent50">#99ffffff</color> <!-- 50% -->
+    	<color name="vippie_white_transparent60">#80ffffff</color> <!-- 60% -->
+    	<color name="vippie_very_light_gray">#faf8f7</color>
+    <!-- end newest rows colors -->
+    
+</resources>

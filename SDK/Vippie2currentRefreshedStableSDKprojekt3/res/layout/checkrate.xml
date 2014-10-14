@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:padding="10dp" >
+
+	<unique.packagename.widget.MainTextView android:id="@+id/checkrate_title"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:paddingRight="6dp"
+		android:paddingBottom="6dp"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+	/>
+
+	<include layout="@layout/horizontal_separator"></include>
+
+	<unique.packagename.widget.MainEditText android:id="@+id/checkrate_prefix"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:hint="@string/checkrate_prefix_hint"
+		android:phoneNumber="true" />
+
+	<TableLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" >
+		<TableRow
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<unique.packagename.widget.MainTextView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/checkrate_info_destination_label"
+				android:paddingLeft="4dp"
+			/>
+
+			<unique.packagename.widget.MainTextView android:id="@+id/checkrate_info_destination_value"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:paddingLeft="10dp"
+			/>
+		</TableRow>
+		<TableRow
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<unique.packagename.widget.MainTextView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/checkrate_info_rate_label"
+				android:paddingLeft="4dp"
+			/>
+
+			<unique.packagename.widget.MainTextView android:id="@+id/checkrate_info_rate_value"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:paddingLeft="10dp"
+			/>
+		</TableRow>
+		<TableRow
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<unique.packagename.widget.MainTextView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/checkrate_info_duration_label"
+				android:paddingLeft="4dp"
+			/>
+
+			<unique.packagename.widget.MainTextView android:id="@+id/checkrate_info_duration_value"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:paddingLeft="10dp"
+			/>
+		</TableRow>
+	</TableLayout>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" >
+
+	    <unique.packagename.widget.Button android:id="@+id/checkrate_btn_checkrate"
+	    	style="@style/dialpad_button"
+	    	android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/button_checkrate" />
+
+		<unique.packagename.widget.Button android:id="@+id/checkrate_btn_cancel"
+			style="@style/dialpad_button"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/button_cancel"
+		/>
+	</LinearLayout>
+
+</LinearLayout>

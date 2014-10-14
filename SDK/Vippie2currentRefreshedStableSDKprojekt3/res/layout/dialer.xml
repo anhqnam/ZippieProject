@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="bottom"
+    android:background="@drawable/background_p"
+    android:orientation="vertical" >
+
+    <!-- <unique.packagename.dialer.widget.StatusBar  android:id="@+id/dialpad_status_bar"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	/> -->
+
+    <FrameLayout
+        android:id="@+id/dialer_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <unique.packagename.dialer.widget.Dialpad
+            android:id="@+id/dialer_dialpad"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <unique.packagename.widget.MainButton
+        android:id="@+id/recharge_button"
+        style="@style/recharge_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <unique.packagename.widget.TitleBar
+        android:id="@+id/voicemail_list_label"
+        android:background="@color/row_primary"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bars_height"
+        app:label="@string/more_voicemail" />
+
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp" >
+
+                <LinearLayout
+                    style="@style/options_row_light_voicemail"
+                    android:layout_marginTop="10dp" >
+
+                    <unique.packagename.widget.MainTextView
+                        style="@style/voicemail_option_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/voicemail_toggle" />
+
+                    <ToggleButton
+                        android:id="@+id/voicemail_toggle_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/toogle_btn_vippie"
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/voicemail_main_panel"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <unique.packagename.widget.MainTextView
+                        style="@style/voicemail_option_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:paddingLeft="5dp"
+                        android:text="@string/voicemail_messages_section" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:stretchColumns="1" >
+
+                        <LinearLayout
+                            android:id="@+id/voicemail_new_unheard_row"
+                            style="@style/options_row_dark" >
+
+                            <unique.packagename.widget.MainTextView
+                                style="@style/voicemail_row_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/voicemail_new_unheard_messages" />
+
+                            <unique.packagename.widget.MainTextView
+                                android:id="@+id/voicemail_text_new_unheard_count"
+                                style="@style/voicemail_row_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|center" />
+
+                            <ImageView
+                                android:layout_width="@dimen/options_light_icon_size_voicemail"
+                                android:layout_height="@dimen/options_light_icon_size_voicemail"
+                                android:layout_gravity="right|center"
+                                android:layout_marginLeft="5dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/arrow_right" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="10dp" />
+
+                        <LinearLayout
+                            android:id="@+id/voicemail_old"
+                            style="@style/options_row_dark"
+                            android:gravity="center_vertical" >
+
+                            <unique.packagename.widget.MainTextView
+                                android:id="@+id/voicemail_text_old"
+                                style="@style/voicemail_row_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/voicemail_old_messages" />
+
+                            <unique.packagename.widget.MainTextView
+                                android:id="@+id/voicemail_text_old_count"
+                                style="@style/voicemail_row_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|center" />
+
+                            <ImageView
+                                android:layout_width="@dimen/options_light_icon_size_voicemail"
+                                android:layout_height="@dimen/options_light_icon_size_voicemail"
+                                android:layout_gravity="right|center"
+                                android:layout_marginLeft="5dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/arrow_right" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <unique.packagename.widget.MainTextView
+                        style="@style/voicemail_option_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:paddingLeft="5dp"
+                        android:text="@string/voicemail_send_voicemail_as_attachment_to" />
+
+                    <LinearLayout
+                        style="@style/options_row_light_voicemail"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="5dp" >
+
+                        <unique.packagename.widget.MainTextView
+                            style="@style/voicemail_row_text_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/voicemail_email" />
+
+                        <unique.packagename.widget.MainEditText
+                            android:id="@+id/voicemail_send_mail"
+                            style="@style/voicemail_mail_text"
+                            android:background="@drawable/textfield_default_holo_light"
+                            android:layout_width="fill_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/voicemail_set_mail"
+                            android:inputType="textEmailAddress" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/voicemail_record_greeting"
+                        style="@style/options_row_dark"
+                        android:background="@color/voicemail_record_bg"
+                        android:layout_marginBottom="20dp" >
+
+                        <unique.packagename.widget.MainTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/voicemail_record_welcome_greeting"
+                            android:textAppearance="@android:style/TextAppearance.Medium"
+                            android:textColor="@color/text_row_primary" />
+
+                        <ImageView
+                            android:layout_width="@dimen/options_dark_icon_size"
+                            android:layout_height="@dimen/options_dark_icon_size"
+                            android:src="@drawable/ic_record" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

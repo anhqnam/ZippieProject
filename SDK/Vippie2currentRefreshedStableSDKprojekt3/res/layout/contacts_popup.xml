@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/vippie_very_dark_gray_transparent" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/message_notification_dlg_bg"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bars_height"
+            android:background="@drawable/message_notification_dlg_title_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_left" />
+            
+            <ImageView
+                android:id="@+id/dialpad_btn"
+                android:layout_width="@dimen/options_dark_icon_size"
+                android:layout_height="@dimen/options_dark_icon_size"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/transparent_bg"
+                android:scaleType="fitXY"
+                android:src="@drawable/call_menu_dialpad" />
+
+            <unique.packagename.widget.MainTextView
+                android:id="@+id/title_label"
+                style="@style/top_activity_label"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:cursorVisible="true"
+                android:password="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <include layout="@layout/contacts" />
+
+            <unique.packagename.dialer.widget.DialpadContacts
+                android:id="@+id/popup_dialpad"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/background_p"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

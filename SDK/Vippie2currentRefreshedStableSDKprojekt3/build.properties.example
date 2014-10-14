@@ -1,0 +1,251 @@
+# Enables disables obfuscation (comment line below if do NOT obfuscate)
+obfuscate=true
+
+# Optimize PJSIP libs for size (default: false)
+#  - This option is forcing PJSIP to almost total rebuild, 
+#    build time is longer but resulting in smaller binaries footprint
+optimize.pjsiplibs.size=false
+
+# Package name that will be generated
+package.name=com.voipswitch.vippieandroid
+package.path=com/voipswitch/vippieandroid
+
+# Sets the application version (have to be set)
+# Available:
+#
+# VERSION_RETAIL
+# VERSION_MARKET
+# VERSION_FULL
+# VERSION_CUSTOM
+app.version=VERSION_MARKET
+
+# Release - true/false (optional, default: true)
+#app.release=false
+
+# Tunnel - true/false (optional, default: false)
+#app.tunnel=true
+
+# Tunnel - use single packet injection (RTP 1:1) - true/false (optional, default: false)
+#app.tunnel.single.packet.injection=true
+
+# Video - true/false (have to be set)
+app.video=true
+
+# Sip transport mode with encription TLS
+app.sip.transport.tls=false
+
+# Demo - true/false (optional, default: false)
+#app.demo=true
+
+# Application name (optional, default: Vippie)
+#app.name=
+
+# Path for custom application icon image (optional)
+#app.icon.path=
+
+# Path for custom splash screen (optional)
+#app.splash.screen.path=
+
+# Activation - ACTIVATION_NONE / ACTIVATION_AC / ACTIVATION_IAC / ACTIVATION_IAC_WITH_USERNAME / ACTIVATION_AC_OPERATOR_CODE 
+# (optional, default: depends on app.version)
+#app.activation=
+
+# Silent Activation - true/false (optional, false: )
+#app.iac=
+
+# Silent Activation with username - true/false (optional, false: )
+#app.iac.with.username=
+
+# Activation Licence Provider - string (optional, default: "vshop")
+#app.activation.provider=
+
+# Setting Sip Advancted section enable - true/false (optional, Default: false)
+#app.sip.advanced.enable=
+
+# Setting Sip Advancted section fields configuration. Avaiable when app.sip.advanced.enable=true
+# When string is empty then all fields are visible. Value is represeted by binary string (e.g. 001001) 
+# Each bit possition activates field from section. Pls see more in class SettingField.SipAdvancedField
+
+#(optional, Default: empty)
+#app.sip.advanced.fields.bit=
+
+# SMS support - true/false (optional, default: depends on app.version)
+#app.sms=
+
+# SIP Custom Server - true/false (optional, default: depends on app.version)
+#app.custom.server=
+
+# DNS SRV Records support - true/false (optional, default: false)
+# Warrning: When enabled sip.port should be set to "0" and sip.server will be SRV DNS
+#app.dns.srv.records=
+
+# SIP Username - String (optional, default: "")
+#app.sip.username=
+
+# SIP Password - String (optional, default: "")
+#app.sip.password=
+
+# SIP Server - String (optional, default: "callto.net")
+#app.sip.server=
+
+# SIP port - int (optional, default: 5060)
+#app.sip.port=
+
+# Use auth name- true/false (optional, default: false), auth name is used allways as userName@domain
+#app.use.auth.name=
+
+# SIP tunnel port - int (optional, default: 1804)
+#app.sip.port.tunnel=
+
+# SIP tunnel remote port - int (optional, default: 6060)
+#app.sip.tunnel.remote.port=
+
+# SIP tunnel local ip - string (optional, default: "callto.net")
+#app.sip.tunnel.local.ip=
+
+# SIP tunnel remote ip - string (optional, default: "callto.net")
+#app.sip.tunnel.remote.ip=
+
+# SIP Balance support - (int:0/1/2/3) BALANCE_NONE/BALANCE_VPS/BALANCE_HTTP/BALANCE_PORTA (optional, default: depends on app.version)
+#app.balance=
+
+# SIP Url for Balance BALANCE_HTTP - String (optional, default: null)
+#app.balance.url="URL"
+
+# SIP Chack Rate support - (int:0/1/2) CHECK_RATE_NONE/CHECK_RATE_VPS/CHECK_RATE_HTTP (optional, default: depends on app.version)
+#app.checkrate=
+
+# SIP Url for Chack Rate CHECK_RATE_HTTP - String (optional, default: null)
+#app.checkrate.url="URL"
+
+# SIP Callback support - CALLBACK_NONE /CALLBACK_VPS/CALLBACK_HTTP (int:0/1/2)(optional, default: depends on app.version)
+#app.callback=
+
+# SIP Url for callback - String (optional, default: "http://callto.net/vsservices/callback.aspx?")
+#app.callback.url="http://callto.net/vsservices/callback.aspx?"
+
+# SIP Callthru support - Boolean (true/false) (optional, default: false)
+#app.callthru=
+
+# SIP Url for callthru - String (optional, default: "")
+#app.callthru.url=""
+
+# SIP Siplink user (for old VPS to siplink commands suport) - true/false (optional, default: false)
+#app.siplink=
+
+# XMPP support - true/false (optional, default: depends on app.version)
+#app.xmpp=
+
+# XMPP custom server - true/false (optional, default: true)
+#app.xmpp.custom.server
+
+# XMPP Server - String (optional, default: "jabber.org")
+#app.xmpp.server
+
+# XMPP Port - int (optional, default: 5222)
+#app.xmpp.port=
+
+# XMPP Service - String (optional, default: null)
+#app.xmpp.service=
+
+# XMPP use sip user name and password - true/false (optional, default: false)
+#app.xmpp.usesiplogin=
+
+# SignUp - true/false (optional, default: false)
+#app.sign.up=
+
+# SignUp URL - String (optional, default: "")
+#app.sign.up.url=
+
+# Recharge - int RECHARGE_DISPLAY_OFF / RECHARGE_DISPLAY_ON_DIALER / RECHARGE_DISPLAY_ON_MENU (optional, default: RECHARGE_DISPLAY_OFF)
+#app.recharge=
+
+# Recharge URL - String (optional, default: "")
+#app.recharge.url=
+
+# Recharge Button text - String (optional, default: "Recharge")
+#app.recharge.button.text=
+
+# Custom dialer menu item - true/false (optional, default: false)
+#app.custom.menu.item=
+
+# Custom dialer menu item URL - String (optional, default: "")
+#app.custom.menu.item.url=
+
+# Custom dialer menu item text - String (optional, default: "")
+#app.custom.menu.item.text=
+
+# VoiceMail - true/false (optional, default: true)
+#app.voicemail=
+
+# VoiceMail number - String (optional, default: "")
+#app.voicemail.number=
+
+# Codecs edition - true/false (optional, default: true)
+#app.codecs.edition=
+
+# Codec G.729 - true/false (optional, default: true)
+#app.codecs.g729=
+
+# Codec G.729 priority - int (1-10, 1 - highest priority) (optional, default: 1)
+#app.codecs.g729.priority=
+
+# Codec G.722 - true/false (optional, default: true)
+#app.codecs.g722=
+
+# Codec G.722 priority - int (1-10, 1 - highest priority) (optional, default: 2)
+#app.codecs.g722.priority=
+
+# Codec G.711u - true/false (optional, default: true)
+#app.codecs.g711u=
+
+# Codec G.711u priority - int (1-10, 1 - highest priority) (optional, default: 3)
+#app.codecs.g711u.priority=
+
+# Codec G.711a - true/false (optional, default: true)
+#app.codecs.g711a=
+
+# Codec G.711a priority - int (1-10, 1 - highest priority) (optional, default: 4)
+#app.codecs.g711a.priority=
+
+# Codec GSM - true/false (optional, default: true)
+#app.codecs.gsm=
+
+# Codec GSM priority - int (1-10, 1 - highest priority) (optional, default: 5)
+#app.codecs.gsm.priority=
+
+# Codec AMR-NB - true/false (optional, default: true)
+#app.codecs.amr.nb=
+
+# Codec AMR-NB priority - int (1-10, 1 - highest priority) (optional, default: 6)
+#app.codecs.amr.nb.priority=
+
+# Codec AMR-WB - true/false (optional, default: true)
+#app.codecs.amr.wb=
+
+# Codec AMR-WB priority - int (1-10, 1 - highest priority) (optional, default: 7)
+#app.codecs.amr.wb.priority=
+
+# Codec Speex(16kHz) - true/false (optional, default: true)
+#app.codecs.speex.16kHz=
+
+# Codec Speex(16kHz) priority - int (1-10, 1 - highest priority) (optional, default: 8)
+#app.codecs.speex.16kHz.priority=
+
+# Codec Speex(8kHz) - true/false (optional, default: true)
+#app.codecs.speex.8kHz=
+
+# Codec Speex(8kHz) priority - int (1-10, 1 - highest priority) (optional, default: 9)
+#app.codecs.speex.8kHz.priority=
+
+# Codec iLBC - true/false (optional, default: true)
+#app.codecs.iLBC=
+
+# Codec iLBC priority - int (1-10, 1 - highest priority) (optional, default: 10)
+#app.codecs.iLBC.priority=
+
+#Keystore
+key.store=keystore
+key.alias=vippieandroid key
+key.store.password=voipswitchkeystore
+key.alias.password=voipswitchkeystore

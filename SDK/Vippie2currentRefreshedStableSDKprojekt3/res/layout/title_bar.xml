@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/bars_height"
+    android:background="@drawable/message_notification_dlg_title_bg"
+    android:gravity="center_vertical" >
+
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/title_label"
+        style="@style/top_activity_label"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:cursorVisible="true"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:password="false"
+        android:text="tesst" />
+
+    <ImageView
+        android:id="@+id/title_back_btn"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrow_left" />
+
+</RelativeLayout>

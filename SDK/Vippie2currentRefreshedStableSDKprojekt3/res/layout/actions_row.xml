@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/actions_row"
+        android:layout_height="50dp"
+        android:layout_width="fill_parent"
+        android:gravity="right"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"  >
+		
+    	<ImageButton
+            android:id="@+id/freesms"
+            android:layout_width="@dimen/options_dark_icon_size"
+            android:layout_height="@dimen/options_dark_icon_size"
+            android:scaleType="fitXY"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:src="@drawable/contacts_free_actions_chat"
+            android:visibility="gone" />
+    
+        <ImageButton
+            android:id="@+id/freecall"
+            android:layout_width="@dimen/options_dark_icon_size"
+            android:layout_height="@dimen/options_dark_icon_size"
+            android:scaleType="fitXY"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:src="@drawable/contacts_free_actions_call"
+			android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/freevid"
+            android:scaleType="fitXY"
+            android:layout_width="@dimen/options_dark_icon_size"
+            android:layout_height="@dimen/options_dark_icon_size"
+            android:background="@color/transparent"
+            android:src="@drawable/contacts_free_actions_video"
+            android:visibility="gone" />
+        
+        <ImageButton
+            android:id="@+id/int_call"
+            android:layout_width="@dimen/options_light_icon_size_profile"
+            android:layout_height="@dimen/options_light_icon_size_profile"
+            android:scaleType="fitXY"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:src="@drawable/contacts_actions_call"
+            android:visibility="gone" />
+        
+        <ImageButton
+            android:id="@+id/int_sms"
+            android:layout_width="@dimen/options_light_icon_size_profile"
+            android:layout_height="@dimen/options_light_icon_size_profile"
+            android:scaleType="fitXY"
+            android:background="@color/transparent"
+            android:src="@drawable/contacts_actions_chat"
+            android:visibility="gone" />
+    </LinearLayout>

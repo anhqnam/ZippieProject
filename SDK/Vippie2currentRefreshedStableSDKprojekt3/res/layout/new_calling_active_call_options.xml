@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"    
+    android:background="@drawable/calling_active_call_options_panel_bg">
+
+    <RelativeLayout 
+        android:padding="1dp"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content">
+    <ImageButton
+        android:id="@+id/active_call_add_call"
+        android:src="@drawable/ic_calling_add_call"
+        style="@style/CallingActiveCallButton"/>
+
+    <ImageButton
+        android:id="@+id/active_call_transfer_call"
+        android:layout_toRightOf="@id/active_call_add_call"
+        android:src="@drawable/ic_calling_transfer_call"
+        style="@style/CallingActiveCallButton"/>
+
+    <ImageButton
+        android:id="@+id/active_call_dialpad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/active_call_transfer_call"
+        android:src="@drawable/ic_calling_dialpad"
+        style="@style/CallingActiveCallButton"/>
+
+    <ImageButton
+        android:id="@+id/active_call_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/active_call_dialpad"
+        android:src="@drawable/ic_calling_record_start"
+        style="@style/CallingActiveCallButton"
+        android:visibility="gone"/>
+    
+     <ImageButton
+        android:id="@+id/active_call_switch_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/active_call_record"
+        android:src="@drawable/ic_calling_switch_camera"
+        style="@style/CallingActiveCallButton"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/active_call_conference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/active_call_switch_camera"
+        android:src="@drawable/ic_calling_join_conference"
+        style="@style/CallingActiveCallButton"/>
+	</RelativeLayout>
+</RelativeLayout>

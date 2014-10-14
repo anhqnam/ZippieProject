@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+    <unique.packagename.widget.MainTextView
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="@color/text_row_primary"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:text="@string/registration_dialog_problem"
+        />
+    
+    <unique.packagename.widget.MainTextView
+        android:id="@+id/registration_dialog_support_email"
+        style="@style/registration_button"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_margin="10dp"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:text="@string/support_email_for_view"
+        />
+    
+</LinearLayout>

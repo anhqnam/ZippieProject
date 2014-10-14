@@ -1,0 +1,371 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+  android:key="settings_main">
+  <PreferenceScreen android:key="settings_screen_sip"
+    android:title="@string/settings_screen_sip">
+
+    <EditTextPreference android:key="settings_key_user_name"
+      android:singleLine="true" android:title="@string/settings_key_user_name"
+      android:summary="@string/settings_key_user_name_summary" />
+
+    <EditTextPreference android:key="settings_key_password"
+      android:singleLine="true" android:title="@string/settings_key_password"
+      android:summary="@string/settings_key_password_summary"
+      android:password="true" />
+
+    <EditTextPreference android:key="settings_key_display_name"
+      android:singleLine="true" android:title="@string/settings_key_display_name"
+      android:summary="@string/settings_key_display_name_summary" />
+
+    <CheckBoxPreference android:key="settings_key_auto_answer_audio"
+      android:title="@string/settings_key_auto_answer_audio"
+      android:summary="@string/settings_key_auto_answer_audio_summary"
+      android:defaultValue="false"  />
+
+    <CheckBoxPreference android:key="settings_key_auto_answer_video"
+      android:title="@string/settings_key_auto_answer_video"
+      android:summary="@string/settings_key_auto_answer_video_summary"
+      android:dependency="settings_key_auto_answer_audio"
+      android:defaultValue="false"  />
+
+    <PreferenceCategory android:key="settings_key_category_sip_server"
+      android:title="@string/settings_key_category_sip_server">
+
+      <EditTextPreference android:key="settings_key_sip_server"
+        android:singleLine="true" android:title="@string/settings_key_server"
+        android:summary="@string/settings_key_server_summary" />
+
+      <EditTextPreference android:key="settings_key_sip_port"
+        android:title="@string/settings_key_sip_port" android:summary="@string/settings_key_sip_port_summary"
+        android:hint="@string/settings_key_sip_port_hint" android:numeric="integer"
+        android:id="@+id/setting_port" />
+    </PreferenceCategory>
+
+    <!-- <PreferenceCategory android:key="settings_key_category_sip_presence"
+      android:title="@string/settings_key_category_sip_presence">
+
+      <ListPreference android:key="settings_key_sip_presence"
+        android:title="@string/settings_key_xmpp_presence"
+        android:defaultValue="2"
+        android:entries="@array/sip_presence"
+        android:entryValues="@array/sip_presence_values" />
+
+      <EditTextPreference android:key="settings_key_sip_presence_status"
+        android:singleLine="true" android:title="@string/settings_key_xmpp_presence_status"
+        android:summary="@string/settings_key_xmpp_presence_status_summary" />
+
+      <ListPreference android:key="settings_key_sip_presence_publish_method"
+        android:title="@string/settings_key_sip_presence_publish_method"
+        android:defaultValue="2"
+        android:entries="@array/sip_presence_publish_method"
+        android:entryValues="@array/sip_presence_publish_method_values" />
+
+      <PreferenceScreen android:key="settings_screen_presence_subscriptions"
+        android:title="@string/presence_subscriptions" />
+
+    </PreferenceCategory> -->
+
+    <PreferenceCategory android:key="settings_key_category_sip_advanced"
+      android:title="@string/settings_key_category_sip_advanced">
+
+	  <EditTextPreference android:key="settings_key_sip_server"
+        android:singleLine="true" android:title="@string/settings_key_server"
+        android:summary="@string/settings_key_server_summary" />
+	  
+	  <CheckBoxPreference android:key="settings_disable_auto_server"
+      	android:title="Force custom server for register" android:summary="Force register to local set server(disable local dialing plan)"
+      	android:defaultValue="false" />
+	  
+	  <CheckBoxPreference android:key="settings_force_custom_server"
+      	android:title="Force custom server for calling" android:summary="Force calling to local set server(disable local dialing plan)"
+      	android:defaultValue="false" />
+	  
+      <ListPreference android:key="settings_key_transport"
+        android:title="@string/settings_key_transport" android:defaultValue="0"
+        android:entries="@array/transport" android:entryValues="@array/transport_values" />
+
+      <ListPreference android:key="settings_key_dtmf_mode"
+        android:title="@string/settings_key_dtmf_mode" android:defaultValue="0"
+        android:entries="@array/dtmf_mode" android:entryValues="@array/dtmf_mode_values" />
+
+      <ListPreference android:key="settings_key_message_type"
+        android:title="@string/settings_key_message_type" android:defaultValue="0"
+        android:entries="@array/message_types" android:entryValues="@array/message_types_values" />
+
+      <EditTextPreference android:key="settings_key_auth_user_name"
+        android:singleLine="true" android:title="@string/settings_key_auth_user_name"
+        android:summary="@string/settings_key_auth_user_name_summary" />
+
+      <EditTextPreference android:key="settings_key_outbound_proxy"
+        android:singleLine="true" android:title="@string/settings_key_outbound_proxy"
+        android:summary="@string/settings_key_outbound_proxy_summary" />
+
+      <!-- <ListPreference android:key="settings_key_nat_traversal"
+        android:title="@string/settings_key_nat_traversal" android:defaultValue="0"
+        android:entries="@array/nat_traversal_mode" android:entryValues="@array/nat_traversal_mode_values" /> -->
+
+      <EditTextPreference android:key="settings_key_stun_server"
+        android:singleLine="true" android:title="@string/settings_key_stun_server"
+        android:summary="@string/settings_key_stun_server_summary" />
+
+      <CheckBoxPreference android:key="settings_key_allow_contact_rewrite"
+        android:title="@string/settings_key_allow_contact_rewrite"
+        android:defaultValue="false" />
+    </PreferenceCategory> 
+  </PreferenceScreen>  
+
+  <!-- <PreferenceScreen android:key="settings_screen_xmpp"
+    android:title="@string/settings_screen_xmpp">
+
+    <EditTextPreference android:key="settings_key_xmpp_user_name"
+      android:singleLine="true" android:title="@string/settings_key_xmpp_user_name"
+      android:summary="@string/settings_key_xmpp_user_name_summary" />
+
+    <EditTextPreference android:key="settings_key_xmpp_password"
+      android:singleLine="true" android:title="@string/settings_key_xmpp_password"
+      android:summary="@string/settings_key_xmpp_password_summary"
+      android:password="true" />
+
+    <PreferenceCategory
+      android:key="settings_key_category_xmpp_server"
+      android:title="@string/settings_key_category_xmpp_server">
+
+      <ListPreference android:key="settings_key_xmpp_server_list"
+        android:title="@string/settings_key_xmpp_server"
+        android:defaultValue="gmail.com"
+        android:entries="@array/xmpp_server_list"
+
+        android:entryValues="@array/xmpp_server_list_values" />
+      <EditTextPreference android:key="settings_key_xmpp_server"
+        android:singleLine="true" android:title="@string/settings_key_xmpp_server_host"
+        android:summary="@string/settings_key_xmpp_server_summary" />
+
+      <EditTextPreference android:key="settings_key_xmpp_port"
+        android:title="@string/settings_key_xmpp_port" android:summary="@string/settings_key_xmpp_port_summary"
+        android:hint="@string/settings_key_xmpp_port_hint" android:numeric="integer" />
+
+      <EditTextPreference android:key="settings_key_xmpp_service"
+        android:title="@string/settings_key_xmpp_service" android:summary="@string/settings_key_xmpp_service_summary"
+        android:hint="@string/settings_key_xmpp_service_hint" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_key_category_xmpp_other">
+
+      <ListPreference android:key="settings_key_xmpp_presence"
+        android:title="@string/settings_key_xmpp_presence"
+        android:defaultValue="2"
+        android:entries="@array/xmpp_presence"
+        android:entryValues="@array/xmpp_presence_values" />
+
+      <EditTextPreference android:key="settings_key_xmpp_presence_status"
+        android:singleLine="true" android:title="@string/settings_key_xmpp_presence_status"
+        android:summary="@string/settings_key_xmpp_presence_status_summary" />
+
+    </PreferenceCategory>
+  </PreferenceScreen> -->
+
+  <PreferenceScreen android:key="settings_screen_video"
+    android:title="@string/settings_screen_video">
+
+    <!-- <ListPreference android:key="settings_key_default_call"
+      android:title="@string/settings_key_default_call"
+      android:defaultValue="00" android:entries="@array/default_call"
+      android:entryValues="@array/default_call_values" />  -->
+
+    <CheckBoxPreference android:key="settings_key_video_front_camera"
+      android:title="@string/settings_key_video_front_camera"
+      android:summaryOn="@string/settings_key_video_front_camera_sum_on"
+      android:summaryOff="@string/settings_key_video_front_camera_sum_off"
+      android:defaultValue="true" />
+    
+    <CheckBoxPreference android:key="settings_key_video_tablet_fix"
+      android:title="@string/settings_key_video_tablet_fix"
+      android:summary="@string/settings_key_video_tablet_fix_summary"
+      android:defaultValue="false" />
+	  
+	<CheckBoxPreference android:key="settings_key_video_preview_horizontal_flip_fix"
+      android:title="@string/settings_key_video_preview_horizontal_flip_fix"
+      android:summary="@string/settings_key_video_preview_horizontal_flip_fix_summary"
+      android:defaultValue="false" />
+
+    <!-- <PreferenceCategory android:title="@string/settings_key_video_recording">
+
+      <ListPreference android:key="settings_key_video_bps"
+        android:title="@string/settings_key_video_bps" android:defaultValue="96000"
+        android:entries="@array/video_bps" android:entryValues="@array/video_bps_values" />
+
+      <ListPreference android:key="settings_key_video_res"
+        android:title="@string/settings_key_video_res" android:defaultValue="2"
+        android:entries="@array/video_res" android:entryValues="@array/video_res_values" />
+
+      <ListPreference android:key="settings_key_video_fps"
+        android:title="@string/settings_key_video_fps" android:defaultValue="10"
+        android:entries="@array/video_fps" android:entryValues="@array/video_fps_values" />
+
+    </PreferenceCategory>
+
+     <PreferenceCategory android:title="@string/settings_key_video_codecs">
+
+      <CheckBoxPreference android:key="settings_key_H264_116"
+        android:title="@string/settings_key_H264_90000"
+        android:defaultValue="true" />
+
+      <CheckBoxPreference android:key="settings_key_H263_1998_115"
+        android:title="@string/settings_key_H263_1998_90000"
+        android:defaultValue="false" />
+      
+        disable H263 codec <CheckBoxPreference
+        android:key="settings_key_H263_90000"
+        android:title="@string/settings_key_H263_90000"
+        android:defaultValue="true" />
+      
+    </PreferenceCategory> -->
+
+  </PreferenceScreen>
+
+  <PreferenceScreen android:key="settings_screen_audio"
+    android:title="@string/settings_screen_audio">
+	
+	<CheckBoxPreference android:key="settings_use_vippie_ringtone"
+      android:title="@string/settings_use_vippie_ringtone" android:summary="@string/settings_use_vippie_ringtone_summary"
+      android:defaultValue="true" />
+	
+	<CheckBoxPreference android:key="settings_use_vippie_sms_ring"
+      android:title="@string/settings_use_vippie_sms_ring" android:summary="@string/settings_use_vippie_sms_ring_summary"
+      android:defaultValue="true" />
+	
+    <RingtonePreference android:key="settings_key_ringtone"
+      android:title="@string/settings_key_ringtone" android:summary="@string/settings_key_ringtone_summary"
+      android:ringtoneType="ringtone">
+    </RingtonePreference>
+
+    <RingtonePreference android:key="settings_sms_key_ringtone"
+      android:title="@string/settings_sms_key_ringtone" android:summary="@string/settings_sms_key_ringtone_summary"
+      android:ringtoneType="ringtone">
+    </RingtonePreference>
+
+    <CheckBoxPreference android:key="settings_key_keytones"
+      android:title="@string/settings_key_keytones" android:summary="@string/settings_key_keytones_summary"
+      android:defaultValue="true" />
+
+    <CheckBoxPreference android:key="settings_key_vibration"
+      android:title="@string/settings_key_vibration" android:summary="@string/settings_key_vibration_summary"
+      android:defaultValue="true" />
+
+    
+      <CheckBoxPreference android:key="settings_key_bluetooth"
+      android:title="@string/settings_key_bluetooth"
+      android:summary="@string/settings_key_bluetooth_summary"
+      android:defaultValue="false" />
+
+    <!-- <CheckBoxPreference android:key="settings_key_ec"
+      android:title="@string/settings_key_ec" android:summary="@string/settings_key_ec_summary" />
+
+    <PreferenceCategory android:key="settings_screen_codecs"
+      android:title="@string/settings_key_audio_codecs">
+
+      <CheckBoxPreference android:key="settings_key_G729"
+        android:title="@string/settings_key_G729" android:defaultValue="true" />
+
+      <CheckBoxPreference android:key="settings_key_G722_16000"
+        android:title="@string/settings_key_G722_16000" android:defaultValue="true" />
+
+      <CheckBoxPreference android:key="settings_key_PCMU_8000"
+        android:title="@string/settings_key_PCMU_8000" android:defaultValue="true" />
+
+      <CheckBoxPreference android:key="settings_key_PCMA_8000"
+        android:title="@string/settings_key_PCMA_8000" android:defaultValue="true" />
+
+      <CheckBoxPreference android:key="settings_key_GSM_8000"
+        android:title="@string/settings_key_GSM_8000" android:defaultValue="true" />
+
+      <CheckBoxPreference android:key="settings_key_AMR_8000_1"
+        android:title="@string/settings_key_AMR_NB_8000" android:defaultValue="true" />
+
+      <CheckBoxPreference android:key="settings_key_AMR_WB_16000_1"
+        android:title="@string/settings_key_AMR_WB_16000" android:defaultValue="true" />
+
+      <CheckBoxPreference android:key="settings_key_speex_16000"
+        android:title="@string/settings_key_speex_16000"
+        android:defaultValue="true" />
+
+      <CheckBoxPreference android:key="settings_key_speex_8000"
+        android:title="@string/settings_key_speex_8000"
+        android:defaultValue="true" />
+
+      <CheckBoxPreference android:key="settings_key_iLBC_8000"
+        android:title="@string/settings_key_iLBC_8000" android:defaultValue="true" />
+
+    </PreferenceCategory> -->
+
+  </PreferenceScreen>
+
+  <PreferenceScreen android:key="settings_screen_system"
+    android:title="@string/settings_screen_system">
+
+    <!-- <ListPreference android:key="settings_key_native_call_mode"
+      android:title="@string/settings_key_native_call_mode"
+      android:defaultValue="0" android:entries="@array/native_call"
+      android:entryValues="@array/native_call_values" /> -->
+
+    <CheckBoxPreference android:key="settings_key_native_calllog"
+      android:title="@string/settings_key_native_calllog"
+      android:summary="@string/settings_key_native_calllog_summary"
+      android:defaultValue="true" />
+
+    <CheckBoxPreference android:key="settings_key_service_auto_start"
+      android:title="@string/settings_key_service_auto_start"
+      android:summary="@string/settings_key_service_auto_start_summary"
+      android:defaultValue="true" />
+
+    <!-- <CheckBoxPreference android:key="settings_key_callthru_enabled"
+      android:title="@string/settings_key_callthru_enabled"
+      android:defaultValue="true"  >
+    </CheckBoxPreference>
+
+    <ListPreference android:key="settings_key_callthru_number"
+      android:title="@string/settings_key_callthru_country" /> -->
+  </PreferenceScreen>
+
+  <!-- <EditTextPreference android:key="settings_key_voice"
+      android:title="@string/settings_key_voice" android:summary="@string/settings_key_voice_summary"
+      android:phoneNumber="true" /> -->
+  <CheckBoxPreference android:key="settings_key_push_notifications"
+      android:title="@string/settings_key_push_notifications"
+      android:summary="@string/settings_key_push_notifications_summary"
+      android:defaultValue="true" >
+  </CheckBoxPreference>
+    
+  <CheckBoxPreference android:key="settings_key_pop_up_notifications"
+      android:title="@string/settings_key_pop_up_notifications"
+      android:summary="@string/settings_key_pop_up_notifications_summary"
+      android:defaultValue="true"  >
+  </CheckBoxPreference>
+  
+  <PreferenceCategory android:title="@string/settings_key_about">
+  	
+  	<PreferenceScreen android:key="settings_key_version"
+    	android:title="@string/settings_key_version">
+    </PreferenceScreen>
+    
+    <PreferenceScreen android:key="settings_key_website"
+    	android:summary="@string/dialer_website"
+    	android:title="@string/settings_key_website">
+    </PreferenceScreen>
+    
+    <PreferenceScreen android:key="settings_key_legal"
+    	android:title="@string/settings_key_legal">
+    </PreferenceScreen>
+  	
+  </PreferenceCategory>
+      
+  <PreferenceScreen android:key="settings_logout_acount"
+  	android:summary="@string/settings_logout_info"
+    android:title="@string/settings_logout">
+    </PreferenceScreen>
+  
+  <PreferenceScreen android:key="settings_deactivate_acount"
+  	android:summary="@string/settings_deactivate_info"
+    android:title="@string/settings_screen_deactivate">
+    </PreferenceScreen>
+    
+</PreferenceScreen>
