@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_topbar"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title_topbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:paddingBottom="@dimen/title_padding"
+            android:paddingLeft="@dimen/title_padding"
+            android:paddingTop="@dimen/title_padding"
+            android:singleLine="true"
+            android:text="@string/category"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_all" />
+
+        <ImageView
+            android:id="@+id/userguide"
+            android:layout_width="@dimen/user_guide_btn"
+            android:layout_height="@dimen/user_guide_btn"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_guide" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/sms_item"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cate_item_selector"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/icon_SMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:src="@drawable/selector_sms_item" />
+
+            <TextView
+                android:id="@+id/tv_SMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:duplicateParentState="true"
+                android:text="@string/SMS"
+                android:textColor="@color/cate_item_text"
+                android:textSize="@dimen/cate_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:background="@color/cate_divider" />
+
+        <LinearLayout
+            android:id="@+id/calllog_item"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cate_item_selector"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/icon_CallLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:src="@drawable/selector_calllog_item" />
+
+            <TextView
+                android:id="@+id/tv_CallLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:duplicateParentState="true"
+                android:text="@string/call_log"
+                android:textColor="@color/cate_item_text"
+                android:textSize="@dimen/cate_item" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/cate_divider" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/audio_item"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cate_item_selector"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/icon_Audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:src="@drawable/selector_audio_item" />
+
+            <TextView
+                android:id="@+id/tv_Audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:duplicateParentState="true"
+                android:text="@string/audio"
+                android:textColor="@color/cate_item_text"
+                android:textSize="@dimen/cate_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:background="@color/cate_divider" />
+
+        <LinearLayout
+            android:id="@+id/video_item"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cate_item_selector"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/icon_Video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:src="@drawable/selector_video_item" />
+
+            <TextView
+                android:id="@+id/tv_Video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:duplicateParentState="true"
+                android:text="@string/video"
+                android:textColor="@color/cate_item_text"
+                android:textSize="@dimen/cate_item" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/cate_divider" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/camera_item"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cate_item_selector"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/icon_Camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:src="@drawable/selector_camera_item" />
+
+            <TextView
+                android:id="@+id/tv_Camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:duplicateParentState="true"
+                android:text="@string/camera"
+                android:textColor="@color/cate_item_text"
+                android:textSize="@dimen/cate_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:background="@color/cate_divider" />
+
+        <LinearLayout
+            android:id="@+id/photo_item"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cate_item_selector"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/icon_Photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:src="@drawable/selector_photo_item" />
+
+            <TextView
+                android:id="@+id/tv_Photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:duplicateParentState="true"
+                android:text="@string/photo"
+                android:textColor="@color/cate_item_text"
+                android:textSize="@dimen/cate_item" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/cate_divider" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/app_item"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cate_item_selector"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/icon_App"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:src="@drawable/selector_app_item" />
+
+            <TextView
+                android:id="@+id/tv_App"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:duplicateParentState="true"
+                android:text="@string/app"
+                android:textColor="@color/cate_item_text"
+                android:textSize="@dimen/cate_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:background="@color/cate_divider" />
+
+        <LinearLayout
+            android:id="@+id/reset_pw_item"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cate_item_selector"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/icon_resetpw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:src="@drawable/selector_resetpw_item" />
+
+            <TextView
+                android:id="@+id/tv_resetpw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:duplicateParentState="true"
+                android:text="@string/reset_pass"
+                android:textColor="@color/cate_item_text"
+                android:textSize="@dimen/cate_item" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

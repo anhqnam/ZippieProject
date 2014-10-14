@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/hidden_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/photo_title_color" >
+
+        <TextView
+            android:id="@+id/video_detail_title_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:paddingBottom="@dimen/title_padding"
+            android:paddingLeft="@dimen/title_padding"
+            android:paddingTop="@dimen/title_padding"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_all" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:background="@color/photo_content_color"
+        android:orientation="vertical" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/photo_detail_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.6" >
+        </android.support.v4.view.ViewPager>
+
+        <Gallery
+            android:id="@+id/imageGallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/title_padding"
+            android:paddingTop="@dimen/title_padding"
+            android:spacing="2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/imageName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:paddingLeft="@dimen/title_padding"
+            android:paddingTop="@dimen/photo_info_padding"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/photo_name" />
+
+        <TextView
+            android:id="@+id/imageSize"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/photo_info_padding"
+            android:paddingLeft="@dimen/title_padding"
+            android:paddingTop="@dimen/photo_info_padding"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/photo_size" />
+    </LinearLayout>
+
+</LinearLayout>

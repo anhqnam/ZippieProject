@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/show_menu_title"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title_topbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:paddingBottom="@dimen/title_padding"
+            android:paddingLeft="@dimen/title_padding"
+            android:paddingTop="@dimen/title_padding"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:text="@string/title_sms"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_all" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_addfiles"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/add_file_title"
+            style="@style/TextDialogBackupRestore"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/title_dialog_choose_mode" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog"
+        android:gravity="center" >
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/add_all_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_selector"
+                android:button="@null" />
+
+            <TextView
+                android:id="@+id/add_all"
+                style="@style/TextDialogBackupRestore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.4"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/all" />
+
+            <RadioButton
+                android:id="@+id/add_folder_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/radio_selector"
+                android:button="@null" />
+
+            <TextView
+                android:id="@+id/add_folder"
+                style="@style/TextDialogBackupRestore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.4"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/folder" />
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_addfiles"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/sort_title"
+            style="@style/TextDialogBackupRestore"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="@string/sort_order" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_dialog"
+        android:gravity="fill_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="fill_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="20dp" >
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical|left"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/sort_asc_group"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/sort_asc_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/radio_selector"
+                        android:button="@null"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/sort_asc_tv"
+                        style="@style/TextDialogBackupRestore"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/sort_asc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sort_des_group"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.5" >
+
+                    <RadioButton
+                        android:id="@+id/sort_des_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/radio_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/sort_des_tv"
+                        style="@style/TextDialogBackupRestore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/sort_des" />
+                </LinearLayout>
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical|left"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/sort_name_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/sort_name_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/sort_name_tv"
+                        style="@style/TextDialogBackupRestore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/sort_name" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sort_size_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <RadioButton
+                        android:id="@+id/sort_size_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@null"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/sort_size_tv"
+                        style="@style/TextDialogBackupRestore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/sort_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sort_date_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <RadioButton
+                        android:id="@+id/sort_date_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/checkbox_selector"
+                        android:button="@null"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/sort_date_tv"
+                        style="@style/TextDialogBackupRestore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/sort_date" />
+                </LinearLayout>
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pri_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/sort_cancel_btn"
+                style="@style/KeyButtonDialogPrivacyCancel"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.4"
+                android:text="@string/cancel"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/sort_ok_btn"
+                style="@style/KeyButtonDialogPrivacyOk"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.4"
+                android:text="@string/ok"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="@dimen/icon_size_list"
+        android:layout_height="@dimen/icon_size_list"
+        android:scaleType="centerCrop" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imageView1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="5dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/file_title" />
+
+            <TextView
+                android:id="@+id/text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/file_size" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_selected"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

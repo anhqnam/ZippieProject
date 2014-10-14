@@ -1,0 +1,12 @@
+<resources>
+
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw600dp devices (e.g. 7" tablets) here.
+    -->
+    <dimen name="text_size_title_privacy">35sp</dimen>
+    <dimen name="text_size_content_privacy">28sp</dimen>
+  <!-- Login  -->
+      <dimen name="button_size">40sp</dimen>
+       <dimen name="content_privacy">20sp</dimen>
+</resources>

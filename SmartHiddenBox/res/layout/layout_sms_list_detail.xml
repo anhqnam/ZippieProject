@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    android:background="@android:color/white"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/avatar_friend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/icon_avatar_contact"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_weight="0.6"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/sms_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:textColor="@color/color_text"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/sms_datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:padding="10dp"
+            android:textColor="@color/color_text"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/avatar_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/icon_avatar_user"
+        android:visibility="gone" />
+
+</LinearLayout>
