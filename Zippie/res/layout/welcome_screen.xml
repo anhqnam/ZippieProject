@@ -1,16 +1,93 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.lunextelecom.zippie.activity.SignUpActivity" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    tools:context="com.example.test.MainActivity" >
+    <RelativeLayout 
+        android:id="@+id/layout_logo"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/buttonStart"
+        android:gravity="center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ImageView 
+            android:id="@+id/logo"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/logo"/>
+        <RelativeLayout 
+            android:id="@+id/line"
+            android:layout_below="@id/logo"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#444"></RelativeLayout>
+        <TextView 
+            android:id="@+id/slogan"
+            android:layout_below="@id/line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:fontFamily="sans-serif-light"
+            android:layout_margin="10dp"
+            android:textSize="14dp"
+            android:text="@string/slogan"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/buttonStart"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:layout_above="@+id/layout_privacy"
+        android:gravity="center|center_horizontal" >
 
-    <TextView
-        android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/imageStart"
+                android:layout_width="fill_parent"
+                android:layout_height="300dp"
+                android:padding="10dp"
+                android:src="@drawable/start" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/button_color_start"
+                android:fontFamily="sans-serif-light"
+                android:text="Start"
+                android:textColor="#fff"
+                android:textSize="35dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_privacy"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentBottom="true" 
+        android:padding="10dp"
+        android:gravity="center|center_horizontal">
+
+        <TextView
+            android:id="@+id/privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/privacy" />
+    </RelativeLayout>
 
 </RelativeLayout>

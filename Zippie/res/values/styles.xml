@@ -16,5 +16,9 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+    <!-- Splash theme  -->
+    <style name="Theme.Splash" parent="@android:style/Theme.Light.NoTitleBar">
+    </style>
 
 </resources>

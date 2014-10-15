@@ -1,3 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="action_bar_background">#21ae60</color>
+    <color name="action_bar_title">#FFFFFF</color>
+    <color name="button_blue_1">#085dad</color>
+    <color name="button_blue_2">#0000FF</color>
+    <color name="blue_1">#085dad</color>
+    <color name="blue_2">#01579b</color>
+    <color name="green1">#dcedc8</color>
+    <color name="green2">#8bc34a</color>
+    <color name="pur1">#ab47bc</color>
+    <color name="pur2">#7b1fa2</color>
+    <color name="green_press1">#333</color>
+    <color name="green_press2">#21ae60</color>
+    <color name="gray_1">#bdbdbd</color>
 </resources>
