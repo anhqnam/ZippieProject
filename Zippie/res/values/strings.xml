@@ -4,5 +4,13 @@
     <string name="app_name">Zippie</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    
+    <!-- Sign Up resources string -->
+    <string name="create_profile_finish_text">Finish</string>
+    <!-- End sign up -->
+    
+    <!-- Top menu resources string -->
+    <string name="introduce_skip_text"><u>Skip</u></string>
+    <!-- End top menu -->
 
 </resources>
