@@ -52,8 +52,7 @@
 	            android:id="@+id/imageStart"
 	            android:layout_width="0dp"	
 	            android:layout_height="300dp"
-	            android:layout_weight="0.9"
-	            android:padding="10dp"
+	            android:layout_weight="1"
 	            android:src="@drawable/start" />
 	        
 		</LinearLayout>
@@ -71,7 +70,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
-                android:padding="15dp"
+                android:padding="10dp"
                 android:src="@drawable/change_background_button_start" />
             
         </LinearLayout>
@@ -82,13 +81,14 @@
             android:weightSum="1" >
 
             <TextView
+                android:id="@+id/txtStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_horizontal"
                 android:textSize="35dp"
-                android:text="@string/start" />
+                android:text="@string/btn_start" />
         </LinearLayout>
     </RelativeLayout>
 

@@ -16,8 +16,10 @@ import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.lunextelecom.zippie.R;
+import com.lunextelecom.zippie.utils.Utils;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -28,8 +30,23 @@ public class WelcomeScreenFragment extends Fragment {
 	/** The m action bar. */
 	private ActionBar mActionBar;
 
+	/** The m image view. */
+	private ImageView mImageView;
+	
+	/** The m button start. */
+	private ImageView mButtonStart;
+	
 	/** The m button start press. */
-	private ImageView mImageView, mButtonStart, mButtonStartPress;
+	private ImageView mButtonStartPress;
+	
+	/** The m slogan text view. */
+	private TextView mSloganTextView;
+	
+	/** The m start text view. */
+	private TextView mStartTextView;
+	
+	/** The m privacy text view. */
+	private TextView mPrivacyTextView;
 
 	/**
 	 * Find view by id.
@@ -54,6 +71,11 @@ public class WelcomeScreenFragment extends Fragment {
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		View view = inflater.inflate(R.layout.welcome_screen, null);
+		mSloganTextView = (TextView)view.findViewById(R.id.slogan);
+		mStartTextView = (TextView)view.findViewById(R.id.txtStart);
+		mPrivacyTextView = (TextView)view.findViewById(R.id.privacy);
+		Utils.setTypefaceRoboto(getActivity(),mSloganTextView, mStartTextView, mPrivacyTextView);
+		
 		mButtonStart = (ImageView)view.findViewById(R.id.btnStart);
 		mButtonStart.setOnClickListener(new OnClickListener() {
 			

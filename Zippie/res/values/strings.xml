@@ -9,12 +9,12 @@
     <string name="introduce_skip_text"><u>Skip</u></string>
     <!-- End top menu -->
     
-        <!-- Welcome resources string-->
+    <!-- Welcome resources string-->
     <string name="privacy">© 2014 Zippie. <u><b><font fgcolor="#ff3498db">Privacy Policy</font></b></u></string>
     <string name="slogan">Free messages and calls to Zippie users \nSend a eGift to your loved one.\n What are you waiting for?</string>
-    <string name="start">Start</string>
+    <string name="btn_start">Start</string>
     <!-- End welcome -->
-	<!--Contact resource string -->
+    <!--Contact resource string -->
 	<string name="contact_zippie">Zippie</string>
     <string name="contact_all">All</string>
     <string name="contact_favorites">Favorites</string>
@@ -31,5 +31,10 @@
     <string name="create_profile_or">or</string>
     <string name="create_profile_action_bar_title">CREATE YOUR PROFILE</string>
     <!-- End create profile -->
-
+    <!-- Input number -->
+    <string name="title_input_number">LET US KNOW ABOUT YOU</string>
+	<string name="text_show">Enter your phone number</string>
+	<string name="name_country">United States</string>
+	<string name="phone_number">+16782167616</string>
+	<string name="btn_continue">Continue</string>
 </resources>
