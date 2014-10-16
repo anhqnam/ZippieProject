@@ -3,5 +3,13 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-
+	 <!-- Contact dimens -->
+	<dimen name="contact_home_btn">35dp</dimen>
+    <dimen name="contact_text_size">12dp</dimen>
+    <dimen name="contact_button_height">30dp</dimen>
+    <dimen name="contact_button_width_all">40dp</dimen>
+    <dimen name="contact_button_width_vippe">50dp</dimen>
+    <dimen name="contact_button_width_favorite">70dp</dimen>
+    <dimen name="contact_button_width_search">60dp</dimen>
+    <dimen name="contact_image_button">15dp</dimen>
 </resources>

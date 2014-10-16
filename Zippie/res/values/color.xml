@@ -15,4 +15,8 @@
     <color name="green_press1">#333</color>
     <color name="green_press2">#21ae60</color>
     <color name="gray_1">#bdbdbd</color>
+	<!-- Contact color -->
+    <color name="background_topbar">#3598db</color>
+    <color name="white">#ffffff</color>
+    <color name="color_button_contact">#3598db</color>
 </resources>

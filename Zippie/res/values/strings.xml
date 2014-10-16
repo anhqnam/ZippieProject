@@ -18,5 +18,10 @@
     <string name="slogan">Free messages and calls to Zippie users \nSend a eGift to your loved one.\n What are you waiting for?</string>
     <string name="start">Start</string>
     <!-- End welcome -->
-
+	<!--Contact resource string -->
+	<string name="contact_zippie">Zippie</string>
+    <string name="contact_all">All</string>
+    <string name="contact_favorites">Favorites</string>
+    <string name="contact_search">Search</string>
+	<!-- End contact -->
 </resources>

@@ -26,6 +26,10 @@
             android:name="com.lunextelecom.zippie.activity.TopMenuActivity"
             android:label="@string/app_name" >
         </activity>
+		<activity
+            android:name="com.lunextelecom.zippie.activity.ContactActivity"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
