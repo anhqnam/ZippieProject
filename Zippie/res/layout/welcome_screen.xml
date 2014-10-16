@@ -1,17 +1,14 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center_horizontal"
-    tools:context="com.example.test.MainActivity" >
-    <RelativeLayout 
-        android:id="@+id/layout_logo"
-        android:layout_marginTop="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/buttonStart"
-        android:gravity="center_horizontal"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="0dp"
+        android:paddingTop="10dp"
+        android:layout_weight="0.3" >
         <ImageView 
             android:id="@+id/logo"
             android:layout_width="fill_parent"
@@ -36,50 +33,72 @@
             android:layout_margin="10dp"
             android:textSize="14dp"
             android:text="@string/slogan"/>
+        
     </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/buttonStart"
-        android:layout_width="fill_parent"
-        android:layout_height="300dp"
-        android:layout_above="@+id/layout_privacy"
-        android:gravity="center|center_horizontal" >
 
-        <RelativeLayout
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:gravity="center_vertical|center_horizontal" >
+		<LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:gravity="center" >
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center|center_vertical"
+            android:weightSum="1" >
+	        <ImageView
+	            android:id="@+id/imageStart"
+	            android:layout_width="0dp"	
+	            android:layout_height="300dp"
+	            android:layout_weight="0.9"
+	            android:padding="10dp"
+	            android:src="@drawable/start" />
+	        
+		</LinearLayout>
+		
+       <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center|center_vertical"
+            android:weightSum="1" >
 
             <ImageView
-                android:id="@+id/imageStart"
-                android:layout_width="fill_parent"
-                android:layout_height="300dp"
-                android:padding="10dp"
-                android:src="@drawable/start" />
-        </RelativeLayout>
-
-        <RelativeLayout
+                android:id="@+id/btnStart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:padding="15dp"
+                android:src="@drawable/change_background_button_start" />
+            
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:gravity="center" >
+            android:gravity="center|center_horizontal"
+            android:weightSum="1" >
 
-            <Button
-                android:id="@+id/btn_start"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:background="@drawable/button_color_start"
-                android:fontFamily="sans-serif-light"
-                android:text="Start"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textColor="#fff"
-                android:textSize="35dp" />
-        </RelativeLayout>
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:textSize="35dp"
+                android:text="@string/start" />
+        </LinearLayout>
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/layout_privacy"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_alignParentBottom="true" 
         android:padding="10dp"
+        android:layout_weight="0.1"
         android:gravity="center|center_horizontal">
 
         <TextView
@@ -87,7 +106,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
+            android:textSize="12dp"
             android:text="@string/privacy" />
     </RelativeLayout>
 
-</RelativeLayout>
+</LinearLayout>

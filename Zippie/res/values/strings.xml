@@ -12,5 +12,11 @@
     <!-- Top menu resources string -->
     <string name="introduce_skip_text"><u>Skip</u></string>
     <!-- End top menu -->
+    
+    <!-- Welcome resources string-->
+    <string name="privacy">© 2014 Zippie. <u><b><font fgcolor="#ff3498db">Privacy Policy</font></b></u></string>
+    <string name="slogan">Free messages and calls to Zippie users \nSend a eGift to your loved one.\n What are you waiting for?</string>
+    <string name="start">Start</string>
+    <!-- End welcome -->
 
 </resources>
