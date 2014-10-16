@@ -29,29 +29,21 @@ public class ContactActivity extends Activity implements OnClickListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		setContentView(R.layout.activity_contact);
 		super.onCreate(savedInstanceState);
 		init();
-
+		DialerApplication.register();
 	}
 
+	@Override
+	protected void onDestroy() {
+		DialerApplication.unregister();
+		super.onDestroy();
+	}
+	
 	private void init() {
 		mContactsWrapper = APIHelper.getInstance().getContactsWrapper();
-		mContactsWrapper.addContactsSyncListener(new IOnSyncContactsListener() {
-
-			@Override
-			public void onSynchronizedContactsChanged(String arg0) {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public void onSipContactsSyncInited() {
-				// TODO Auto-generated method stub
-
-			}
-		});
+		
 		findViewById(R.id.contactFetchClick).setOnClickListener(this);
 		findViewById(R.id.contactFetch1Click).setOnClickListener(this);
 		findViewById(R.id.contactFetch2Click).setOnClickListener(this);
@@ -91,7 +83,6 @@ public class ContactActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch (v.getId()) {
 		case R.id.contactFetchClick: {
 			((TextView) findViewById(R.id.tv_result)).setText("");
@@ -110,7 +101,6 @@ public class ContactActivity extends Activity implements OnClickListener {
 
 						@Override
 						public void run() {
-							// TODO Auto-generated method stub
 							((TextView) findViewById(R.id.tv_result))
 									.setText(mResult);
 						}
@@ -123,7 +113,7 @@ public class ContactActivity extends Activity implements OnClickListener {
 
 		case R.id.contactFetch1Click: {
 			((TextView) findViewById(R.id.tv_result)).setText("");
-			Contact iContact = mContactsWrapper.fetch(47, false);
+			Contact iContact = mContactsWrapper.fetch(3, true);
 			mResult = " GetID: " + iContact.getId() + " ,getDisplayName: "
 					+ iContact.getDisplayName() + " ,getCurrentPhone: "
 					+ iContact.getCurrentPhone();
@@ -133,7 +123,7 @@ public class ContactActivity extends Activity implements OnClickListener {
 
 		case R.id.contactFetch2Click: {
 			((TextView) findViewById(R.id.tv_result)).setText("");
-			Contact iContact = mContactsWrapper.fetch("21456668955", false);
+			Contact iContact = mContactsWrapper.fetch("48792440117", true);
 			mResult = " GetID: " + iContact.getId() + " ,getDisplayName: "
 					+ iContact.getDisplayName() + " ,getCurrentPhone: "
 					+ iContact.getCurrentPhone();
@@ -191,7 +181,7 @@ public class ContactActivity extends Activity implements OnClickListener {
 				list = (iContacts[i].getPhones());
 				List<String> m = mContactsWrapper
 						.containsVippieNumbersCached(list);
-				mResult += " stt " + i + " : " + m;
+				mResult = " stt " + i + " : " + m;
 				((TextView) findViewById(R.id.tv_result)).setText(mResult);
 			}
 			break;
@@ -219,7 +209,7 @@ public class ContactActivity extends Activity implements OnClickListener {
 
 		case R.id.contactGetNumberForVippieClick: {
 			((TextView) findViewById(R.id.tv_result)).setText("");
-			String number1 = mContactsWrapper.getNumberForVippie("1656823341");
+			String number1 = mContactsWrapper.getNumberForVippie("+148792440117");
 			String number2 = mContactsWrapper.getNumberForVippie("1888373");
 			mResult = " number 1: " + number1 + " number 2: " + number2;
 			((TextView) findViewById(R.id.tv_result)).setText(mResult);
@@ -227,7 +217,7 @@ public class ContactActivity extends Activity implements OnClickListener {
 		}
 		case R.id.contactGetVippieLoginForNumberClick: {
 			String number1 = mContactsWrapper
-					.getVippieLoginForNumber("1656823341");
+					.getVippieLoginForNumber("+148792440117");
 			String number2 = mContactsWrapper
 					.getVippieLoginForNumber("1888373");
 			mResult = " number 1: " + number1 + " number 2: " + number2;
@@ -262,14 +252,14 @@ public class ContactActivity extends Activity implements OnClickListener {
 		}
 		case R.id.contactIsVippieIdClick: {
 			Boolean b;
-			b = mContactsWrapper.isVippieId("1656823341");
+			b = mContactsWrapper.isVippieId("1877256");
 			mResult = " " + b.toString();
 			((TextView) findViewById(R.id.tv_result)).setText(mResult);
 			break;
 		}
 		case R.id.contactIsVippieNumberClick: {
 			Boolean b;
-			b = mContactsWrapper.isVippieNumber("1656823341");
+			b = mContactsWrapper.isVippieNumber("+148792440117");
 			mResult = " " + b.toString();
 			((TextView) findViewById(R.id.tv_result)).setText(mResult);
 			break;

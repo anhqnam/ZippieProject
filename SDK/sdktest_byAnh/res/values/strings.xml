@@ -13,6 +13,8 @@
     <string name="openSignUp">Sign Up</string>
     <string name="openContact">Contact</string>
     <string name="openSetting">Setting</string>
+    <string name="openAvatar">Avatar</string>
+
     <!-- For sign up -->
     <string name="signupRegisterSMS">RegisterSMS</string>
     <string name="signupActivateSMS">ActivateSMS</string>
@@ -47,5 +49,26 @@
     <string name="contactRequestView">RequestView</string>
     <string name="contactUnregisterListener">UnregisterListener</string>
     <string name="contactVerifyNumber">VerifyNumber</string>
+
+    <!-- Activity setting -->
+    <string name="getcountrycode">Get Country Code</string>
+    <string name="getdisplayname">Get Display Name</string>
+    <string name="getRegistrationNumber">Get Registration Number</string>
+    <string name="isRegistered">is Registered</string>
+
+    <!-- Activity avatar -->
+    <string name="addAvatarListener">add Avatar Listener</string>
+    <string name="getAvatar">get Avatar</string>
+    <string name="getAvatarFullPath">get Avatar Full Path</string>
+    <string name="getMyAvatar">get MyAvatar</string>
+    <string name="getTempThumbnailAvatar">get Temp Thumbnail Avatar</string>
+    <string name="getThumbnailFilename">get Thumbnail Filename</string>
+    <string name="loadAvatarImageBitmap">load Avatar Image Bitmap</string>
+    <string name="loadMyAvatar">load My Avatar</string>
     
+    <string name="loadTempThumbnailImageBitmap">load Temp Thumbnail Image Bitmap</string>
+    <string name="loadThumbnailImageBitmap">load Thumbnail Image Bitmap</string>
+    <string name="removeAvatarListener">remove Avatar Listener</string>
+    <string name="sendAvatar">send Avatar</string>
+
 </resources>

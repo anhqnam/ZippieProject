@@ -23,6 +23,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		findViewById(R.id.openSignUp).setOnClickListener(this);
 		findViewById(R.id.openContact).setOnClickListener(this);
 		findViewById(R.id.openSetting).setOnClickListener(this);
+		findViewById(R.id.openAvatar).setOnClickListener(this);
 
 /*		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
@@ -316,7 +317,9 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		case R.id.openSetting:
 			i.setClass(getApplicationContext(), SettingActivity.class);
 			break;
-
+		case R.id.openAvatar:
+			i.setClass(getApplicationContext(), AvatarActivity.class);
+			break;
 		default:
 			break;
 		}

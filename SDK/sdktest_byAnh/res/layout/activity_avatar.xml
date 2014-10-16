@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/addAvatarListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/addAvatarListener" />
+
+            <Button
+                android:id="@+id/getAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/getAvatar" />
+
+            <Button
+                android:id="@+id/getAvatarFullPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/getAvatarFullPath" />
+
+            <Button
+                android:id="@+id/getMyAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/getMyAvatar" />
+
+            <!--  -->
+
+            <Button
+                android:id="@+id/getTempThumbnailAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/getTempThumbnailAvatar" />
+
+            <Button
+                android:id="@+id/getThumbnailFilename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/getThumbnailFilename" />
+
+            <Button
+                android:id="@+id/loadAvatarImageBitmap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loadAvatarImageBitmap" />
+
+            <Button
+                android:id="@+id/loadMyAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loadMyAvatar" />
+
+            <!--  -->
+
+            <Button
+                android:id="@+id/loadTempThumbnailImageBitmap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loadTempThumbnailImageBitmap" />
+
+            <Button
+                android:id="@+id/loadThumbnailImageBitmap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loadThumbnailImageBitmap" />
+
+            <Button
+                android:id="@+id/removeAvatarListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/removeAvatarListener" />
+
+            <Button
+                android:id="@+id/sendAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sendAvatar" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_avatarResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

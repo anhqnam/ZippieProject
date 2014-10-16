@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:orientation="vertical" >
 
     <!--
                  <LinearLayout
@@ -39,30 +39,44 @@
         android:layout_height="match_parent"
         tools:context="com.example.sdktest.MainActivity"
         tools:ignore="MergeRootFrame" >
+    </FrameLayout> -->
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
-    </FrameLayout>
-    -->
+        <Button
+            android:id="@+id/openSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/openSignUp" />
 
+        <Button
+            android:id="@+id/openContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/openContact" />
+
+        <Button
+            android:id="@+id/openSetting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/openSetting" />
+    </LinearLayout>
+  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
     <Button
-        android:id="@+id/openSignUp"
+        android:id="@+id/openAvatar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/openSignUp" />
-
-    <Button
-        android:id="@+id/openContact"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/openContact" />
-
-    <Button
-        android:id="@+id/openSetting"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/openSetting" />
+        android:text="@string/openAvatar" />
+    </LinearLayout>
 
 </LinearLayout>
