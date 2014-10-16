@@ -5,15 +5,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     
-    <!-- Sign Up resources string -->
-    <string name="create_profile_finish_text">Finish</string>
-    <!-- End sign up -->
-    
     <!-- Top menu resources string -->
     <string name="introduce_skip_text"><u>Skip</u></string>
     <!-- End top menu -->
     
-    <!-- Welcome resources string-->
+        <!-- Welcome resources string-->
     <string name="privacy">© 2014 Zippie. <u><b><font fgcolor="#ff3498db">Privacy Policy</font></b></u></string>
     <string name="slogan">Free messages and calls to Zippie users \nSend a eGift to your loved one.\n What are you waiting for?</string>
     <string name="start">Start</string>
@@ -23,5 +19,17 @@
     <string name="contact_all">All</string>
     <string name="contact_favorites">Favorites</string>
     <string name="contact_search">Search</string>
-	<!-- End contact -->
+	<!-- End contact -->    
+
+    <!-- Create profile resources string -->
+    <string name="create_profile_finish_text">Finish</string>
+    <string name="create_profile_add_photo_text">+ <u>Add photo</u></string>
+    <string name="create_profile_hint_name">Enter your name</string>
+    <string name="create_profile_hint_email">Enter email (optional)</string>
+    <string name="create_profile_text_face">Use Facebook Info</string>
+    <string name="create_profile_logo_face">f</string>
+    <string name="create_profile_or">or</string>
+    <string name="create_profile_action_bar_title">CREATE YOUR PROFILE</string>
+    <!-- End create profile -->
+
 </resources>

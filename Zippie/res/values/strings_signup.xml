@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- string of welcome screen -->
+    <string name="privacy">© 2014 Zippie. <u>Privacy Policy</u></string>
+    <string name="slogan">Free messages and calls to Zippie users \nSend a eGift to your loved one.\n What are you waiting for?</string>
+    <!--  string of  -->
+</resources>

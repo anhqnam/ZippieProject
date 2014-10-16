@@ -2,13 +2,13 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
         -->
     </style>
 
@@ -16,9 +16,26 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    
-    <!-- Splash theme  -->
-    <style name="Theme.Splash" parent="@android:style/Theme.Light.NoTitleBar">
-    </style>
 
+    <!-- Splash theme -->
+    <style name="Theme.Splash" parent="@android:style/Theme.Light.NoTitleBar"></style>
+    
+    <!-- Sign-up theme -->
+    <style name="Theme.SignUp" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="actionBarStyle">@style/Custom.Theme.ActionBar</item>
+    </style>
+    
+    <!-- Action bar theme -->
+    <style name="Custom.Theme.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="android:background">@color/button_normal_blue</item>
+        <item name="titleTextStyle">@style/Custom.Theme.ActionBarTextStyle</item>
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+    <!-- Action bar text style -->
+    <style name="Custom.Theme.ActionBarTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_size_48_point</item>
+    </style>
+    
 </resources>

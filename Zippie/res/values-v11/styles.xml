@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme for API 11+. This theme completely replaces
@@ -6,6 +6,24 @@
     -->
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
         <!-- API 11 theme customizations can go here. -->
+    </style>
+    
+    <!-- Sign-up theme -->
+    <style name="Theme.SignUp" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:actionBarStyle">@style/Custom.Theme.ActionBar</item>
+    </style>
+    
+    <!-- Action bar theme -->
+    <style name="Custom.Theme.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="android:background">@color/button_normal_blue</item>
+        <item name="android:titleTextStyle">@style/Custom.Theme.ActionBarTextStyle</item>
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+    <!-- Action bar text style -->
+    <style name="Custom.Theme.ActionBarTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_size_48_point</item>
     </style>
 
 </resources>

@@ -76,7 +76,9 @@ public class CircularImageView extends ImageView {
     @Override
     public void onDraw(Canvas canvas) {
         // load the bitmap
-        image = drawableToBitmap(getDrawable());
+        if(image == null){
+            image = drawableToBitmap(getDrawable());
+        }
 
         // init shader
         if (image != null) {
@@ -114,7 +116,15 @@ public class CircularImageView extends ImageView {
             result = specSize;
         } else if (specMode == MeasureSpec.AT_MOST) {
             // The child can be as large as it wants up to the specified size.
-            result = specSize;
+            //result = specSize;
+            if(image == null){
+                image = drawableToBitmap(getDrawable());
+            }
+            if(image != null){
+                result = image.getWidth();
+            }else{
+                result = 0;
+            }
         } else {
             // The parent has not imposed any constraint on the child.
             result = canvasSize;
@@ -133,7 +143,15 @@ public class CircularImageView extends ImageView {
             result = specSize;
         } else if (specMode == MeasureSpec.AT_MOST) {
             // The child can be as large as it wants up to the specified size.
-            result = specSize;
+            //result = specSize;
+            if(image == null){
+                image = drawableToBitmap(getDrawable());
+            }
+            if(image != null){
+                result = image.getHeight();
+            }else{
+                result = 0;
+            }
         } else {
             // Measure the text (beware: ascent is a negative number)
             result = canvasSize;

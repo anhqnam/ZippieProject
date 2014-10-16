@@ -42,7 +42,7 @@ public class IntroduceFragment extends Fragment implements OnClickListener{
         // TODO Auto-generated method stub
         View view = inflater.inflate(R.layout.layout_introduce, null);
         TextView tvSkip = (TextView)view.findViewById(R.id.introduce_skip_text);
-        Utils.setTypeface(getActivity(), tvSkip, "Roboto-Light.ttf");
+        Utils.setTypefaceRoboto(getActivity(), tvSkip);
         tvSkip.setOnClickListener(this);
         ViewPager viewPager = (ViewPager)view.findViewById(R.id.introduce_view_pager);
         IntroduceAdapter adapter = new IntroduceAdapter(getFragmentManager(), getListIntroduceItemFragment());

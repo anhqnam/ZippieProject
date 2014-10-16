@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="background_logo_facebook_blue">#3b589e</color>
+ <!--  button default -->
+    <color name="button_default_notpress">#ff3498db</color>
+    <color name="button_default_press">#cd3498db</color>
+    
+    <color name="background_logo_facebook_notpress">#ff3b589e</color>
+    <color name="background_logo_facebook_press">#cd3b589e</color>
     <color name="button_normal_blue">#3598db</color>
     <color name="action_bar_background">#21ae60</color>
     <color name="action_bar_title">#FFFFFF</color>

@@ -2,7 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:custom="http://schemas.android.com/apk/res/com.lunextelecom.zippie"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:padding="20dp" 
+    android:background="@android:color/white">
     
     <LinearLayout
         android:id="@+id/create_profile_top_layout"
@@ -11,74 +13,106 @@
         android:orientation="vertical"
         android:layout_above="@+id/create_profile_finish">
         
-        <LinearLayout 
+        <LinearLayout android:id="@+id/create_profile_button_face"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_margin="20dp"
-            android:background="@color/background_logo_facebook_blue">
+            android:gravity="center_vertical"
+            android:background="@drawable/button_color_facebook">
             <TextView android:id="@+id/create_profile_logo_face_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/white"
-                android:textSize="30sp"
+                android:textSize="@dimen/text_size_128_point"
                 android:textStyle="bold"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="f"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/create_profile_logo_face"/>
             <View 
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:background="#6379b2"/>
-            <TextView android:layout_width="match_parent"
+            <TextView android:id="@+id/create_profile_text_face"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
                 android:gravity="center"
-                android:textSize="24sp"
+                android:textSize="@dimen/text_size_72_point"
                 android:textColor="@android:color/white"
-                android:text="Use Facebook Info"/>
+                android:text="@string/create_profile_text_face"/>
         </LinearLayout>
         
         <LinearLayout android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
             <View android:layout_width="0dp"
                 android:layout_weight="2"
                 android:layout_height="1dp"
-                android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_gravity="center_vertical"
                 android:background="#dddddd"/>
-            <TextView android:layout_width="wrap_content"
+            <TextView android:id="@+id/create_profile_or"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#666666"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
                 android:textSize="20sp"
-                android:text="or"/>
+                android:text="@string/create_profile_or"/>
             <View android:layout_width="0dp"
                 android:layout_weight="2"
                 android:layout_height="1dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:background="#dddddd"/>
         </LinearLayout>
         
         <com.lunextelecom.zippie.view.CircularImageView
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:src="@drawable/profile_default"
             custom:border="true"
-            custom:border_color="@android:color/white"
             custom:border_width="0dp"
-            custom:shadow="true" />
+            android:layout_gravity="center_horizontal"/>
+        <TextView android:id="@+id/create_profile_add_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/text_size_60_point"
+            android:textColor="@drawable/text_link_color_default"
+            android:text="@string/create_profile_add_photo_text"/>
+        <EditText android:id="@+id/create_profile_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="@string/create_profile_hint_name"
+            android:textSize="@dimen/text_size_60_point"/>
+        <EditText android:id="@+id/create_profile_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="@string/create_profile_hint_email"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/text_size_60_point"/>
         
     </LinearLayout>
     <Button
         android:id="@+id/create_profile_finish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/button_color_default"
         android:layout_alignParentBottom="true"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_72_point"
         android:text="@string/create_profile_finish_text"/>
 </RelativeLayout>
