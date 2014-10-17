@@ -1,5 +1,6 @@
 package com.example.sdktest.api;
 
+import unique.packagename.sdkwrapper.avatars.AvatarWrapper;
 import unique.packagename.sdkwrapper.contacts.ContactsWrapper;
 import unique.packagename.sdkwrapper.registration.RegistrationWrapper;
 import unique.packagename.sdkwrapper.registration.id.IRegistrationStateProvider;
@@ -12,6 +13,7 @@ public class APIHelper {
 	private RegistrationWrapper mRegistrationWrapper;
 	private ContactsWrapper mContactsWrapper;
 	private SettingsWrapper mSettingsWrapper; 
+	private AvatarWrapper mAvatarWrapper;
 	
 	private APIHelper() {
 		// TODO Auto-generated constructor stub
@@ -57,6 +59,15 @@ public class APIHelper {
 			mSettingsWrapper = new SettingsWrapper();
 		}
 		return mSettingsWrapper;
+	}
+	
+	public AvatarWrapper getAvatarWrapper()
+	{
+		if(mAvatarWrapper == null)
+		{
+			mAvatarWrapper = new AvatarWrapper();
+		}
+		return mAvatarWrapper;
 	}
 	
 	

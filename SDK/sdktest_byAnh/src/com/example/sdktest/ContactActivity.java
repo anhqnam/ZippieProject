@@ -2,9 +2,6 @@ package com.example.sdktest;
 
 import java.util.List;
 
-import com.example.sdktest.api.APIHelper;
-import com.voipswitch.contacts.Contact;
-
 import unique.packagename.sdkwrapper.contacts.ContactsWrapper;
 import unique.packagename.sdkwrapper.contacts.IOnContactsChangeListener;
 import unique.packagename.sdkwrapper.contacts.IOnSyncContactsListener;
@@ -19,6 +16,9 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.sdktest.api.APIHelper;
+import com.voipswitch.contacts.Contact;
 
 public class ContactActivity extends Activity implements OnClickListener {
 
@@ -43,6 +43,14 @@ public class ContactActivity extends Activity implements OnClickListener {
 	
 	private void init() {
 		mContactsWrapper = APIHelper.getInstance().getContactsWrapper();
+		mContactsWrapper.addContactsChangeListener(new IOnContactsChangeListener() {
+			
+			@Override
+			public void onContacsChanged() {
+				// TODO Auto-generated method stub
+				Log.d("ContactActivity", "onContacsChanged");
+			}
+		});
 		
 		findViewById(R.id.contactFetchClick).setOnClickListener(this);
 		findViewById(R.id.contactFetch1Click).setOnClickListener(this);
@@ -64,8 +72,6 @@ public class ContactActivity extends Activity implements OnClickListener {
 		findViewById(R.id.contactHasVippieNumberClick).setOnClickListener(this);
 		findViewById(R.id.contactIsVippieIdClick).setOnClickListener(this);
 		findViewById(R.id.contactIsVippieNumberClick).setOnClickListener(this);
-		findViewById(R.id.contactPhoneForVippieNumberClick).setOnClickListener(
-				this);
 		findViewById(R.id.contactPrepareNumberClick).setOnClickListener(this);
 		findViewById(R.id.contactRegisterListenerClick)
 				.setOnClickListener(this);
@@ -73,10 +79,8 @@ public class ContactActivity extends Activity implements OnClickListener {
 				.setOnClickListener(this);
 		findViewById(R.id.contactRequestAddNewClick).setOnClickListener(this);
 		findViewById(R.id.contactRequestEditClick).setOnClickListener(this);
-
+		findViewById(R.id.contactRequestPickClick).setOnClickListener(this);
 		findViewById(R.id.contactRequestViewClick).setOnClickListener(this);
-		findViewById(R.id.contactUnregisterListenerClick).setOnClickListener(
-				this);
 		findViewById(R.id.contactVerifyNumberClick).setOnClickListener(this);
 
 	}
@@ -170,7 +174,6 @@ public class ContactActivity extends Activity implements OnClickListener {
 				mResult = " stt " + i + " : " + m;
 				((TextView) findViewById(R.id.tv_result)).setText(mResult);
 			}
-
 			break;
 		}
 		case R.id.contactContainsVippieNumbersCachedsClick: {
@@ -209,30 +212,31 @@ public class ContactActivity extends Activity implements OnClickListener {
 
 		case R.id.contactGetNumberForVippieClick: {
 			((TextView) findViewById(R.id.tv_result)).setText("");
-			String number1 = mContactsWrapper.getNumberForVippie("+148792440117");
-			String number2 = mContactsWrapper.getNumberForVippie("1888373");
+			String number1 = mContactsWrapper.getNumberForVippie("1873514");
+			String number2 = mContactsWrapper.getNumberForVippie("1888065");
 			mResult = " number 1: " + number1 + " number 2: " + number2;
 			((TextView) findViewById(R.id.tv_result)).setText(mResult);
 			break;
 		}
 		case R.id.contactGetVippieLoginForNumberClick: {
 			String number1 = mContactsWrapper
-					.getVippieLoginForNumber("+148792440117");
+					.getVippieLoginForNumber("84922012350");
 			String number2 = mContactsWrapper
-					.getVippieLoginForNumber("1888373");
+					.getVippieLoginForNumber("84908475112");
 			mResult = " number 1: " + number1 + " number 2: " + number2;
 			((TextView) findViewById(R.id.tv_result)).setText(mResult);
 			break;
 		}
 		case R.id.contactGetVippiePhonesClick: {
 			((TextView) findViewById(R.id.tv_result)).setText("");
+			mResult ="";
 			java.util.List<com.voipswitch.contacts.Contact.Phone> list;
 			List<com.voipswitch.contacts.Contact.Phone> phone;
 			Contact[] iContacts = mContactsWrapper.fetch();
 			for (int i = 0; i < iContacts.length; i++) {
 				list = (iContacts[i].getPhones());
 				phone = mContactsWrapper.getVippiePhones(list);
-				mResult = " " + phone.toString();
+				mResult += " " + phone.toString();
 				((TextView) findViewById(R.id.tv_result)).setText(mResult);
 			}
 			break;
@@ -252,21 +256,19 @@ public class ContactActivity extends Activity implements OnClickListener {
 		}
 		case R.id.contactIsVippieIdClick: {
 			Boolean b;
-			b = mContactsWrapper.isVippieId("1877256");
+			b = mContactsWrapper.isVippieId("1882919");
 			mResult = " " + b.toString();
 			((TextView) findViewById(R.id.tv_result)).setText(mResult);
 			break;
 		}
 		case R.id.contactIsVippieNumberClick: {
 			Boolean b;
-			b = mContactsWrapper.isVippieNumber("+148792440117");
+			b = mContactsWrapper.isVippieNumber("841656823341");
 			mResult = " " + b.toString();
 			((TextView) findViewById(R.id.tv_result)).setText(mResult);
 			break;
 		}
-		case R.id.contactPhoneForVippieNumberClick: {
-			break;
-		}
+		
 		case R.id.contactPrepareNumberClick: {
 			String prepare = "";
 			prepare = mContactsWrapper.prepareNumber("01656823341");
@@ -289,15 +291,19 @@ public class ContactActivity extends Activity implements OnClickListener {
 			break;
 		}
 		case R.id.contactRequestAddNewClick:
-			Intent intend;
-			intend = mContactsWrapper.requestAddNew();
-			mResult = " " + intend;
+		{
+			Intent intent;
+			intent = mContactsWrapper.requestAddNew();
+			startActivityForResult(intent,1);
+			mResult = " " + intent;
 			((TextView) findViewById(R.id.tv_result)).setText(mResult);
 			break;
+		}
 		case R.id.contactRequestEditClick: {
-			Contact contact = mContactsWrapper.fetch(3, false);
+			Contact contact = mContactsWrapper.fetch(12, false);
 			Intent intent;
 			intent = mContactsWrapper.requestEdit(contact);
+			startActivityForResult(intent,1);
 			mResult = " " + intent;
 			((TextView) findViewById(R.id.tv_result)).setText(mResult);
 			break;
@@ -306,11 +312,17 @@ public class ContactActivity extends Activity implements OnClickListener {
 			Contact contact = mContactsWrapper.fetch(3, false);
 			Intent intent;
 			intent = mContactsWrapper.requestView(contact);
-			mResult = " " + intent;
+			startActivityForResult(intent,1);
+			mResult = " " + intent;			
 			((TextView) findViewById(R.id.tv_result)).setText(mResult);
 			break;
 		}
-		case R.id.contactUnregisterListenerClick: {
+		case R.id.contactRequestPickClick: {
+			Intent intent;
+			intent = mContactsWrapper.requestPick();
+			startActivityForResult(intent,1);
+			mResult = " " + intent;
+			((TextView) findViewById(R.id.tv_result)).setText(mResult);
 			break;
 		}
 		case R.id.contactVerifyNumberClick: {
@@ -323,4 +335,6 @@ public class ContactActivity extends Activity implements OnClickListener {
 			break;
 		}
 	}
+	
+	
 }

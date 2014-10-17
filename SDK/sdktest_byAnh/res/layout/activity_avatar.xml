@@ -91,6 +91,12 @@
         </LinearLayout>
     </ScrollView>
 
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/sendAvatar" />
+
     <TextView
         android:id="@+id/tv_avatarResult"
         android:layout_width="match_parent"

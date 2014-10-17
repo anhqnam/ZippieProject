@@ -98,12 +98,6 @@
                 android:text="@string/contactIsVippieNumber" />
 
             <Button
-                android:id="@+id/contactPhoneForVippieNumberClick"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/contactPhoneForVippieNumber" />
-
-            <Button
                 android:id="@+id/contactPrepareNumberClick"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -138,12 +132,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/contactRequestView" />
-
+            
             <Button
-                android:id="@+id/contactUnregisterListenerClick"
+                android:id="@+id/contactRequestPickClick"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactUnregisterListener" />
+                android:text="@string/contactRequestPick" />
+
+          
 
             <Button
                 android:id="@+id/contactVerifyNumberClick"
