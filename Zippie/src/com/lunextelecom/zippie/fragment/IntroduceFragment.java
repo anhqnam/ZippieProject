@@ -4,6 +4,7 @@
  */
 package com.lunextelecom.zippie.fragment;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
@@ -21,12 +22,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.Interpolator;
 import android.widget.TextView;
 
 import com.lunextelecom.zippie.R;
 import com.lunextelecom.zippie.adapter.IntroduceAdapter;
 import com.lunextelecom.zippie.utils.Utils;
 import com.lunextelecom.zippie.view.CirclePageIndicator;
+import com.lunextelecom.zippie.view.FixedSpeedScroller;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -34,6 +38,20 @@ import com.lunextelecom.zippie.view.CirclePageIndicator;
  */
 public class IntroduceFragment extends Fragment implements OnClickListener{
 
+    /** The Constant DELAY_BEFORE_AUTO_SCROLL. */
+    private final static int DELAY_BEFORE_AUTO_SCROLL = 10000;
+
+    /** The Constant SPEED_DISTANCE_AUTO_SCROLL. */
+    private final static int SPEED_DISTANCE_AUTO_SCROLL = 5000;
+
+    /** The Constant SPEED_SCROLL_AUTO. */
+    private final static int SPEED_SCROLL_AUTO = 600;
+
+    /** The Constant SPEED_SCROLL_NORMAL. */
+    private final static int SPEED_SCROLL_NORMAL = 100;
+
+    /** The Constant SPEED_SCROLL_QUICK. */
+    private final static int SPEED_SCROLL_QUICK = 10;
     /** The m handler. */
     private final Handler mHandler = new Handler();
 
@@ -49,8 +67,18 @@ public class IntroduceFragment extends Fragment implements OnClickListener{
     /** The m timer. */
     private Timer mTimer;
 
+    /** The m scroller. */
+    private FixedSpeedScroller mScroller;
+
+    /**
+     * The Enum IntroduceFrom.
+     */
     public enum IntroduceFrom{
+
+        /** The local. */
         LOCAL,
+
+        /** The server. */
         SERVER
     }
 
@@ -102,17 +130,25 @@ public class IntroduceFragment extends Fragment implements OnClickListener{
                 if(mTimer != null){
                     mTimer.cancel();
                     mTimer = null;
-                    viewPagerAutoScroll(5);
+                    mScroller.setFixedDuration(SPEED_SCROLL_NORMAL);
+                    viewPagerAutoScroll();
                 }
                 return false;
             }
         });
-
-        viewPagerAutoScroll(5);
-
         return view;
     }
 
+    /* (non-Javadoc)
+     * @see android.support.v4.app.Fragment#onStart()
+     */
+    @Override
+    public void onStart() {
+        // TODO Auto-generated method stub
+        super.onStart();
+        viewPagerAutoScroll();
+        setScrollAutoViewPagerSpeed();
+    }
     /* (non-Javadoc)
      * @see android.view.View.OnClickListener#onClick(android.view.View)
      */
@@ -133,13 +169,18 @@ public class IntroduceFragment extends Fragment implements OnClickListener{
     /**
      * Gets the list introduce item fragment.
      * 
+     * @param modeType the mode type
      * @return the list introduce item fragment
      */
     private List<IntroduceItemFragment> getListIntroduceItemFragment(IntroduceFrom modeType){
         List<Object> listImage = null;
         if(modeType == IntroduceFrom.LOCAL){
             //TODO load from local
-            listImage = getListImageFromLocal();
+            listImage = new ArrayList<Object>();
+            listImage.add(R.drawable.intro_01);
+            listImage.add(R.drawable.intro_02);
+            listImage.add(R.drawable.intro_03);
+            listImage.add(R.drawable.intro_04);
         }else{
             //TODO load from server
         }
@@ -155,25 +196,9 @@ public class IntroduceFragment extends Fragment implements OnClickListener{
     }
 
     /**
-     * Gets the list image from local.
-     * 
-     * @return the list image from local
-     */
-    private List<Object> getListImageFromLocal(){
-        List<Object> list = new ArrayList<Object>();
-        list.add(R.drawable.intro_01);
-        list.add(R.drawable.intro_02);
-        list.add(R.drawable.intro_03);
-        list.add(R.drawable.intro_04);
-        return list;
-    }
-
-    /**
      * View pager auto scroll.
-     * 
-     * @param seconds the seconds
      */
-    public void viewPagerAutoScroll(final int seconds){
+    public void viewPagerAutoScroll(){
         mTimer = new Timer();
         mTimer.schedule(new TimerTask() {
             @Override
@@ -185,16 +210,39 @@ public class IntroduceFragment extends Fragment implements OnClickListener{
                         int currentPage = mViewPager.getCurrentItem();
                         int numberPage = mAdapter.getCount();
                         if (currentPage == numberPage-1) {
-                            mDirection = -1;
-                        }
-                        if(currentPage == 0){
-                            mDirection = 1;
+                            currentPage = -1;
+                            mScroller.setFixedDuration(SPEED_SCROLL_QUICK);
+                        }else{
+                            mScroller.setFixedDuration(SPEED_SCROLL_AUTO);
                         }
                         mViewPager.setCurrentItem(currentPage+mDirection, true);
                     }
                 });
 
             }
-        }, 10*1000, seconds*1000);
+        }, DELAY_BEFORE_AUTO_SCROLL, SPEED_DISTANCE_AUTO_SCROLL);
+    }
+
+    /**
+     * Sets the scroll auto view pager speed.
+     */
+    public void setScrollAutoViewPagerSpeed(){
+        Interpolator sInterpolator = new AccelerateInterpolator();
+        try {
+            Field scrollerField = ViewPager.class.getDeclaredField("mScroller");
+            scrollerField.setAccessible(true);
+            mScroller = new FixedSpeedScroller(mViewPager.getContext(), sInterpolator);
+            mScroller.setFixedDuration(SPEED_SCROLL_NORMAL);
+            scrollerField.set(mViewPager, mScroller);
+        } catch (NoSuchFieldException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IllegalArgumentException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 }
