@@ -73,7 +73,7 @@ public class WelcomeScreenFragment extends Fragment {
 		View view = inflater.inflate(R.layout.welcome_screen, null);
 		mSloganTextView = (TextView)view.findViewById(R.id.slogan);
 		mStartTextView = (TextView)view.findViewById(R.id.txtStart);
-		mPrivacyTextView = (TextView)view.findViewById(R.id.privacy);
+		mPrivacyTextView = (TextView)view.findViewById(R.id.tv_Privacy);
 		Utils.setTypefaceRoboto(getActivity(),mSloganTextView, mStartTextView, mPrivacyTextView);
 		
 		mButtonStart = (ImageView)view.findViewById(R.id.btnStart);
