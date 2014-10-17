@@ -23,7 +23,12 @@
     <!-- Sign-up theme -->
     <style name="Theme.SignUp" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-        <item name="actionBarStyle">@style/Custom.Theme.ActionBar</item>
+        <item name="actionBarStyle">@style/Custom.Theme.None.ActionBar</item>
+    </style>
+    
+    <!-- Theme none action bar-->
+    <style name="Custom.Theme.None.ActionBar" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
     </style>
     
     <!-- Action bar theme -->

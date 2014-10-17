@@ -42,6 +42,9 @@ public class InputPhoneNumberFragment extends Fragment {
 
 	/** The m action bar. */
 	private ActionBar mActionBar;
+	
+	/** The m title text view. */
+	private TextView mTitleTextView;
 
 	/*
 	 * (non-Javadoc)
@@ -55,16 +58,17 @@ public class InputPhoneNumberFragment extends Fragment {
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		//mActionBar.setTitle(R.string.title_input_number);
-		SpannableString s = new SpannableString(getResources().getString(
+		/*SpannableString s = new SpannableString(getResources().getString(
 				R.string.title_input_number));
 		s.setSpan(new TypefaceSpan("fonts/Roboto.ttf"), 0, s.length(),
 				Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 		mActionBar = ((ActionBarActivity) getActivity())
 				.getSupportActionBar();
 		mActionBar.show();
-		mActionBar.setTitle(s);
-
+		mActionBar.setTitle(s);*/
 		View view = inflater.inflate(R.layout.input_phone_number, null);
+		mTitleTextView = (TextView)view.findViewById(R.id.txtTitle);
+		mTitleTextView.setText(R.string.title_input_number);
 		mShowTextView = (TextView) view.findViewById(R.id.txtTextView);
 		mCountryTextView = (TextView) view.findViewById(R.id.txtCountry);
 		mFlagImageView = (ImageView) view.findViewById(R.id.imgFlag);
