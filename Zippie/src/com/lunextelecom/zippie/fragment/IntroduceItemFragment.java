@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.lunextelecom.zippie.R;
+import com.lunextelecom.zippie.fragment.IntroduceFragment.IntroduceFrom;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -21,17 +22,21 @@ import com.lunextelecom.zippie.R;
  */
 public class IntroduceItemFragment extends Fragment{
 
-    /** The m image id. */
-    private int mImageId;
+    /** The m image. */
+    private Object mImage;
+
+    /** The m mode type. */
+    private IntroduceFrom mModeType;
 
     /**
      * Instantiates a new introduce item fragment.
      * 
-     * @param imageId the image id
+     * @param image the image
      */
-    public IntroduceItemFragment(int imageId) {
+    public IntroduceItemFragment(Object image, IntroduceFrom modeType) {
         // TODO Auto-generated constructor stub
-        mImageId = imageId;
+        mImage = image;
+        mModeType = modeType;
     }
 
     /* (non-Javadoc)
@@ -44,7 +49,11 @@ public class IntroduceItemFragment extends Fragment{
         // TODO Auto-generated method stub
         View view = inflater.inflate(R.layout.layout_introduce_item, null);
         ImageView imageView = (ImageView)view.findViewById(R.id.iv_intro);
-        imageView.setImageResource(mImageId);
+        if(mModeType == IntroduceFrom.LOCAL){
+            imageView.setImageResource((Integer)mImage);
+        }else{
+            //TODO load bitmap from server set to imageview
+        }
         return view;
     }
 }

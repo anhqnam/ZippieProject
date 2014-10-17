@@ -1,5 +1,12 @@
+/*
+ * @author Jake Wharton
+ * @custom Vuong Huynh
+ * Copyright (C) 2012 Jake Wharton
+ * http://viewpagerindicator.com/
+ */
 package com.lunextelecom.zippie.view;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -17,21 +24,55 @@ import android.widget.ImageView;
 
 import com.lunextelecom.zippie.R;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CircularImageView.
+ */
+@SuppressLint("DrawAllocation")
 public class CircularImageView extends ImageView {
+
+    /** The border width. */
     private int borderWidth;
+
+    /** The canvas size. */
     private int canvasSize;
+
+    /** The image. */
     private Bitmap image;
+
+    /** The paint. */
     private Paint paint;
+
+    /** The paint border. */
     private Paint paintBorder;
 
+    /**
+     * Instantiates a new circular image view.
+     * 
+     * @param context the context
+     */
     public CircularImageView(final Context context) {
         this(context, null);
     }
 
+    /**
+     * Instantiates a new circular image view.
+     * 
+     * @param context the context
+     * @param attrs the attrs
+     */
     public CircularImageView(Context context, AttributeSet attrs) {
         this(context, attrs, R.attr.circularImageViewStyle);
     }
 
+    /**
+     * Instantiates a new circular image view.
+     * 
+     * @param context the context
+     * @param attrs the attrs
+     * @param defStyle the def style
+     */
+    @SuppressLint("Recycle")
     public CircularImageView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
@@ -55,24 +96,40 @@ public class CircularImageView extends ImageView {
             addShadow();
     }
 
+    /**
+     * Sets the border width.
+     * 
+     * @param borderWidth the new border width
+     */
     public void setBorderWidth(int borderWidth) {
         this.borderWidth = borderWidth;
         this.requestLayout();
         this.invalidate();
     }
 
-    public void setBorderColor(int borderColor) {
+    /**
+     * Sets the border color.
+     * 
+     * @param borderColor the new border color
+     */
+    @SuppressLint("DrawAllocation") public void setBorderColor(int borderColor) {
         if (paintBorder != null)
             paintBorder.setColor(borderColor);
         this.invalidate();
     }
 
+    /**
+     * Adds the shadow.
+     */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void addShadow() {
         setLayerType(LAYER_TYPE_SOFTWARE, paintBorder);
         paintBorder.setShadowLayer(4.0f, 0.0f, 2.0f, Color.BLACK);
     }
 
+    /* (non-Javadoc)
+     * @see android.widget.ImageView#onDraw(android.graphics.Canvas)
+     */
     @Override
     public void onDraw(Canvas canvas) {
         // load the bitmap
@@ -99,6 +156,9 @@ public class CircularImageView extends ImageView {
         }
     }
 
+    /* (non-Javadoc)
+     * @see android.widget.ImageView#onMeasure(int, int)
+     */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int width = measureWidth(widthMeasureSpec);
@@ -106,6 +166,12 @@ public class CircularImageView extends ImageView {
         setMeasuredDimension(width, height);
     }
 
+    /**
+     * Measure width.
+     * 
+     * @param measureSpec the measure spec
+     * @return the int
+     */
     private int measureWidth(int measureSpec) {
         int result = 0;
         int specMode = MeasureSpec.getMode(measureSpec);
@@ -133,6 +199,12 @@ public class CircularImageView extends ImageView {
         return result;
     }
 
+    /**
+     * Measure height.
+     * 
+     * @param measureSpecHeight the measure spec height
+     * @return the int
+     */
     private int measureHeight(int measureSpecHeight) {
         int result = 0;
         int specMode = MeasureSpec.getMode(measureSpecHeight);
@@ -160,6 +232,12 @@ public class CircularImageView extends ImageView {
         return (result + 2);
     }
 
+    /**
+     * Drawable to bitmap.
+     * 
+     * @param drawable the drawable
+     * @return the bitmap
+     */
     public Bitmap drawableToBitmap(Drawable drawable) {
         if (drawable == null) {
             return null;

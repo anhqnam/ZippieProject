@@ -10,7 +10,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 
 import com.lunextelecom.zippie.R;
-import com.lunextelecom.zippie.fragment.CreateProfileFragment;
+import com.lunextelecom.zippie.fragment.IntroduceFragment;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -29,8 +29,8 @@ public class TopMenuActivity extends ActionBarActivity{
         setContentView(R.layout.activity_top_menu);
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        //IntroduceFragment introduceFragment = new IntroduceFragment();
-        CreateProfileFragment fragment = new CreateProfileFragment();
+        IntroduceFragment fragment = new IntroduceFragment();
+        //CreateProfileFragment fragment = new CreateProfileFragment();
         fragmentTransaction.add(R.id.top_menu_fragment_contain, fragment);
         fragmentTransaction.commit();
     }

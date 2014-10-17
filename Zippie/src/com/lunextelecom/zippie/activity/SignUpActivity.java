@@ -23,13 +23,13 @@ public class SignUpActivity extends ActionBarActivity {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-	super.onCreate(savedInstanceState);
-	setContentView(R.layout.signup_activity);
-	FragmentManager fragmentManager = getSupportFragmentManager();
-	FragmentTransaction transaction = fragmentManager.beginTransaction();
-	transaction.add(R.id.fragment_container, new SplashScreenFragment());
-	transaction.addToBackStack(null);
-	transaction.commit();
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.signup_activity);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.add(R.id.fragment_container, new SplashScreenFragment());
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
     /*
@@ -39,9 +39,9 @@ public class SignUpActivity extends ActionBarActivity {
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-	// Inflate the menu; this adds items to the action bar if it is present.
-	getMenuInflater().inflate(R.menu.main, menu);
-	return true;
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
     }
 
     /*
@@ -51,10 +51,9 @@ public class SignUpActivity extends ActionBarActivity {
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-	// Handle action bar item clicks here. The action bar will
-	// automatically handle clicks on the Home/Up button, so long
-	// as you specify a parent activity in AndroidManifest.xml.
-	int id = item.getItemId();
-	return super.onOptionsItemSelected(item);
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        return super.onOptionsItemSelected(item);
     }
 }
