@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        
+        android:layout_width="match_parent"
+        android:layout_height="300dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/addcallslog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/addcallslog" />
+
+            <Button
+                android:id="@+id/fetchcallslog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fetchcallslog" />
+
+            <Button
+                android:id="@+id/fetchcallslogtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fetchcallslogtype" />
+            
+            <Button
+                android:id="@+id/fetchcallslogtypenumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fetchcallslogtypenumber" />
+            
+
+            <Button
+                android:id="@+id/fetchcallslognumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fetchcallslognumber" />
+
+            <Button
+                android:id="@+id/fetchIncomingByNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fetchIncomingByNumber" />
+
+            <Button
+                android:id="@+id/fetchOutgoingByNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fetchOutgoingByNumber" />
+
+            <Button
+                android:id="@+id/CallslogregisterListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/CallslogregisterListener" />
+            
+             <Button
+                android:id="@+id/removecallslog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/removecallslog" />
+
+            <Button
+                android:id="@+id/removecallslogentry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/removecallslogentry" />
+
+            <Button
+                android:id="@+id/removecallslogtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/removecallslogtype" />
+
+            <Button
+                android:id="@+id/Removecallslognumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Removecallslognumber" />
+
+            <Button
+                android:id="@+id/RemovecallslogTypeNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/RemovecallslogTypeNumber" />
+
+            <Button
+                android:id="@+id/removeGroupcallslog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/removeGroupcallslog" />
+
+            <Button
+                android:id="@+id/unregisterListenercalslog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unregisterListenercalslog" />
+        </LinearLayout>
+    </ScrollView>
+    
+     <TextView
+        android:id="@+id/tv_CallsLogResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+</LinearLayout>

@@ -14,6 +14,7 @@
     <string name="openContact">Contact</string>
     <string name="openSetting">Setting</string>
     <string name="openAvatar">Avatar</string>
+    <string name="openCallslog">Calls Log</string>
 
     <!-- For sign up -->
     <string name="signupRegisterSMS">RegisterSMS</string>
@@ -65,10 +66,26 @@
     <string name="getThumbnailFilename">get Thumbnail Filename</string>
     <string name="loadAvatarImageBitmap">load Avatar Image Bitmap</string>
     <string name="loadMyAvatar">load My Avatar</string>
-    
     <string name="loadTempThumbnailImageBitmap">load Temp Thumbnail Image Bitmap</string>
     <string name="loadThumbnailImageBitmap">load Thumbnail Image Bitmap</string>
     <string name="removeAvatarListener">remove Avatar Listener</string>
     <string name="sendAvatar">send Avatar</string>
+
+    <!-- Activity CallsLog -->
+    <string name="addcallslog">Add</string>
+    <string name="fetchcallslog">Fetch</string>
+    <string name="fetchcallslogtype">Fetch Type</string>
+    <string name="fetchcallslogtypenumber">Fetch Type and Number</string>
+    <string name="fetchcallslognumber">Fetch Number</string>
+    <string name="fetchIncomingByNumber">Fetch Incoming By Number</string>
+    <string name="fetchOutgoingByNumber">Fetch Outgoing By Number</string>
+    <string name="CallslogregisterListener">Register sListener</string>
+    <string name="removecallslog">Remove</string>
+    <string name="removecallslogentry">Remove Entry</string>
+    <string name="removecallslogtype">Remove Type</string>
+    <string name="Removecallslognumber">Remove Number</string>
+    <string name="RemovecallslogTypeNumber">Remover Type And Number</string>
+    <string name="removeGroupcallslog">Remove Group</string>
+    <string name="unregisterListenercalslog">unregister Listener calslog</string>
 
 </resources>

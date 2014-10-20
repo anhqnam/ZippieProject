@@ -4,7 +4,6 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    
     <!-- need for vippie features -->
     <!-- For bluetooth on android 4.0+ -->
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
@@ -66,7 +65,7 @@
     <!--
     This option is added to disable "Stretch to fill screen" option on tablets
     introduced in android 3.2 - it has bug that crashes the application
-    http://code.google.com/p/android/issues/detail?id=19817
+    http://code.google.com/p/android/issues/detail?id=19817
     -->
 
     <uses-sdk
@@ -81,19 +80,19 @@
         android:resizeable="true"
         android:smallScreens="true"
         android:xlargeScreens="true" />
-    
-    <!--end need for vippie features -->
-    
+
+    <!-- end need for vippie features -->
+
     <application
         android:name=".TestApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        
+
         <!-- ============== all test app stuff here ================= -->
-        
-        <activity     
+
+        <activity
             android:name="com.example.sdktest.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
@@ -102,28 +101,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <activity     
+        <activity
             android:name="com.example.sdktest.SignUpActivity"
             android:label="@string/app_name" >
         </activity>
-        <activity     
+        <activity
+            android:name="com.example.sdktest.CallsLogActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
             android:name="com.example.sdktest.AvatarActivity"
             android:label="@string/app_name" >
         </activity>
-        <activity     
+        <activity
             android:name="com.example.sdktest.SettingActivity"
             android:label="@string/app_name" >
         </activity>
-        <activity     
+        <activity
             android:name="com.example.sdktest.ContactActivity"
             android:label="@string/app_name" >
         </activity>
-        
+
         <!-- ============== end all test app stuff here ================= -->
-        
+
+
         <!-- need for vippie features -->
-        
+
         <activity
             android:name="unique.packagename.features.geolocation.MapActivity"
             android:screenOrientation="portrait"
@@ -147,7 +150,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:scheme="tel" />
-            </intent-filter>
+            </intent-filter>
             -->
             <intent-filter android:priority="1000" >
                 <action android:name="android.intent.action.CALL" />
@@ -185,7 +188,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:scheme="tel" />
-            </intent-filter>
+            </intent-filter>
             -->
             <!--
             sms intercepting is currently disabled
@@ -193,7 +196,7 @@
                 <action android:name="android.intent.action.SENDTO" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:scheme="smsto" />
-            </intent-filter>
+            </intent-filter>
             -->
 
         </activity>
@@ -364,7 +367,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <!-- <activity
+        <!--
+        <activity
             android:name="unique.packagename.dialer.SplashActivity"
             android:alwaysRetainTaskState="true"
             android:configChanges="orientation|keyboardHidden"
@@ -376,7 +380,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> -->
+        </activity>
+        -->
         <activity
             android:name="unique.packagename.callslog.CallsLogActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -390,10 +395,10 @@
             android:theme="@style/Theme.ColorBg" >
         </activity>
         <activity
-            android:launchMode="singleTop"
             android:name="unique.packagename.contacts.ContactsActivityPopup"
             android:configChanges="orientation|keyboardHidden"
             android:excludeFromRecents="true"
+            android:launchMode="singleTop"
             android:theme="@style/Theme.Transparent" >
         </activity>
         <activity
@@ -637,7 +642,7 @@
             <meta-data
                 android:name="android.content.SyncAdapter"
                 android:resource="@xml/contacts_sync" />
-        </service>
+        </service>
         -->
 
         <receiver android:name="unique.packagename.sip.SipCallsManager$IncommingCallReceiver" >
@@ -685,7 +690,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </receiver>
+        </receiver>
         -->
 
         <receiver android:name="unique.packagename.service.ServiceAutoStarter" >
@@ -737,11 +742,12 @@
 
         <!--
              value is downloaded from https://code.google.com/apis/console/
-			For more information how to generate that code read GOOGLE_MAP_KEY.txt attachted to this project        
+			For more information how to generate that code read GOOGLE_MAP_KEY.txt attachted to this project        
         -->
-        
+
+
         <!-- end need for vippie features -->
-        
+
     </application>
 
 </manifest>

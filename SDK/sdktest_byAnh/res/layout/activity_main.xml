@@ -77,6 +77,13 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/openAvatar" />
+    
+    <Button
+        android:id="@+id/openCallslog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/openCallslog" />
     </LinearLayout>
 
 </LinearLayout>
