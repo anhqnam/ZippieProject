@@ -17,7 +17,7 @@
             android:ems="10"
             android:hint="@string/signupHintCountryCode"
             android:inputType="text"
-            android:text="84" >
+            android:text="@string/contrycode84" >
 
             <requestFocus />
         </EditText>
@@ -30,7 +30,7 @@
             android:ems="10"
             android:hint="@string/signupHintPhonenumber"
             android:inputType="text"
-            android:text="933551923" >
+            android:text="@string/numberphone933" >
         </EditText>
 
         <EditText

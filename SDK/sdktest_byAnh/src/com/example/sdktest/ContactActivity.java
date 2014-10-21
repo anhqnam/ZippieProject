@@ -83,6 +83,7 @@ public class ContactActivity extends Activity implements OnClickListener{
 
     @Override
     public void onClick(View v) {
+        mResult = "";
         switch (v.getId()) {
             case R.id.contactFetchClick: {
                 ((TextView)findViewById(R.id.tv_result)).setText("");
@@ -160,24 +161,26 @@ public class ContactActivity extends Activity implements OnClickListener{
             }
             case R.id.contactContainsVippieNumberClick: {
                 ((TextView)findViewById(R.id.tv_result)).setText("");
+                mResult = "";
                 java.util.List<com.voipswitch.contacts.Contact.Phone> list;
                 Contact[] iContacts = mContactsWrapper.fetch();
                 for (int i = 0; i < iContacts.length; i++) {
                     list = (iContacts[i].getPhones());
                     String m = mContactsWrapper.containsVippieNumber(list);
-                    mResult = " stt " + i + " : " + m;
+                    mResult += " stt " + i + " : " + m;
                     ((TextView)findViewById(R.id.tv_result)).setText(mResult);
                 }
                 break;
             }
             case R.id.contactContainsVippieNumbersCachedsClick: {
+                mResult = "";
                 ((TextView)findViewById(R.id.tv_result)).setText("");
                 java.util.List<com.voipswitch.contacts.Contact.Phone> list;
                 Contact[] iContacts = mContactsWrapper.fetch();
                 for (int i = 0; i < iContacts.length; i++) {
                     list = (iContacts[i].getPhones());
                     List<String> m = mContactsWrapper.containsVippieNumbersCached(list);
-                    mResult = " stt " + i + " : " + m;
+                    mResult += " stt " + i + " : " + m;
                     ((TextView)findViewById(R.id.tv_result)).setText(mResult);
                 }
                 break;
@@ -256,13 +259,14 @@ public class ContactActivity extends Activity implements OnClickListener{
             }
             case R.id.contactHasVippieNumberClick: {
                 ((TextView)findViewById(R.id.tv_result)).setText("");
+                mResult = "";
                 java.util.List<com.voipswitch.contacts.Contact.Phone> list;
                 Boolean b;
                 Contact[] iContacts = mContactsWrapper.fetch();
                 for (int i = 0; i < iContacts.length; i++) {
                     list = (iContacts[i].getPhones());
                     b = mContactsWrapper.hasVippieNumber(list);
-                    mResult = " " + b.toString();
+                    mResult += " " + b.toString();
                     ((TextView)findViewById(R.id.tv_result)).setText(mResult);
                 }
                 break;
@@ -276,7 +280,7 @@ public class ContactActivity extends Activity implements OnClickListener{
             }
             case R.id.contactIsVippieNumberClick: {
                 Boolean b;
-                b = mContactsWrapper.isVippieNumber("84922012350");
+                b = mContactsWrapper.isVippieNumber("84933094998");
                 mResult = " " + b.toString();
                 ((TextView)findViewById(R.id.tv_result)).setText(mResult);
                 break;

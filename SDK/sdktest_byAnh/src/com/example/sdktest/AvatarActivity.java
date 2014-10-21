@@ -94,7 +94,7 @@ public class AvatarActivity extends Activity implements OnClickListener {
                 break;
             }
             case R.id.getAvatarFullPath: {
-                String MyResult = avatarwrapper.getAvatarFullPath("1877256");
+                String MyResult = avatarwrapper.getAvatarFullPath("1882919");
                 ((TextView) findViewById(R.id.tv_avatarResult)).setText(MyResult);
                 break;
             }
@@ -109,26 +109,38 @@ public class AvatarActivity extends Activity implements OnClickListener {
                 break;
             }
             case R.id.getThumbnailFilename: {
-                String myResult = avatarwrapper.getThumbnailFilename("1877256");
-                ((TextView) findViewById(R.id.tv_avatarResult)).setText(myResult);
+                ((TextView) findViewById(R.id.tv_avatarResult)).setText("");
+                new getThumbnailfilenametask().execute();
                 break;
             }
             case R.id.loadAvatarImageBitmap: {
+                ((TextView) findViewById(R.id.tv_avatarResult)).setText("");
+                ((ImageView) findViewById(R.id.img_avatar))
+                .setImageBitmap(null);
                 new LoadAvatarBMtask().execute();
                 Log.d("loadAvatarImageBitmap", "loadbitmap");
                 break;
             }
             case R.id.loadMyAvatar: {
+                ((TextView) findViewById(R.id.tv_avatarResult)).setText("");
+                ((ImageView) findViewById(R.id.img_avatar))
+                .setImageBitmap(null);
                 new LoadMyAvatarBMtask().execute();
                 Log.d("loadMyAvatar", "loadbitmap");
                 break;
             }
             case R.id.loadTempThumbnailImageBitmap: {
+                ((TextView) findViewById(R.id.tv_avatarResult)).setText("");
+                ((ImageView) findViewById(R.id.img_avatar))
+                .setImageBitmap(null);
                 new LoadTempThumbnailimageBMtask().execute();
                 Log.d("loadTempThumbnailImageBitmap", "loadbitmap");
                 break;
             }
             case R.id.loadThumbnailImageBitmap: {
+                ((TextView) findViewById(R.id.tv_avatarResult)).setText("");
+                ((ImageView) findViewById(R.id.img_avatar))
+                .setImageBitmap(null);
                 new LoadThumbnailimageBMtask().execute();
                 Log.d("loadThumbnailImageBitmap", "loadbitmap");
                 break;
@@ -163,7 +175,28 @@ public class AvatarActivity extends Activity implements OnClickListener {
         }
     }
 
-    //
+    /**
+     * The Class getThumbnailfilenametask.
+     */
+    private class getThumbnailfilenametask extends AsyncTask<String, String, String>{
+
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#doInBackground(Params[])
+         */
+        @Override
+        protected String doInBackground(String... params) {
+            final String mResult = avatarwrapper.getThumbnailFilename("1874827");
+            return mResult;
+        }
+
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
+         */
+        @Override
+        protected void onPostExecute(String result) {
+            ((TextView) findViewById(R.id.tv_avatarResult)).setText(result);
+        }
+    }
     /**
      * The Class DownloadFilesTask.
      */
@@ -174,7 +207,7 @@ public class AvatarActivity extends Activity implements OnClickListener {
          */
         @Override
         protected String doInBackground(String... params) {
-            String str = Environment.getExternalStorageDirectory().getPath() + "/Vippie/avatars/1877256.jpg";
+            String str = Environment.getExternalStorageDirectory().getPath() + "/Vippie/avatars/temp/1874827.jpg";
             final String mResult = avatarwrapper.sendAvatar(str);
             return mResult;
         }
@@ -199,7 +232,7 @@ public class AvatarActivity extends Activity implements OnClickListener {
          */
         @Override
         protected Integer doInBackground(String... params) {
-            Integer getavatar = avatarwrapper.getAvatar("1877256");
+            Integer getavatar = avatarwrapper.getAvatar("1882919");
             return getavatar;
         }
 
@@ -225,7 +258,7 @@ public class AvatarActivity extends Activity implements OnClickListener {
          */
         @Override
         protected Integer doInBackground(String... params) {
-            Integer getavatar = avatarwrapper.getTempThumbnailAvatar("1877256");
+            Integer getavatar = avatarwrapper.getTempThumbnailAvatar("1882919");
             return getavatar;
         }
 
@@ -250,7 +283,7 @@ public class AvatarActivity extends Activity implements OnClickListener {
          */
         @Override
         protected Bitmap doInBackground(String... params) {
-            Bitmap getavatar = avatarwrapper.loadAvatarImageBitmap("1877256");
+            Bitmap getavatar = avatarwrapper.loadAvatarImageBitmap("1882919");
             return getavatar;
         }
 
@@ -260,7 +293,7 @@ public class AvatarActivity extends Activity implements OnClickListener {
         @Override
         protected void onPostExecute(Bitmap result) {
             if (result == null) {
-                ((TextView) findViewById(R.id.tv_avatarResult)).setText("null");
+                ((TextView) findViewById(R.id.tv_avatarResult)).setText("LoadAvatarBMtask + null");
             } else {
                 ((ImageView) findViewById(R.id.img_avatar))
                 .setImageBitmap(result);
@@ -290,7 +323,7 @@ public class AvatarActivity extends Activity implements OnClickListener {
         @Override
         protected void onPostExecute(Bitmap result) {
             if (result == null) {
-                ((TextView) findViewById(R.id.tv_avatarResult)).setText("null");
+                ((TextView) findViewById(R.id.tv_avatarResult)).setText("LoadMyAvatarBMtask + null");
             } else {
                 ((ImageView) findViewById(R.id.img_avatar))
                 .setImageBitmap(result);
@@ -305,27 +338,21 @@ public class AvatarActivity extends Activity implements OnClickListener {
      */
     private class LoadTempThumbnailimageBMtask extends
     AsyncTask<String, String, Bitmap> {
-
-        /* (non-Javadoc)
-         * @see android.os.AsyncTask#doInBackground(Params[])
-         */
         @Override
         protected Bitmap doInBackground(String... params) {
             Bitmap getavatar = avatarwrapper
-                    .loadTempThumbnailImageBitmap("1874827");
+                    .loadTempThumbnailImageBitmap("1872514");
             return getavatar;
         }
 
-        /* (non-Javadoc)
-         * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
-         */
         @Override
-        protected void onPostExecute(Bitmap result) {
+        protected void onPostExecute(Bitmap result)
+        {
             if (result == null) {
-                ((TextView) findViewById(R.id.tv_avatarResult)).setText("null");
-            } else {
-                ((ImageView) findViewById(R.id.img_avatar))
-                .setImageBitmap(result);
+                ((TextView) findViewById(R.id.tv_avatarResult)).setText("LoadTempThumbnailimageBMtask + null");
+            } else
+            {
+                ((ImageView) findViewById(R.id.img_avatar)).setImageBitmap(result);
             }
 
         }
@@ -338,23 +365,20 @@ public class AvatarActivity extends Activity implements OnClickListener {
     private class LoadThumbnailimageBMtask extends
     AsyncTask<String, String, Bitmap> {
 
-        /* (non-Javadoc)
-         * @see android.os.AsyncTask#doInBackground(Params[])
-         */
+
         @Override
-        protected Bitmap doInBackground(String... params) {
+        protected Bitmap doInBackground(String... params)
+        {
             Bitmap getavatar = avatarwrapper
-                    .loadThumbnailImageBitmap("1874827");
+                    .loadThumbnailImageBitmap("1882919");
             return getavatar;
         }
 
-        /* (non-Javadoc)
-         * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
-         */
         @Override
-        protected void onPostExecute(Bitmap result) {
+        protected void onPostExecute(Bitmap result)
+        {
             if (result == null) {
-                ((TextView) findViewById(R.id.tv_avatarResult)).setText("null");
+                ((TextView) findViewById(R.id.tv_avatarResult)).setText(" LoadThumbnailimageBMtask + null");
             } else {
                 ((ImageView) findViewById(R.id.img_avatar))
                 .setImageBitmap(result);

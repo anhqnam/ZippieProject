@@ -18,6 +18,8 @@
 
     <!-- For sign up -->
     <string name="signupRegisterSMS">RegisterSMS</string>
+    <string name="contrycode84">84</string>
+    <string name="numberphone933">933551923</string>
     <string name="signupActivateSMS">ActivateSMS</string>
     <string name="signupChangePhoneNumberWithSMS">ChangePhoneNumberWithSMS</string>
     <string name="signupActivateChangedNumber">ActivateChangedNumber</string>
