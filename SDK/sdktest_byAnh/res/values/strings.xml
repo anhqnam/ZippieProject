@@ -33,6 +33,7 @@
     <string name="contactCheckForChange">CheckForChange</string>
     <string name="contactContainsVippieNumber">ContainsVippieNumber</string>
     <string name="contactContainsVippieNumbersCacheds">ContainsVippieNumbersCacheds</string>
+    <string name="contactGetPhonePhoto">contactGetPhonePhoto</string>
     <string name="contactGetContactPhoto">GetContactPhoto</string>
     <string name="contactGetNumberForVippie">GetNumberForVippie</string>
     <string name="contactGetVippieLoginForNumber">GetVippieLoginForNumber</string>

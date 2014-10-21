@@ -86,32 +86,68 @@ public class CallsLogActivity extends Activity implements OnClickListener {
             }
             case R.id.fetchcallslog: {
                 CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetch();
-                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mArrayCallsLogEntry.toString());
+                String mResult = "";
+                int len = mArrayCallsLogEntry.length;
+                for(int i=0 ;i<len ;i++)
+                {
+                    mResult += mArrayCallsLogEntry[i].toString() + "\n";
+                }
+                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mResult);
                 break;
             }
             case R.id.fetchcallslogtype: {
                 CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetch(1);
-                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mArrayCallsLogEntry.toString());
+                String mResult = "";
+                int len = mArrayCallsLogEntry.length;
+                for(int i=0 ;i<len ;i++)
+                {
+                    mResult += mArrayCallsLogEntry[i].toString() + "\n";
+                }
+                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mResult);
                 break;
             }
             case R.id.fetchcallslogtypenumber: {
                 CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetch(1,"84933094998");
-                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mArrayCallsLogEntry.toString());
+                String mResult = "";
+                int len = mArrayCallsLogEntry.length;
+                for(int i=0 ;i<len ;i++)
+                {
+                    mResult += mArrayCallsLogEntry[i].toString() + "\n";
+                }
+                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mResult);
                 break;
             }
             case R.id.fetchcallslognumber: {
                 CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetch("84933094998");
-                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mArrayCallsLogEntry.toString());
+                String mResult = "";
+                int len = mArrayCallsLogEntry.length;
+                for(int i=0 ;i<len ;i++)
+                {
+                    mResult += mArrayCallsLogEntry[i].toString() + "\n";
+                }
+                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mResult);
                 break;
             }
             case R.id.fetchIncomingByNumber: {
                 CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetchIncomingByNumber("84933094998");
-                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mArrayCallsLogEntry.toString());
+                String mResult = "";
+                int len = mArrayCallsLogEntry.length;
+                for(int i=0 ;i<len ;i++)
+                {
+                    mResult += mArrayCallsLogEntry[i].toString() + "\n";
+                }
+                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mResult);
                 break;
             }
             case R.id.fetchOutgoingByNumber: {
                 CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetchOutgoingByNumber("84933094998");
-                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mArrayCallsLogEntry.toString());
+                String mResult = "";
+                int len = mArrayCallsLogEntry.length;
+                for(int i=0 ;i<len ;i++)
+                {
+                    mResult += mArrayCallsLogEntry[i].toString() + "\n";
+                }
+                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mResult);
                 break;
             }
             case R.id.CallslogregisterListener: {
@@ -131,24 +167,29 @@ public class CallsLogActivity extends Activity implements OnClickListener {
             }
             case R.id.removecallslogentry: {
                 CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetch();
+                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mArrayCallsLogEntry[0] + "removed");
                 mCallslogWrapper.remove(mArrayCallsLogEntry[0]);
                 break;
             }
             case R.id.removecallslogtype: {
                 mCallslogWrapper.remove(1);
+                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText("Calls Log type = 1 was removed");
                 break;
             }
             case R.id.RemovecallslogTypeNumber: {
                 mCallslogWrapper.remove(1,"84933094998");
+                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText("Calls Logtype = 1 and number = 84933094998 were removed");
                 break;
             }
             case R.id.Removecallslognumber: {
                 mCallslogWrapper.remove("84933094998");
+                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText("Calls Log number = 84933094998 were removed");
                 break;
             }
             case R.id.removeGroupcallslog: {
                 CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetch();
                 mCallslogWrapper.removeGroup(mArrayCallsLogEntry[0]);
+                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mArrayCallsLogEntry[0] + "removed");
                 break;
             }
             case R.id.unregisterListenercalslog: {

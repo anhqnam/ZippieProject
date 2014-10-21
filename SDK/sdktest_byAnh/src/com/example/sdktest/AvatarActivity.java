@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,11 +18,18 @@ import android.widget.TextView;
 
 import com.example.sdktest.api.APIHelper;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AvatarActivity.
+ */
 public class AvatarActivity extends Activity implements OnClickListener {
 
     /** The avatarwrapper. */
     private AvatarWrapper avatarwrapper;
 
+    /* (non-Javadoc)
+     * @see android.app.Activity#onCreate(android.os.Bundle)
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +38,9 @@ public class AvatarActivity extends Activity implements OnClickListener {
         Init();
     }
 
+    /**
+     * Inits the.
+     */
     private void Init() {
         avatarwrapper = APIHelper.getInstance().getAvatarWrapper();
         // execute button
@@ -51,6 +62,9 @@ public class AvatarActivity extends Activity implements OnClickListener {
         findViewById(R.id.sendAvatar).setOnClickListener(this);
     }
 
+    /* (non-Javadoc)
+     * @see android.view.View.OnClickListener#onClick(android.view.View)
+     */
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -80,7 +94,7 @@ public class AvatarActivity extends Activity implements OnClickListener {
                 break;
             }
             case R.id.getAvatarFullPath: {
-                String MyResult = avatarwrapper.getAvatarFullPath("1873514");
+                String MyResult = avatarwrapper.getAvatarFullPath("1877256");
                 ((TextView) findViewById(R.id.tv_avatarResult)).setText(MyResult);
                 break;
             }
@@ -95,7 +109,7 @@ public class AvatarActivity extends Activity implements OnClickListener {
                 break;
             }
             case R.id.getThumbnailFilename: {
-                String myResult = avatarwrapper.getThumbnailFilename("1873514");
+                String myResult = avatarwrapper.getThumbnailFilename("1877256");
                 ((TextView) findViewById(R.id.tv_avatarResult)).setText(myResult);
                 break;
             }
@@ -150,14 +164,24 @@ public class AvatarActivity extends Activity implements OnClickListener {
     }
 
     //
+    /**
+     * The Class DownloadFilesTask.
+     */
     private class DownloadFilesTask extends AsyncTask<String, String, String> {
+
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#doInBackground(Params[])
+         */
         @Override
         protected String doInBackground(String... params) {
-            String str = "/storage/sdcard0/Download/03_01_ContactsList_02.jpg";
+            String str = Environment.getExternalStorageDirectory().getPath() + "/Vippie/avatars/1877256.jpg";
             final String mResult = avatarwrapper.sendAvatar(str);
             return mResult;
         }
 
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
+         */
         @Override
         protected void onPostExecute(String result) {
             ((TextView) findViewById(R.id.tv_avatarResult)).setText(result);
@@ -165,13 +189,23 @@ public class AvatarActivity extends Activity implements OnClickListener {
     }
 
     //
+    /**
+     * The Class getAvatartask.
+     */
     private class getAvatartask extends AsyncTask<String, String, Integer> {
+
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#doInBackground(Params[])
+         */
         @Override
         protected Integer doInBackground(String... params) {
-            Integer getavatar = avatarwrapper.getAvatar("1874827");
+            Integer getavatar = avatarwrapper.getAvatar("1877256");
             return getavatar;
         }
 
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
+         */
         @Override
         protected void onPostExecute(Integer result) {
             String MyResult = result + "";
@@ -180,14 +214,24 @@ public class AvatarActivity extends Activity implements OnClickListener {
     }
 
     //
+    /**
+     * The Class getTempThumbnailtask.
+     */
     private class getTempThumbnailtask extends
     AsyncTask<String, String, Integer> {
+
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#doInBackground(Params[])
+         */
         @Override
         protected Integer doInBackground(String... params) {
-            Integer getavatar = avatarwrapper.getTempThumbnailAvatar("1873514");
+            Integer getavatar = avatarwrapper.getTempThumbnailAvatar("1877256");
             return getavatar;
         }
 
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
+         */
         @Override
         protected void onPostExecute(Integer result) {
             String MyResult = result + "";
@@ -195,15 +239,24 @@ public class AvatarActivity extends Activity implements OnClickListener {
         }
     }
 
-    //
+
+    /**
+     * The Class LoadAvatarBMtask.
+     */
     private class LoadAvatarBMtask extends AsyncTask<String, String, Bitmap> {
 
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#doInBackground(Params[])
+         */
         @Override
         protected Bitmap doInBackground(String... params) {
-            Bitmap getavatar = avatarwrapper.loadAvatarImageBitmap("1873514");
+            Bitmap getavatar = avatarwrapper.loadAvatarImageBitmap("1877256");
             return getavatar;
         }
 
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
+         */
         @Override
         protected void onPostExecute(Bitmap result) {
             if (result == null) {
@@ -217,14 +270,23 @@ public class AvatarActivity extends Activity implements OnClickListener {
     }
 
     //
+    /**
+     * The Class LoadMyAvatarBMtask.
+     */
     private class LoadMyAvatarBMtask extends AsyncTask<String, String, Bitmap> {
 
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#doInBackground(Params[])
+         */
         @Override
         protected Bitmap doInBackground(String... params) {
             Bitmap getavatar = avatarwrapper.loadMyAvatar();
             return getavatar;
         }
 
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
+         */
         @Override
         protected void onPostExecute(Bitmap result) {
             if (result == null) {
@@ -238,9 +300,15 @@ public class AvatarActivity extends Activity implements OnClickListener {
     }
 
     //
+    /**
+     * The Class LoadTempThumbnailimageBMtask.
+     */
     private class LoadTempThumbnailimageBMtask extends
     AsyncTask<String, String, Bitmap> {
 
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#doInBackground(Params[])
+         */
         @Override
         protected Bitmap doInBackground(String... params) {
             Bitmap getavatar = avatarwrapper
@@ -248,6 +316,9 @@ public class AvatarActivity extends Activity implements OnClickListener {
             return getavatar;
         }
 
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
+         */
         @Override
         protected void onPostExecute(Bitmap result) {
             if (result == null) {
@@ -261,9 +332,15 @@ public class AvatarActivity extends Activity implements OnClickListener {
     }
 
     //
+    /**
+     * The Class LoadThumbnailimageBMtask.
+     */
     private class LoadThumbnailimageBMtask extends
     AsyncTask<String, String, Bitmap> {
 
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#doInBackground(Params[])
+         */
         @Override
         protected Bitmap doInBackground(String... params) {
             Bitmap getavatar = avatarwrapper
@@ -271,6 +348,9 @@ public class AvatarActivity extends Activity implements OnClickListener {
             return getavatar;
         }
 
+        /* (non-Javadoc)
+         * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
+         */
         @Override
         protected void onPostExecute(Bitmap result) {
             if (result == null) {
