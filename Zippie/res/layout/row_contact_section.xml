@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:listSelector="@android:color/transparent" 
+    >
+
+    <TextView
+        android:id="@+id/tvContactSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="A"
+        android:textColor="@color/background_topbar"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/vContactVippe"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#3598db" />
+
+</LinearLayout>

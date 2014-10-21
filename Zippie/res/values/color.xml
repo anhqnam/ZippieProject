@@ -8,9 +8,10 @@
    <color name="background_logo_facebook_notpress">#ff3b589e</color>
     <color name="background_logo_facebook_press">#cd3b589e</color>
     <color name="button_normal_blue">#3598db</color>
-    	<!-- Contact color -->
+     <!-- Contact color -->
     <color name="background_topbar">#3598db</color>
     <color name="white">#ffffff</color>
     <color name="color_button_contact">#3598db</color>
-
+    <drawable name="focused">#ff5500</drawable>
+    <drawable name="selected">#FF00FF</drawable>
 </resources>

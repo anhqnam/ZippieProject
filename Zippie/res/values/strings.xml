@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Zippie</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     
+<!-- Sign Up resources string -->
+    <string name="create_profile_finish_text">Finish</string>
+    <!-- End sign up -->
     <!-- Top menu resources string -->
     <string name="introduce_skip_text"><u>Skip</u></string>
     <!-- End top menu -->
@@ -14,14 +16,16 @@
     <string name="slogan">Free messages and calls to Zippie users \nSend a eGift to your loved one.\n What are you waiting for?</string>
     <string name="btn_start">Start</string>
     <!-- End welcome -->
-    <!--Contact resource string -->
+	<!--Contact resource string -->
 	<string name="contact_zippie">Zippie</string>
     <string name="contact_all">All</string>
     <string name="contact_favorites">Favorites</string>
     <string name="contact_search">Search</string>
-	<!-- End contact -->    
-
-    <!-- Create profile resources string -->
+    <string name="contact_invite">Invite</string>
+    <string name = "contact_name">Andy Code</string>
+    <string name = "contact_search_hint">Please input text</string>
+	<!-- End contact -->
+ <!-- Create profile resources string -->
     <string name="create_profile_finish_text">Finish</string>
     <string name="create_profile_add_photo_text">+ <u>Add photo</u></string>
     <string name="create_profile_hint_name">Enter your name</string>
@@ -33,8 +37,8 @@
     <!-- End create profile -->
     <!-- Input number -->
     <string name="title_input_number">LET US KNOW ABOUT YOU</string>
-	<string name="text_show">Enter your phone number</string>
-	<string name="name_country">United States</string>
-	<string name="phone_number">+16782167616</string>
-	<string name="btn_continue">Continue</string>
+    <string name="text_show">Enter your phone number</string>
+    <string name="name_country">United States</string>
+    <string name="phone_number">+16782167616</string>
+    <string name="btn_continue">Continue</string>
 </resources>
