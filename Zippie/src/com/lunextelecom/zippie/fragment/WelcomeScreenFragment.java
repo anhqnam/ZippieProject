@@ -1,6 +1,5 @@
 package com.lunextelecom.zippie.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -32,26 +31,27 @@ public class WelcomeScreenFragment extends Fragment {
 
 	/** The m image view. */
 	private ImageView mImageView;
-	
+
 	/** The m button start. */
 	private ImageView mButtonStart;
-	
+
 	/** The m button start press. */
 	private ImageView mButtonStartPress;
-	
+
 	/** The m slogan text view. */
 	private TextView mSloganTextView;
-	
+
 	/** The m start text view. */
 	private TextView mStartTextView;
-	
+
 	/** The m privacy text view. */
 	private TextView mPrivacyTextView;
 
 	/**
 	 * Find view by id.
-	 *
-	 * @param imagestart the imagestart
+	 * 
+	 * @param imagestart
+	 *            the imagestart
 	 * @return the image view
 	 */
 	private ImageView findViewById(int imagestart) {
@@ -71,20 +71,23 @@ public class WelcomeScreenFragment extends Fragment {
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		View view = inflater.inflate(R.layout.welcome_screen, null);
-		mSloganTextView = (TextView)view.findViewById(R.id.slogan);
-		mStartTextView = (TextView)view.findViewById(R.id.txtStart);
-		mPrivacyTextView = (TextView)view.findViewById(R.id.tv_Privacy);
-		Utils.setTypefaceRoboto(getActivity(),mSloganTextView, mStartTextView, mPrivacyTextView);
-		
-		mButtonStart = (ImageView)view.findViewById(R.id.btnStart);
+		mSloganTextView = (TextView) view.findViewById(R.id.slogan);
+		mStartTextView = (TextView) view.findViewById(R.id.txtStart);
+		mPrivacyTextView = (TextView) view.findViewById(R.id.tv_Privacy);
+		Utils.setTypefaceRoboto(getActivity(), mSloganTextView, mStartTextView,
+				mPrivacyTextView);
+
+		mButtonStart = (ImageView) view.findViewById(R.id.btnStart);
 		mButtonStart.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				FragmentManager fragmentManager = getFragmentManager();
-				FragmentTransaction transaction = fragmentManager.beginTransaction();
-				transaction.replace(R.id.fragment_container, new InputPhoneNumberFragment());
+				FragmentTransaction transaction = fragmentManager
+						.beginTransaction();
+				transaction.replace(R.id.fragment_container,
+						new SignupInputPhoneNumberFragment());
 				transaction.addToBackStack(null);
 				transaction.commit();
 			}

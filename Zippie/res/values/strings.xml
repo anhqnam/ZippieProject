@@ -52,9 +52,13 @@
     <!-- End create profile -->
     
     <!-- Input number -->
-    <string name="title_input_number">LET US KNOW ABOUT YOU</string>
-	<string name="text_show">Enter your phone number</string>
-	<string name="name_country">United States</string>
-	<string name="phone_number">+16782167616</string>
-	<string name="btn_continue">Continue</string>
+    <string name="signup_title_input_number_str">LET US KNOW ABOUT YOU</string>
+	<string name="signup_text_show_str">Enter your phone number</string>
+	<string name="signup_name_country_str">United States</string>
+	<string name="signup_phone_number_str">+16782167616</string>
+	<string name="signup_button_continue_tr">Continue</string>
+	
+	<!-- Dialog choose name country -->
+	<string name="signup_dialog_country_title">Title</string>
+	<string name="signup_dialog_country_hint">Please input text</string>
 </resources>

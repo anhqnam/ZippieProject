@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:id="@+id/signup_header_dialog_id"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/signup_country_title_dialog_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="5dp"
+            android:text="@string/signup_dialog_country_title"
+            android:textColor="#07c"
+            android:textSize="@dimen/text_size_60_point" />
+
+        <ImageView
+            android:id="@+id/signup_icon_search_id"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/search" />
+
+        <RelativeLayout
+            android:id="@+id/signup_search_box_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/signup_search_edittext_id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/signup_dialog_country_hint"
+                android:inputType="text" />
+
+            <ImageView
+                android:id="@+id/signup_icon_delete_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/delete" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/signup_line_id"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/signup_header_dialog_id"
+        android:background="#07c" />
+
+    <ListView
+        android:id="@+id/signup_list_country_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signup_line_id" >
+    </ListView>
+
+</RelativeLayout>
