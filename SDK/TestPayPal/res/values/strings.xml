@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TestPayPal</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- Main -->
+    <string name="Testpaypal">PAYPAL TETSTING</string>
+    <string name="main_buything_str">BUY THINGS</string>
+    <string name="main_future_payment_consent_str">FUTURE PAYMENT CONSENT</string>
+    <string name="main_future_payment_purchase_str">FUTURE PAYMENT PURCHASE</string>
+    <string name="main_profile_share_str">PROFILE SHARE</string>
+    
+    
+
+</resources>

@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.testpaypal.MainActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/Testpaypal"
+        android:textSize="@dimen/abc_action_bar_title_text_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/main_btn_buything_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_buything_str" />
+
+    <Button
+        android:id="@+id/main_future_payment_consent_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_future_payment_consent_str" />
+
+    <Button
+        android:id="@+id/main_future_payment_purchase_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_future_payment_purchase_str" />
+
+    <Button
+        android:id="@+id/main_profile_share_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_profile_share_str" />
+
+</LinearLayout>
