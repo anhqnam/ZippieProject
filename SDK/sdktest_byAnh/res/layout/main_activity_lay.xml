@@ -47,43 +47,43 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/openSignUp"
+            android:id="@+id/main_openSignUp_id"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/openSignUp" />
+            android:text="@string/main_openSignUp_str" />
 
         <Button
-            android:id="@+id/openContact"
+            android:id="@+id/main_openContact_id"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/openContact" />
+            android:text="@string/main_openContact_str" />
 
         <Button
-            android:id="@+id/openSetting"
+            android:id="@+id/main_openSetting_id"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/openSetting" />
+            android:text="@string/main_openSetting_str" />
     </LinearLayout>
   <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
     <Button
-        android:id="@+id/openAvatar"
+        android:id="@+id/main_openAvatar_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/openAvatar" />
+        android:text="@string/main_openAvatar_str" />
     
     <Button
-        android:id="@+id/openCallslog"
+        android:id="@+id/main_openCallslog_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/openCallslog" />
+        android:text="@string/main_openCallslog_str" />
     </LinearLayout>
 
 </LinearLayout>

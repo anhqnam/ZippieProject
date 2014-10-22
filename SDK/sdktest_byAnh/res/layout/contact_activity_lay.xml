@@ -14,144 +14,144 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/contactFetchClick"
+                android:id="@+id/contact_FetchClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactFetch" />
+                android:text="@string/contact_Fetch_str" />
 
             <Button
-                android:id="@+id/contactFetch1Click"
+                android:id="@+id/contact_Fetch1Click_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactFetch1" />
+                android:text="@string/contact_Fetch1_str" />
 
             <Button
-                android:id="@+id/contactFetch2Click"
+                android:id="@+id/contact_Fetch2Click_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactFetch2" />
+                android:text="@string/contact_Fetch2_str" />
 
             <Button
-                android:id="@+id/contactAddContactListenerClick"
+                android:id="@+id/contact_AddContactListenerClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactAddContactListener" />
+                android:text="@string/contact_AddContactListener_str" />
 
             <Button
-                android:id="@+id/contactCheckForChangeClick"
+                android:id="@+id/contact_CheckForChangeClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactCheckForChange" />
+                android:text="@string/contact_CheckForChange_str" />
 
             <Button
-                android:id="@+id/contactContainsVippieNumberClick"
+                android:id="@+id/contact_ContainsVippieNumberClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactContainsVippieNumber" />
+                android:text="@string/contact_ContainsVippieNumber_str" />
 
             <Button
-                android:id="@+id/contactContainsVippieNumbersCachedsClick"
+                android:id="@+id/contact_ContainsVippieNumbersCachedsClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactContainsVippieNumbersCacheds" />
+                android:text="@string/contact_ContainsVippieNumbersCacheds_str" />
 
              <Button
-                android:id="@+id/contactGetPhonePhotoClick"
+                android:id="@+id/contact_GetPhonePhotoClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactGetPhonePhoto" />
+                android:text="@string/contact_GetPhonePhoto_str" />
              
             <Button
-                android:id="@+id/contactGetContactPhotoClick"
+                android:id="@+id/contact_GetContactPhotoClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactGetContactPhoto" />
+                android:text="@string/contact_GetContactPhoto_str" />
 
             <Button
-                android:id="@+id/contactGetNumberForVippieClick"
+                android:id="@+id/contact_GetNumberForVippieClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactGetNumberForVippie" />
+                android:text="@string/contact_GetNumberForVippie_str" />
 
             <Button
-                android:id="@+id/contactGetVippieLoginForNumberClick"
+                android:id="@+id/contact_GetVippieLoginForNumberClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactGetVippieLoginForNumber" />
+                android:text="@string/contact_GetVippieLoginForNumber_str" />
 
             <Button
-                android:id="@+id/contactGetVippiePhonesClick"
+                android:id="@+id/contact_GetVippiePhonesClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactGetVippiePhones" />
+                android:text="@string/contact_GetVippiePhones_str" />
 
             <Button
-                android:id="@+id/contactHasVippieNumberClick"
+                android:id="@+id/contact_HasVippieNumberClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactHasVippieNumber" />
+                android:text="@string/contact_HasVippieNumber_str" />
 
             <Button
-                android:id="@+id/contactIsVippieIdClick"
+                android:id="@+id/contact_IsVippieIdClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactIsVippieId" />
+                android:text="@string/contact_IsVippieId_str" />
 
             <Button
-                android:id="@+id/contactIsVippieNumberClick"
+                android:id="@+id/contact_IsVippieNumberClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactIsVippieNumber" />
+                android:text="@string/contact_IsVippieNumber_str" />
 
             <Button
-                android:id="@+id/contactPrepareNumberClick"
+                android:id="@+id/contact_PrepareNumberClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactPrepareNumber" />
+                android:text="@string/contact_PrepareNumber_str" />
 
             <Button
-                android:id="@+id/contactRegisterListenerClick"
+                android:id="@+id/contact_RegisterListenerClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactRegisterListener" />
+                android:text="@string/contact_RegisterListener_str" />
 
             <Button
-                android:id="@+id/contactRemoveContactListenerClick"
+                android:id="@+id/contact_RemoveContactListenerClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactRemoveContactListener" />
+                android:text="@string/contact_RemoveContactListener_str" />
 
             <Button
-                android:id="@+id/contactRequestAddNewClick"
+                android:id="@+id/contact_RequestAddNewClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactRequestAddNew" />
+                android:text="@string/contact_RequestAddNew_str" />
 
             <Button
-                android:id="@+id/contactRequestEditClick"
+                android:id="@+id/contact_RequestEditClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactRequestEdit" />
+                android:text="@string/contact_RequestEdit_str" />
 
             <Button
-                android:id="@+id/contactRequestViewClick"
+                android:id="@+id/contact_RequestViewClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactRequestView" />
+                android:text="@string/contact_RequestView_str" />
             
             <Button
-                android:id="@+id/contactRequestPickClick"
+                android:id="@+id/contact_RequestPickClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactRequestPick" />
+                android:text="@string/contact_RequestPick_str" />
 
           
 
             <Button
-                android:id="@+id/contactVerifyNumberClick"
+                android:id="@+id/contact_VerifyNumberClick_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contactVerifyNumber" />
+                android:text="@string/contact_VerifyNumber_str" />
         </LinearLayout>
     </ScrollView>
     <ScrollView
@@ -164,18 +164,18 @@
             android:orientation="vertical" >
 
             <ImageView
-                android:id="@+id/img_v"
+                android:id="@+id/contact_img_v_id"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:contentDescription="@string/contactRegisterListener" />
+                android:contentDescription="@string/contact_RegisterListener_str" />
 
             <TextView
-                android:id="@+id/tv_status"
+                android:id="@+id/contact_tv_status_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/tv_result"
+                android:id="@+id/contact_tv_result_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>

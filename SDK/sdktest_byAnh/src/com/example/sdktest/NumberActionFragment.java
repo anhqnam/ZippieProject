@@ -34,7 +34,7 @@ public class NumberActionFragment extends Fragment implements OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_init_call, container, false);
+        View root = inflater.inflate(R.layout.call_fragment_init_lay, container, false);
         mNumber = (EditText) root.findViewById(R.id.call_number);
 
         mFreeCall = (Button) root.findViewById(R.id.call_free);

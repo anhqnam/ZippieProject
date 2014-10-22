@@ -22,15 +22,15 @@ public class SettingActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting);
+        setContentView(R.layout.setting_activity_lay);
 
         settingwraper = APIHelper.getInstance().getSettingsWrapper();
 
-        mBtn_getcountrycode = (Button) findViewById(R.id.getcountrycode);
-        mBtn_getdisplayname = (Button) findViewById(R.id.getdisplayname);
-        mBtn_getRegistrationNumber = (Button) findViewById(R.id.getRegistrationNumber);
-        mBtn_isRegister = (Button) findViewById(R.id.isRegistered);
-        mtv_result = (TextView) findViewById(R.id.setting_result);
+        mBtn_getcountrycode = (Button) findViewById(R.id.setting_getcountrycode_id);
+        mBtn_getdisplayname = (Button) findViewById(R.id.setting_getdisplayname_id);
+        mBtn_getRegistrationNumber = (Button) findViewById(R.id.setting_getRegistrationNumber_id);
+        mBtn_isRegister = (Button) findViewById(R.id.setting_isRegistered_id);
+        mtv_result = (TextView) findViewById(R.id.setting_result_id);
 
         mBtn_getcountrycode.setOnClickListener(new View.OnClickListener() {
 

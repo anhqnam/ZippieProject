@@ -17,13 +17,13 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_activity_lay);
 
-        findViewById(R.id.openSignUp).setOnClickListener(this);
-        findViewById(R.id.openContact).setOnClickListener(this);
-        findViewById(R.id.openSetting).setOnClickListener(this);
-        findViewById(R.id.openAvatar).setOnClickListener(this);
-        findViewById(R.id.openCallslog).setOnClickListener(this);
+        findViewById(R.id.main_openSignUp_id).setOnClickListener(this);
+        findViewById(R.id.main_openContact_id).setOnClickListener(this);
+        findViewById(R.id.main_openSetting_id).setOnClickListener(this);
+        findViewById(R.id.main_openAvatar_id).setOnClickListener(this);
+        findViewById(R.id.main_openCallslog_id).setOnClickListener(this);
 
         /*		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
@@ -308,19 +308,19 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
         // TODO Auto-generated method stub
         Intent i = new Intent();
         switch (v.getId()) {
-            case R.id.openSignUp:
+            case R.id.main_openSignUp_id:
                 i.setClass(getApplicationContext(), SignUpActivity.class);
                 break;
-            case R.id.openContact:
+            case R.id.main_openContact_id:
                 i.setClass(getApplicationContext(), ContactActivity.class);
                 break;
-            case R.id.openSetting:
+            case R.id.main_openSetting_id:
                 i.setClass(getApplicationContext(), SettingActivity.class);
                 break;
-            case R.id.openAvatar:
+            case R.id.main_openAvatar_id:
                 i.setClass(getApplicationContext(), AvatarActivity.class);
                 break;
-            case R.id.openCallslog:
+            case R.id.main_openCallslog_id:
                 i.setClass(getApplicationContext(), CallsLogActivity.class);
                 break;
             default:

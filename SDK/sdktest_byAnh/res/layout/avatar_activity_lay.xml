@@ -14,91 +14,91 @@
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/addAvatarListener"
+                android:id="@+id/avatar_addAvatarListener_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/addAvatarListener" />
+                android:text="@string/avatar_addAvatarListener_str" />
 
             <Button
-                android:id="@+id/getAvatar"
+                android:id="@+id/avatar_getAvatar_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/getAvatar" />
+                android:text="@string/avatar_getAvatar_str" />
 
             <Button
-                android:id="@+id/getAvatarFullPath"
+                android:id="@+id/avatar_getAvatarFullPath_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/getAvatarFullPath" />
+                android:text="@string/avatar_getAvatarFullPath_str" />
 
             <Button
-                android:id="@+id/getMyAvatar"
+                android:id="@+id/avatar_getMyAvatar_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/getMyAvatar" />
+                android:text="@string/avatar_getMyAvatar_str" />
 
             <!--  -->
 
             <Button
-                android:id="@+id/getTempThumbnailAvatar"
+                android:id="@+id/avatar_getTempThumbnailAvatar_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/getTempThumbnailAvatar" />
+                android:text="@string/avatar_getTempThumbnailAvatar_str" />
 
             <Button
-                android:id="@+id/getThumbnailFilename"
+                android:id="@+id/avatar_getThumbnailFilename_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/getThumbnailFilename" />
+                android:text="@string/avatar_getThumbnailFilename_str" />
 
             <Button
-                android:id="@+id/loadAvatarImageBitmap"
+                android:id="@+id/avatar_loadAvatarImageBitmap_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/loadAvatarImageBitmap" />
+                android:text="@string/avatar_loadAvatarImageBitmap_str" />
 
             <Button
-                android:id="@+id/loadMyAvatar"
+                android:id="@+id/avatar_loadMyAvatar_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/loadMyAvatar" />
+                android:text="@string/avatar_loadMyAvatar_str" />
 
             <!--  -->
 
             <Button
-                android:id="@+id/loadTempThumbnailImageBitmap"
+                android:id="@+id/avatar_loadTempThumbnailImageBitmap_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/loadTempThumbnailImageBitmap" />
+                android:text="@string/avatar_loadTempThumbnailImageBitmap_str" />
 
             <Button
-                android:id="@+id/loadThumbnailImageBitmap"
+                android:id="@+id/avatar_loadThumbnailImageBitmap_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/loadThumbnailImageBitmap" />
+                android:text="@string/avatar_loadThumbnailImageBitmap_str" />
 
             <Button
-                android:id="@+id/removeAvatarListener"
+                android:id="@+id/avatar_removeAvatarListener_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/removeAvatarListener" />
+                android:text="@string/avatar_removeAvatarListener_str" />
 
             <Button
-                android:id="@+id/sendAvatar"
+                android:id="@+id/avatar_sendAvatar_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sendAvatar" />
+                android:text="@string/avatar_sendAvatar_str" />
         </LinearLayout>
     </ScrollView>
 
     <ImageView
-        android:id="@+id/img_avatar"
+        android:id="@+id/avatar_img_avatar_id"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:contentDescription="@string/sendAvatar" />
+        android:contentDescription="@string/avatar_sendAvatar_str" />
 
     <TextView
-        android:id="@+id/tv_avatarResult"
+        android:id="@+id/avatar_tv_avatarResult_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

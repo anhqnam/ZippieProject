@@ -5,31 +5,31 @@
     android:orientation="vertical" >
     
 	<Button
-            android:id="@+id/getcountrycode"
+            android:id="@+id/setting_getcountrycode_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/getcountrycode" />
+            android:text="@string/setting_getcountrycode_str" />
 
         <Button
-            android:id="@+id/getdisplayname"
+            android:id="@+id/setting_getdisplayname_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/getdisplayname" />
+            android:text="@string/setting_getdisplayname_str" />
 
         <Button
-            android:id="@+id/getRegistrationNumber"
+            android:id="@+id/setting_getRegistrationNumber_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/getRegistrationNumber" />
+            android:text="@string/setting_getRegistrationNumber_str" />
 
         <Button
-            android:id="@+id/isRegistered"
+            android:id="@+id/setting_isRegistered_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/isRegistered" />
+            android:text="@string/setting_isRegistered_str" />
         
          <TextView
-        	android:id="@+id/setting_result"
+        	android:id="@+id/setting_result_id"
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content" />
         
