@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--  button default -->
-    <color name="button_default_notpress">#ff3498db</color>
-    <color name="button_default_press">#cd3498db</color>
+    <color name="common_button_default_notpress_col">#ff3498db</color>
+    <color name="common_button_default_press_col">#cd3498db</color>
     
     <!-- create profile -->
    <color name="createprofile_background_logo_facebook_notpress_col">#ff3b589e</color>

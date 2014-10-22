@@ -70,7 +70,7 @@ public class WelcomeScreenFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater,
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		View view = inflater.inflate(R.layout.welcome_screen, null);
+		View view = inflater.inflate(R.layout.sigup_welcome_screen_lay, null);
 		mSloganTextView = (TextView) view.findViewById(R.id.slogan);
 		mStartTextView = (TextView) view.findViewById(R.id.txtStart);
 		mPrivacyTextView = (TextView) view.findViewById(R.id.tv_Privacy);

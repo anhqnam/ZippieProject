@@ -24,9 +24,9 @@
     <!-- End top menu -->
     
     <!-- Welcome resources string-->
-    <string name="privacy">© 2014 Zippie. <u><b><font fgcolor="#ff3498db">Privacy Policy</font></b></u></string>
-    <string name="slogan">Free messages and calls to Zippie users \nSend a eGift to your loved one.\n What are you waiting for?</string>
-    <string name="btn_start">Start</string>
+    <string name="signup_welcome_privacy_str">© 2014 Zippie. <u><b><font fgcolor="#ff3498db">Privacy Policy</font></b></u></string>
+    <string name="signup_welcome_slogan_tr">Free messages and calls to Zippie users \nSend a eGift to your loved one.\n What are you waiting for?</string>
+    <string name="signup_welcome_button_start_str">Start</string>
     <!-- End welcome -->
     
     <!--Contact resource string -->

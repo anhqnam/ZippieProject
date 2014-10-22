@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:background="#fff"
     android:weightSum="1" >
-	<include layout="@layout/header_signup"/>
+	<include layout="@layout/signup_header_lay"/>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_margin="15dp"
-                android:background="@drawable/button_color_default"
+                android:background="@drawable/common_button_color_default_dra"
                 android:text="@string/signup_button_continue_tr"
                 android:textSize="24dp"
                 android:paddingTop="15dp"

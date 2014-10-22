@@ -102,7 +102,7 @@ public class IntroduceFragment extends Fragment implements OnClickListener{
             Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         //get view
-        View view = inflater.inflate(R.layout.introduce_lay, null);
+        View view = inflater.inflate(R.layout.signup_introduce_lay, null);
         TextView introSkipTextTv = (TextView)view.findViewById(R.id.introduce_skip_text_id);
         mIntroViewPager = (ViewPager)view.findViewById(R.id.introduce_view_pager_id);
         CirclePageIndicator introIndicator = (CirclePageIndicator)view.findViewById(R.id.introduce_indicator_id);

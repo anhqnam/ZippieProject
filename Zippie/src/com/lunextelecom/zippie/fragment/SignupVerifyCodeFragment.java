@@ -22,7 +22,7 @@ public class SignupVerifyCodeFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		View view = inflater.inflate(R.layout.welcome_screen, null);
+		View view = inflater.inflate(R.layout.signup_verify_code_lay, null);
 		return view;
 	}
 }

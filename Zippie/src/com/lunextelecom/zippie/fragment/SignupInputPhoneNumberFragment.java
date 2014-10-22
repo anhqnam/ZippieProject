@@ -9,12 +9,10 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -169,18 +167,6 @@ public class SignupInputPhoneNumberFragment extends Fragment implements
 			}
 		}
 		return results;
-	}
-
-	/**
-	 * Gets the system service.
-	 * 
-	 * @param inputMethodService
-	 *            the input method service
-	 * @return the system service
-	 */
-	private InputMethodManager getSystemService(String inputMethodService) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	/**

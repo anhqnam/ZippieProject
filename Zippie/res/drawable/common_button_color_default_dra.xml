@@ -3,15 +3,15 @@
     <item android:state_pressed="false">
        <shape android:shape="rectangle"  >
          <corners android:radius="3dip" />
-         <stroke android:width="1dip" android:color="@color/button_default_notpress" />
-         <gradient android:angle="-90" android:startColor="@color/button_default_notpress" android:endColor="@color/button_default_notpress"  />         
+         <stroke android:width="1dip" android:color="@color/common_button_default_notpress_col" />
+         <gradient android:angle="-90" android:startColor="@color/common_button_default_notpress_col" android:endColor="@color/common_button_default_notpress_col"  />         
      	</shape>
     </item>
     <item android:state_pressed="true">
         <shape android:shape="rectangle"  >
          <corners android:radius="3dip" />
-         <stroke android:width="1dip" android:color="@color/button_default_press" />
-         <gradient android:angle="-90" android:startColor="@color/button_default_press" android:endColor="@color/button_default_press"  /> 
+         <stroke android:width="1dip" android:color="@color/common_button_default_press_col" />
+         <gradient android:angle="-90" android:startColor="@color/common_button_default_press_col" android:endColor="@color/common_button_default_press_col"  /> 
          <!-- <gradient android:angle="-90" android:startColor="#345953" android:endColor="#689a92"  /> -->            
      	</shape>
     </item>

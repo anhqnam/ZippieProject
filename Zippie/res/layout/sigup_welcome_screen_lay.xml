@@ -32,7 +32,7 @@
             android:fontFamily="sans-serif-light"
             android:layout_margin="10dp"
             android:textSize="16dp"
-            android:text="@string/slogan"/>
+            android:text="@string/signup_welcome_slogan_tr"/>
         
     </RelativeLayout>
 
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
                 android:padding="5dp"
-                android:src="@drawable/change_background_button_start" />
+                android:src="@drawable/signup_change_background_button_start_dra" />
             
         </LinearLayout>
         <LinearLayout
@@ -87,7 +87,7 @@
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_horizontal"
                 android:textSize="42dp"
-                android:text="@string/btn_start" />
+                android:text="@string/signup_welcome_button_start_str" />
         </LinearLayout>
     </RelativeLayout>
 
@@ -106,7 +106,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
             android:textSize="12dp"
-            android:text="@string/privacy" />
+            android:text="@string/signup_welcome_privacy_str" />
     </RelativeLayout>
 
 </LinearLayout>

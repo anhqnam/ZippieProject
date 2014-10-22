@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/header_height_size"
         android:layout_alignParentTop="true"
-        layout="@layout/header_signup"/>
+        layout="@layout/signup_header_lay"/>
     
     <LinearLayout
         android:id="@+id/createprofile_top_layout_id"
@@ -121,7 +121,7 @@
             android:layout_weight="1"
             android:layout_marginTop="30dp"
             android:gravity="center"
-            android:background="@drawable/button_color_default"
+            android:background="@drawable/common_button_color_default_dra"
             android:textColor="@android:color/white"
             android:textSize="@dimen/text_size_72_point"
             android:text="@string/createprofile_finish_text_str"/>
