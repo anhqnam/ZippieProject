@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Zippie</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     
-<!-- Sign Up resources string -->
-    <string name="create_profile_finish_text">Finish</string>
-    <!-- End sign up -->
+    <!-- Introduce resource string -->
+    <string name="introduce_skip_text_str"><u>Skip</u></string>
+    <!-- End introduce -->
+    
     <!-- Top menu resources string -->
-    <string name="introduce_skip_text"><u>Skip</u></string>
+    <string name="topmenu_header_text_point_str">Your points:</string>
+    <string name="topmenu_premium_call_text_str">Premium Call</string>
+    <string name="topmenu_egift_text_str">Egift</string>
+    <string name="topmenu_money_transfer_text_str">Money Transfer</string>
+    <string name="topmenu_points_text_str">Points</string>
+    <string name="topmenu_pay_bill_text_str">Pay Bill</string>
+    <string name="topmenu_top_up_text_str">Top Up</string>
+    <string name="topmenu_contacts_str">Contacts</string>
+    <string name="topmenu_message_str">Message</string>
+    <string name="topmenu_call_str">Call</string>
+    <string name="topmenu_learn_more_str"><u>learn more...</u></string>
     <!-- End top menu -->
     
     <!-- Welcome resources string-->
@@ -16,7 +28,8 @@
     <string name="slogan">Free messages and calls to Zippie users \nSend a eGift to your loved one.\n What are you waiting for?</string>
     <string name="btn_start">Start</string>
     <!-- End welcome -->
-	<!--Contact resource string -->
+    
+    <!--Contact resource string -->
 	<string name="contact_zippie">Zippie</string>
     <string name="contact_all">All</string>
     <string name="contact_favorites">Favorites</string>
@@ -24,21 +37,24 @@
     <string name="contact_invite">Invite</string>
     <string name = "contact_name">Andy Code</string>
     <string name = "contact_search_hint">Please input text</string>
-	<!-- End contact -->
- <!-- Create profile resources string -->
-    <string name="create_profile_finish_text">Finish</string>
-    <string name="create_profile_add_photo_text">+ <u>Add photo</u></string>
-    <string name="create_profile_hint_name">Enter your name</string>
-    <string name="create_profile_hint_email">Enter email (optional)</string>
-    <string name="create_profile_text_face">Use Facebook Info</string>
-    <string name="create_profile_logo_face">f</string>
-    <string name="create_profile_or">or</string>
-    <string name="create_profile_action_bar_title">CREATE YOUR PROFILE</string>
+	<!-- End contact -->    
+
+    <!-- Create profile resources string -->
+    <string name="createprofile_finish_text_str">Finish</string>
+    <string name="createprofile_add_photo_text_str">
+        <u>Add photo</u></string>
+    <string name="createprofile_hint_name_str">Enter your name</string>
+    <string name="createprofile_hint_email_str">Enter email (optional)</string>
+    <string name="createprofile_text_face_str">Use Facebook Info</string>
+    <string name="createprofile_logo_face_str">f</string>
+    <string name="createprofile_or_str">or</string>
+    <string name="createprofile_action_bar_title_str">CREATE YOUR PROFILE</string>
     <!-- End create profile -->
+    
     <!-- Input number -->
     <string name="title_input_number">LET US KNOW ABOUT YOU</string>
-    <string name="text_show">Enter your phone number</string>
-    <string name="name_country">United States</string>
-    <string name="phone_number">+16782167616</string>
-    <string name="btn_continue">Continue</string>
+	<string name="text_show">Enter your phone number</string>
+	<string name="name_country">United States</string>
+	<string name="phone_number">+16782167616</string>
+	<string name="btn_continue">Continue</string>
 </resources>

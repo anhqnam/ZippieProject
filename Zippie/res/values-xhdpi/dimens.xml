@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!-- Text size -->
+    <dimen name="text_size_36_point">12dp</dimen>
+    <dimen name="text_size_39.6_point">13.2dp</dimen>
+    <dimen name="text_size_40.5_point">13.5dp</dimen>
     <dimen name="text_size_48_point">16dp</dimen>
+    <dimen name="text_size_49.5_point">16.5dp</dimen>
     <dimen name="text_size_60_point">20dp</dimen>
     <dimen name="text_size_72_point">24dp</dimen>
     <dimen name="text_size_128_point">42dp</dimen>
-
-    <!-- Contact dimens -->
+    
+    <!-- Header height size -->
+    <dimen name="header_height_size">48dp</dimen>
+    
+    <!-- Top menu -->
+    <dimen name="topmenu_item_size_big_dim">72dp</dimen>
+    <dimen name="topmenu_item_size_small_dim">66.3dp</dimen>
+     <!-- Contact dimens -->
     <dimen name="contact_home_btn">35dp</dimen>
     <dimen name="contact_text_size">12dp</dimen>
     <dimen name="contact_button_height">30dp</dimen>
@@ -17,5 +27,4 @@
     <dimen name="contact_image_button">15dp</dimen>
     <dimen name="contact_name_size">20dp</dimen>
     <dimen name="contact_margin_hearder">70dp</dimen>
-
 </resources>

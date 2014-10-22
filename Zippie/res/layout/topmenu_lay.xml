@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white" >
+    <!-- Header layout -->
+    <RelativeLayout android:id="@+id/topmenu_header_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height_size"
+        android:background="@color/topmenu_background_header_col">
+        <ImageView android:id="@+id/topmenu_header_icon_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/topmenu_header_icon"/>
+        <LinearLayout android:id="@+id/topmenu_header_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/topmenu_header_icon_id"
+            android:paddingRight="15dp"
+            android:layout_centerVertical="true"
+            android:gravity="right"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/topmenu_header_text_point_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_48_point"
+                android:text="@string/topmenu_header_text_point_str"/>
+            <TextView android:id="@+id/topmenu_header_point_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_48_point"
+                android:text="100"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- Orther menu layout -->
+    <RelativeLayout
+        android:id="@+id/layout_top_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topmenu_header_layout_id"
+        android:layout_above="@+id/layout_bottom_id">
+        <ImageView
+            android:id="@+id/topmenu_circle_select_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/topmenu_circle_select_1" />
+        <View android:id="@+id/topmenu_line_vertical_center_id"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"/>
+        <!-- Infomation detail item selected-->
+        <LinearLayout android:id="@+id/top_up_menu_item_selected_detail_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true">
+            <TextView android:id="@+id/topmenu_item_selected_detail_header_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/topmenu_text_header_col"
+                android:textSize="@dimen/text_size_49.5_point"
+                android:textStyle="bold"
+                android:text="Top-Up the World"/>
+            <TextView android:id="@+id/topmenu_item_selected_detail_content_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/text_size_40.5_point"
+                android:text="send to your loved one"/>
+            <TextView android:id="@+id/topmenu_item_selected_detail_footer_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_40.5_point"
+                android:textColor="@color/topmenu_text_header_col"
+                android:text="@string/topmenu_learn_more_str"/>
+        </LinearLayout>
+        
+        <!-- Item premium call -->
+            <!-- Normal -->
+        <RelativeLayout android:id="@+id/topmenu_premium_call_id"
+            android:layout_width="@dimen/topmenu_item_size_big_dim"
+            android:layout_height="@dimen/topmenu_item_size_big_dim"
+            android:background="@drawable/topmenu_background_menu_item_dra"
+            android:layout_above="@+id/topmenu_circle_select_id"
+            android:clickable="true"
+            android:layout_marginBottom="-30dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible">
+            <ImageView android:id="@+id/topmenu_premium_call_icon_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/topmenu_premium_call_icon"/>
+            <TextView android:id="@+id/topmenu_premium_call_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topmenu_premium_call_icon_id"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_size_36_point"
+                android:text="@string/topmenu_premium_call_text_str"/>
+        </RelativeLayout>
+            <!-- Active -->
+        <RelativeLayout android:id="@+id/topmenu_premium_call_active_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/topmenu_circle_select_id"
+            android:layout_marginBottom="-40dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+            <ImageView android:id="@+id/topmenu_premium_call_icon_active_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/topmenu_top_up_active_icon"/>
+            <TextView android:id="@+id/topmenu_premium_call_text_active_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topmenu_premium_call_icon_active_id"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:textSize="@dimen/text_size_39.6_point"
+                android:text="@string/topmenu_premium_call_text_str"/>
+        </RelativeLayout>
+        
+        <!-- Item eGgift -->
+            <!-- Normal -->
+        <RelativeLayout android:id="@+id/topmenu_egift_id"
+            android:layout_width="@dimen/topmenu_item_size_big_dim"
+            android:layout_height="@dimen/topmenu_item_size_big_dim"
+            android:background="@drawable/topmenu_background_menu_item_dra"
+            android:layout_toLeftOf="@+id/topmenu_circle_select_id"
+            android:layout_above="@+id/topmenu_line_vertical_center_id"
+            android:clickable="true"
+            android:layout_marginRight="-70dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible">
+            <ImageView android:id="@+id/topmenu_egift_icon_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/topmenu_egift_icon"/>
+            <TextView android:id="@+id/topmenu_egift_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topmenu_egift_icon_id"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_size_36_point"
+                android:text="@string/topmenu_egift_text_str"/>
+        </RelativeLayout>
+            <!-- Active -->
+        <RelativeLayout android:id="@+id/topmenu_egift_active_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/topmenu_circle_select_id"
+            android:layout_above="@+id/topmenu_line_vertical_center_id"
+            android:layout_marginRight="-70dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+            <ImageView android:id="@+id/topmenu_egift_icon_active_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/topmenu_top_up_active_icon"/>
+            <TextView android:id="@+id/topmenu_egift_text_active_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topmenu_egift_icon_active_id"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_size_39.6_point"
+                android:text="@string/topmenu_egift_text_str"/>
+        </RelativeLayout>
+        
+        <!-- Item Money Transfer -->
+            <!-- Normal -->
+        <RelativeLayout android:id="@+id/topmenu_money_transfer_id"
+            android:layout_width="@dimen/topmenu_item_size_big_dim"
+            android:layout_height="@dimen/topmenu_item_size_big_dim"
+            android:background="@drawable/topmenu_background_menu_item_dra"
+            android:layout_toLeftOf="@+id/topmenu_circle_select_id"
+            android:layout_below="@+id/topmenu_line_vertical_center_id"
+            android:clickable="true"
+            android:layout_marginRight="-70dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible">
+            <ImageView android:id="@+id/topmenu_money_transfer_icon_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/topmenu_money_transfer_icon"/>
+            <TextView android:id="@+id/topmenu_money_transfer_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topmenu_money_transfer_icon_id"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_size_36_point"
+                android:text="@string/topmenu_money_transfer_text_str"/>
+        </RelativeLayout>
+            <!-- Active -->
+        <RelativeLayout android:id="@+id/topmenu_money_transfer_active_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/topmenu_circle_select_id"
+            android:layout_below="@+id/topmenu_line_vertical_center_id"
+            android:layout_marginRight="-70dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+            <ImageView android:id="@+id/topmenu_money_transfer_icon_active_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/topmenu_top_up_active_icon"/>
+            <TextView android:id="@+id/topmenu_money_transfer_text_active_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topmenu_money_transfer_icon_active_id"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:textSize="@dimen/text_size_39.6_point"
+                android:text="@string/topmenu_money_transfer_text_str"/>
+        </RelativeLayout>
+        
+        <!-- Item Points -->
+            <!-- Normal -->
+        <RelativeLayout android:id="@+id/topmenu_points_id"
+            android:layout_width="@dimen/topmenu_item_size_big_dim"
+            android:layout_height="@dimen/topmenu_item_size_big_dim"
+            android:background="@drawable/topmenu_background_menu_item_dra"
+            android:layout_below="@+id/topmenu_circle_select_id"
+            android:clickable="true"
+            android:layout_marginTop="-30dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible">
+            <ImageView android:id="@+id/topmenu_points_icon_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/topmenu_points_icon"/>
+            <TextView android:id="@+id/topmenu_points_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topmenu_points_icon_id"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_size_36_point"
+                android:text="@string/topmenu_points_text_str"/>
+        </RelativeLayout>
+            <!-- Active -->
+        <RelativeLayout android:id="@+id/topmenu_points_active_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topmenu_circle_select_id"
+            android:layout_marginTop="-40dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+            <ImageView android:id="@+id/topmenu_points_icon_active_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/topmenu_top_up_active_icon"/>
+            <TextView android:id="@+id/topmenu_points_text_active_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topmenu_points_icon_active_id"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_size_39.6_point"
+                android:text="@string/topmenu_points_text_str"/>
+        </RelativeLayout>
+        
+        <!-- Item Pay Bill -->
+            <!-- Normal -->
+        <RelativeLayout android:id="@+id/topmenu_pay_bill_id"
+            android:layout_width="@dimen/topmenu_item_size_big_dim"
+            android:layout_height="@dimen/topmenu_item_size_big_dim"
+            android:background="@drawable/topmenu_background_menu_item_dra"
+            android:layout_toRightOf="@+id/topmenu_circle_select_id"
+            android:layout_below="@+id/topmenu_line_vertical_center_id"
+            android:clickable="true"
+            android:layout_marginLeft="-70dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible">
+            <ImageView android:id="@+id/topmenu_pay_bill_icon_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/topmenu_pay_bill_icon"/>
+            <TextView android:id="@+id/topmenu_pay_bill_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topmenu_pay_bill_icon_id"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_size_36_point"
+                android:text="@string/topmenu_pay_bill_text_str"/>
+        </RelativeLayout>
+            <!-- Active -->
+        <RelativeLayout android:id="@+id/topmenu_pay_bill_active_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/topmenu_circle_select_id"
+            android:layout_below="@+id/topmenu_line_vertical_center_id"
+            android:layout_marginLeft="-70dp"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+            <ImageView android:id="@+id/topmenu_pay_bill_icon_active_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/topmenu_top_up_active_icon"/>
+            <TextView android:id="@+id/topmenu_pay_bill_text_active_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topmenu_pay_bill_icon_active_id"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/text_size_39.6_point"
+                android:text="@string/topmenu_pay_bill_text_str"/>
+        </RelativeLayout>
+        
+        <!-- Item Top Up -->
+            <!-- Normal -->
+        <RelativeLayout android:id="@+id/topmenu_top_up_id"
+            android:layout_width="@dimen/topmenu_item_size_big_dim"
+            android:layout_height="@dimen/topmenu_item_size_big_dim"
+            android:layout_toRightOf="@+id/topmenu_circle_select_id"
+            android:layout_above="@+id/topmenu_line_vertical_center_id"
+            android:clickable="true"
+            android:layout_marginLeft="-70dp"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/topmenu_background_menu_item_dra"
+            android:gravity="center"
+            android:visibility="gone">
+             <ImageView android:id="@+id/topmenu_top_up_icon_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/topmenu_egift_icon"/>
+            <TextView android:id="@+id/topmenu_top_up_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/topmenu_top_up_icon_id"
+                android:textSize="@dimen/text_size_36_point"
+                android:text="@string/topmenu_top_up_text_str"/>
+        </RelativeLayout>
+            <!-- Active -->
+        <RelativeLayout android:id="@+id/topmenu_top_up_active_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/topmenu_circle_select_id"
+            android:layout_above="@+id/topmenu_line_vertical_center_id"
+            android:layout_marginLeft="-70dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible">
+            
+            <ImageView android:id="@+id/topmenu_top_up_icon_active_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/topmenu_top_up_active_icon"/>
+            <TextView android:id="@+id/topmenu_top_up_text_active_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/topmenu_top_up_icon_active_id"
+                android:textSize="@dimen/text_size_39.6_point"
+                android:text="@string/topmenu_top_up_text_str"/>
+        </RelativeLayout>
+        
+    </RelativeLayout>
+    
+    <!-- Main menu layout-->
+    <LinearLayout android:id="@+id/layout_bottom_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <!-- Contacts -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <LinearLayout android:id="@+id/topmenu_contacts_id"
+                android:layout_width="@dimen/topmenu_item_size_small_dim"
+                android:layout_height="@dimen/topmenu_item_size_small_dim"
+                android:background="@drawable/topmenu_background_contacts_dra"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:gravity="center">
+                <ImageView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/common_people_icon"/>
+                <TextView android:id="@+id/topmenu_contacts_text_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_36_point"
+                    android:text="@string/topmenu_contacts_str"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Message -->
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <LinearLayout android:id="@+id/topmenu_message_id"
+                android:layout_width="@dimen/topmenu_item_size_small_dim"
+                android:layout_height="@dimen/topmenu_item_size_small_dim"
+                android:background="@drawable/topmenu_background_message_dra"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:gravity="center">
+                <ImageView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/common_message_icon"/>
+                <TextView android:id="@+id/topmenu_message_text_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_36_point"
+                    android:textColor="@android:color/white"
+                    android:text="@string/topmenu_message_str"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Call -->
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <LinearLayout android:id="@+id/topmenu_call_id"
+                android:layout_width="@dimen/topmenu_item_size_small_dim"
+                android:layout_height="@dimen/topmenu_item_size_small_dim"
+                android:background="@drawable/topmenu_background_call_dra"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:gravity="center">
+                <ImageView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/common_call_icon"/>
+                <TextView android:id="@+id/topmenu_call_text_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_36_point"
+                    android:text="@string/topmenu_call_str"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -47,7 +47,7 @@ public class IntroduceItemFragment extends Fragment{
             ViewGroup container, @Nullable
             Bundle savedInstanceState) {
         // TODO Auto-generated method stub
-        View view = inflater.inflate(R.layout.layout_introduce_item, null);
+        View view = inflater.inflate(R.layout.introduce_item_lay, null);
         ImageView imageView = (ImageView)view.findViewById(R.id.iv_intro);
         if(mModeType == IntroduceFrom.LOCAL){
             imageView.setImageResource((Integer)mImage);

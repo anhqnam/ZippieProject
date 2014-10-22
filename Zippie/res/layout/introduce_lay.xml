@@ -4,19 +4,19 @@
     android:layout_height="match_parent" >
     
     <android.support.v4.view.ViewPager
-        android:id="@+id/introduce_view_pager"
+        android:id="@+id/introduce_view_pager_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </android.support.v4.view.ViewPager>
     <com.lunextelecom.zippie.view.CirclePageIndicator
-        android:id="@+id/introduce_indicator"
+        android:id="@+id/introduce_indicator_id"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="50dp"/>
-    <TextView android:id="@+id/introduce_skip_text"
+    <TextView android:id="@+id/introduce_skip_text_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -26,5 +26,5 @@
         android:textSize="22sp"
         android:drawableRight="@drawable/ic_action_next_item"
         android:layout_marginBottom="10dp"
-        android:text="@string/introduce_skip_text"/>
+        android:text="@string/introduce_skip_text_str"/>
 </RelativeLayout>

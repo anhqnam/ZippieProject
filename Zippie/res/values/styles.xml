@@ -33,7 +33,7 @@
     
     <!-- Action bar theme -->
     <style name="Custom.Theme.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
-        <item name="android:background">@color/button_normal_blue</item>
+        <item name="android:background">@color/createprofile_button_normal_blue_col</item>
         <item name="titleTextStyle">@style/Custom.Theme.ActionBarTextStyle</item>
         <item name="android:icon">@android:color/transparent</item>
     </style>

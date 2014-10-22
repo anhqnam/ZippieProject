@@ -5,13 +5,28 @@
     <color name="button_default_press">#cd3498db</color>
     
     <!-- create profile -->
-   <color name="background_logo_facebook_notpress">#ff3b589e</color>
-    <color name="background_logo_facebook_press">#cd3b589e</color>
-    <color name="button_normal_blue">#3598db</color>
-     <!-- Contact color -->
+   <color name="createprofile_background_logo_facebook_notpress_col">#ff3b589e</color>
+    <color name="createprofile_background_logo_facebook_press_col">#cd3b589e</color>
+    <color name="createprofile_button_normal_blue_col">#3598db</color>
+    
+    <!-- Contact color -->
     <color name="background_topbar">#3598db</color>
     <color name="white">#ffffff</color>
     <color name="color_button_contact">#3598db</color>
     <drawable name="focused">#ff5500</drawable>
     <drawable name="selected">#FF00FF</drawable>
+
+    <!-- Top menu -->
+    <color name="topmenu_background_header_col">#3498db</color>
+    <color name="topmenu_background_menu_item_notpress_col">#fff6f6f6</color>
+    <color name="topmenu_background_menu_item_press_col">#cdf6f6f6</color>
+    <color name="topmenu_background_menu_item_stroke_notpress_col">#ff3498db</color>
+    <color name="topmenu_background_menu_item_stroke_press_col">#993498db</color>
+    <color name="topmenu_background_contacts_notpress_col">#ff1abc9c</color>
+    <color name="topmenu_background_contacts_press_col">#cd1abc9c</color>
+    <color name="topmenu_background_message_notpress_col">#ff47a1de</color>
+    <color name="topmenu_background_message_press_col">#cd47a1de</color>
+    <color name="topmenu_background_call_notpress_col">#ff35ac00</color>
+    <color name="topmenu_background_call_press_col">#cd35ac00</color>
+    <color name="topmenu_text_header_col">#3498db</color>
 </resources>

@@ -56,10 +56,10 @@ public class IntroduceFragment extends Fragment implements OnClickListener{
     private final Handler mHandler = new Handler();
 
     /** The m view pager. */
-    private ViewPager mViewPager;
+    private ViewPager mIntroViewPager;
 
     /** The m adapter. */
-    private IntroduceAdapter mAdapter;
+    private IntroduceAdapter mIntroAdapter;
 
     /** The m direction. */
     private int mDirection = 1;
@@ -102,26 +102,26 @@ public class IntroduceFragment extends Fragment implements OnClickListener{
             Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         //get view
-        View view = inflater.inflate(R.layout.layout_introduce, null);
-        TextView tvSkip = (TextView)view.findViewById(R.id.introduce_skip_text);
-        mViewPager = (ViewPager)view.findViewById(R.id.introduce_view_pager);
-        CirclePageIndicator indicator = (CirclePageIndicator)view.findViewById(R.id.introduce_indicator);
+        View view = inflater.inflate(R.layout.introduce_lay, null);
+        TextView introSkipTextTv = (TextView)view.findViewById(R.id.introduce_skip_text_id);
+        mIntroViewPager = (ViewPager)view.findViewById(R.id.introduce_view_pager_id);
+        CirclePageIndicator introIndicator = (CirclePageIndicator)view.findViewById(R.id.introduce_indicator_id);
 
-        Utils.setTypefaceRoboto(getActivity(), tvSkip);
-        tvSkip.setOnClickListener(this);
+        Utils.setTypefaceRoboto(getActivity(), introSkipTextTv);
+        introSkipTextTv.setOnClickListener(this);
 
-        mAdapter = new IntroduceAdapter(getFragmentManager(), getListIntroduceItemFragment(IntroduceFrom.LOCAL));
-        mViewPager.setAdapter(mAdapter);
+        mIntroAdapter = new IntroduceAdapter(getFragmentManager(), getListIntroduceItemFragment(IntroduceFrom.LOCAL));
+        mIntroViewPager.setAdapter(mIntroAdapter);
 
-        indicator.setViewPager(mViewPager);
+        introIndicator.setViewPager(mIntroViewPager);
         final float density = getResources().getDisplayMetrics().density;
-        indicator.setRadius(5 * density);
-        indicator.setPageColor(0x88FFFFFF);
-        indicator.setFillColor(0xFFFFFFFF);
-        indicator.setSnap(true);
-        indicator.setStrokeWidth(0);
-        indicator.setSpaceBetweenWidth(7);
-        mViewPager.setOnTouchListener(new OnTouchListener() {
+        introIndicator.setRadius(5 * density);
+        introIndicator.setPageColor(0x88FFFFFF);
+        introIndicator.setFillColor(0xFFFFFFFF);
+        introIndicator.setSnap(true);
+        introIndicator.setStrokeWidth(0);
+        introIndicator.setSpaceBetweenWidth(7);
+        mIntroViewPager.setOnTouchListener(new OnTouchListener() {
 
             @SuppressLint("ClickableViewAccessibility")
             @Override
@@ -157,7 +157,7 @@ public class IntroduceFragment extends Fragment implements OnClickListener{
         // TODO Auto-generated method stub
         int id = v.getId();
         switch (id) {
-            case R.id.introduce_skip_text:
+            case R.id.introduce_skip_text_id:
 
                 break;
 
@@ -207,15 +207,15 @@ public class IntroduceFragment extends Fragment implements OnClickListener{
                 mHandler.post(new Runnable() {
                     @Override
                     public void run() {
-                        int currentPage = mViewPager.getCurrentItem();
-                        int numberPage = mAdapter.getCount();
+                        int currentPage = mIntroViewPager.getCurrentItem();
+                        int numberPage = mIntroAdapter.getCount();
                         if (currentPage == numberPage-1) {
                             currentPage = -1;
                             mScroller.setFixedDuration(SPEED_SCROLL_QUICK);
                         }else{
                             mScroller.setFixedDuration(SPEED_SCROLL_AUTO);
                         }
-                        mViewPager.setCurrentItem(currentPage+mDirection, true);
+                        mIntroViewPager.setCurrentItem(currentPage+mDirection, true);
                     }
                 });
 
@@ -231,9 +231,9 @@ public class IntroduceFragment extends Fragment implements OnClickListener{
         try {
             Field scrollerField = ViewPager.class.getDeclaredField("mScroller");
             scrollerField.setAccessible(true);
-            mScroller = new FixedSpeedScroller(mViewPager.getContext(), sInterpolator);
+            mScroller = new FixedSpeedScroller(mIntroViewPager.getContext(), sInterpolator);
             mScroller.setFixedDuration(SPEED_SCROLL_NORMAL);
-            scrollerField.set(mViewPager, mScroller);
+            scrollerField.set(mIntroViewPager, mScroller);
         } catch (NoSuchFieldException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
