@@ -3,9 +3,88 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
-	<TextView 
-	    android:layout_width="fill_parent"
-	    android:layout_height="fill_parent"
-	    android:text="@string/hello_world"/>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/header_height_size"
+        layout="@layout/signup_header_verify_lay" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.6"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:padding="20dp" >
+
+            <TextView
+                android:id="@+id/signup_show_text_id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="15dp"
+                android:text="@string/signup_text_show_verify_str"
+                android:textSize="@dimen/text_size_60_point" />
+
+            <TextView
+                android:id="@+id/signup_phone_verify_id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="+84979485576"
+                android:textSize="@dimen/text_size_128_point" />
+
+            <EditText
+                android:id="@+id/signup_verify_code_id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="@string/signup_verify_code_str"
+                android:layout_marginTop="40dp"
+                android:textSize="@dimen/text_size_60_point" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#fff" >
+
+                <TextView
+                    android:id="@+id/signup_resend_code_text_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="20dp"
+                    android:text="@string/signup_resend_code_str"
+                    android:textSize="@dimen/text_size_60_point" />
+
+                <Button
+                    android:id="@+id/signup_button_continue_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/signup_resend_code_text_id"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/common_button_color_default_dra"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/signup_button_verify_str"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_72_point" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
 </LinearLayout>

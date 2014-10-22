@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:paddingLeft="5dp"
-            android:text="@string/signup_dialog_country_title"
+            android:text="@string/signup_dialog_country_title_str"
             android:textColor="#07c"
             android:textSize="@dimen/text_size_60_point" />
 
@@ -41,7 +41,7 @@
                 android:id="@+id/signup_search_edittext_id"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/signup_dialog_country_hint"
+                android:hint="@string/signup_dialog_country_hint_str"
                 android:inputType="text" />
 
             <ImageView
@@ -59,7 +59,7 @@
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:layout_below="@id/signup_header_dialog_id"
-        android:background="#07c" />
+        android:background="@color/common_button_default_notpress_col" />
 
     <ListView
         android:id="@+id/signup_list_country_id"

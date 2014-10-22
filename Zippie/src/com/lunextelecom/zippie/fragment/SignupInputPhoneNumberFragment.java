@@ -126,13 +126,22 @@ public class SignupInputPhoneNumberFragment extends Fragment implements
 				FragmentManager fragmentManager = getFragmentManager();
 				FragmentTransaction transaction = fragmentManager
 						.beginTransaction();
-				transaction.replace(R.id.fragment_container,
-						new SignupVerifyCodeFragment());
-				transaction.addToBackStack(null);
-				transaction.commit();
+				String phone_number = mNumberEditText.getText().toString();
+				if(phone_number.trim().length() == 0)
+				{
+					Toast.makeText(getActivity(), "Please enter your phone number", Toast.LENGTH_LONG).show();
+				}else{
+					SignupVerifyCodeFragment fragment = new SignupVerifyCodeFragment();
+					Bundle bundle = new Bundle();
+					bundle.putString("phonenumber", phone_number);
+					fragment.setArguments(bundle);
+					transaction.replace(R.id.fragment_container,fragment);
+					transaction.addToBackStack(null);
+					transaction.commit();
+				}
 			}
 		});
-		Utils.setTypefaceRoboto(getActivity(), mShowTextView, mCountryTextView,
+		Utils.setTypefaceRoboto(getActivity(),mTitleTextView, mShowTextView, mCountryTextView,
 				mNumberEditText, mFlagImageView, mContinueButton);
 		return view;
 	}

@@ -59,6 +59,13 @@
 	<string name="signup_button_continue_tr">Continue</string>
 	
 	<!-- Dialog choose name country -->
-	<string name="signup_dialog_country_title">Title</string>
-	<string name="signup_dialog_country_hint">Please input text</string>
+	<string name="signup_dialog_country_title_str">Title</string>
+	<string name="signup_dialog_country_hint_str">Please input text</string>
+	
+	<!-- Verify code -->
+	<string name="signup_title_verify_screen_str">DID YOU RECEIVE OUR TEXT?</string>
+	<string name="signup_resend_code_str"><u><font fgcolor="#ff3498db">Resend new code</font></u></string>
+	<string name="signup_button_verify_str">Verify</string>
+	<string name="signup_text_show_verify_str">Please enter verification code from text message send to</string>
+	<string name="signup_verify_code_str">Enter verification code</string>
 </resources>
