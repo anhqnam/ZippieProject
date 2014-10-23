@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Text size -->
-    <dimen name="text_size_36_point">12dp</dimen>
+    <dimen name="text_size_36_point">11dp</dimen>
     <dimen name="text_size_39.6_point">13.2dp</dimen>
     <dimen name="text_size_40.5_point">13.5dp</dimen>
     <dimen name="text_size_48_point">16dp</dimen>
@@ -14,8 +14,26 @@
     <dimen name="header_height_size">48dp</dimen>
     
     <!-- Top menu -->
-    <dimen name="topmenu_item_size_big_dim">72dp</dimen>
-    <dimen name="topmenu_item_size_small_dim">66.3dp</dimen>
+    <dimen name="topmenu_item_size_big_dim">65dp</dimen>
+    <dimen name="topmenu_item_size_small_dim">60.3dp</dimen>
+    <dimen name="topmenu_circle_select_width_dim">277dp</dimen>
+    <dimen name="topmenu_circle_select_height_dim">235dp</dimen>
+    <dimen name="topmenu_orther_main_menu_margin_dim">20dp</dimen>
+    <dimen name="topmenu_item_active_width_dim">70dp</dimen>
+    <dimen name="topmenu_item_active_height_dim">70dp</dimen>
+    <dimen name="topmenu_item_active_right_margin_left_dim">-75dp</dimen>
+    <dimen name="topmenu_item_active_left_margin_right_dim">-75dp</dimen>
+    <dimen name="topmenu_item_active_top_margin_bottom_dim">-45dp</dimen>
+    <dimen name="topmenu_item_active_bottom_margin_top_dim">-45dp</dimen>
+    <dimen name="topmenu_item_active_right_left_margin_bottom_dim">10dp</dimen>
+    <dimen name="topmenu_item_active_right_left_margin_top_dim">10dp</dimen>
+    <dimen name="topmenu_item_right_margin_left_dim">-60dp</dimen>
+    <dimen name="topmenu_item_left_margin_right_dim">-60dp</dimen>
+    <dimen name="topmenu_item_top_margin_bottom_dim">-23dp</dimen>
+    <dimen name="topmenu_item_bottom_margin_top_dim">-23dp</dimen>
+    <dimen name="topmenu_item_right_left_margin_bottom_dim">30dp</dimen>
+    <dimen name="topmenu_item_right_left_margin_top_dim">30dp</dimen>
+    
     <!-- Contact dimens -->
     <dimen name="contact_home_btn_dim">35dp</dimen>
     <dimen name="contact_text_size_dim">12dp</dimen>

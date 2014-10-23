@@ -27,7 +27,8 @@
         <ImageView
             android:id="@+id/signup_auto_verify_code_runing_id"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:src="@drawable/signup_auto_verify_run_icon_1"/>
 
         <TextView
             android:id="@+id/signup_auto_verify_notify_id"

@@ -20,6 +20,23 @@
     <!-- Top menu -->
     <dimen name="topmenu_item_size_big_dim">72dp</dimen>
     <dimen name="topmenu_item_size_small_dim">66.3dp</dimen>
+    <dimen name="topmenu_circle_select_width_dim">324dp</dimen>
+    <dimen name="topmenu_circle_select_height_dim">275dp</dimen>
+    <dimen name="topmenu_orther_main_menu_margin_dim">30dp</dimen>
+    <dimen name="topmenu_item_active_width_dim">80dp</dimen>
+    <dimen name="topmenu_item_active_height_dim">80dp</dimen>
+    <dimen name="topmenu_item_active_right_margin_left_dim">-85dp</dimen>
+    <dimen name="topmenu_item_active_left_margin_right_dim">-85dp</dimen>
+    <dimen name="topmenu_item_active_top_margin_bottom_dim">-45dp</dimen>
+    <dimen name="topmenu_item_active_bottom_margin_top_dim">-45dp</dimen>
+    <dimen name="topmenu_item_active_right_left_margin_bottom_dim">15dp</dimen>
+    <dimen name="topmenu_item_active_right_left_margin_top_dim">15dp</dimen>
+    <dimen name="topmenu_item_right_margin_left_dim">-70dp</dimen>
+    <dimen name="topmenu_item_left_margin_right_dim">-70dp</dimen>
+    <dimen name="topmenu_item_top_margin_bottom_dim">-30dp</dimen>
+    <dimen name="topmenu_item_bottom_margin_top_dim">-30dp</dimen>
+    <dimen name="topmenu_item_right_left_margin_bottom_dim">30dp</dimen>
+    <dimen name="topmenu_item_right_left_margin_top_dim">30dp</dimen>
     
 	 <!-- Contact dimens -->
 	<dimen name="contact_home_btn">35dp</dimen>
