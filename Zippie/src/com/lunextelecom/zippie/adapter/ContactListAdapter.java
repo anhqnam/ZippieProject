@@ -44,16 +44,18 @@ public class ContactListAdapter extends android.widget.BaseAdapter implements Se
     private String mSections = "ABCDEFGHIJKLMNOPQRSTUVWXYZ#";
 
     /** The m sms. */
-    private Integer mSms =1;
+    //private Integer mSms =1;
 
     /** The m call. */
-    private Integer mCall =2;
+    //private Integer mCall =2;
 
     /** The m invite. */
-    private Integer mInvite =3;
+    //private Integer mInvite =3;
 
+    /** The m invite. */
+    private Integer mContactDetail =4;
     /** The m contact id. */
-    private Integer mContactId;
+    //private Integer mContactId;
 
     /**
      * The Class Row.
@@ -179,14 +181,14 @@ public class ContactListAdapter extends android.widget.BaseAdapter implements Se
             ViewHolder viewHolder;
             if (convertView == null) {
                 LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                convertView = inflater.inflate(R.layout.row_contact_detail, parent, false);
+                convertView = inflater.inflate(R.layout.contact_rowdetail_contactlist_layout, parent, false);
                 viewHolder = new ViewHolder();
-                viewHolder.tvContactName = (TextView)convertView.findViewById(R.id.tvContactName);
-                //viewHolder.ivAvatar = (ImageView)convertView.findViewById(R.id.ivContactAvatar);
-                viewHolder.ivStatus = (ImageView)convertView.findViewById(R.id.ivContactStatus);
-                viewHolder.ivSmsFree = (ImageView)convertView.findViewById(R.id.ivContactSms);
-                viewHolder.ivCallFree = (ImageView)convertView.findViewById(R.id.ivContactCall);
-                viewHolder.ivContactInvite = (Button)convertView.findViewById(R.id.ivContactInvite);
+                viewHolder.tvContactName = (TextView)convertView.findViewById(R.id.contact_rowlist_name_tv_id);
+                //viewHolder.ivAvatar = (ImageView)convertView.findViewById(R.id.contact_rowlist_avartar_iv_id);
+                viewHolder.ivStatus = (ImageView)convertView.findViewById(R.id.contact_rowlist_status_iv_id);
+                viewHolder.ivSmsFree = (ImageView)convertView.findViewById(R.id.contact_rowlist_sms_iv_id);
+                viewHolder.ivCallFree = (ImageView)convertView.findViewById(R.id.contact_rowlist_call_iv_id);
+                viewHolder.ivContactInvite = (Button)convertView.findViewById(R.id.contact_rowlist_invite_bt_id);
                 convertView.setTag(viewHolder);
             } else {
                 viewHolder = (ViewHolder)convertView.getTag();
@@ -220,12 +222,12 @@ public class ContactListAdapter extends android.widget.BaseAdapter implements Se
         }else { // Section
             if (convertView == null) {
                 LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                convertView = inflater.inflate(R.layout.row_contact_section, parent,
+                convertView = inflater.inflate(R.layout.contact_rowsection_contactlist_layout, parent,
                         false);
             }
 
             Section section = (Section)getItem(position);
-            TextView textView = (TextView)convertView.findViewById(R.id.tvContactSection);
+            TextView textView = (TextView)convertView.findViewById(R.id.contact_rowlist_section_tv_id);
             textView.setText(section.text);
         }
         return convertView;
@@ -292,19 +294,19 @@ public class ContactListAdapter extends android.widget.BaseAdapter implements Se
     public void onClick(View v) {
         // TODO Auto-generated method stub
         switch (v.getId()) {
-            case R.id.ivContactSms:
+            case R.id.contact_rowlist_sms_iv_id:
                 if(mContactAdapterCallBack != null){
-                    mContactAdapterCallBack.callbackQuestionDialog(mContactId,mSms);
+                    //mContactAdapterCallBack.callbackQuestionDialog(mContactId,mSms);
                 }
                 break;
-            case R.id.ivContactCall:
+            case R.id.contact_rowlist_call_iv_id:
                 if(mContactAdapterCallBack != null){
-                    mContactAdapterCallBack.callbackQuestionDialog(mContactId,mCall);
+                    //mContactAdapterCallBack.callbackQuestionDialog(mContactId,mCall);
                 }
                 break;
-            case R.id.ivContactInvite:
+            case R.id.contact_rowlist_invite_bt_id:
                 if(mContactAdapterCallBack != null){
-                    mContactAdapterCallBack.callbackQuestionDialog(mContactId,mInvite);
+                    //mContactAdapterCallBack.callbackQuestionDialog(mContactId,mInvite);
                 }
                 break;
             default:
@@ -333,7 +335,7 @@ public class ContactListAdapter extends android.widget.BaseAdapter implements Se
          * @param result the result
          * @param method the method
          */
-        public void callbackQuestionDialog(Integer result,Integer method);
+        public void callbackAdapter(ContactObject result,Integer method);
     }
 
     /**
@@ -352,8 +354,11 @@ public class ContactListAdapter extends android.widget.BaseAdapter implements Se
     public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
         // TODO Auto-generated method stub
         if(getItemViewType(arg2) == 0){
-            //Item r = (Item)getItem(arg2);
-            //Integer d =r.mContact.getcId();
+            Item r = (Item)getItem(arg2);
+            ContactObject contact =r.mContact;
+            if(mContactAdapterCallBack != null){
+                mContactAdapterCallBack.callbackAdapter(contact,mContactDetail);
+            }
         }
     }
 

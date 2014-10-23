@@ -5,12 +5,12 @@
   <item 
     android:state_focused="true" 
     android:state_selected="false" 
-    android:drawable="@drawable/focused"/> 
+    android:drawable="@drawable/contact_focused_col"/> 
 
   <!-- Pressed -->
   <item 
     android:state_selected="true" 
     android:state_focused="false"
-    android:drawable="@drawable/selected" /> 
+    android:drawable="@drawable/contact_selected_col" /> 
 
 </selector>

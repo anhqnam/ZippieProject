@@ -30,13 +30,22 @@
     <!-- End welcome -->
     
     <!--Contact resource string -->
-	<string name="contact_zippie">Zippie</string>
-    <string name="contact_all">All</string>
-    <string name="contact_favorites">Favorites</string>
-    <string name="contact_search">Search</string>
-    <string name="contact_invite">Invite</string>
-    <string name = "contact_name">Andy Code</string>
-    <string name = "contact_search_hint">Please input text</string>
+    <string name="contact_zippie_str">Zippie</string>
+    <string name="contact_all_str">All</string>
+    <string name="contact_favorites_str">Favorites</string>
+    <string name="contact_search_str">Search</string>
+    <string name="contact_invite_str">Invite</string>
+    <string name="contact_name_str">Andy Code</string>
+    <string name="contact_search_hint_str">Please input text</string>
+    <string name="contact_detail_voicecall_str">Voice</string>
+    <string name="contact_detail_videocall_str">Video</string>
+    <string name="contact_detail_sms_str">Message</string>
+    <string name="contact_detail_premium_str">Premium Call</string>
+    <string name="contact_detail_egift_str">eGift</string>
+    <string name="contact_detail_money_transfer_str">Money Transfer</string>
+    <string name="contact_detail_pay_bill_str">Pay Bill</string>
+    <string name="contact_detail_topup_str">Top Up</string>
+    <string name="contact_detail_menu_center_str">2X</string>
 	<!-- End contact -->    
 
     <!-- Create profile resources string -->

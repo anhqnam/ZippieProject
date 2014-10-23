@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.lunextelecom.zippie"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <!-- contact detail header -->
+
+    <RelativeLayout
+        android:id="@+id/contactdetail_header_rl_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:background="@color/contact_background_header_col"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/contactdetail_back_iv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="14dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/contact_image_change_dra"
+            android:contentDescription="@null"
+            android:src="@drawable/contact_back_icon_dra" />
+
+        <ImageView
+            android:id="@+id/contactdetail_status_iv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/contactdetail_back_iv_id"
+            android:contentDescription="@null"
+            android:src="@drawable/contact_status_icon_dra" />
+
+        <TextView
+            android:id="@+id/contactdetail_contactname_tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/contactdetail_status_iv_id"
+            android:text="ABC DEF IGH"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/contactdetail_editcontact_iv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="14dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/contact_image_change_dra"
+            android:contentDescription="@null"
+            android:src="@drawable/contact_detail_pen_icon_dra" />
+
+        <ImageView
+            android:id="@+id/contactdetail_favoritecontact_iv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/contactdetail_editcontact_iv_id"
+            android:background="@drawable/contact_image_change_dra"
+            android:src="@drawable/contact_detail_start_icon_dra" />
+    </RelativeLayout>
+    <!-- contact detail information -->
+
+    <RelativeLayout
+        android:id="@+id/contactdetail_avatar_phonelist_rl_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.18"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/contactdetail_avatar_rl_id"
+            android:layout_width="120dp"
+            android:layout_height="match_parent" >
+
+            <com.lunextelecom.zippie.view.CircularImageView
+                android:id="@+id/contactdetail_avatar_iv_id"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/contact_avatar_icon_dra"
+                app:border_color="#EEEEEE"
+                app:border_width="0.5dp"
+                app:shadow="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/contactdetail_phonelist_rl_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/contactdetail_avatar_rl_id" >
+
+            <ListView
+                android:id="@+id/contactdetail_phonelist_lv_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ListView>
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- contact detail call and sms free -->
+
+    <LinearLayout
+        android:id="@+id/contactdetail_callsms_ll_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.14"
+        android:baselineAligned="false" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/contactdetail_callvoice_rl_id"
+                android:layout_width="@dimen/contact_detail_imagewidth_dim"
+                android:layout_height="@dimen/contact_detail_imagewidth_dim"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/contact_callvoice_background_dra"
+                android:gravity="center"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/contactdetail_callvoice_iv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/contact_detail_callvoice_icon_dra" />
+
+                <TextView
+                    android:id="@+id/contactdetail_callvoice_tv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/contactdetail_callvoice_iv_id"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/contact_detail_voicecall_str"
+                    android:textColor="@color/contact_background_white_col"
+                    android:textSize="@dimen/contact_detail_icontextsize_dim" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/contactdetail_callvideo_rl_id"
+                android:layout_width="@dimen/contact_detail_imagewidth_dim"
+                android:layout_height="@dimen/contact_detail_imagewidth_dim"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/contact_callvideo_background_dra"
+                android:gravity="center"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/contactdetail_callvideo_iv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/contact_detail_callvideo_icon_dra" />
+
+                <TextView
+                    android:id="@+id/contactdetail_callvideo_tv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/contactdetail_callvideo_iv_id"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/contact_detail_videocall_str"
+                    android:textColor="@color/contact_background_white_col"
+                    android:textSize="@dimen/contact_detail_icontextsize_dim" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:id="@+id/contactdetail_sms_rl_id"
+                android:layout_width="@dimen/contact_detail_imagewidth_dim"
+                android:layout_height="@dimen/contact_detail_imagewidth_dim"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/contact_sms_background_dra"
+                android:gravity="center"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/contactdetail_sms_iv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/contact_detail_sms_icon_dra" />
+
+                <TextView
+                    android:id="@+id/contactdetail_sms_tv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/contactdetail_sms_iv_id"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/contact_detail_sms_str"
+                    android:textColor="@color/contact_background_white_col"
+                    android:textSize="@dimen/contact_detail_icontextsize_dim" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/contactdetail_line_v_id"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="#dddddd" />
+
+    <RelativeLayout
+        android:id="@+id/contactdetail_information_rl_id"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:gravity="center" >
+
+        <RelativeLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/contactdetail_information_iv_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:padding="40dp"
+                android:src="@drawable/contact_detail_background_topup_dra" />
+
+            <View
+                android:id="@+id/contactdetail_information_v_id"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center" >
+
+                        <RelativeLayout
+                            android:id="@+id/contactdetail_callpremium_rl_id"
+                            android:layout_width="@dimen/contact_detail_imagewidth_dim"
+                            android:layout_height="@dimen/contact_detail_imagewidth_dim"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/contact_callvpremium_background_dra"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:visibility="visible" >
+
+                            <ImageView
+                                android:id="@+id/contactdetail_callpremium_iv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/contact_detail_premiumcall_icon_dra" />
+
+                            <TextView
+                                android:id="@+id/contactdetail_callpremium_tv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/contactdetail_callpremium_iv_id"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center_horizontal"
+                                android:text="@string/contact_detail_premium_str"
+                                android:textColor="@color/contact_background_white_col"
+                                android:textSize="@dimen/contact_detail_icontextsize_dim" />
+                        </RelativeLayout>
+                        <!-- Active -->
+
+                        <RelativeLayout
+                            android:id="@+id/contactdetail_callpremium_active_rl_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:id="@+id/contactdetail_callpremium_active_iv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/contact_detail_topup_active_icon_dra" />
+
+                            <TextView
+                                android:id="@+id/contactdetail_callpremium_active_tv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/contactdetail_callpremium_active_iv_id"
+                                android:gravity="center_horizontal"
+                                android:text="@string/contact_detail_premium_str"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/contact_detail_icontextsize_dim" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <!-- Item eGgift -->
+                        <!-- Normal -->
+
+                        <RelativeLayout
+                            android:id="@+id/contactdetail_egift_rl_id"
+                            android:layout_width="@dimen/contact_detail_imagewidth_dim"
+                            android:layout_height="@dimen/contact_detail_imagewidth_dim"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/contact_egift_background_dra"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:visibility="visible" >
+
+                            <ImageView
+                                android:id="@+id/contactdetail_egift_iv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/contact_detail_egift_icon_dra" />
+
+                            <TextView
+                                android:id="@+id/contactdetail_egift_tv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/contactdetail_egift_iv_id"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center_horizontal"
+                                android:text="@string/contact_detail_egift_str"
+                                android:textColor="@color/contact_background_white_col"
+                                android:textSize="@dimen/contact_detail_icontextsize_dim" />
+                        </RelativeLayout>
+                        <!-- Active -->
+
+                        <RelativeLayout
+                            android:id="@+id/contactdetail_egift_active_rl_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="30dp"
+                            android:gravity="center"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:id="@+id/contactdetail_egift_active_iv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/contact_detail_topup_active_icon_dra" />
+
+                            <TextView
+                                android:id="@+id/contactdetail_egift_active_tv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/contactdetail_egift_active_iv_id"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/contact_detail_egift_str"
+                                android:textSize="@dimen/contact_detail_icontextsize_dim" />
+                        </RelativeLayout>
+
+                        <!-- Item Top Up -->
+                        <!-- Normal -->
+
+                        <RelativeLayout
+                            android:id="@+id/contactdetail_topup_rl_id"
+                            android:layout_width="@dimen/contact_detail_imagewidth_dim"
+                            android:layout_height="@dimen/contact_detail_imagewidth_dim"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/contact_topup_background_dra"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:id="@+id/contactdetail_topup_iv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/contact_detail_egift_icon_dra" />
+
+                            <TextView
+                                android:id="@+id/contactdetail_topup_tv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/contactdetail_topup_iv_id"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center_horizontal"
+                                android:text="@string/contact_detail_topup_str"
+                                android:textColor="@color/contact_background_white_col"
+                                android:textSize="@dimen/contact_detail_icontextsize_dim" />
+                        </RelativeLayout>
+
+                        <!-- Active -->
+
+                        <RelativeLayout
+                            android:id="@+id/contactdetail_topup_active_rl_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="30dp"
+                            android:gravity="center"
+                            android:visibility="visible" >
+
+                            <ImageView
+                                android:id="@+id/contactdetail_topup_active_iv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/contact_detail_topup_active_icon_dra" />
+
+                            <TextView
+                                android:id="@+id/contactdetail_topup_active_tv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/contactdetail_topup_active_iv_id"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/contact_detail_topup_str"
+                                android:textSize="@dimen/contact_detail_icontextsize_dim" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.30" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <!-- Item Money Transfer -->
+                        <!-- Normal -->
+
+                        <RelativeLayout
+                            android:id="@+id/contactdetail_money_transfer_rl_id"
+                            android:layout_width="@dimen/contact_detail_imagewidth_dim"
+                            android:layout_height="@dimen/contact_detail_imagewidth_dim"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="60dp"
+                            android:background="@drawable/contact_money_transfer_background_dra"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:visibility="visible" >
+
+                            <ImageView
+                                android:id="@+id/contactdetail_money_transfer_iv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/contact_detail_money_icon_dra" />
+
+                            <TextView
+                                android:id="@+id/contactdetail_money_transfer_tv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/contactdetail_money_transfer_iv_id"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center_horizontal"
+                                android:text="@string/contact_detail_money_transfer_str"
+                                android:textColor="@color/contact_background_white_col"
+                                android:textSize="@dimen/contact_detail_icontextsize_dim" />
+                        </RelativeLayout>
+                        <!-- Active -->
+
+                        <RelativeLayout
+                            android:id="@+id/contactdetail_money_transfer_active_rl_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="60dp"
+                            android:gravity="center"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:id="@+id/contactdetail_money_transfer_active_iv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/contact_detail_topup_active_icon_dra" />
+
+                            <TextView
+                                android:id="@+id/contactdetail_money_transfer_active_tv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/contactdetail_money_transfer_active_iv_id"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center_horizontal"
+                                android:text="@string/contact_detail_money_transfer_str"
+                                android:textSize="@dimen/contact_detail_icontextsize_dim" />
+                        </RelativeLayout>
+                        <!-- Item Pay Bill -->
+                        <!-- Normal -->
+
+                        <RelativeLayout
+                            android:id="@+id/contactdetail_pay_bill_rl_id"
+                            android:layout_width="@dimen/contact_detail_imagewidth_dim"
+                            android:layout_height="@dimen/contact_detail_imagewidth_dim"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="60dp"
+                            android:background="@drawable/contact_paybill_background_dra"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:visibility="visible" >
+
+                            <ImageView
+                                android:id="@+id/contactdetail_pay_bill_iv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/contact_detail_bill_icon_dra" />
+
+                            <TextView
+                                android:id="@+id/contactdetail_pay_bill_tv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/contactdetail_pay_bill_iv_id"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/contact_detail_pay_bill_str"
+                                android:textColor="@color/contact_background_white_col"
+                                android:textSize="@dimen/contact_detail_icontextsize_dim" />
+                        </RelativeLayout>
+                        <!-- Active -->
+
+                        <RelativeLayout
+                            android:id="@+id/contactdetail_pay_bill_active_rl_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="60dp"
+                            android:gravity="center"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:id="@+id/contactdetail_pay_bill_active_iv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/contact_detail_topup_active_icon_dra" />
+
+                            <TextView
+                                android:id="@+id/contactdetail_pay_bill_active_tv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/contactdetail_pay_bill_active_iv_id"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center_horizontal"
+                                android:text="@string/contact_detail_pay_bill_str"
+                                android:textSize="@dimen/contact_detail_icontextsize_dim" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

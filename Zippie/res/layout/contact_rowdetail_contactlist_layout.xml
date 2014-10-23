@@ -16,37 +16,37 @@
             android:layout_height="wrap_content" >
 
             <com.lunextelecom.zippie.view.CircularImageView
-                android:id="@+id/ivContactAvatar"
+                android:id="@+id/contact_rowlist_avatar_iv_id"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/ic_contact_avatar"
+                android:src="@drawable/contact_avatar_icon_dra"
                 app:border_color="#EEEEEE"
                 app:border_width="0.5dp"
                 app:shadow="true" />
 
             <ImageView
-                android:id="@+id/ivContactStatus"
+                android:id="@+id/contact_rowlist_status_iv_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="10dp"
                 android:contentDescription="@null"
-                android:src="@drawable/ic_contact_status" />
+                android:src="@drawable/contact_status_icon_dra" />
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/tvContactName"
+            android:id="@+id/contact_rowlist_name_tv_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="80dp"
             android:layout_marginTop="20dp"
-            android:maxLength="@integer/max_length"
-            android:text="@string/contact_name"
-            android:textSize="@dimen/contact_name_size" />
+            android:maxLength="10"
+            android:text="@string/contact_name_str"
+            android:textSize="@dimen/contact_name_size_dim" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -56,41 +56,41 @@
             android:layout_marginRight="20dp" >
 
             <Button
-                android:id="@+id/ivContactInvite"
+                android:id="@+id/contact_rowlist_invite_bt_id"
                 android:layout_width="90dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="17dp"
-                android:background="@drawable/contact_button_change"
+                android:background="@drawable/contact_button_change_background_dra"
                 android:focusable="false"
-                android:text="@string/contact_invite"
-                android:textColor="@color/color_button_contact"
+                android:text="@string/contact_invite_str"
+                android:textColor="@color/contact_button_col"
                 android:visibility="gone" />
 
             <ImageView
-                android:id="@+id/ivContactSms"
+                android:id="@+id/contact_rowlist_sms_iv_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="17dp"
-                android:background="@drawable/contact_image_change"
+                android:background="@drawable/contact_image_change_dra"
                 android:contentDescription="@null"
-                android:src="@drawable/ic_contact_sms"
+                android:src="@drawable/contact_smsfree_icon_dra"
                 android:visibility="gone" />
 
             <ImageView
-                android:id="@+id/ivContactCall"
+                android:id="@+id/contact_rowlist_call_iv_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="54dp"
                 android:layout_marginTop="17dp"
-                android:background="@drawable/contact_image_change"
+                android:background="@drawable/contact_image_change_dra"
                 android:contentDescription="@null"
-                android:src="@drawable/ic_contact_call"
+                android:src="@drawable/contact_callfree_icon_draw"
                 android:visibility="gone" />
         </RelativeLayout>
     </RelativeLayout>
 
     <View
-        android:id="@+id/vContactVippe"
+        android:id="@+id/contact_rowlist_v_id"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:background="#808080" />

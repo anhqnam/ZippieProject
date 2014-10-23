@@ -15,6 +15,7 @@ import android.widget.ListView;
 
 import com.lunextelecom.zippie.R;
 import com.lunextelecom.zippie.adapter.ContactListAdapter;
+import com.lunextelecom.zippie.adapter.ContactListAdapter.ContactAdapterListener;
 import com.lunextelecom.zippie.adapter.ContactListAdapter.Item;
 import com.lunextelecom.zippie.adapter.ContactListAdapter.Row;
 import com.lunextelecom.zippie.adapter.ContactListAdapter.Section;
@@ -28,7 +29,7 @@ import com.lunextelecom.zippie.view.ImageLoader;
 /**
  * The Class ContactListFragment.
  */
-public class ContactListFragment extends Fragment {
+public class ContactListFragment extends Fragment implements ContactAdapterListener {
 
     /** The m list contact. */
     private List<ContactObject> mListContact ;
@@ -41,6 +42,8 @@ public class ContactListFragment extends Fragment {
 
     /** The mfilter. */
     private String mFilter;
+
+    /** The m search. */
     private String mSearch;
 
     /** The m list view contact. */
@@ -55,7 +58,7 @@ public class ContactListFragment extends Fragment {
     /**
      * New instance.
      *
-     * @param title the title
+     * @param position the position
      * @return the contact list fragment
      */
     public static ContactListFragment newInstancePager(String position) {
@@ -67,6 +70,14 @@ public class ContactListFragment extends Fragment {
         frag.setArguments(args);
         return frag;
     }
+
+    /**
+     * New instance fragment.
+     *
+     * @param title the title
+     * @param search the search
+     * @return the contact list fragment
+     */
     public static ContactListFragment newInstanceFragment(String title,String search) {
         ContactListFragment frag = new ContactListFragment();
         Bundle args = new Bundle();
@@ -81,12 +92,12 @@ public class ContactListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // TODO Auto-generated method stub
-        View view = inflater.inflate(R.layout.layout_contact, container, false);
+        View view = inflater.inflate(R.layout.contact_frament_contactlist_layout, container, false);
         mFilter = getArguments().getString("filter", "Enter Name");
         mSearch = getArguments().getString("search", "Enter Name");
         mContactAPI =  ContactAPIHelper.getInstance(getActivity());
         mContactDb = ContactDatabaseHelper.getInstance(getActivity());
-        mListViewContact = (ListView) view.findViewById(R.id.lvContactFragment);
+        mListViewContact = (ListView) view.findViewById(R.id.contact_list_lv_id);
         if(mFilter == Utils.FRAGMENT_CONTACT_ALL){
             mListContact = mContactAPI.GetContactAll(false);
         }else if(mFilter == Utils.FRAGMENT_CONTACT_VIPPE){
@@ -98,6 +109,7 @@ public class ContactListFragment extends Fragment {
         }
         final List<Row> rows = getListRow(mListContact);
         mAdapter = new ContactListAdapter(getActivity(), rows, mImageLoader,mSearch);
+        mAdapter.setOnClickButton(ContactListFragment.this);
         mListViewContact.setAdapter(mAdapter);
         mListViewContact.setOnItemClickListener(mAdapter);
         return view;
@@ -133,5 +145,49 @@ public class ContactListFragment extends Fragment {
             }
         }
         return rows;
+    }
+
+    /* (non-Javadoc)
+     * @see com.lunextelecom.zippie.adapter.ContactListAdapter.ContactAdapterListener#callbackAdapter(com.lunextelecom.zippie.bean.ContactObject, java.lang.Integer)
+     */
+    @Override
+    public void callbackAdapter(ContactObject result, Integer method) {
+        // TODO Auto-generated method stub
+        if(mContactFragmentCallBack != null){
+            mContactFragmentCallBack.callbacFragment(result,method);
+        }
+    }
+    /** The m custom layout call back. */
+    private ContactFragmentListener mContactFragmentCallBack;
+
+    /**
+     * The listener interface for receiving contactFragment events.
+     * The class that is interested in processing a contactFragment
+     * event implements this interface, and the object created
+     * with that class is registered with a component using the
+     * component's <code>addContactFragmentListener<code> method. When
+     * the contactFragment event occurs, that object's appropriate
+     * method is invoked.
+     *
+     * @see ContactFragmentEvent
+     */
+    public interface ContactFragmentListener {
+
+        /**
+         * Callbac fragment.
+         *
+         * @param result the result
+         * @param method the method
+         */
+        public void callbacFragment(ContactObject result,Integer method);
+    }
+
+    /**
+     * Sets the on click button.
+     *
+     * @param listener the new on click button
+     */
+    public void setOnClickButton(ContactFragmentListener listener){
+        this.mContactFragmentCallBack = listener;
     }
 }

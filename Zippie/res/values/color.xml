@@ -10,11 +10,12 @@
     <color name="createprofile_button_normal_blue_col">#3598db</color>
     
     <!-- Contact color -->
-    <color name="background_topbar">#3598db</color>
-    <color name="white">#ffffff</color>
-    <color name="color_button_contact">#3598db</color>
-    <drawable name="focused">#ff5500</drawable>
-    <drawable name="selected">#FF00FF</drawable>
+    <color name="contact_background_header_col">#3598db</color>
+    <color name="contact_background_white_col">#ffffff</color>
+    <color name="contact_button_col">#3598db</color>
+    <drawable name="contact_focused_col">#ff5500</drawable>
+    <drawable name="contact_selected_col">#FF00FF</drawable>
+    <color name="contact_detail_menu_center_col">#ff0000</color>
 
     <!-- Top menu -->
     <color name="topmenu_background_header_col">#3498db</color>

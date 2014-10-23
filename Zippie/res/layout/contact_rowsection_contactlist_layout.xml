@@ -7,16 +7,16 @@
     >
 
     <TextView
-        android:id="@+id/tvContactSection"
+        android:id="@+id/contact_rowlist_section_tv_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="A"
-        android:textColor="@color/background_topbar"
+        android:textColor="@color/contact_background_header_col"
         android:textStyle="bold" />
 
     <View
-        android:id="@+id/vContactVippe"
+        android:id="@+id/contact_rowlist_section_v_id"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#3598db" />

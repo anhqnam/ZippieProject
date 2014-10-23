@@ -1,12 +1,18 @@
 package com.lunextelecom.zippie.bean;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 // TODO: Auto-generated Javadoc
 /**
  * The Class ContactObject.
  */
-public class ContactObject {
+public class ContactObject implements Serializable {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
+
     public int cId;
     public int getcId() {
         return cId;
