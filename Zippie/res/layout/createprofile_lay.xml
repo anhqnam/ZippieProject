@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/header_height_size"
         android:layout_alignParentTop="true"
-        layout="@layout/signup_header_lay"/>
+        layout="@layout/signup_header_verify_lay"/>
     
     <LinearLayout
         android:id="@+id/createprofile_top_layout_id"
@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="20dp"
-        android:weightSum="7"
+        android:weightSum="7.25"
         android:orientation="vertical">
         
         <LinearLayout android:id="@+id/createprofile_button_face_id"
@@ -94,9 +94,9 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.5"
+            android:layout_weight="0.75"
             android:textSize="@dimen/text_size_60_point"
-            android:textColor="@drawable/createprofile_add_photo_link_color_dra"
+            android:textColor="@drawable/common_text_link_color_dra"
             android:text="@string/createprofile_add_photo_text_str"/>
         
         <EditText android:id="@+id/createprofile_name_id"
@@ -119,7 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:background="@drawable/common_button_color_default_dra"
             android:textColor="@android:color/white"

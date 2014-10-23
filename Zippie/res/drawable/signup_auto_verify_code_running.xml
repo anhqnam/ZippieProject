@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/signup_auto_verify_run_icon_1" android:duration="400" />
+    <item android:drawable="@drawable/signup_auto_verify_run_icon_2" android:duration="400" />
+    <item android:drawable="@drawable/signup_auto_verify_run_icon_3" android:duration="400" />
+    <item android:drawable="@drawable/signup_auto_verify_run_icon_4" android:duration="400" />
+    <item android:drawable="@drawable/signup_auto_verify_run_icon_5" android:duration="400" />
+    <item android:drawable="@drawable/signup_auto_verify_run_icon_6" android:duration="400" />
+    <item android:drawable="@drawable/signup_auto_verify_run_icon_7" android:duration="400" />
+    <item android:drawable="@drawable/signup_auto_verify_run_icon_8" android:duration="400" />
+</animation-list>

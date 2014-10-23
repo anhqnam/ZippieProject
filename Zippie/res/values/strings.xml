@@ -68,4 +68,10 @@
 	<string name="signup_button_verify_str">Verify</string>
 	<string name="signup_text_show_verify_str">Please enter verification code from text message send to</string>
 	<string name="signup_verify_code_str">Enter verification code</string>
+
+     <!-- Sign up auto verify -->
+    <string name="signup_auto_verify_header_title_str">VERIFYING YOUR CODE&#8230;</string>
+    <string name="signup_auto_verify_notify_str">Please wait for a while&#8230;</string>
+    <string name="signup_auto_verify_start_over_str"><u>Start Over</u></string>
+
 </resources>

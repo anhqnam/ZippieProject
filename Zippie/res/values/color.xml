@@ -29,4 +29,8 @@
     <color name="topmenu_background_call_notpress_col">#ff35ac00</color>
     <color name="topmenu_background_call_press_col">#cd35ac00</color>
     <color name="topmenu_text_header_col">#3498db</color>
+    
+    <!-- Sign up auto verify code -->
+    <color name="signup_auto_verify_code_text_notify_col">#444444</color>
+    
 </resources>

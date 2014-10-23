@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/signup_auto_verify_code_header_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        layout="@layout/signup_header_verify_lay" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/signup_auto_verify_code_start_over_id"
+        android:layout_below="@+id/signup_auto_verify_code_header_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/signup_auto_verify_code_runing_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/signup_auto_verify_notify_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/signup_auto_verify_notify_str"
+            android:textColor="@color/signup_auto_verify_code_text_notify_col"
+            android:textSize="@dimen/text_size_60_point" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/signup_auto_verify_code_start_over_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textColor="@drawable/common_text_link_color_dra"
+        android:text="@string/signup_auto_verify_start_over_str"
+        android:textSize="@dimen/text_size_60_point" />
+
+</RelativeLayout>
