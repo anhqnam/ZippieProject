@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ImageView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/hello_world"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/pizzaexpress"
+            android:paddingBottom="10dip" />
+
+        <TextView
+            android:id="@+id/ResultsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:paddingBottom="5dip"
+            android:paddingLeft="10dip"
+            android:text="@string/Default"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/ResultsText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingLeft="10dip"
+            android:text=""
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ResultsText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingLeft="10dip"
+            android:text=""
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ResultsText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingLeft="10dip"
+            android:text="@string/Default"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="20dip" >
+
+            <Button
+                android:id="@+id/BuyMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buymore" />
+
+            <Button
+                android:id="@+id/Done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Done" />
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
