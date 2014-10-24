@@ -29,6 +29,8 @@
     <!-- Theme none action bar-->
     <style name="Custom.Theme.None.ActionBar" parent="AppBaseTheme">
         <item name="android:windowNoTitle">true</item>
+        <!-- <item name="windowActionBar">false</item> -->
+        <!-- <item name="android:windowFullscreen">true</item> -->
     </style>
     
     <!-- Action bar theme -->

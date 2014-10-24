@@ -1,13 +1,12 @@
 package com.lunextelecom.zippie.fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,9 +19,6 @@ import com.lunextelecom.zippie.R;
  */
 public class SplashScreenFragment extends Fragment {
 
-	/** The m action bar. */
-	private ActionBar mActionBar;
-
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -30,18 +26,16 @@ public class SplashScreenFragment extends Fragment {
 	 * android.support.v4.app.Fragment#onCreateView(android.view.LayoutInflater,
 	 * android.view.ViewGroup, android.os.Bundle)
 	 */
+	@SuppressLint("InflateParams") 
 	@Override
 	public View onCreateView(LayoutInflater inflater,
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		mActionBar = ((ActionBarActivity) getActivity()).getSupportActionBar();
-		mActionBar.hide();
 		View view = inflater.inflate(R.layout.signup_splash_screen_lay, null);
-		int secondsDelayed = 2000;
+		int secondsDelayed = 1000;
 		new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {
-				mActionBar.show();
 				FragmentManager fragmentManager = getFragmentManager();
 				FragmentTransaction transaction = fragmentManager
 						.beginTransaction();
