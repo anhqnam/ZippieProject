@@ -58,6 +58,7 @@
     <string name="createprofile_logo_face_str">f</string>
     <string name="createprofile_or_str">or</string>
     <string name="createprofile_action_bar_title_str">CREATE YOUR PROFILE</string>
+    <string name="createprofile_face_app_id">1484204058532237</string>
     <!-- End create profile -->
     
     <!-- Input number -->

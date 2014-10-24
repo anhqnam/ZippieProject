@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:custom="http://schemas.android.com/apk/res/com.lunextelecom.zippie"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white">
@@ -80,24 +81,30 @@
                 android:background="#dddddd"/>
         </LinearLayout>
         
-        <com.lunextelecom.zippie.view.CircularImageView
-            android:layout_width="wrap_content"
+        <LinearLayout android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/common_profile_default"
-            custom:border="true"
-            custom:border_width="0dp"
-            android:layout_weight="2.25"
-            android:layout_gravity="center_horizontal|bottom"/>
-        
-        <TextView android:id="@+id/createprofile_add_photo_id"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.75"
-            android:textSize="@dimen/text_size_60_point"
-            android:textColor="@drawable/common_text_link_color_dra"
-            android:text="@string/createprofile_add_photo_text_str"/>
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <com.lunextelecom.zippie.view.CircularImageView
+                android:id="@+id/createprofile_avatar_id"
+                android:layout_width="136dp"
+                android:layout_height="136dp"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/common_profile_default"
+                custom:border="true"
+                custom:border_width="0dp"
+                android:layout_gravity="center_horizontal|bottom"/>
+            
+            <TextView android:id="@+id/createprofile_add_photo_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/text_size_60_point"
+                android:textColor="@drawable/common_text_link_color_dra"
+                android:text="@string/createprofile_add_photo_text_str"/>
+        </LinearLayout>
         
         <EditText android:id="@+id/createprofile_name_id"
             android:layout_width="match_parent"

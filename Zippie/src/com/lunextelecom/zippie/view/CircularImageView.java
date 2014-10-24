@@ -133,9 +133,7 @@ public class CircularImageView extends ImageView {
     @Override
     public void onDraw(Canvas canvas) {
         // load the bitmap
-        if(image == null){
-            image = drawableToBitmap(getDrawable());
-        }
+        image = drawableToBitmap(getDrawable());
 
         // init shader
         if (image != null) {
@@ -183,9 +181,7 @@ public class CircularImageView extends ImageView {
         } else if (specMode == MeasureSpec.AT_MOST) {
             // The child can be as large as it wants up to the specified size.
             //result = specSize;
-            if(image == null){
-                image = drawableToBitmap(getDrawable());
-            }
+            image = drawableToBitmap(getDrawable());
             if(image != null){
                 result = image.getWidth();
             }else{
@@ -216,9 +212,7 @@ public class CircularImageView extends ImageView {
         } else if (specMode == MeasureSpec.AT_MOST) {
             // The child can be as large as it wants up to the specified size.
             //result = specSize;
-            if(image == null){
-                image = drawableToBitmap(getDrawable());
-            }
+            image = drawableToBitmap(getDrawable());
             if(image != null){
                 result = image.getHeight();
             }else{
