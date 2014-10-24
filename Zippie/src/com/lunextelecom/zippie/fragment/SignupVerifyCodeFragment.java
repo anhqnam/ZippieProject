@@ -1,18 +1,19 @@
 package com.lunextelecom.zippie.fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.lunextelecom.zippie.R;
 import com.lunextelecom.zippie.utils.Utils;
@@ -23,9 +24,6 @@ import com.lunextelecom.zippie.utils.Utils;
  * The Class SignupVerifyCodeFragment.
  */
 public class SignupVerifyCodeFragment extends Fragment implements OnClickListener {
-	
-	/** The m back image view. */
-	private ImageView mBackImageView;
 	
 	/** The m title text view. */
 	private TextView mTitleTextView;
@@ -45,6 +43,9 @@ public class SignupVerifyCodeFragment extends Fragment implements OnClickListene
 	/** The m resend code text view. */
 	private TextView mResendCodeTextView;
 	
+	/** The m back layout. */
+	private LinearLayout mBackLayout;
+	
 	/* (non-Javadoc)
 	 * @see android.support.v4.app.Fragment#onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
 	 */
@@ -53,7 +54,7 @@ public class SignupVerifyCodeFragment extends Fragment implements OnClickListene
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		View view = inflater.inflate(R.layout.signup_verify_code_lay, null);
-		mBackImageView = (ImageView)view.findViewById(R.id.signup_header_verify_back_id);
+		mBackLayout = (LinearLayout)view.findViewById(R.id.signup_back_fragment_id);
 		mTitleTextView = (TextView)view.findViewById(R.id.signup_header_verify_title_id);
 		mTitleTextView.setText(R.string.signup_title_verify_screen_str);
 		mTextView      = (TextView)view.findViewById(R.id.signup_show_text_id);
@@ -61,6 +62,8 @@ public class SignupVerifyCodeFragment extends Fragment implements OnClickListene
 		mCodeEditText  = (EditText)view.findViewById(R.id.signup_verify_code_id);
 		mVerifyButton  = (Button)view.findViewById(R.id.signup_button_continue_id);
 		mResendCodeTextView = (TextView)view.findViewById(R.id.signup_resend_code_text_id);
+		String htmlString="<u>" + getString(R.string.signup_resend_code_str) + "</u>";
+		mResendCodeTextView.setText(Html.fromHtml(htmlString));
 		Utils.setTypefaceRoboto(getActivity(), mTitleTextView, mTextView, mPhoneTextView, mCodeEditText, mVerifyButton, mResendCodeTextView);
 		Bundle args = getArguments();
 		if(args != null){
@@ -68,7 +71,7 @@ public class SignupVerifyCodeFragment extends Fragment implements OnClickListene
 			mPhoneTextView.setText(phone_number);
 		}
 		
-		mBackImageView.setOnClickListener(this);
+		mBackLayout.setOnClickListener(this);
 		mVerifyButton.setOnClickListener(this);
 		
 		return view;
@@ -77,12 +80,13 @@ public class SignupVerifyCodeFragment extends Fragment implements OnClickListene
 	/* (non-Javadoc)
 	 * @see android.view.View.OnClickListener#onClick(android.view.View)
 	 */
-	@Override
+	@SuppressLint("ResourceAsColor") @Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		int id = v.getId();
 		switch (id) {
-		case R.id.signup_header_verify_back_id:
+		case R.id.signup_back_fragment_id:
+			mBackLayout.setBackgroundColor(R.color.common_button_default_press_col);
 			FragmentManager fm = getActivity().getSupportFragmentManager();
 		    fm.popBackStack();
 			break;

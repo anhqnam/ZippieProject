@@ -1,0 +1,9 @@
+<resources>
+	<dimen name="signup_background_start_dim">500dp</dimen>
+    <dimen name="signup_button_start_dim">200dp</dimen>
+	<dimen name="signup_size_start_dim">60dp</dimen>
+	<dimen name="signup_size_logo_dim">90dp</dimen>
+	<dimen name="signup_margin_logo_dim">14dp</dimen>
+	<dimen name="signup_font_slogan_dim">24dp</dimen>
+	<dimen name="signup_font_privacy_dim">17dp</dimen>
+</resources>

@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -45,7 +46,7 @@ public class WelcomeScreenFragment extends Fragment {
 	private TextView mStartTextView;
 
 	/** The m privacy text view. */
-	private TextView mPrivacyTextView;
+	private TextView mTextView, mPrivacyTextView;
 
 	/**
 	 * Find view by id.
@@ -71,13 +72,17 @@ public class WelcomeScreenFragment extends Fragment {
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		View view = inflater.inflate(R.layout.sigup_welcome_screen_lay, null);
-		mSloganTextView = (TextView) view.findViewById(R.id.slogan);
-		mStartTextView = (TextView) view.findViewById(R.id.txtStart);
-		mPrivacyTextView = (TextView) view.findViewById(R.id.tv_Privacy);
-		Utils.setTypefaceRoboto(getActivity(), mSloganTextView, mStartTextView,
+		mSloganTextView = (TextView) view.findViewById(R.id.signup_welcome_slogan_id);
+		mStartTextView = (TextView) view.findViewById(R.id.signup_welcome_text_start_id);
+		mTextView = (TextView) view.findViewById(R.id.signup_welcome_text_id);
+		mPrivacyTextView = (TextView) view.findViewById(R.id.signup_welcome_text_privacy_id);
+		
+		String htmlString=" &nbsp; <b><u>Privacy Policy</u></b>";
+		mPrivacyTextView.setText(Html.fromHtml(htmlString));
+		Utils.setTypefaceRoboto(getActivity(), mSloganTextView, mStartTextView,mTextView,
 				mPrivacyTextView);
 
-		mButtonStart = (ImageView) view.findViewById(R.id.btnStart);
+		mButtonStart = (ImageView) view.findViewById(R.id.signup_welcome_button_start_id);
 		mButtonStart.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -92,7 +97,7 @@ public class WelcomeScreenFragment extends Fragment {
 				transaction.commit();
 			}
 		});
-		mImageView = (ImageView) view.findViewById(R.id.imageStart);
+		mImageView = (ImageView) view.findViewById(R.id.signup_welcome_background_start_id);
 		mActionBar = ((ActionBarActivity) getActivity()).getSupportActionBar();
 		mActionBar.hide();
 

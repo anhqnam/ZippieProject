@@ -24,7 +24,7 @@
     <!-- End top menu -->
     
     <!-- Welcome resources string-->
-    <string name="signup_welcome_privacy_str">© 2014 Zippie. <u><b><font fgcolor="#ff3498db">Privacy Policy</font></b></u></string>
+    <string name="signup_welcome_privacy_str">© 2014 Zippie. </string>
     <string name="signup_welcome_slogan_tr">Free messages and calls to Zippie users \nSend a eGift to your loved one.\n What are you waiting for?</string>
     <string name="signup_welcome_button_start_str">Start</string>
     <!-- End welcome -->
@@ -64,7 +64,7 @@
     <string name="signup_title_input_number_str">LET US KNOW ABOUT YOU</string>
 	<string name="signup_text_show_str">Enter your phone number</string>
 	<string name="signup_name_country_str">United States</string>
-	<string name="signup_phone_number_str">+16782167616</string>
+	<string name="signup_phone_number_str">+1</string>
 	<string name="signup_button_continue_tr">Continue</string>
 	
 	<!-- Dialog choose name country -->
@@ -73,7 +73,7 @@
 	
 	<!-- Verify code -->
 	<string name="signup_title_verify_screen_str">DID YOU RECEIVE OUR TEXT?</string>
-	<string name="signup_resend_code_str"><u><font fgcolor="#ff3498db">Resend new code</font></u></string>
+	<string name="signup_resend_code_str">Resend new code</string>
 	<string name="signup_button_verify_str">Verify</string>
 	<string name="signup_text_show_verify_str">Please enter verification code from text message send to</string>
 	<string name="signup_verify_code_str">Enter verification code</string>

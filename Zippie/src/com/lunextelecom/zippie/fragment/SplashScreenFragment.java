@@ -37,7 +37,7 @@ public class SplashScreenFragment extends Fragment {
 		mActionBar = ((ActionBarActivity) getActivity()).getSupportActionBar();
 		mActionBar.hide();
 		View view = inflater.inflate(R.layout.signup_splash_screen_lay, null);
-		int secondsDelayed = 3000;
+		int secondsDelayed = 2000;
 		new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {

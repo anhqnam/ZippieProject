@@ -52,4 +52,12 @@
     <dimen name="contact_detail_callpremium_marginbottom_dim">-90dp</dimen>
      <dimen name="contact_detail_paybill_marginleft_dim">-100dp</dimen>
     <dimen name="contact_detail_paybill_margintop_dim">60dp</dimen>
+    <!-- Welcome screen -->
+    <dimen name="signup_background_start_dim">320dp</dimen>
+    <dimen name="signup_button_start_dim">130dp</dimen>
+	<dimen name="signup_size_start_dim">37dp</dimen>
+	<dimen name="signup_size_logo_dim">49dp</dimen>
+	<dimen name="signup_margin_logo_dim">5dp</dimen>
+	<dimen name="signup_font_slogan_dim">16dp</dimen>
+	<dimen name="signup_font_privacy_dim">12dp</dimen>
 </resources>

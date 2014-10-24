@@ -8,30 +8,30 @@
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:paddingTop="10dp"
-        android:layout_weight="0.3" >
+        android:layout_weight="0.35" >
         <ImageView 
-            android:id="@+id/iv_wc_logo"
+            android:id="@+id/signup_logo_welcome_screen_id"
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
+            android:layout_height="@dimen/signup_size_logo_dim"
+            android:layout_margin="@dimen/signup_margin_logo_dim"
             android:src="@drawable/logo"/>
         <RelativeLayout 
-            android:id="@+id/line"
-            android:layout_below="@id/iv_wc_logo"
+            android:id="@+id/signup_welcome_line_id"
+            android:layout_below="@id/signup_logo_welcome_screen_id"
             android:layout_width="fill_parent"
             android:layout_height="1px"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="#444"></RelativeLayout>
         <TextView 
-            android:id="@+id/slogan"
-            android:layout_below="@id/line"
+            android:id="@+id/signup_welcome_slogan_id"
+            android:layout_below="@id/signup_welcome_line_id"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:fontFamily="sans-serif-light"
             android:layout_margin="10dp"
-            android:textSize="16dp"
+            android:textSize="@dimen/signup_font_slogan_dim"
             android:text="@string/signup_welcome_slogan_tr"/>
         
     </RelativeLayout>
@@ -39,7 +39,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.65"
+        android:layout_weight="0.6"
         android:gravity="center_vertical|center_horizontal" >
 		<LinearLayout
             android:layout_width="fill_parent"
@@ -49,9 +49,9 @@
             android:gravity="center|center_vertical"
             android:weightSum="1" >
 	        <ImageView
-	            android:id="@+id/imageStart"
-	            android:layout_width="350dp"	
-	            android:layout_height="350dp"
+	            android:id="@+id/signup_welcome_background_start_id"
+	            android:layout_width="@dimen/signup_background_start_dim"	
+	            android:layout_height="@dimen/signup_background_start_dim"
 	            android:src="@drawable/start" />
 	        
 		</LinearLayout>
@@ -65,10 +65,9 @@
             android:weightSum="1" >
 
             <ImageView
-                android:id="@+id/btnStart"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.4"
+                android:id="@+id/signup_welcome_button_start_id"
+                android:layout_width="@dimen/signup_button_start_dim"
+                android:layout_height="@dimen/signup_button_start_dim"
                 android:padding="5dp"
                 android:src="@drawable/signup_change_background_button_start_dra" />
             
@@ -80,13 +79,13 @@
             android:weightSum="1" >
 
             <TextView
-                android:id="@+id/txtStart"
+                android:id="@+id/signup_welcome_text_start_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_horizontal"
-                android:textSize="42dp"
+                android:textSize="@dimen/signup_size_start_dim"
                 android:text="@string/signup_welcome_button_start_str" />
         </LinearLayout>
     </RelativeLayout>
@@ -99,14 +98,17 @@
         android:paddingBottom="10dp"
         android:layout_weight="0.05"
         android:gravity="center|center_horizontal">
-
+		<TextView 
+		    android:id="@+id/signup_welcome_text_id"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/signup_welcome_privacy_str"/>
         <TextView
-            android:id="@+id/tv_Privacy"
+            android:id="@+id/signup_welcome_text_privacy_id"
+            android:layout_toRightOf="@id/signup_welcome_text_id"
+            android:textColor="@color/common_button_default_notpress_col"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
-            android:textSize="12dp"
-            android:text="@string/signup_welcome_privacy_str" />
+            android:layout_height="wrap_content" />
     </RelativeLayout>
 
 </LinearLayout>
