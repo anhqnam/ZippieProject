@@ -29,7 +29,6 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:fontFamily="sans-serif-light"
             android:layout_margin="10dp"
             android:textSize="@dimen/signup_font_slogan_dim"
             android:text="@string/signup_welcome_slogan_tr"/>
@@ -83,7 +82,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
-                android:fontFamily="sans-serif-light"
                 android:gravity="center_horizontal"
                 android:textSize="@dimen/signup_size_start_dim"
                 android:text="@string/signup_welcome_button_start_str" />

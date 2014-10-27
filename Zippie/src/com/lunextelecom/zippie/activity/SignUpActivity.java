@@ -1,12 +1,12 @@
 package com.lunextelecom.zippie.activity;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 
 import com.lunextelecom.zippie.R;
-import com.lunextelecom.zippie.fragment.SplashScreenFragment;
+import com.lunextelecom.zippie.fragment.SignupSplashScreenFragment;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -24,9 +24,9 @@ public class SignUpActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_sign_up);
-        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.add(R.id.fragment_container, new SplashScreenFragment());
+        transaction.add(R.id.fragment_container, new SignupSplashScreenFragment());
         transaction.addToBackStack(null);
         transaction.commit();
     }

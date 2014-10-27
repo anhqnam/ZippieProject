@@ -1,14 +1,27 @@
+/*
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ * 
+ * 
+ * Copyright 2011 - 2013 Lunextelecom, Inc. All rights reserved.
+ * Author: AnhHa
+ * Location: Zippie - com.lunextelecom.zippie - SignUpActivity.java
+ * 
+ */
 package com.lunextelecom.zippie.fragment;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import android.annotation.SuppressLint;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
+
+import android.telephony.TelephonyManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -58,10 +71,9 @@ public class SignupInputPhoneNumberFragment extends Fragment implements
 	/** The m list country. */
 	private List<CountryObject> mListCountry;
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.support.v4.app.Fragment#onCreate(android.os.Bundle)
+
+	/* (non-Javadoc)
+	 * @see android.app.Fragment#onCreate(android.os.Bundle)
 	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -72,24 +84,33 @@ public class SignupInputPhoneNumberFragment extends Fragment implements
 				.getAssets());
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.support.v4.app.Fragment#onStart()
+	/**
+	 * Get ISO 3166-1 alpha-2 country code for this device (or null if not available).
+	 *
+	 * @param context Context reference to get the TelephonyManager instance from
+	 * @return country code or null
 	 */
-	@Override
-	public void onStart() {
-		// TODO Auto-generated method stub
-		super.onStart();
-		mCountryHelper.connectGPS();
+	public static String getUserCountry(Context context) {
+	    try {
+	        final TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+	        final String simCountry = tm.getSimCountryIso();
+	        if (simCountry != null && simCountry.length() == 2) { // SIM country code is available
+	            return simCountry.toLowerCase(Locale.US);
+	        }
+	        else if (tm.getPhoneType() != TelephonyManager.PHONE_TYPE_CDMA) { // device is not 3G (would be unreliable)
+	            String networkCountry = tm.getNetworkCountryIso();
+	            if (networkCountry != null && networkCountry.length() == 2) { // network country code is available
+	                return networkCountry.toLowerCase(Locale.US);
+	            }
+	        }
+	    }
+	    catch (Exception e) { }
+	    return null;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * android.support.v4.app.Fragment#onCreateView(android.view.LayoutInflater,
-	 * android.view.ViewGroup, android.os.Bundle)
+
+	/* (non-Javadoc)
+	 * @see android.app.Fragment#onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
 	 */
 	@SuppressLint("InflateParams")
 	@Override
@@ -100,7 +121,8 @@ public class SignupInputPhoneNumberFragment extends Fragment implements
 		View view = inflater.inflate(R.layout.signup_input_phone_number, null);
 
 		mTitleTextView = (TextView) view.findViewById(R.id.txtTitle);
-		mTitleTextView.setText(R.string.signup_title_input_number_str);
+		mTitleTextView.setText(getUserCountry(getActivity()));
+		//mTitleTextView.setText(R.string.signup_title_input_number_str);
 		mShowTextView = (TextView) view.findViewById(R.id.signup_textshow_id);
 		mCountryTextView = (TextView) view.findViewById(R.id.signup_country_name_textview_id);
 		mCountryTextView.setOnClickListener(new OnClickListener() {
@@ -202,7 +224,6 @@ public class SignupInputPhoneNumberFragment extends Fragment implements
 	@Override
 	public void callbackCountryDialog(String dialCode) {
 		// TODO Auto-generated method stub
-		Toast.makeText(getActivity(), dialCode, Toast.LENGTH_LONG).show();
 		CountryObject country = CountryHelper.getCountryObjectByDialCode(dialCode, mListCountry);
 		getInfoCountry(country);
 	}
