@@ -12,26 +12,26 @@
         android:orientation="vertical" >
 
         <ImageView
-            android:id="@+id/ImageView02"
+            android:id="@+id/result_imv01_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/hello_world"
             android:layout_marginTop="20dip"
-            android:background="@drawable/pizzaexpress"
+            android:background="@drawable/logo"
             android:paddingBottom="10dip" />
 
         <TextView
-            android:id="@+id/ResultsTitle"
+            android:id="@+id/Result_Title_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
             android:paddingBottom="5dip"
             android:paddingLeft="10dip"
-            android:text="@string/Default"
+            android:text="@string/result_Default_str"
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/ResultsText1"
+            android:id="@+id/Result_Text1_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="5dip"
@@ -40,7 +40,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/ResultsText2"
+            android:id="@+id/Result_Text2_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="5dip"
@@ -49,12 +49,12 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/ResultsText3"
+            android:id="@+id/Result_Text3_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="5dip"
             android:paddingLeft="10dip"
-            android:text="@string/Default"
+            android:text="@string/result_Default_str"
             android:textSize="12sp" />
 
         <LinearLayout
@@ -65,16 +65,16 @@
             android:paddingTop="20dip" >
 
             <Button
-                android:id="@+id/BuyMore"
+                android:id="@+id/result_BuyMore_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buymore" />
+                android:text="@string/result_buymore_str" />
 
             <Button
-                android:id="@+id/Done"
+                android:id="@+id/result_Done_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Done" />
+                android:text="@string/result_Done_str" />
             
         </LinearLayout>
     </LinearLayout>

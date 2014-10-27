@@ -6,50 +6,50 @@
     android:background="@drawable/bg" >
 
     <TextView
-        android:id="@+id/TextView01"
+        android:id="@+id/cus_tv01_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dip"
-        android:text="@string/Selectasize" >
+        android:text="@string/cus_Selectasize_str" >
     </TextView>
 
     <Spinner
-        android:id="@+id/Spinner01"
+        android:id="@+id/cus_spr01_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/TextView01"
+        android:layout_below="@+id/cus_tv01_id"
         android:layout_centerHorizontal="true" >
     </Spinner>
 
     <TextView
-        android:id="@+id/TextView02"
+        android:id="@+id/cus_tv02_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Spinner01"
+        android:layout_below="@+id/cus_spr01_id"
         android:layout_centerHorizontal="true"
-        android:text="@string/duel" >
+        android:text="@string/cus_duel_str" >
     </TextView>
 
     <Button
-        android:id="@+id/Button03"
+        android:id="@+id/cus_btn_choose_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/TextView02"
+        android:layout_below="@+id/cus_tv02_id"
         android:layout_centerHorizontal="true"
-        android:text="@string/Chooseyourtoppings" >
+        android:text="@string/cus_Chooseyourtoppings_str" >
     </Button>
 
     <Button
-        android:id="@+id/Continue"
+        android:id="@+id/cus_Continue_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dip"
         android:paddingTop="10dip"
-        android:text="@string/Continue" >
+        android:text="@string/cus_Continue_str" >
     </Button>
 
 </RelativeLayout>

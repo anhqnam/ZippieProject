@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:paddingLeft="20sp"
+    android:paddingRight="20sp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/review_SoftWare_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dip"
+            android:layout_marginTop="20dip"
+            android:text="@string/review_software_str"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/review_Price_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="@string/review_price_str"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/review_namesoftware_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dip"
+            android:layout_marginTop="20dip"
+            android:text="@string/review_namesoftware_str"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/review_pricename_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="abc"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/review_number_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dip"
+            android:layout_marginTop="20dip"
+            android:text="@string/review_number_str"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/review_pricenumber_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="abc"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- product follow -->
+    <!-- fin -->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/review_subtotal_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dip"
+            android:layout_marginTop="20dip"
+            android:text="@string/review_subtotal_str"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/review_pricesubtotal_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="abc"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/review_tax_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dip"
+            android:layout_marginTop="20dip"
+            android:text="@string/review_tax_str"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/review_pricetax_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="abc"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/review_total_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dip"
+            android:layout_marginTop="20dip"
+            android:text="@string/review_total_str"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/review_price_total_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="abc"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CustomPayPal</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Main Activity -->
+    <string name="main_software_str">SHOP SOFTWARE</string>
+    <string name="main_design_str">design by namnguyen@lunextelecom.com</string>
+
+    <!-- Custom Activity -->
+    <string name="cus_Selectasize_str">SELECT A SOFTWARE</string>
+    <string name="cus_duel_str">Toppings ($9.99 each) </string>
+    <string name="cus_Chooseyourtoppings_str">Choose Your Toppings</string>
+    <string name="cus_Continue_str">CONTINUE</string>
+
+    <!-- finalize -->
+    <string name="fin_Selectthenumber_str">SELECT NUMBER SOFTWARE</string>
+    <string name="fin_Choosedeliverypickup_str">CHOOSE DELIVER OR PICKUP</string>
+    <string name="fin_ReviewOrder_str">REVIEW ORDER</string>
+
+    <!-- results -->
+    <string name="result_Default_str">DEFAULT</string>
+    <string name="result_buymore_str">BUY MORE</string>
+    <string name="result_Done_str">DONE</string>
+
+    <!-- REVIEW -->
+    <string name="review_software_str">SOFTWARE</string>
+    <string name="review_price_str">PRICE</string>
+    <string name="review_number_str">NUMBER : </string>
+    <string name="review_namesoftware_str">TYPE SOFTWARE : </string>
+    <string name="review_subtotal_str">SUBTOTAL : </string>
+    <string name="review_tax_str">TAX : </string>
+    <string name="review_shipping_str">SHIPPING : </string>
+    <string name="review_method_str">METHOD : </string>
+    <string name="review_total_str">TOTAL : </string>
+    
+    <string name="review_pen_str">PEN : </string>
+    <string name="review_pencil_str">PENCIL : </string>
+    <string name="review_rule_str">RULE : </string>
+    <string name="review_headphone_str">HEADPHONE : </string>
+    
+
+</resources>

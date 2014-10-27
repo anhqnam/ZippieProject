@@ -6,49 +6,49 @@
     android:background="@drawable/bg" >
 
     <TextView
-        android:id="@+id/TextView01"
+        android:id="@+id/fin_tv01_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dip"
-        android:text="@string/Selectthenumberofpizzas" >
+        android:text="@string/fin_Selectthenumber_str" >
     </TextView>
 
     <Spinner
-        android:id="@+id/Spinner02"
+        android:id="@+id/fin_spr01_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/TextView01"
+        android:layout_below="@+id/fin_tv01_id"
         android:layout_centerHorizontal="true" >
     </Spinner>
 
     <TextView
-        android:id="@+id/TextView02"
+        android:id="@+id/fin_tv02_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Spinner02"
+        android:layout_below="@+id/fin_spr01_id"
         android:layout_centerHorizontal="true"
-        android:text="@string/Choosedeliverypickup" >
+        android:text="@string/fin_Choosedeliverypickup_str" >
     </TextView>
 
     <Spinner
-        android:id="@+id/Spinner03"
+        android:id="@+id/fin_spr02_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/TextView02"
+        android:layout_below="@+id/fin_tv02_id"
         android:layout_centerHorizontal="true" >
     </Spinner>
 
     <Button
-        android:id="@+id/ReviewOrder"
+        android:id="@+id/fin_ReviewOrder_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dip"
         android:paddingTop="10dip"
-        android:text="@string/ReviewOrder" >
+        android:text="@string/fin_ReviewOrder_str" >
     </Button>
 
 </RelativeLayout>
