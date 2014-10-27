@@ -4,7 +4,8 @@
  * 
  * Copyright 2011 - 2013 Lunextelecom, Inc. All rights reserved.
  * Author: AnhBui
- * Location: Zippie - com.lunextelecom.zippie - SignUpActivity.java
+ * Location: Zippie - com.lunextelecom.zippie - ContactObject.java
+ * created Date: 2014-10-24
  * 
  */
 package com.lunextelecom.zippie.bean;
@@ -17,15 +18,27 @@ import java.util.ArrayList;
  * The Class ContactObject.
  */
 public class ContactObject implements Serializable {
-    /**
-     * 
-     */
+    
+    /** The Constant serialVersionUID. */
     private static final long serialVersionUID = 1L;
 
+    /** The c id. */
     public int cId;
+    
+    /**
+     * Gets the c id.
+     *
+     * @return the c id
+     */
     public int getcId() {
         return cId;
     }
+    
+    /**
+     * Sets the c id.
+     *
+     * @param cId the new c id
+     */
     public void setcId(int cId) {
         this.cId = cId;
     }
@@ -180,6 +193,11 @@ public class ContactObject implements Serializable {
         this.cStatus = cStatus;
     }
 
+    /**
+     * Gets the c favorites.
+     *
+     * @return the c favorites
+     */
     public String getcFavorites() {
         return cFavorites;
     }

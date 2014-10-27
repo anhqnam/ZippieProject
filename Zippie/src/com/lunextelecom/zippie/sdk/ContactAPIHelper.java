@@ -1,3 +1,13 @@
+/*
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ * 
+ * 
+ * Copyright 2011 - 2013 Lunextelecom, Inc. All rights reserved.
+ * Author: AnhBui
+ * Location: Zippie - com.lunextelecom.zippie - ContactAPIHelper.java
+ * created Date: 2014-10-24
+ * 
+ */
 package com.lunextelecom.zippie.sdk;
 
 import java.util.ArrayList;
@@ -16,7 +26,11 @@ public class ContactAPIHelper extends APIHelper {
 
     /** The instance. */
     private static ContactAPIHelper instance = null;
+    
+    /** The m contact list. */
     private List<ContactObject> mContactList;
+    
+    /** The m vippie contac list. */
     private List<ContactObject> mVippieContacList;
     /** The m context. */
     private Context mContext;
@@ -62,6 +76,13 @@ public class ContactAPIHelper extends APIHelper {
         instance.setmContext(context);
         return instance;
     }
+    
+    /**
+     * Gets the contact all.
+     *
+     * @param forceLoad the force load
+     * @return the list
+     */
     public List<ContactObject> GetContactAll(boolean forceLoad){
         if (mContactList != null && !forceLoad) {
             return mContactList;
@@ -134,6 +155,13 @@ public class ContactAPIHelper extends APIHelper {
 
         return mContactList;
     }
+    
+    /**
+     * Gets the contact vippie.
+     *
+     * @param forceLoad the force load
+     * @return the list
+     */
     public List<ContactObject> GetContactVippie(boolean forceLoad){
         if(mVippieContacList != null && !forceLoad){
             return mVippieContacList;

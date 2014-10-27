@@ -97,7 +97,7 @@ public class CreateProfileFragment extends Fragment implements OnClickListener{
         // TODO Auto-generated method stub
         //get view
         View view = inflater.inflate(R.layout.signup_create_profile_lay, null);
-        TextView createProfileTitleTv = (TextView)view.findViewById(R.id.txtTitle);
+        TextView createProfileTitleTv = (TextView)view.findViewById(R.id.signup_header_text_id);
         createProfileTitleTv.setText(getResources().getString(R.string.createprofile_action_bar_title_str));
         View createProfileButtonFaceView = view.findViewById(R.id.createprofile_button_face_id);
         TextView createProfileLogoFaceTextTv = (TextView)view.findViewById(R.id.createprofile_logo_face_text_id);

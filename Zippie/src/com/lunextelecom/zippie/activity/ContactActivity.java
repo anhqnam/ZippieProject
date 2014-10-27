@@ -58,7 +58,6 @@ public class ContactActivity extends Activity implements
 				.newContactListFragment();
 		mContactListFrag.setOnClickContactList(ContactActivity.this);
 		transaction.replace(R.id.contact_main_fl_id, mContactListFrag);
-		transaction.addToBackStack(null);
 		transaction.commit();
 	}
 

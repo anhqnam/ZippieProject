@@ -1,11 +1,21 @@
+/*
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ * 
+ * 
+ * Copyright 2011 - 2013 Lunextelecom, Inc. All rights reserved.
+ * Author: AnhBui
+ * Location: Zippie - com.lunextelecom.zippie - SignupVerifyCodeFragment.java
+ * created Date: 2014-10-24
+ * 
+ */
 package com.lunextelecom.zippie.fragment;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,6 +26,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lunextelecom.zippie.R;
+import com.lunextelecom.zippie.activity.SignUpActivity;
 import com.lunextelecom.zippie.utils.Utils;
 
 
@@ -45,6 +56,9 @@ public class SignupVerifyCodeFragment extends Fragment implements OnClickListene
 	
 	/** The m back layout. */
 	private LinearLayout mBackLayout;
+
+	/** The m sign up activity. */
+	private SignUpActivity mSignUpActivity;
 	
 	/* (non-Javadoc)
 	 * @see android.support.v4.app.Fragment#onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
@@ -86,18 +100,43 @@ public class SignupVerifyCodeFragment extends Fragment implements OnClickListene
 		int id = v.getId();
 		switch (id) {
 		case R.id.signup_back_fragment_id:
-			mBackLayout.setBackgroundColor(R.color.common_button_default_press_col);
-			FragmentManager fm = getActivity().getFragmentManager();
-		    fm.popBackStack();
+			if(mSignUpActivity != null)
+			{
+				mSignUpActivity.backFragment();
+			}
 			break;
 		case R.id.signup_button_continue_id:
-			/*FragmentManager fragmentManager = getFragmentManager();
-			FragmentTransaction transaction = fragmentManager
-					.beginTransaction();
-			transaction.replace(R.id.fragment_container,new CreateProfileFragment());
-			transaction.addToBackStack(null);
-			transaction.commit();*/
+			if(mSignUpActivity != null)
+			{
+				mSignUpActivity.startProfileFragment();
+			}
 			break;
 		}
+	}
+	
+	/* (non-Javadoc)
+	 * @see android.app.Fragment#onAttach(android.app.Activity)
+	 */
+	@Override
+	public void onAttach(Activity activity) {
+		// TODO Auto-generated method stub
+		super.onAttach(activity);
+		try {
+			mSignUpActivity = (SignUpActivity) activity;
+		} catch (Exception e) {
+			// TODO: handle exception
+			Log.e("Zippie", getClass().getName()
+					+ " must implement mSignUpActivity.startSplashFragment();");
+		}
+	}
+	
+	/* (non-Javadoc)
+	 * @see android.app.Fragment#onDetach()
+	 */
+	@Override
+	public void onDetach() {
+		// TODO Auto-generated method stub
+		mSignUpActivity = null;
+		super.onDetach();
 	}
 }

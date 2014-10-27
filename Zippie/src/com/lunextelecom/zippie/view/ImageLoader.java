@@ -311,7 +311,6 @@ public abstract class ImageLoader {
      * @param imageView The ImageView to set the bitmap to.
      * @param bitmap The new bitmap to set.
      */
-    @SuppressWarnings("deprecation")
     private void setImageBitmap(ImageView imageView, Bitmap bitmap) {
         if (mFadeInBitmap) {
             // Transition drawable to fade from loading bitmap to final bitmap

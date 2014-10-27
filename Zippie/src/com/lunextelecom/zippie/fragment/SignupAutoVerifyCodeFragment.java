@@ -1,14 +1,20 @@
 /*
- * @author Vuong Huynh
- * Copyright (C) 2014 Lunextelecom
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ * 
+ * 
+ * Copyright 2011 - 2013 Lunextelecom, Inc. All rights reserved.
+ * Author: AnhBui
+ * Location: Zippie - com.lunextelecom.zippie - SignupAutoVerifyCodeFragment.java
+ * created Date: 2014-10-24
+ * 
  */
 package com.lunextelecom.zippie.fragment;
 
 import android.annotation.SuppressLint;
+import android.app.Fragment;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;

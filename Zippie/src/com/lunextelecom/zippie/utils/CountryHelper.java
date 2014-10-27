@@ -1,4 +1,11 @@
 /*
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ * 
+ * 
+ * Copyright 2011 - 2013 Lunextelecom, Inc. All rights reserved.
+ * Author: AnhBui
+ * Location: Zippie - com.lunextelecom.zippie - CountryHelper.java
+ * created Date: 2014-10-24
  * 
  */
 package com.lunextelecom.zippie.utils;
@@ -213,6 +220,13 @@ public class CountryHelper implements ConnectionCallbacks,
 		return null;
 	}
 	
+	/**
+	 * Gets the country object by dial code.
+	 *
+	 * @param dialCode the dial code
+	 * @param listCountry the list country
+	 * @return the country object by dial code
+	 */
 	public static CountryObject getCountryObjectByDialCode(String dialCode, List<CountryObject> listCountry){
 		if(listCountry != null){
 			for(int i=0, size = listCountry.size(); i < size; i++){

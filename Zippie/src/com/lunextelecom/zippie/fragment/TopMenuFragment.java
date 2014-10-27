@@ -1,12 +1,23 @@
 /*
- * @author Vuong Huynh
- * Copyright (C) 2014 Lunextelecom
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ * 
+ * 
+ * Copyright 2011 - 2013 Lunextelecom, Inc. All rights reserved.
+ * Author: AnhBui
+ * Location: Zippie - com.lunextelecom.zippie - TopMenuFragment.java
+ * created Date: 2014-10-24
+ * 
  */
 package com.lunextelecom.zippie.fragment;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,6 +26,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lunextelecom.zippie.R;
+import com.lunextelecom.zippie.activity.CallActivity;
+import com.lunextelecom.zippie.activity.ContactActivity;
+import com.lunextelecom.zippie.activity.EGiftActivity;
+import com.lunextelecom.zippie.activity.MessageActivity;
+import com.lunextelecom.zippie.activity.TopMenuActivity;
+import com.lunextelecom.zippie.activity.TopUpActivity;
 import com.lunextelecom.zippie.utils.Utils;
 
 // TODO: Auto-generated Javadoc
@@ -86,15 +103,23 @@ public class TopMenuFragment extends Fragment implements OnClickListener{
     /** The m current view active. */
     private View mCurrentViewActive;
 
+	private TopMenuActivity mTopMenuActivity;
+
     /* (non-Javadoc)
      * @see android.support.v4.app.Fragment#onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
      */
-    @Override
+    @SuppressLint("InflateParams") @Override
     public View onCreateView(LayoutInflater inflater, @Nullable
             ViewGroup container, @Nullable
             Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         View view = inflater.inflate(R.layout.topmenu_lay, null);
+        initView(view);
+        return view;
+    }
+    
+    private void initView(View view)
+    {
         TextView tvTextPoint = (TextView)view.findViewById(R.id.topmenu_header_text_point_id);
         mTopMenuPointTv = (TextView)view.findViewById(R.id.topmenu_header_point_id);
         mTopMenuItemSelectedDetailHeaderTv = (TextView)view.findViewById(R.id.topmenu_item_selected_detail_header_id);
@@ -149,7 +174,9 @@ public class TopMenuFragment extends Fragment implements OnClickListener{
         mTopMenuPointsView.setOnClickListener(this);
         mTopMenuPayBillView.setOnClickListener(this);
         mTopMenuTopUpView.setOnClickListener(this);
-        return view;
+        mTopMenuContactsView.setOnClickListener(this);
+        mTopMenuMessageView.setOnClickListener(this);
+        mTopMenuCallView.setOnClickListener(this);
     }
 
     /* (non-Javadoc)
@@ -164,8 +191,12 @@ public class TopMenuFragment extends Fragment implements OnClickListener{
                 selectedItemMenu(R.drawable.topmenu_circle_select_2, mTopMenuPremiumCallView, mTopMenuPremiumCallActiveView);
                 break;
             case R.id.topmenu_egift_id:
+            {
                 selectedItemMenu(R.drawable.topmenu_circle_select_3, mTopMenuEGiftView, mTopMenuEGiftActiveView);
+        		Intent intent = new Intent(getActivity(), EGiftActivity.class);
+        		startActivityDelay(intent,2000);
                 break;
+            }
             case R.id.topmenu_money_transfer_id:
                 selectedItemMenu(R.drawable.topmenu_circle_select_4, mTopMenuMoneyTransView, mTopMenuMoneyTransActiveView);
                 break;
@@ -176,8 +207,39 @@ public class TopMenuFragment extends Fragment implements OnClickListener{
                 selectedItemMenu(R.drawable.topmenu_circle_select_6, mTopMenuPayBillView, mTopMenuPayBillActiveView);
                 break;
             case R.id.topmenu_top_up_id:
+            {
                 selectedItemMenu(R.drawable.topmenu_circle_select_1, mTopMenuTopUpView, mTopMenuTopUpActiveView);
+                Intent intent = new Intent(getActivity(), TopUpActivity.class);
+                startActivityDelay(intent, 2000);
                 break;
+            }
+            case R.id.topmenu_contacts_id:
+            {
+            	if(mTopMenuActivity != null)
+            	{
+            		Intent intent = new Intent(getActivity(), ContactActivity.class);
+            		mTopMenuActivity.startNewActivity(intent);
+            	}
+                break;
+            }
+            case R.id.topmenu_message_id:
+            {
+            	if(mTopMenuActivity != null)
+            	{
+            		Intent intent = new Intent(getActivity(), MessageActivity.class);
+            		mTopMenuActivity.startNewActivity(intent);
+            	}
+                break;
+            }
+            case R.id.topmenu_call_id:
+            {
+            	if(mTopMenuActivity != null)
+            	{
+            		Intent intent = new Intent(getActivity(), CallActivity.class);
+            		mTopMenuActivity.startNewActivity(intent);
+            	}
+                break;
+            }
             default:
                 break;
         }
@@ -199,4 +261,45 @@ public class TopMenuFragment extends Fragment implements OnClickListener{
         mCurrentView = itemSelect;
         mCurrentViewActive = itemSelectActive;
     }
+    
+    private void startActivityDelay(final Intent intent,int delay)
+    {
+		int secondsDelayed = delay;
+		new Handler().postDelayed(new Runnable() {
+			@Override
+			public void run() {
+            	if(mTopMenuActivity != null)
+            	{
+            		
+            		mTopMenuActivity.startNewActivity(intent);
+            	}
+			}
+		}, secondsDelayed);
+    }
+    
+	/* (non-Javadoc)
+	 * @see android.app.Fragment#onAttach(android.app.Activity)
+	 */
+	@Override
+	public void onAttach(Activity activity) {
+		// TODO Auto-generated method stub
+		super.onAttach(activity);
+		try {
+			mTopMenuActivity = (TopMenuActivity) activity;
+		} catch (Exception e) {
+			// TODO: handle exception
+			Log.e("Zippie", getClass().getName()
+					+ " must implement mSignUpActivity.startSplashFragment();");
+		}
+	}
+	
+	/* (non-Javadoc)
+	 * @see android.app.Fragment#onDetach()
+	 */
+	@Override
+	public void onDetach() {
+		// TODO Auto-generated method stub
+		mTopMenuActivity = null;
+		super.onDetach();
+	}
 }
