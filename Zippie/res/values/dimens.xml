@@ -38,6 +38,10 @@
     <dimen name="topmenu_item_right_left_margin_bottom_dim">30dp</dimen>
     <dimen name="topmenu_item_right_left_margin_top_dim">30dp</dimen>
     
+    <!-- Create profile -->
+    <dimen name="signup_cerate_profile_avatar_size_dim">136dp</dimen>
+    <dimen name="signup_cerate_profile_margin1_dim">20dp</dimen>
+    
 	 <!-- Contact dimens -->
 	<dimen name="contact_home_btn">35dp</dimen>
     <dimen name="contact_text_size">12dp</dimen>

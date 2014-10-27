@@ -18,7 +18,7 @@
         android:layout_below="@+id/createprofile_header"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="20dp"
+        android:padding="@dimen/signup_cerate_profile_margin1_dim"
         android:weightSum="7"
         android:orientation="vertical">
         
@@ -88,8 +88,8 @@
             android:gravity="center_horizontal">
             <com.lunextelecom.zippie.view.CircularImageView
                 android:id="@+id/createprofile_avatar_id"
-                android:layout_width="136dp"
-                android:layout_height="136dp"
+                android:layout_width="@dimen/signup_cerate_profile_avatar_size_dim"
+                android:layout_height="@dimen/signup_cerate_profile_avatar_size_dim"
                 android:scaleType="fitCenter"
                 android:layout_marginTop="15dp"
                 android:src="@drawable/common_profile_default"
@@ -106,27 +106,33 @@
                 android:text="@string/createprofile_add_photo_text_str"/>
         </LinearLayout>
         
-        <EditText android:id="@+id/createprofile_name_id"
-            android:layout_width="match_parent"
+        <LinearLayout android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.75"
-            android:hint="@string/createprofile_hint_name_str"
-            android:textSize="@dimen/text_size_60_point"/>
-        
-        <EditText android:id="@+id/createprofile_email_id"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.75"
-            android:layout_marginTop="5dp"
-            android:hint="@string/createprofile_hint_email_str"
-            android:inputType="textEmailAddress"
-            android:textSize="@dimen/text_size_60_point"/>
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+            <EditText android:id="@+id/createprofile_name_id"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.75"
+                android:hint="@string/createprofile_hint_name_str"
+                android:textSize="@dimen/text_size_60_point"/>
+            
+            <EditText android:id="@+id/createprofile_email_id"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.75"
+                android:layout_marginTop="5dp"
+                android:hint="@string/createprofile_hint_email_str"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/text_size_60_point"/>
+            
+        </LinearLayout>
         
          <Button android:id="@+id/createprofile_finish_id"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/signup_cerate_profile_margin1_dim"
             android:gravity="center"
             android:background="@drawable/common_button_color_default_dra"
             android:textColor="@android:color/white"
