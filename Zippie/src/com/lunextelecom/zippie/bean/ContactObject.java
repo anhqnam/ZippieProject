@@ -1,3 +1,12 @@
+/*
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ * 
+ * 
+ * Copyright 2011 - 2013 Lunextelecom, Inc. All rights reserved.
+ * Author: AnhBui
+ * Location: Zippie - com.lunextelecom.zippie - SignUpActivity.java
+ * 
+ */
 package com.lunextelecom.zippie.bean;
 
 import java.io.Serializable;

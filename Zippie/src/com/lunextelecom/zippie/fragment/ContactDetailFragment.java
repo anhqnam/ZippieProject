@@ -1,10 +1,18 @@
-
+/*
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ * 
+ * 
+ * Copyright 2011 - 2013 Lunextelecom, Inc. All rights reserved.
+ * Author: AnhBui
+ * Location: Zippie - com.lunextelecom.zippie - SignUpActivity.java
+ * 
+ */
 package com.lunextelecom.zippie.fragment;
 
+import android.app.Fragment;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,7 +20,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.lunextelecom.zippie.R;
 import com.lunextelecom.zippie.bean.ContactObject;
 
@@ -53,7 +60,7 @@ public class ContactDetailFragment extends Fragment implements OnClickListener {
      * @param contactDetail the contact detail
      * @return the contact detail fragment
      */
-    public static ContactDetailFragment newInstance(ContactObject contactDetail) {
+    public static ContactDetailFragment newDetailFragment(ContactObject contactDetail) {
         ContactDetailFragment frag = new ContactDetailFragment();
         Bundle args = new Bundle();
         args.putSerializable("contactDetail", contactDetail);
@@ -90,7 +97,8 @@ public class ContactDetailFragment extends Fragment implements OnClickListener {
         mPaybill = (RelativeLayout)view.findViewById(R.id.contactdetail_pay_bill_rl_id);
         mPaybillActive = (RelativeLayout)view
                 .findViewById(R.id.contactdetail_pay_bill_active_rl_id);
-
+        view.findViewById(R.id.contactdetail_editcontact_iv_id).setOnClickListener(this);
+        view.findViewById(R.id.contactdetail_back_iv_id).setOnClickListener(this);
         mPremiumCall.setOnClickListener(this);
         mPremiumCallActive.setOnClickListener(this);
         mEgift.setOnClickListener(this);
@@ -234,10 +242,31 @@ public class ContactDetailFragment extends Fragment implements OnClickListener {
                 break;
             case R.id.contactdetail_pay_bill_rl_id:
                 setVisibleAction(4);
-
                 break;
+            case R.id.contactdetail_editcontact_iv_id:
+            	int method = 10;
+            	if(mContactDetailCallBack != null){
+            		mContactDetailCallBack.callbackEditContact(mContact, method);
+            	}
+                break;
+            case R.id.contactdetail_back_iv_id:
+            	int methodBack = 11;
+            	ContactObject contact = new ContactObject();
+            	if(mContactDetailCallBack != null){
+            		mContactDetailCallBack.callbackEditContact(contact, methodBack);
+            	}
             default:
                 break;
         }
+    }
+    private ContactDetailListener mContactDetailCallBack;
+
+   
+    public interface ContactDetailListener {
+        public void callbackEditContact(ContactObject result,Integer method);
+    }
+
+    public void setOnClickEditContact(ContactDetailListener listener){
+        this.mContactDetailCallBack = listener;
     }
 }

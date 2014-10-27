@@ -1,3 +1,12 @@
+/*
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ * 
+ * 
+ * Copyright 2011 - 2013 Lunextelecom, Inc. All rights reserved.
+ * Author: AnhBui
+ * Location: Zippie - com.lunextelecom.zippie - SignUpActivity.java
+ * 
+ */
 package com.lunextelecom.zippie.database;
 import java.util.List;
 
@@ -58,7 +67,7 @@ public class ContactDatabaseHelper extends ZippieDatabaseHelper {
         instance.setmContext(context);
         return instance;
     }
-    public List<ContactObject> GetContactFavorite(boolean forceLoad){
+    public List<ContactObject> GetContactFavoriteList(boolean forceLoad){
         if(mFavoriteContactList != null && !forceLoad){
             return mFavoriteContactList;
         }

@@ -1,4 +1,12 @@
-
+/*
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+ * 
+ * 
+ * Copyright 2011 - 2013 Lunextelecom, Inc. All rights reserved.
+ * Author: AnhBui
+ * Location: Zippie - com.lunextelecom.zippie - SignUpActivity.java
+ * 
+ */
 package com.lunextelecom.zippie.adapter;
 
 import java.util.List;
@@ -110,13 +118,12 @@ public class ContactListAdapter extends android.widget.BaseAdapter implements Se
      * @param imageLoader the image loader
      * @param search the search
      */
-    public ContactListAdapter(Context context, List<Row> objects, ImageLoader imageLoader,String search) {
+    public ContactListAdapter(Context context, List<Row> objects, ImageLoader imageLoader) {
         // TODO Auto-generated constructor stub
         mRows = objects;
         mContext = context;
         //mImageLoader = imageLoader;
-        mSearchTerm =search;
-    }
+       }
 
     /**
      * Sets the rows.
@@ -126,7 +133,9 @@ public class ContactListAdapter extends android.widget.BaseAdapter implements Se
     public void setRows(List<Row> rows) {
         this.mRows = rows;
     }
-
+    public void setSearch(String search){
+    	this.mSearchTerm =search;
+    }
     /* (non-Javadoc)
      * @see android.widget.Adapter#getCount()
      */
@@ -295,17 +304,17 @@ public class ContactListAdapter extends android.widget.BaseAdapter implements Se
         // TODO Auto-generated method stub
         switch (v.getId()) {
             case R.id.contact_rowlist_sms_iv_id:
-                if(mContactAdapterCallBack != null){
+                if(mContactListAdapterCallBack != null){
                     //mContactAdapterCallBack.callbackQuestionDialog(mContactId,mSms);
                 }
                 break;
             case R.id.contact_rowlist_call_iv_id:
-                if(mContactAdapterCallBack != null){
+                if(mContactListAdapterCallBack != null){
                     //mContactAdapterCallBack.callbackQuestionDialog(mContactId,mCall);
                 }
                 break;
             case R.id.contact_rowlist_invite_bt_id:
-                if(mContactAdapterCallBack != null){
+                if(mContactListAdapterCallBack != null){
                     //mContactAdapterCallBack.callbackQuestionDialog(mContactId,mInvite);
                 }
                 break;
@@ -314,7 +323,7 @@ public class ContactListAdapter extends android.widget.BaseAdapter implements Se
         }
     }
     /** The m custom layout call back. */
-    private ContactAdapterListener mContactAdapterCallBack;
+    private ContactListAdapterListener mContactListAdapterCallBack;
 
     /**
      * The listener interface for receiving contactAdapter events.
@@ -327,7 +336,7 @@ public class ContactListAdapter extends android.widget.BaseAdapter implements Se
      *
      * @see ContactAdapterEvent
      */
-    public interface ContactAdapterListener {
+    public interface ContactListAdapterListener {
         // you can define any parameter as per your requirement
         /**
          * Callback question dialog.
@@ -335,7 +344,7 @@ public class ContactListAdapter extends android.widget.BaseAdapter implements Se
          * @param result the result
          * @param method the method
          */
-        public void callbackAdapter(ContactObject result,Integer method);
+        public void callbackContactListAdapter(ContactObject result,Integer method);
     }
 
     /**
@@ -343,8 +352,8 @@ public class ContactListAdapter extends android.widget.BaseAdapter implements Se
      *
      * @param listener the new on click button
      */
-    public void setOnClickButton(ContactAdapterListener listener){
-        this.mContactAdapterCallBack = listener;
+    public void setOnClickContactListAdapter(ContactListAdapterListener listener){
+        this.mContactListAdapterCallBack = listener;
     }
 
     /* (non-Javadoc)
@@ -356,8 +365,8 @@ public class ContactListAdapter extends android.widget.BaseAdapter implements Se
         if(getItemViewType(arg2) == 0){
             Item r = (Item)getItem(arg2);
             ContactObject contact =r.mContact;
-            if(mContactAdapterCallBack != null){
-                mContactAdapterCallBack.callbackAdapter(contact,mContactDetail);
+            if(mContactListAdapterCallBack != null){
+            	mContactListAdapterCallBack.callbackContactListAdapter(contact,mContactDetail);
             }
         }
     }

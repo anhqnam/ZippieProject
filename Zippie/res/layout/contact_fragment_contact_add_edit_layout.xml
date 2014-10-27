@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.lunextelecom.zippie"
+    android:id="@+id/contact_add_edit_fl_id"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <!-- contact detail header -->
+
+        <RelativeLayout
+            android:id="@+id/contactadd_header_rl_id"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="@color/contact_background_header_col"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/contactadd_back_rl_id"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true" >
+
+                <Button
+                    android:id="@+id/contactadd_back_bt_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/contact_button_change_background_detail_dra"
+                    android:contentDescription="@null"
+                    android:drawableLeft="@drawable/contact_back_icon_dra"
+                    android:paddingLeft="14dp"
+                    android:text="ADD NEW CONTACT"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/contactadd_done_rl_id"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true" >
+
+                <View
+                    android:id="@+id/contactadd_done_v_id"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff" />
+
+                <Button
+                    android:id="@+id/contactadd_done_bt_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/contactadd_done_v_id"
+                    android:background="@drawable/contact_button_change_background_detail_dra"
+                    android:contentDescription="@null"
+                    android:drawableLeft="@drawable/contact_addedit_check_icon_dra"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp"
+                    android:text="DONE"
+                    android:textColor="#ffffff" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <!-- contact detail information -->
+
+        <LinearLayout
+            android:id="@+id/contactadd_body_ll_id"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.2"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:id="@+id/contactadd_avatar_rl_id"
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent" >
+
+                            <com.lunextelecom.zippie.view.CircularImageView
+                                android:id="@+id/contactadd_avatar_iv_id"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/contact_avatar_icon_dra"
+                                app:border_color="#EEEEEE"
+                                app:border_width="0.5dp"
+                                app:shadow="true" />
+
+                            <Button
+                                android:id="@+id/contactadd_avatar_tv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/contactadd_avatar_iv_id"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/contact_button_change_background_detail_dra"
+                                android:text="Add Photo"
+                                android:textColor="@color/contact_background_header_col" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/contactadd_name_rl_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_toRightOf="@id/contactadd_avatar_rl_id"
+                            android:paddingRight="10dp" >
+
+                            <EditText
+                                android:id="@+id/contactadd_fname_et_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="First name" />
+
+                            <EditText
+                                android:id="@+id/contactadd_lname_et_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/contactadd_fname_et_id"
+                                android:layout_marginTop="10dp"
+                                android:hint="Last name" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                    <!-- contact detail call and sms free -->
+
+                    <LinearLayout
+                        android:id="@+id/contactadd_edit_ll_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.4"
+                        android:baselineAligned="false"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/contactadd_edit_phone_ll_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/contactadd_addphone_ll_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="10dp" >
+
+                            <Button
+                                android:id="@+id/contactadd_addphone_bt_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/contact_button_change_background_detail_dra"
+                                android:drawableLeft="@drawable/contact_addedit_add_phone_icon_dra"
+                                android:text="  Add New Phone Number"
+                                android:textColor="#37ab17" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/contactadd_addfavorites_ll_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="10dp" >
+
+                            <Button
+                                android:id="@+id/contactadd_addfavorites_bt_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/contact_button_change_background_detail_dra"
+                                android:drawableLeft="@drawable/contact_addedit_add_favorites_icon_dra"
+                                android:text="  Add Contact to Favorites"
+                                android:textColor="#3498db" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/contactadd_dellcontact_ll_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="10dp" >
+
+                            <Button
+                                android:id="@+id/contactadd_dellcontact_bt_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/contact_button_change_background_detail_dra"
+                                android:drawableLeft="@drawable/contact_addedit_del_contact_icon_dra"
+                                android:text="  Delete this Contact"
+                                android:textColor="#ff2626" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

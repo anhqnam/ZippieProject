@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contactlist_fl_id"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <!-- Contact Menu Filter -->
+
+        <RelativeLayout
+            android:id="@+id/contact_header_rl_id"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="@color/contact_background_header_col"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/contact_home_iv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/contact_image_change_dra"
+                    android:contentDescription="@null"
+                    android:src="@drawable/contact_home_icon_home" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/contact_margin_hearder_dim"
+                android:layout_marginTop="10dp" >
+
+                <RelativeLayout
+                    android:id="@+id/contact_vippie_rl_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/contact_vippie_bt_id"
+                        android:layout_width="@dimen/contact_button_width_vippe_dim"
+                        android:layout_height="@dimen/contact_button_height_dim"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/contact_buttonvippie_hide_background_dra"
+                        android:text="@string/contact_zippie_str"
+                        android:textColor="@color/contact_button_col"
+                        android:textSize="@dimen/contact_text_size_dim" />
+
+                    <ImageView
+                        android:id="@+id/contact_vippie_iv_id"
+                        android:layout_width="@dimen/contact_image_button_dim"
+                        android:layout_height="@dimen/contact_image_button_dim"
+                        android:layout_below="@id/contact_vippie_bt_id"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/contact_button_under_background_dra"
+                        android:contentDescription="@null"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/contact_linevippie_v_id"
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/contact_button_height_dim"
+                    android:layout_toRightOf="@+id/contact_vippie_rl_id"
+                    android:background="#3598db" />
+
+                <RelativeLayout
+                    android:id="@+id/contact_all_rl_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/contact_linevippie_v_id"
+                    android:gravity="center" >
+
+                    <Button
+                        android:id="@+id/contact_all_bt_id"
+                        android:layout_width="@dimen/contact_button_width_all_dim"
+                        android:layout_height="@dimen/contact_button_height_dim"
+                        android:background="@drawable/contact_buttonall_hide_background_dra"
+                        android:text="@string/contact_all_str"
+                        android:textColor="@color/contact_button_col"
+                        android:textSize="@dimen/contact_text_size_dim" />
+
+                    <ImageView
+                        android:id="@+id/contact_all_iv_id"
+                        android:layout_width="@dimen/contact_image_button_dim"
+                        android:layout_height="@dimen/contact_image_button_dim"
+                        android:layout_below="@id/contact_all_bt_id"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/contact_button_under_background_dra"
+                        android:contentDescription="@null"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/contact_all_v_id"
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/contact_button_height_dim"
+                    android:layout_toRightOf="@+id/contact_all_rl_id"
+                    android:background="#3598db" />
+
+                <RelativeLayout
+                    android:id="@+id/contact_farvorite_rl_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/contact_all_v_id"
+                    android:gravity="center" >
+
+                    <Button
+                        android:id="@+id/contact_farvorite_bt_id"
+                        android:layout_width="@dimen/contact_button_width_favorite_dim"
+                        android:layout_height="@dimen/contact_button_height_dim"
+                        android:background="@drawable/contact_buttonall_hide_background_dra"
+                        android:text="@string/contact_favorites_str"
+                        android:textColor="@color/contact_button_col"
+                        android:textSize="@dimen/contact_text_size_dim" />
+
+                    <ImageView
+                        android:id="@+id/contact_farvorite_iv_id"
+                        android:layout_width="@dimen/contact_image_button_dim"
+                        android:layout_height="@dimen/contact_image_button_dim"
+                        android:layout_below="@id/contact_farvorite_bt_id"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/contact_button_under_background_dra"
+                        android:contentDescription="@null"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/contact_farvorite_v_id"
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/contact_button_height_dim"
+                    android:layout_toRightOf="@+id/contact_farvorite_rl_id"
+                    android:background="#3598db" />
+
+                <RelativeLayout
+                    android:id="@+id/contact_seacrch_rl_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/contact_farvorite_v_id"
+                    android:gravity="center" >
+
+                    <Button
+                        android:id="@+id/contact_seacrch_bt_id"
+                        android:layout_width="@dimen/contact_button_width_search_dim"
+                        android:layout_height="@dimen/contact_button_height_dim"
+                        android:background="@drawable/contact_buttonfavorite_hide_background_dra"
+                        android:text="@string/contact_search_str"
+                        android:textColor="@color/contact_button_col"
+                        android:textSize="@dimen/contact_text_size_dim" />
+
+                    <ImageView
+                        android:id="@+id/contact_seacrch_iv_id"
+                        android:layout_width="@dimen/contact_image_button_dim"
+                        android:layout_height="@dimen/contact_image_button_dim"
+                        android:layout_below="@id/contact_seacrch_bt_id"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/contact_button_under_background_dra"
+                        android:contentDescription="@null"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/contact_add_iv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/contact_image_change_dra"
+                    android:contentDescription="@null"
+                    android:src="@drawable/contact_addnew_icon_dra" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <!-- Contact detail search -->
+
+        <RelativeLayout
+            android:id="@+id/contact_search_detail_rl_id"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/contact_searchdetail_back_iv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/contact_image_change_dra"
+                android:contentDescription="@null"
+                android:src="@drawable/contact_back_icon_dra" />
+
+            <ImageView
+                android:id="@+id/contact_searchdetail_search_iv_id"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/contact_image_change_dra"
+                android:contentDescription="@null"
+                android:src="@drawable/search" />
+
+            <RelativeLayout
+                android:id="@+id/contact_searchdetail_search_rl_id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/contact_searchdetail_back_iv_id"
+                android:gravity="center_vertical" >
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp" >
+
+                    <EditText
+                        android:id="@+id/contact_searchdetail_search_et_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/contact_search_hint_str"
+                        android:visibility="gone" >
+
+                        <requestFocus />
+                    </EditText>
+
+                    <ImageView
+                        android:id="@+id/contact_searchdetail_clear_iv_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/contact_image_change_dra"
+                        android:contentDescription="@null"
+                        android:src="@drawable/contact_search_delete_icon_draw"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <!-- Progress bar refresh data from server -->
+
+        <ProgressBar
+            android:id="@+id/contact_refresh_iv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="false" >
+        </ProgressBar>
+        <!-- List contact frament -->
+
+        <FrameLayout
+            android:id="@+id/contact_list_fl_id"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9" >
+            <ListView 
+                android:id="@+id/contact_list_lv_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>
