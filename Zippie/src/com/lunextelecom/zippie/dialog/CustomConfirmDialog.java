@@ -13,10 +13,16 @@ import android.widget.TextView;
 
 import com.lunextelecom.zippie.R;
 
-public class CustomConfirmDialog extends DialogFragment {
+public class CustomConfirmDialog extends DialogFragment implements OnClickListener {
 	private TextView mTitleTextView;
 	private TextView mContentTextView;
 	private Button mYesButton;
+	private Button mNoButton;
+	private ConfirmDialogClickListener mOnClickConfirmDialogListener;
+	
+	public interface ConfirmDialogClickListener{
+		public void onClickConfirmDialogListener(boolean confirm);
+	};
 	
 	public CustomConfirmDialog(){
 		
@@ -44,14 +50,38 @@ public class CustomConfirmDialog extends DialogFragment {
 		mTitleTextView.setText(title);
 		mContentTextView.setText(content);
 		mYesButton = (Button)v.findViewById(R.id.custom_dialog_alert_button_yes_id);
-		mYesButton.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				dismiss();
-			}
-		});
+		mNoButton = (Button)v.findViewById(R.id.custom_dialog_alert_button_no_id);
+		mYesButton.setOnClickListener(this);
+		mNoButton.setOnClickListener(this);
 		return v;
 	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		int id = v.getId();
+		switch (id) {
+		case R.id.custom_dialog_alert_button_yes_id:
+			if(mOnClickConfirmDialogListener != null){
+				mOnClickConfirmDialogListener.onClickConfirmDialogListener(true);
+			}
+			break;
+		case R.id.custom_dialog_alert_button_no_id:
+			if(mOnClickConfirmDialogListener != null){
+				mOnClickConfirmDialogListener.onClickConfirmDialogListener(false);
+			}
+			break;
+		}
+	}
+
+	public ConfirmDialogClickListener getOnClickConfirmDialogListener() {
+		return mOnClickConfirmDialogListener;
+	}
+
+	public void setOnClickConfirmDialogListener(
+			ConfirmDialogClickListener onClickConfirmDialogListener) {
+		this.mOnClickConfirmDialogListener = onClickConfirmDialogListener;
+	}
+	
+	
 }
