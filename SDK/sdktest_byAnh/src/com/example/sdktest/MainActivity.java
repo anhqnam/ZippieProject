@@ -17,14 +17,18 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity_lay);
+        setContentView(R.layout.activity_main);
 
-        findViewById(R.id.main_openSignUp_id).setOnClickListener(this);
-        findViewById(R.id.main_openContact_id).setOnClickListener(this);
-        findViewById(R.id.main_openSetting_id).setOnClickListener(this);
-        findViewById(R.id.main_openAvatar_id).setOnClickListener(this);
-        findViewById(R.id.main_openCallslog_id).setOnClickListener(this);
-
+        findViewById(R.id.openSignUp).setOnClickListener(this);
+        findViewById(R.id.openContact).setOnClickListener(this);
+        findViewById(R.id.openSetting).setOnClickListener(this);
+        findViewById(R.id.openAvatar).setOnClickListener(this);
+        findViewById(R.id.openCallslog).setOnClickListener(this);
+        findViewById(R.id.openSip).setOnClickListener(this);
+        findViewById(R.id.openCallAndSms).setOnClickListener(this);
+        findViewById(R.id.openProfile).setOnClickListener(this);
+        findViewById(R.id.openMessage).setOnClickListener(this);
+        
         /*		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 			.add(R.id.container, new NumberActionFragment()).commit();
@@ -308,21 +312,33 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
         // TODO Auto-generated method stub
         Intent i = new Intent();
         switch (v.getId()) {
-            case R.id.main_openSignUp_id:
+            case R.id.openSignUp:
                 i.setClass(getApplicationContext(), SignUpActivity.class);
                 break;
-            case R.id.main_openContact_id:
+            case R.id.openContact:
                 i.setClass(getApplicationContext(), ContactActivity.class);
                 break;
-            case R.id.main_openSetting_id:
+            case R.id.openSetting:
                 i.setClass(getApplicationContext(), SettingActivity.class);
                 break;
-            case R.id.main_openAvatar_id:
+            case R.id.openAvatar:
                 i.setClass(getApplicationContext(), AvatarActivity.class);
                 break;
-            case R.id.main_openCallslog_id:
+            case R.id.openCallslog:
                 i.setClass(getApplicationContext(), CallsLogActivity.class);
                 break;
+            case R.id.openSip:
+                i.setClass(getApplicationContext(), SipActivity.class);
+                break;
+            case R.id.openCallAndSms:
+                i.setClass(getApplicationContext(), NumberActionActivity.class);
+                break;
+            case R.id.openProfile:
+                i.setClass(getApplicationContext(), ProfileActivity.class);
+                break;
+            case R.id.openMessage:
+            	i.setClass(getApplicationContext(), MessageActivity.class);
+            	break;
             default:
                 break;
         }

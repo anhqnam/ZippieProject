@@ -1,9 +1,10 @@
 package com.example.sdktest;
 
 import unique.packagename.messages.MsgThreadsActivity;
+import unique.packagename.sdkwrapper.calling.Calling;
 import unique.packagename.sdkwrapper.contacts.ContactsWrapper;
 import unique.packagename.sdkwrapper.contacts.IOnSyncContactsListener;
-import unique.packagename.sdkwrapper.settings.SettingsWrapper;
+import unique.packagename.sdkwrapper.messages.MessagesWrapper;
 import unique.packagename.sip.SipContactsSynchronizationManager;
 import unique.packagename.sip.SipServersManager;
 import android.content.Intent;
@@ -34,7 +35,7 @@ public class NumberActionFragment extends Fragment implements OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.call_fragment_init_lay, container, false);
+        View root = inflater.inflate(R.layout.fragment_init_call, container, false);
         mNumber = (EditText) root.findViewById(R.id.call_number);
 
         mFreeCall = (Button) root.findViewById(R.id.call_free);
@@ -73,7 +74,6 @@ public class NumberActionFragment extends Fragment implements OnClickListener{
         setupOnClickListeners();
         //account has to be loged int ovippie system to call methods (after log in dialer synchronizes numbers etc )
         //same thing for changeNumber methods
-        sthsth();
     }
 
     private void setupOnClickListeners() {
@@ -123,7 +123,7 @@ public class NumberActionFragment extends Fragment implements OnClickListener{
         String number = getNumber();
         if(isFreeActionPossible(number)){
             SipUri uri = SipUri.create(number, "", getRawNumber(), "");
-            DialerApplication.makeCall(getActivity(), uri, Settings.VideoCallMode.ASK);	//can provide call mode here without asking
+            new Calling().callFree(getActivity(), uri, Settings.VideoCallMode.ASK);	//can provide call mode here without asking
         }
     }
 
@@ -131,7 +131,7 @@ public class NumberActionFragment extends Fragment implements OnClickListener{
         String number = getNumber();
         if(isPaidActionPossible(number)){
             SipUri uri = SipUri.create(SipServersManager.GSM_CALL_PREFIX + number, "", getRawNumber(), "");
-            DialerApplication.makeGsmCall(getActivity(), uri);
+            new Calling().callPaid(getActivity(), uri);
         }
     }
 
@@ -139,7 +139,8 @@ public class NumberActionFragment extends Fragment implements OnClickListener{
         String number = getNumber();
         if(isFreeActionPossible(number)){
             number = SipContactsSynchronizationManager.prepareNumber(number);
-            DialerApplication.handleNumber(getActivity(), SipUri.create(number, "", getRawNumber(), ""), DialerApplication.ACTION_SEND_MESSAGE);
+            SipUri toUri = SipUri.create(number, "", getRawNumber(), "");
+            new MessagesWrapper().smsFree(getActivity(), toUri);
         }
     }
 
@@ -147,7 +148,7 @@ public class NumberActionFragment extends Fragment implements OnClickListener{
         String number = getNumber();
         if(isPaidActionPossible(number)){
             SipUri toUri = SipUri.create(SipServersManager.GSM_CALL_PREFIX + number, "", getRawNumber(), "");
-            DialerApplication.sendMessageWithLogin(getActivity(), toUri);
+            new MessagesWrapper().smsPaid(getActivity(), toUri);
         }
     }
 
@@ -178,18 +179,4 @@ public class NumberActionFragment extends Fragment implements OnClickListener{
     public void openMessagesThreads(){
         startActivity(new Intent(getActivity(), MsgThreadsActivity.class));
     }
-
-    private void sthsth(){
-        //boolean isVippie = mContacts.isVippieNumber("48889155221");
-        //			Toast.makeText(getActivity(), "Is vippie check for 48889155221 result is " + isVippie, Toast.LENGTH_SHORT).show();
-
-        SettingsWrapper wrapper = new SettingsWrapper();
-        boolean isRegistered = wrapper.isRegistered();
-        Toast.makeText(getActivity(), "Is vippie check for registered result is " + isRegistered, Toast.LENGTH_SHORT).show();
-
-        //ContactsWrapper wrapper2 = new ContactsWrapper();
-        //Contact[] list = wrapper2.fetch();
-    }
-
-
 }

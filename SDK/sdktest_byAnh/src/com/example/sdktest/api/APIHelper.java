@@ -3,6 +3,7 @@ package com.example.sdktest.api;
 import unique.packagename.sdkwrapper.avatars.AvatarWrapper;
 import unique.packagename.sdkwrapper.callslog.CallsLogWrapper;
 import unique.packagename.sdkwrapper.contacts.ContactsWrapper;
+import unique.packagename.sdkwrapper.messages.MessagesWrapper;
 import unique.packagename.sdkwrapper.registration.RegistrationWrapper;
 import unique.packagename.sdkwrapper.registration.id.IRegistrationStateProvider;
 import unique.packagename.sdkwrapper.settings.SettingsWrapper;
@@ -16,6 +17,7 @@ public class APIHelper {
     private SettingsWrapper mSettingsWrapper;
     private AvatarWrapper mAvatarWrapper;
     private CallsLogWrapper mCallslogWrapper;
+    private MessagesWrapper mMessageWrapper;
 
     private APIHelper() {
         // TODO Auto-generated constructor stub
@@ -81,5 +83,13 @@ public class APIHelper {
         return mCallslogWrapper;
     }
 
+    public MessagesWrapper getMessageWrapper()
+    {
+        if(  mMessageWrapper == null)
+        {
+        	  mMessageWrapper = new MessagesWrapper();
+        }
+        return   mMessageWrapper;
+    }
 
 }

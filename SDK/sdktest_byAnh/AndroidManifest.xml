@@ -117,11 +117,26 @@
             android:name="com.example.sdktest.SettingActivity"
             android:label="@string/app_name" >
         </activity>
+          <activity
+            android:name="com.example.sdktest.MessageActivity"
+            android:label="@string/app_name" >
+        </activity>
         <activity
             android:name="com.example.sdktest.ContactActivity"
             android:label="@string/app_name" >
         </activity>
-
+		<activity
+            android:name="com.example.sdktest.SipActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.sdktest.NumberActionActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.sdktest.ProfileActivity"
+            android:label="@string/app_name" >
+        </activity>
         <!-- ============== end all test app stuff here ================= -->
 
 

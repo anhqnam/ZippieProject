@@ -10,36 +10,36 @@
         android:orientation="horizontal" >
 
         <EditText
-            android:id="@+id/signup_et_countrycodestr_id"
+            android:id="@+id/et_countrycodestr"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="@string/signup_HintCountryCode_str"
+            android:hint="@string/signupHintCountryCode"
             android:inputType="text"
-            android:text="@string/signup_contrycode84_str" >
+            android:text="84" >
 
             <requestFocus />
         </EditText>
 
         <EditText
-            android:id="@+id/signup_et_phonestr_id"
+            android:id="@+id/et_phonestr"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="@string/signup_HintPhonenumber_str"
+            android:hint="@string/signupHintPhonenumber"
             android:inputType="text"
-            android:text="@string/signup_numberphone933_str" >
+            android:text="938592413" >
         </EditText>
 
         <EditText
-            android:id="@+id/signup_et_verifycode_id"
+            android:id="@+id/et_verifycode"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="@string/signup_HintVerifyCode_str"
+            android:hint="@string/signupHintVerifyCode"
             android:inputType="text" >
         </EditText>
     </LinearLayout>
@@ -50,43 +50,43 @@
         android:orientation="vertical" >
 
         <Button
-            android:id="@+id/signup_registerSmsClick_id"
+            android:id="@+id/registerSmsClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/signup_RegisterSMS_str" />
+            android:text="@string/signupRegisterSMS" />
 
         <Button
-            android:id="@+id/signup_activateSMSClick_id"
+            android:id="@+id/activateSMSClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/signup_ActivateSMS_str" />
+            android:text="@string/signupActivateSMS" />
 
         <Button
-            android:id="@+id/signup_changePhoneNumberWithSMSClick_id"
+            android:id="@+id/changePhoneNumberWithSMSClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/signup_ChangePhoneNumberWithSMS_str" />
+            android:text="@string/signupChangePhoneNumberWithSMS" />
 
         <Button
-            android:id="@+id/signup_activateChangedNumberClick_id"
+            android:id="@+id/activateChangedNumberClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/signup_ActivateChangedNumber_str" />
+            android:text="@string/signupActivateChangedNumber" />
 
         <Button
-            android:id="@+id/signup_loginWithoutPasswordClick_id"
+            android:id="@+id/loginWithoutPasswordClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/signup_loginWithoutPassword_str" />       
+            android:text="@string/signuploginWithoutPassword" />       
     </LinearLayout>
 
     <TextView
-        android:id="@+id/signup_tv_status_id"
+        android:id="@+id/tv_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/signup_tv_result_id"
+        android:id="@+id/tv_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
