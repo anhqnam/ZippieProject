@@ -137,11 +137,14 @@ public class NumberActionFragment extends Fragment implements OnClickListener{
 
     private void sendFreeSms(){
         String number = getNumber();
-        if(isFreeActionPossible(number)){
+        number = SipContactsSynchronizationManager.prepareNumber(number);
+        SipUri toUri = SipUri.create(number, "", getRawNumber(), "");
+        new MessagesWrapper().smsFree(getActivity(), toUri);
+        /*if(isFreeActionPossible(number)){
             number = SipContactsSynchronizationManager.prepareNumber(number);
             SipUri toUri = SipUri.create(number, "", getRawNumber(), "");
             new MessagesWrapper().smsFree(getActivity(), toUri);
-        }
+        }*/
     }
 
     private void sendPaidSms(){

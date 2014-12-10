@@ -270,14 +270,14 @@ public class ContactActivity extends Activity implements OnClickListener{
             }
             case R.id.contactIsVippieIdClick: {
                 Boolean b;
-                b = mContactsWrapper.isVippieId("1873514");
+                b = mContactsWrapper.isVippieId("1917965");
                 mResult = " " + b.toString();
                 ((TextView)findViewById(R.id.tv_result)).setText(mResult);
                 break;
             }
             case R.id.contactIsVippieNumberClick: {
                 Boolean b;
-                b = mContactsWrapper.isVippieNumber("84922012350");
+                b = mContactsWrapper.isVippieNumber("84938592413");
                 mResult = " " + b.toString();
                 ((TextView)findViewById(R.id.tv_result)).setText(mResult);
                 break;
@@ -339,7 +339,7 @@ public class ContactActivity extends Activity implements OnClickListener{
                 break;
             }
             case R.id.contactVerifyNumberClick: {
-                Boolean verify = mContactsWrapper.verifyNumber("+84979485576");
+                Boolean verify = mContactsWrapper.verifyNumber("84979485576");
                 mResult = "Result : " + verify.toString();
                 ((TextView)findViewById(R.id.tv_result)).setText(mResult);
                 break;

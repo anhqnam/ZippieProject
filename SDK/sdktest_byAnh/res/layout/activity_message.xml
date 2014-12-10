@@ -15,75 +15,86 @@
 
             <Button
                 android:id="@+id/Messagefetch"
-                android:text="Fetch"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="Fetch" />
 
             <Button
                 android:id="@+id/MessagefetchThread"
-                android:text="FetchThread"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="FetchThread" />
 
             <Button
                 android:id="@+id/WaittingConfirmation"
-                android:text="Waitting For Confirmation"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="Waitting For Confirmation" />
 
             <Button
                 android:id="@+id/MessageModify"
-                android:text="Modify"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="Modify" />
 
             <Button
                 android:id="@+id/MessageRegisterListener"
-                android:text="RegisterListener"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="RegisterListener" />
 
             <Button
                 android:id="@+id/MessageRemoveid"
-                android:text="RemoveWithID"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="RemoveWithID" />
 
             <Button
                 android:id="@+id/MessageRemoveMessage"
-                android:text="RemoveWithMessage"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="RemoveWithMessage" />
 
             <Button
                 android:id="@+id/MessageRemoveThread"
-                android:text="RemoveWithThread"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="RemoveWithThread" />
 
             <Button
                 android:id="@+id/MessagesmsFree"
-                android:text="SMS Free"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="SMS Free" />
 
             <Button
                 android:id="@+id/MessagesmsPaid"
-                android:text="SMS Paid"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="SMS Paid" />
 
             <Button
                 android:id="@+id/MessageunregisterListener"
-                android:text="UnregisterListener"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="UnregisterListener" />
         </LinearLayout>
     </ScrollView>
 
-    <TextView
-        android:id="@+id/tvMessageResult"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvMessageResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

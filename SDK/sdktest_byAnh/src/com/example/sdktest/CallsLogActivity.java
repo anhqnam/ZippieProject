@@ -4,10 +4,9 @@
 
 package com.example.sdktest;
 
-import java.util.Date;
-
 import unique.packagename.sdkwrapper.callslog.CallsLogWrapper;
 import unique.packagename.sdkwrapper.callslog.IOnCallLogChangedListener;
+import unique.packagename.sdkwrapper.contacts.ContactsWrapper;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,24 +16,28 @@ import android.widget.TextView;
 
 import com.example.sdktest.api.APIHelper;
 import com.voipswitch.callslog.CallsLogEntry;
-import com.voipswitch.sip.SipUri;
 
 public class CallsLogActivity extends Activity implements OnClickListener {
 
     /** The m callslog wrapper. */
     private CallsLogWrapper mCallslogWrapper;
+    
+    /** The number. */
+    private String  number;
+    
+    private String mynumber;
 
-    /** The m uri. */
-    private SipUri mUri;
+   /* *//** The m uri. *//*
+    private SipUri mUri;*/
 
-    /** The m type. */
+    /** The m type. *//*
     private int mType;
 
-    /** The m duration. */
+    *//** The m duration. *//*
     private int mDuration;
 
-    /** The m date. */
-    private Date mDate;
+    *//** The m date. *//*
+    private java.util.Date mDate;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +48,9 @@ public class CallsLogActivity extends Activity implements OnClickListener {
     }
 
     private void Init() {
-
+    	ContactsWrapper mContactwrap = APIHelper.getInstance().getContactsWrapper(); 
+    	number = mContactwrap.prepareNumber("841677113348");
+    	mynumber =  mContactwrap.prepareNumber("84938592413");
         mCallslogWrapper = APIHelper.getInstance().getCallslogWrapper();
         // execute button
         findViewById(R.id.addcallslog).setOnClickListener(this);
@@ -73,16 +78,15 @@ public class CallsLogActivity extends Activity implements OnClickListener {
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.addcallslog: {
-                //                ContactsWrapper mContactsWrapper = APIHelper.getInstance().getContactsWrapper();
-                //                Contact iContact = mContactsWrapper.fetch("84933094998", false);
-                //                CallsLogEntry mCallsLogEntry = new CallsLogEntry();
-                //                mUri = iContact.getSipUri();
-                //                Log.d("SipUri :", mUri.toString());
-                //                mType = 1;
-                //                mDuration = 1;
-                //                mDate = mCallsLogEntry.getDate();
+              /*  ContactsWrapper mContactsWrapper = APIHelper.getInstance().getContactsWrapper();
+                Contact iContact = mContactsWrapper.fetch(number, false); 
+                mUri = iContact.getSipUri();
+                Log.d("SipUri :", mUri.toString());
+                mType = 1;
+                mDuration = 1;
+                mDate = new java.util.Date();
                 mCallslogWrapper.add(mUri, mType, mDuration, mDate);
-                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mUri.toString()+ " " + mType +" "+ " " +mDuration +" " + mDate);
+                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mUri.toString()+ " " + mType +" "+ " " +mDuration +" " + mDate);*/
                 break;
             }
             case R.id.fetchcallslog: {
@@ -91,13 +95,13 @@ public class CallsLogActivity extends Activity implements OnClickListener {
                 int len = mArrayCallsLogEntry.length;
                 for(int i=0 ;i<len ;i++)
                 {
-                    mResult += mArrayCallsLogEntry[i].toString() + "\n";
+                    mResult += mArrayCallsLogEntry[i].toString() + " " + mArrayCallsLogEntry[i].getType() + "\n" ;
                 }
                 ((TextView) findViewById(R.id.tv_CallsLogResult)).setText(mResult);
                 break;
             }
             case R.id.fetchcallslogtype: {
-                CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetch(0);
+                CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetch(1);
                 String mResult = "";
                 int len = mArrayCallsLogEntry.length;
                 for(int i=0 ;i<len ;i++)
@@ -108,7 +112,7 @@ public class CallsLogActivity extends Activity implements OnClickListener {
                 break;
             }
             case R.id.fetchcallslogtypenumber: {
-                CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetch(1,"84933094998");
+                CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetch(3,number);
                 String mResult = "";
                 int len = mArrayCallsLogEntry.length;
                 for(int i=0 ;i<len ;i++)
@@ -119,7 +123,7 @@ public class CallsLogActivity extends Activity implements OnClickListener {
                 break;
             }
             case R.id.fetchcallslognumber: {
-                CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetch("84933094998");
+                CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetch(number);
                 String mResult = "";
                 int len = mArrayCallsLogEntry.length;
                 for(int i=0 ;i<len ;i++)
@@ -130,7 +134,7 @@ public class CallsLogActivity extends Activity implements OnClickListener {
                 break;
             }
             case R.id.fetchIncomingByNumber: {
-                CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetchIncomingByNumber("84933094998");
+                CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetchIncomingByNumber(mynumber);
                 String mResult = "";
                 int len = mArrayCallsLogEntry.length;
                 for(int i=0 ;i<len ;i++)
@@ -141,7 +145,7 @@ public class CallsLogActivity extends Activity implements OnClickListener {
                 break;
             }
             case R.id.fetchOutgoingByNumber: {
-                CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetchOutgoingByNumber("84933094998");
+                CallsLogEntry[] mArrayCallsLogEntry = mCallslogWrapper.fetchOutgoingByNumber(mynumber);
                 String mResult = "";
                 int len = mArrayCallsLogEntry.length;
                 for(int i=0 ;i<len ;i++)
@@ -173,18 +177,18 @@ public class CallsLogActivity extends Activity implements OnClickListener {
                 break;
             }
             case R.id.removecallslogtype: {
-                mCallslogWrapper.remove(1);
+                mCallslogWrapper.remove(3);
                 ((TextView) findViewById(R.id.tv_CallsLogResult)).setText("Calls Log type = 1 was removed");
                 break;
             }
             case R.id.RemovecallslogTypeNumber: {
-                mCallslogWrapper.remove(1,"84933094998");
-                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText("Calls Logtype = 1 and number = 84933094998 were removed");
+                mCallslogWrapper.remove(3,"84933094998");
+                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText("Calls Logtype = 1 and number = 841677113348 were removed");
                 break;
             }
             case R.id.Removecallslognumber: {
                 mCallslogWrapper.remove("84933094998");
-                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText("Calls Log number = 84933094998 were removed");
+                ((TextView) findViewById(R.id.tv_CallsLogResult)).setText("Calls Log number = 841677113348 were removed");
                 break;
             }
             case R.id.removeGroupcallslog: {

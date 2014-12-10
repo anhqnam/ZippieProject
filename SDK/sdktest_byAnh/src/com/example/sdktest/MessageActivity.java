@@ -19,8 +19,11 @@ public class MessageActivity extends Activity implements OnClickListener {
 
 	/** The m messages wrapper. */
 	private MessagesWrapper mMessagesWrapper;
+	
+	/** The address. */
+	private static String address = "841677113348";
 
-	private String mResult;
+	private String mResult = "";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +53,9 @@ public class MessageActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.Messagefetch:
-			String address = "";
+			((TextView) findViewById(R.id.tvMessageResult)).setText("");
 			Vector<Message> listMessage = mMessagesWrapper.fetch(address);
+			((TextView) findViewById(R.id.tvMessageResult)).setText(listMessage.toString());
 			Log.d("Message Adress : ", listMessage.toString());
 			break;
 		case R.id.MessagefetchThread: {
@@ -62,8 +66,7 @@ public class MessageActivity extends Activity implements OnClickListener {
 					final Vector<MessagesThread> listMessageThread = mMessagesWrapper
 							.fetchThreads();
 					for (int i = 0; i < listMessageThread.size(); i++) {
-						mResult += listMessageThread.get(i).getAddress()
-								.toString();
+						mResult += listMessageThread.get(i).getAddress()+ " " + listMessageThread.get(i).getMessage(i);
 					}
 					runOnUiThread(new Runnable() {
 						@Override
@@ -80,12 +83,12 @@ public class MessageActivity extends Activity implements OnClickListener {
 			break;
 		}
 		case R.id.WaittingConfirmation:
-			Message msg1 = mMessagesWrapper.fetch("1test").get(0);
+			Message msg1 = mMessagesWrapper.fetch(address).get(0);
 			boolean message = mMessagesWrapper.isWaitingForConfirmation(msg1);
 			Log.d("WaittingConfirmation", message + "");
 			break;
 		case R.id.MessageModify:
-			Message msg2 = mMessagesWrapper.fetch("1test").get(0);
+			Message msg2 = mMessagesWrapper.fetch(address).get(0);
 			mMessagesWrapper.modify(msg2);
 			break;
 		case R.id.MessageRegisterListener:
@@ -103,10 +106,10 @@ public class MessageActivity extends Activity implements OnClickListener {
 					});
 			break;
 		case R.id.MessageRemoveid:
-			mMessagesWrapper.remove(1);
+			mMessagesWrapper.remove(1917965);
 			break;
 		case R.id.MessageRemoveMessage:
-			Message msg3 = mMessagesWrapper.fetch("1test").get(0);
+			Message msg3 = mMessagesWrapper.fetch(address).get(0);
 			mMessagesWrapper.remove(msg3);
 			break;
 		case R.id.MessageRemoveThread:
